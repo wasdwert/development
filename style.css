@@ -1,0 +1,155 @@
+@media screen and (max-width: 1000px) {
+.background {
+    background: url(Images/background.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: 1000px, auto;
+}
+}
+
+@media screen and (min-width: 1000px) {
+.background {
+    background: url(Images/background.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: 100%, auto;
+}
+}
+
+.game {
+    box-sizing: border-box;
+}
+
+.headcontainer {
+    box-sizing: border-box;
+    display: flex; /* using flexbox to align items */
+    flex-wrap: wrap; /* to force items on multiple lines */
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.container {
+    box-sizing: border-box;
+    display: flex; /* using flexbox to align items */
+    flex-wrap: wrap; /* to force items on multiple lines */
+    justify-content: center;
+}
+
+.gametitle {
+    box-sizing: border-box;
+    width: 400px;
+    height: 50px;
+    border: 2px solid #737373;
+    border-radius: 8px;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.resources {
+    box-sizing: border-box;
+    width: 800px;
+    height: 50px;
+    border: 2px solid #737373;
+    border-radius: 8px;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.leftcolumn {
+    box-sizing: border-box;
+    display: inline-flex; /* using flexbox to align items */
+    flex-direction: column;
+    margin: 5px;
+}
+
+.leftcolumntitle {
+    box-sizing: border-box;
+    width: 252px;
+	height: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#VSalvage {
+    box-sizing: border-box;
+    width: 250px;
+	height: 40px;
+	background: #A6D5FA;
+    border: 0px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.centercolumn {
+    box-sizing: border-box;
+    display: inline-flex; /* using flexbox to align items */
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.centercolumntitle {
+    box-sizing: border-box;
+    width: 600px;
+	height: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    background: url(Images/ActionCanvas.jpg);
+	border: 1px solid grey;
+}
+
+.rightcolumn {
+    box-sizing: border-box;
+    display: inline-flex; /* using flexbox to align items */
+    flex-direction: column;
+    margin: 5px;
+}
+
+.rightcolumntitle {
+    box-sizing: border-box;
+    width: 252px;
+	height: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Feld {
+    box-sizing: border-box;
+    width: 252px;
+	height: 42px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

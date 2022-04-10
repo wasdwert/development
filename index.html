@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bonsai Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+    <div class="game">
+        <div class="headcontainer">
+            <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="margin: 0px; font-family:Arial; font-size: 16px"><strong>&nbsp;Bonsai Game: The Mythical Bonsai</strong></p></div>
+            <div class="resources"></div>
+        </div>
+        <div class="container">
+            <div class="leftcolumn">
+                <div class="leftcolumntitle"><p>View</p></div>
+                <div class="Feld"><button id=VSalvage onclick="ViewSalvage()">Salvaging</button></div>
+                <div class="Feld"><button id=VFarming onclick="ViewFarming()">Farming</button></div>
+                <div class="Feld"><button id=VBuilding onclick="ViewBuilding()">Building</button></div>
+                <div class="Feld"><button id=VInventing onclick="ViewInventing()">Inventing</button></div>
+                <div class="Feld"><button id=VBonsais onclick="ViewBonsais()">Bonsais</button></div>
+                <div class="Feld"><button id=VShop onclick="ViewShop()">Shop</button></div>
+                <div class="Feld"><button id=VOptions onclick="ViewOptions()">Options</button></div>
+            </div>
+            
+            <div class="centercolumn">
+                <div class="centercolumntitle"><p>Action Canvas Column</p></div>
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="rightcolumn">
+                <div class="rightcolumntitle"><p>Action Options Column</p></div>
+                <div class="Feld"><button id=VSalvage onclick="ViewSalvage()">Salvaging</button></div>
+            </div>
+        </div>
+    
+    </div>
+    
+    <script src="script.js"></script> 
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>StartGame();</script>
+    
+</body>
+</html>
