@@ -8,7 +8,7 @@
    version="1.1"
    id="svg58"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   sodipodi:docname="bonsai.svg"
+   sodipodi:docname="b01r01.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
        rx="64.846252"
        ry="64.846245" />
     <circle
-       style="fill:#ffffff;fill-opacity:1;stroke:#777777;stroke-width:7.77241;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#33ccff;stroke-width:7.77241;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle4892"
        cx="66.145836"
        cy="66.145836"
