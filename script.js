@@ -197,7 +197,8 @@ function experience(exp) {
 }
 
 /*1 Sekunden Intervallfunktion*/
-setInterval(function() {    
+setInterval(function() { 
+    console.log("Time");
     menu_change();
     menu_shop_change();
 
@@ -4429,7 +4430,7 @@ function learn_shaping() {
 function learn_patience() {
     if (skills.patience==0) {
         if (skills.level>=5) {
-            if (equipment.book_of_patience==0 & equipment.memory_chips==1) {
+            if (equipment.book_of_patience==1 & equipment.memory_chips==1) {
                 if (worker01.busy==0) {
                     state.workers_available-=1;
                     worker01.busy=1;
