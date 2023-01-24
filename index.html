@@ -3,44 +3,1185 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Bonsai Game</title>
+    <title>Bonsai Master</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="background">
+    <div id="snackbar"><span id="snack_message">-</span></div> 
     <div class="game">
+        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master</strong></p></div>
         <div class="headcontainer">
-            <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="margin: 0px; font-family:Arial; font-size: 16px"><strong>&nbsp;Bonsai Game: The Mythical Bonsai</strong></p></div>
-            <div class="resources"></div>
+            <button id=ButtonNavigationBonDex class="" onclick="ViewBonDex(z=0)" style="cursor: auto"></button>
+            <button id=ButtonNavigationLearn class="" onclick="ViewLearning(z=0)" style="cursor: auto"></button>
+            <button id=ButtonNavigationTasks class=green onclick="ViewTasks(z=0)">Tasks</button>
+            <button id=ButtonNavigationExpedition class=green onclick="ViewExpedition(z=0)">Expedition</button>
+            <button id=ButtonNavigationCraft class="" onclick="ViewCrafting(z=0)" style="cursor: auto"></button>
+            <button id=ButtonNavigationShop class="" onclick="ViewShopping(z=0)" style="cursor: auto"></button>
+            <button id=ButtonNavigationOptions class=green onclick="ViewOptions(z=0)">Options</button>
+            <button id=ButtonNavigationAchievements class="" onclick="ViewAchievements(z=0)" style="cursor: auto"></button>
         </div>
-        <div class="container">
+        
+        <div class="gamecontainer">
             <div class="leftcolumn">
-                <div class="leftcolumntitle"><p>View</p></div>
-                <div class="Feld"><button id=VSalvage onclick="ViewSalvage()">Salvaging</button></div>
-                <div class="Feld"><button id=VFarming onclick="ViewFarming()">Farming</button></div>
-                <div class="Feld"><button id=VBuilding onclick="ViewBuilding()">Building</button></div>
-                <div class="Feld"><button id=VInventing onclick="ViewInventing()">Inventing</button></div>
-                <div class="Feld"><button id=VBonsais onclick="ViewBonsais()">Bonsais</button></div>
-                <div class="Feld"><button id=VShop onclick="ViewShop()">Shop</button></div>
-                <div class="Feld"><button id=VOptions onclick="ViewOptions()">Options</button></div>
+                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: none">Bonsais</button>
+                <div class="collapsible_open-content" id="collapsible-section-0" style="display: none">
+                    <div class="rightcolumn_content2">    
+                    <select class="select" id="menu" onchange="menu_change()">
+                        <option value="1">Box 1 - Bonsai #01-#06</option>
+                        <option value="7">Box 2 - Bonsai #07-#12</option>
+                    </select>
+                    <button id=ButtonBonsaiA class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_name">-</span><br><span id="bonsaia_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaia_level">-</span><br>CP <span id="bonsaia_cp">-</span></button>
+                    <button id=ButtonBonsaiB class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_name">-</span><br><span id="bonsaib_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaib_level">-</span><br>CP <span id="bonsaib_cp">-</span></button>
+                    <button id=ButtonBonsaiC class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_name">-</span><br><span id="bonsaic_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaic_level">-</span><br>CP <span id="bonsaic_cp">-</span></button>
+                    <button id=ButtonBonsaiD class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_name">-</span><br><span id="bonsaid_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaid_level">-</span><br>CP <span id="bonsaid_cp">-</span></button>
+                    <button id=ButtonBonsaiE class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_name">-</span><br><span id="bonsaie_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaie_level">-</span><br>CP <span id="bonsaie_cp">-</span></button>
+                    <button id=ButtonBonsaiF class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name">-</span><br><span id="bonsaif_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaif_level">-</span><br>CP <span id="bonsaif_cp">-</span></button>
+                    </div>
+                </div>
             </div>
             
             <div class="centercolumn">
-                <div class="centercolumntitle"><p>Action Canvas Column</p></div>
-                <canvas id="canvas"></canvas>
+                <div class="tasks">
+                    <div class="center_content">    
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tasks</div>
+                            
+                            <button class="collapsible_open_a" id="collapsible-button-6" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Open Tasks</button>
+                                <div class="collapsible_open_a-content_a" id="collapsible-section-6" style="width: 280px">
+                                <div class="rightcolumn_content2" style="width: 280px">
+                                    <button id=T000 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewT000()">Main goal: Bonsai master</button>
+                                    <button id=T001 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewT001()">Tutorial: Expeditions</button>
+                                    <button id=T002 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
+                                    <button id=T003 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
+                                    <button id=T004 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT004()">Tutorial: Learn building robots</button>
+                                    <button id=T005 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT005()">Tutorial: Craft a robot</button>
+                                    <button id=T006 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT006()">Tutorial: Bonsai growing</button>
+                                    <button id=T007 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT007()">Tutorial: Compost</button>
+                                    <button id=T008 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
+                                    <button id=T009 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT009()">Tutorial: Growing Skill</button>
+                                    <button id=T010 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT010()">Tutorial: Shopping</button>
+                                    <button id=T011 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT011()">Tutorial: Shopping #2</button>
+                                    <button id=T012 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT012()">Tutorial: Shaping Skill</button>
+                                    <button id=T013 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT013()">Tutorial: Patience Skill</button>
+                                    <button id=T014 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
+                                </div>
+                                </div>
+                            
+                            <button class="collapsible_open2_a" id="collapsible-button-7" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Finished Tasks</button>
+                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-7" style="width: 280px; max-height: 0px">
+                                <div class="rightcolumn_content2" style="width: 280px">
+                                    <button id=T000C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT000()">Main goal: Bonsai master</button>
+                                    <button id=T001C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT001()">Tutorial: Expeditions</button>
+                                    <button id=T002C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
+                                    <button id=T003C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
+                                    <button id=T004C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT004()">Tutorial: Learn building robots</button>
+                                    <button id=T005C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT005()">Tutorial: Craft a robot</button>
+                                    <button id=T006C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT006()">Tutorial: Bonsai growing</button>
+                                    <button id=T007C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT007()">Tutorial: Compost</button>
+                                    <button id=T008C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
+                                    <button id=T009C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT009()">Tutorial: Growing Skill</button>
+                                    <button id=T010C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT010()">Tutorial: Shopping</button>
+                                    <button id=T011C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT011()">Tutorial: Shopping #2</button>
+                                    <button id=T012C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT012()">Tutorial: Shaping Skill</button>
+                                    <button id=T013C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT013()">Tutorial: Patience Skill</button>
+                                    <button id=T014C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=t000 style="width:100%; display: none; background-image: url(Images/bonsai.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Main goal: Bonsai master</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 91.4px; padding-left: : 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 166.8px; margin-top: 0px; border: 0px">
+                                    Since being small you wanted to grow bonsais and be the best in it. Now is the time to do so!<br>Go out and built yourself up to be a bonsai master!
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Have the best bonsai possible.
+                                </div>
+                                <button id=ButtonT000 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t000()"><span id=t000goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t001 style="width:100%; display: show; background-image: url(Images/neighborhood.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Expeditions</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 39.4px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 201.2px; margin-top: 0px; border: 0px">
+                                    First you need to find a seedling. Go on an "Expedition in your neighborhood".
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 39.4px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Obtain one seedling. Return here afterwards.
+                                </div>
+                                <button id=ButtonT001 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t001()"><span id=t001goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t002 style="width:100%; display: none; background-image: url(Images/planting.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Plant a bonsai</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 74.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 166px; margin-top: 0px; border: 0px">
+                                    Your first seedling, now you need to plant it. Click one of the empty bonsai spaces on the left side and plant your first bonsai.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 39.4px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Plant one bonsai. Return here afterwards.
+                                </div>
+                                <button id=ButtonT002 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t002()"><span id=t002goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t003 style="width:100%; display: none; background-image: url(Images/neighborhood.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Bonsai species and potentials</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 161.8px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 78.8px; margin-top: 0px; border: 0px">
+                                    One bonsai isn't enough, you're thinking to yourself. You want more tree species to grow into bonsais and maybe a seedling with a better potential of being a great bonsai.<br>Go back on an expedition. You can now go on longer expeditions for better chances on different tree species and potential.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 39.4px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Obtain two different tree species. Return here afterwards.
+                                </div>
+                                <button id=ButtonT003 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t003()"><span id=t003goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t004 style="width:100%; display: none; background-image: url(Images/robot_building.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Learn building robots</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 161px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 97.2px; margin-top: 0px; border: 0px">
+                                    With all the seedlings you found, you don't know how to grow them all at the same time.<br>If I only would have more help, you thought.<br>Luckily you're handy with electronics and remember having an instruction book for building robots. You should learn how to build one.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Learn 'Building robots'.
+                                </div>
+                                <button id=ButtonT004 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t004()"><span id=t004goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t005 style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Craft a robot</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 73.8px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 184.4px; margin-top: 0px; border: 0px">
+                                    Reading the book took some time, but finally you finished. Now it's time to build your new helper.<br>Go to 'Craft' and craft a robot.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Craft a robot.
+                                </div>
+                                <button id=ButtonT005 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t005()"><span id=t005goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t006 style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Bonsai growing</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    When you flick the switch, your robot beeps and looks at you.<br>How may I help you, he asks?<br>Grow together with your new robotic helper three bonsais to at least level 5.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Three bonsais with at least level 5.
+                                </div>
+                                <button id=ButtonT006 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t006()"><span id=t006goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t007 style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Compost</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 161px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 79.6px; margin-top: 0px; border: 0px">
+                                    Your bonsais are growing. But it does take longer and longer, the bigger your bonsais get, you realize.<br>With the experience from doing expeditions and growing bonsais, I should have the skills by now to learn how to make compost and produce some, you think.<br>That might help them to grow quicker!
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 39.4px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Learn 'Compost making' and craft 3 compost.
+                                </div>
+                                <button id=ButtonT007 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t007()"><span id=t007goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t008 style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Level Up Bonsai</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    With the addition of compost your bonsais are now growing quicker. Time to bring them up to the next level.<br>You can now add compost to bonsais when they still have to grow for 60 or more seconds, through the growing button.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Grow a bonsai to level 10
+                                </div>
+                                <button id=ButtonT008 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t008()"><span id=t008goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t009 style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Growing Skill</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    Your knowledge and skill level is slowly growing. Time to refine your skill in growing your bonsais and giving them another boost.<br>You can now learn "Growing #1" a skill that boosts the increase of CP with each level.<br>Note: CP stand for Combined Points and measure the growth of your bonsai. The higher the level and potential of a bonsai, the higher the CP can be.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Learn "Growing #1" and grow a bonsai with 30 or more CP
+                                </div>
+                                <button id=ButtonT009 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t009()"><span id=t009goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t010 style="width:100%; display: none; background-image: url(Images/shopping.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Shopping</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    Strolling your neighborhood for new bonsais you meet a person that tells you about different bonsais on the outskirts of the city.<br>Time to go shopping, so that you can take an expedition there.<br>Note: Bonsais have type. The rarer the type the more worth the bonsai is.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Buy the backpack
+                                </div>
+                                <button id=ButtonT010 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t010()"><span id=t010goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t011 style="width:100%; display: none; background-image: url(Images/shopping2.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Shopping #2</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    Because your bonsais need more and more care you think about building another robot.<br>Unfortunately you don't have the resources yet, but the shop might be able to help you.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Build a third robot
+                                </div>
+                                <button id=ButtonT011 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t011()"><span id=t011goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t012 style="width:100%; display: none; background-image: url(Images/shaping.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Shaping skill</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    One day you meet another person that grows bonsais and learn that you can not only grow bonsais, but also actively shape them.<br>You can now learn "Shaping #1" a skill that lets you distribute a portion of the new CP, that your bonsai gains with each level.<br>Note: Your bonsais CP are calculated from the points of the four individual categories (Foliage, branches, trunk and roots). Besides your shaping skill, these are influenced through the nature of the bonsai.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Grow a bonsai with 20 or more points in one of the individual categories
+                                </div>
+                                <button id=ButtonT012 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t012()"><span id=t012goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t013 style="width:100%; display: none; background-image: url(Images/patience.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: Patience skill</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    The longer you grow bonsais, the more you feel like being more patient in general.<br>You can now learn "Patience" a skill that lets you grow a bonsai over multiple level at once.
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Learn "Patience"
+                                </div>
+                                <button id=ButtonT013 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t013()"><span id=t013goal>Not yet complete</span></button>
+                            </div>
+                            <div id=t014 style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tutorial: A nicely grown bonsai</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px; border: 0px">
+                                    Instructions:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 90.6px; padding-left: 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 167.6px; margin-top: 0px; border: 0px">
+                                    TBA
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 10px; border: 0px">
+                                    Goal:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 21.8px; text-align: center; padding-left: : 10px; padding-right: 10px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; margin-top: 0px; border: 0px">
+                                    Grow a level 20 bonsai with 24 foliage points
+                                </div>
+                                <button id=ButtonT014 class="" style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center; cursor: auto" onclick="t014()"><span id=t014goal>Not yet complete</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expedition">
+                    <div class="center_content">    
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Expeditions</div>
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewExNeighborhood()">Expedition to 'Neighborhood'</button>
+                            <div id=expedition2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center"onclick="ViewExCityBoundaries()">Expedition to 'city boundaries'</button>
+                            </div></div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=neighborhood style="width:100%; display: none; background-image: url(Images/neighborhood.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Expedition to 'Neighorhood'</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px">
+                                    Tree species found:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 40px;display: flex;align-items:center; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 5px; margin-top: 0px">
+                                    <span id="area01_tt01"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area01_tt02"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area01_tt03"><img src="Images/questionmark.svg" width="35" height="35"></span>
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 5px">
+                                    Potential found:
+                                </div>
+                                <div class="Field" id="neighborhoodx" style="width:285px;background: #f1f1f1;color: #555;height: 40px;display: flex;align-items:center; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 210px; margin-top: 0px">
+                                    <span id="area01_po01"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area01_po02"><img src="Images/questionmark.svg" width="35" height="35"></span>
+                                </div>
+                                <div id=neighborhoodxx style="width: 100%; display: none">
+                                <select class="selectsub" id="neighborhood_time" onchange="neighborhood_time_change()" style="width: 100%">
+                                    <option value="6">6 seconds</option>
+                                    <option value="30">30 seconds</option>
+                                    <option value="180">180 seconds</option>
+                                </select>
+                                </div>
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="expedition(1)">Start expedition (<span id="neighborhoodtime">6</span>&nbsp;seconds)</button>
+                            </div>
+                            <div id=cityboundaries style="width:100%; display: none; background-image: url(Images/forrest.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Expedition to 'city boundaries'</div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 15px">
+                                    Tree species found:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 40px;display: flex;align-items:center; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 5px; margin-top: 0px">
+                                    <span id="area02_tt01"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area02_tt02"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area02_tt03"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area02_tt04"><img src="Images/questionmark.svg" width="35" height="35"></span>
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 0px; margin-top: 5px">
+                                    Potential found:
+                                </div>
+                                <div class="Field" style="width:285px;background: #f1f1f1;color: #555;height: 40px;display: flex;align-items:center; padding-left: 5px; margin-left: 15px; margin-right: 15px; margin-bottom: 180px; margin-top: 0px">
+                                    <span id="area02_po01"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area02_po02"><img src="Images/questionmark.svg" width="35" height="35"></span>&nbsp;
+                                    <span id="area02_po03"><img src="Images/questionmark.svg" width="35" height="35"></span>
+                                </div>
+                                <select class="selectsub" id="cityboundaries_time" onchange="cityboundaries_time_change()" style="width: 100%">
+                                    <option value="30">30 seconds</option>
+                                    <option value="180">180 seconds</option>
+                                    <option value="1200">1200 seconds</option>
+                                </select>
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="expedition(2)">Start expedition (<span id="cityboundariestime">30</span>&nbsp;seconds)</button>
+                            </div>
+                        </div>
+                    </div>        
+                </div>            
+                <div class="crafting">
+                    <div class="center_content">    
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting</div>
+                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrCompost()">Compost</button>
+                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrRobot()">Robot</button>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=cr_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Compost</div>
+                                <div class="Field" style="width:140px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 87.5px; margin-right: 87.5px; margin-bottom: 0px; margin-top: 230px">
+                                    Resources needed:
+                                </div>
+                                <div class="Field" style="width:140px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 87.5px; margin-right: 87.5px; margin-bottom: 5px; margin-top: 0px">
+                                    <img src="Images/organic_waste.svg" width="20" height="20">&nbsp;<span id="cr_compost_ow" style="width: 16px; text-align: end">1</span>x
+                                </div>
+                                <div class="Field" style="width:140px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 87.5px; margin-right: 87.5px; margin-bottom: 0px; margin-top: 5px">
+                                    Quantity:
+                                </div>
+                                <div class="Field" style="width:140px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 87.5px; margin-right: 87.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <div style="display: flex;align-items: center;justify-content: center"><button id="cr_compost_m" style="border: 0px;width: 16px; height: 16px; cursor: pointer; background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    &nbsp;<span id="cr_compost_q" style="width: 16px; text-align: end">1</span>x&nbsp;
+                                    <button id="cr_compost_p" style="border: 0px;width: 16px; height: 16px; cursor: pointer; background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button></div>
+                                </div>
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="craft_compost()">Craft (<span id="cr_compost_time">5</span>&nbsp;Seconds)</button>
+                            </div>
+                            <div id=cr_robot style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Robot</div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 285px">
+                                    Resources needed:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <img src="Images/bolt.svg" width="20" height="20">&nbsp;<span style="width: 16px; text-align: end">5</span>x&nbsp;&nbsp;&nbsp;
+                                    <img src="Images/metal.svg" width="20" height="20">&nbsp;<span style="width: 16px; text-align: end">3</span>x&nbsp;&nbsp;&nbsp;
+                                    <img src="Images/wire.svg" width="20" height="20">&nbsp;<span style="width: 16px; text-align: end">2</span>x&nbsp;&nbsp;&nbsp;
+                                    <img src="Images/board.svg" width="20" height="20">&nbsp;<span style="width: 16px; text-align: end">1</span>x
+                                </div>
+                                
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="craft_robot()">Craft (<span>300</span>&nbsp;Seconds)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning">
+                    <div class="center_content">    
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Learning</div>
+                            <button class="collapsible_open_a" id="collapsible-button-4" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Learnable</button>
+                                <div class="collapsible_open_a-content_a" id="collapsible-section-4" style="width: 280px">
+                                <div class="rightcolumn_content2" style="width: 280px">
+                                    <button id=Skill_Robot class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillRobot()">Building Robots</button>
+                                    <button id=Skill_Compost class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillCompost()">Crafting Compost</button>
+                                    <button id=Skill_Growing class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillGrowing()">Growing #<span id="skill_growing_nr2">1</span></button>
+                                    <button id=Skill_Shaping class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillShaping()">Shaping #<span id="skill_shaping_nr2">1</span></button>
+                                    <button id=Skill_Patience class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillPatience()">Patience/Memory increase</button>
+                                </div>
+                                </div>
+                            <button class="collapsible_open2_a" id="collapsible-button-5" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Learned</button>
+                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-5" style="width: 280px; max-height: 0px">
+                                <div class="rightcolumn_content2" style="width: 280px">
+                                    <button id=Skill_Robot_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillRobot()">Building Robots</button>
+                                    <button id=Skill_Compost_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillCompost()">Crafting Compost</button>
+                                    <button id=Skill_Growing_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillGrowing()">Growing</button>
+                                    <button id=Skill_Shaping_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillShaping()">Shaping</button>
+                                    <button id=Skill_Patience_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillPatience()">Patience/Memory increase</button>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=skill_robot style="width:100%; display: none; background-image: url(Images/robot_building.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Building Robots</div>
+                                <div class="Field" style="width: 295px;background: #f1f1f1;color: #555;height: 56.8px;display: flex;align-items:center; margin-left: 10px; margin-top: 10px">"Robots can help you with exploring, growing and crafting. They are a neat way to do more in less time."</div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 218.2px">
+                                    Required to learn:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    -
+                                </div>
+                                <button id=Button_Skill_Robot class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_robot()"><span id=Skill_Robot_Button>Learn (300 Seconds)</span></button>
+                            </div>
+                            <div id=skill_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting Compost</div>
+                                <div class="Field" style="width: 295px;background: #f1f1f1;color: #555;height: 56.8px;display: flex;align-items:center; margin-left: 10px; margin-top: 10px">"With compost you can give your precious plants a growth boost from their own past remains."</div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 218.2px">
+                                    Required to learn:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level 1
+                                </div>
+                                <button id=Button_Skill_Compost class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_compost()"><span id=Skill_Compost_Button>Learn (300 Seconds)</span></button>
+                            </div>
+                            <div id=skill_growing style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Growing #<span id="skill_growing_nr">1</span></div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 195px">
+                                    Required to learn:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level&nbsp;<span id="skill_growing_level">2</span>
+                                </div>
+                                <button id=Button_Skill_Growing class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_growing()">Learn (<span id="skill_growing_time">300</span>&nbsp;Seconds)</button>
+                            </div>
+                            <div id=skill_shaping style="width:100%; display: none; background-image: url(Images/shaping.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Shaping #<span id="skill_shaping_nr">1</span></div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 195px">
+                                    Required to learn:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level&nbsp;<span id="skill_shaping_level">4</span>
+                                </div>
+                                <button id=Button_Skill_Shaping class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_shaping()">Learn (<span id="skill_shaping_time">300</span>&nbsp;Seconds)</button>
+                            </div>
+                            <div id=skill_patience style="width:100%; display: none; background-image: url(Images/robot_building.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Building Robots</div>
+                                <div class="Field" style="width: 295px;background: #f1f1f1;color: #555;height: 56.8px;display: flex;align-items:center; margin-left: 10px; margin-top: 10px">"Robots can help you with exploring, growing and crafting. They are a neat way to do more in less time."</div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 218.2px">
+                                    Required to learn:
+                                </div>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level 5<br>
+                                    <img src="Images/book.svg" width="20" height="20">&nbsp;Book of patience<br>
+                                    <img src="Images/chip.svg" width="20" height="20">&nbsp;Memory chips
+                                </div>
+                                <button id=Button_Skill_Patience class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_patience()"><span id=Skill_Patience_Button>Learn (300 Seconds)</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping">
+                    <div class="center_content">    
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Shopping</div>
+                            <div id=ShopEquipment style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopEquipment()">Equipment</button>
+                            </div></div>
+                            <div id=ShopResources style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopResources()">Resources</button>
+                            </div></div>
+                            <div id=ShopSeedlings style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopSeedlings()">Seedlings</button>
+                            </div></div>
+                            <div id=ShopBonsais style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopBonsais()">Bonsais</button>
+                            </div></div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=shop_equipment style="width: 100%; display: none">
+                                <div class="Field" style="width: 100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Equipment</div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/backpack.svg" width="20" height="20">&nbsp;Backpack</div>
+                                    <div class="Field" style="width: 50px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;20&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_equip_backpack" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/buy.svg); background-size: 60px, 24px;)" onclick="BuyBackpack()"></button>
+                                    </div>
+                                </div>
+                                <div id=equipment_patience style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/book.svg" width="20" height="20">&nbsp;Book of Patience</div>
+                                    <div class="Field" style="width: 50px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;25&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_equip_bookofpatience" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/buy.svg); background-size: 60px, 24px;)" onclick="BuyBookofPatience()"></button>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/chip.svg" width="20" height="20">&nbsp;Memory chips</div>
+                                    <div class="Field" style="width: 50px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;40&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_equip_memorychips" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/buy.svg); background-size: 60px, 24px;)" onclick="BuyMemoryChips()"></button>
+                                    </div>
+                                </div>
+                                </div></div>
+                            </div>
+                            <div id=shop_resources style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Resources</div>
+                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Item</div>
+                                    <div class="Field" style="width: 50px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Sell</div>
+                                    <span id="xxx" style="width:70px; text-align: center">You</span>
+                                    <div class="Field" style="width: 50px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Buy</div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 145px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/bolt.svg" width="20" height="20">&nbsp;Nuts & Bolts</div>
+                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                    <button id="shop_bolt_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="shop_bolt" style="width:40px; text-align: center">0</span>
+                                    <button id="shop_bolt_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
+                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/metal.svg" width="20" height="20">&nbsp;Metal</div>
+                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                    <button id="shop_metal_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="shop_metal" style="width:40px; text-align: center">0</span>
+                                    <button id="shop_metal_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
+                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 145px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/wire.svg" width="20" height="20">&nbsp;Wires</div>
+                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                    <button id="shop_wire_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="shop_wire" style="width:40px; text-align: center">0</span>
+                                    <button id="shop_wire_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
+                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;3&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/board.svg" width="20" height="20">&nbsp;Electronic boards</div>
+                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                    <button id="shop_board_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="shop_board" style="width:40px; text-align: center">0</span>
+                                    <button id="shop_board_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
+                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;4&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                </div>
+                                
+                            </div>
+                            <div id=shop_seedlings style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Seedlings</div>
+                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 75px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Seedling</div>
+                                    <div class="Field" style="width: 82.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">Price</div>
+                                    <div class="Field" style="width: 75px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Seedling</div>
+                                    <div class="Field" style="width: 82.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">Price</div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlinga_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinga_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlinga_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling1)"></button>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlingb_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingb_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlingb_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling2)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlingc_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingc_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlingc_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling3)"></button>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlingd_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingd_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlingd_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling4)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlinge_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinge_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlinge_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling5)"></button>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="seedlingf_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingf_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=seedlingf_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_seedling1_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellSeedling(seedling6)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div id=shop_bonsais style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Bonsais</div>
+                                <select class="select_shopping" id="menu_shopping" onchange="menu_shop_change()">
+                                <option value="1">Box 1 - Bonsai #01-#06</option>
+                                <option value="7">Box 2 - Bonsai #07-#12</option>
+                                </select>
+                                <div style="overflow-y: scroll; height: 360px">
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiA_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaia_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaia_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaia_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaia_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaia_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaia_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=1)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiB_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaib_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaib_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaib_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaib_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaib_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaib_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=2)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiC_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaic_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaic_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaic_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaic_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaic_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaic_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=3)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiD_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaid_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaid_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaid_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaid_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaid_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaid_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=4)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiE_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaie_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaie_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaie_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaie_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaie_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaie_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=5)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiF_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaif_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaif_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaif_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaif_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaif_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaif_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=6)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bonsai_details">
+                    <div class="center_content">
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">
+                                <span id="bonsai_detail_name">-</span>
+                                &nbsp;<button id="EditName" class="edit" style="width: 15px; height: 15px; background-image: url(Images/edit.svg); background-size: 15px, 15px"></button>
+                            </div>
+                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
+                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_status">-</span></div>
+                            <div id="bonsai_detail_rarity" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                                <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
+                            </div>
+                            <div id=bdcc_l_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_level">-</span></div>
+                            </div></div>
+                            <div id=bdcc_l_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Type</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_treetype">-</span></div>
+                            </div></div>
+                            <div id=bdcc_l_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Nature</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_nature">-</span></div>
+                            </div></div>
+                            <div id=bdcc_l_t14 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Combined Points (CP)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_cp">-</span></div>
+                            </div></div>
+                            <div id=bdcc_l_t15 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Foliage (F)</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_foliage">-</span></div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Branches (B)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_branches">-</span></div>
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Trunk (T)</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_trunk">-</span></div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Roots (R)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_roots">-</span></div>
+                            </div></div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div id=bdcc_r_t1 style="display: none; width: 100%">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Grow bonsai</div>
+                            </div> 
+                            <div id=bdcc_r_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level2">-</span></div>
+                                <div id=bdcc_r_t111 style="display: none; width: 142px"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <button id="bonsai_level_minus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="bonsai_level_leftpoints" style="width:40px; text-align: center">0</span>
+                                    <button id="bonsai_level_plus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
+                                </div>
+                                </div></div>
+                                <div id=bdcc_r_t112 style="display: show; width: 142px"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                </div>
+                                </div></div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level_new2">-</span></div>
+                            </div></div>
+                            <div id=bdcc_r_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:55px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">CP</div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp2">-</span></div>
+                                <div class="Field" style="width:142px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center"></div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp_new2">-</span></div>
+                            </div></div>
+                            <div id=bdcc_r_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Stats</div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Old</div>
+                                <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Shape points</div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">New</div>
+                            <div class="Field" style="width:55px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">F</div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_foliage2">-</span></div>
+                                <div class="Field" style="width:142px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center">
+                                    <button id="bonsai_foliage_minus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_foliage_minus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_foliage_minus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="bonsai_foliage_leftpoints" style="width:40px; text-align: center">0.0</span>
+                                    <button id="bonsai_foliage_plus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_foliage_plus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_foliage_plus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>                                    
+                                </div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_foliage_new2">-</span></div>
+                            <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">B</div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_branches2">-</span></div>
+                                <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center">
+                                    <button id="bonsai_branches_minus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_branches_minus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_branches_minus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="bonsai_branches_leftpoints" style="width:40px; text-align: center">0.0</span>
+                                    <button id="bonsai_branches_plus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_branches_plus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_branches_plus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                </div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_branches_new2">-</span></div>
+                            <div class="Field" style="width:55px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">T</div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_trunk2">-</span></div>
+                                <div class="Field" style="width:142px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center"> 
+                                    <button id="bonsai_trunk_minus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_trunk_minus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_trunk_minus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="bonsai_trunk_leftpoints" style="width:40px; text-align: center">0.0</span>
+                                    <button id="bonsai_trunk_plus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_trunk_plus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_trunk_plus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                </div>
+                                <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_trunk_new2">-</span></div>
+                            <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">R</div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_roots2">-</span></div>
+                                <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center"> 
+                                    <button id="bonsai_roots_minus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_roots_minus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_roots_minus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <span id="bonsai_roots_leftpoints" style="width:40px; text-align: center">0.0</span>
+                                    <button id="bonsai_roots_plus_0" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm0.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_roots_plus_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm1.svg); background-size: 16px, 16px;)"></button>
+                                    <button id="bonsai_roots_plus_10" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/pm10.svg); background-size: 16px, 16px;)"></button>
+                                </div>
+                                <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_roots_new2">-</span></div>
+                            <div class="Field" style="width: 165px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center; justify-content: flex-start">Left to distribute:</div>
+                                <div class="Field" style="width:40px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_leftpoints">-</span></div>
+                                <div class="Field" style="width: 110px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: flex-start">Shape points</div>
+                            </div></div>
+                            <div id=bdcc_r_t19 style="display: none; width: 100%">
+                            <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
+                            </div>
+                            <div id=bdcc_r_t2 class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Change bonsai position</div>
+                            <select class="selectsub" id="positionn_batch" name="positionn_batch" onchange="PositionChangeBox()" style="width:100%;background: #d8d8d8;color: #555">
+                                <option value="1000">Select box</option>
+                                <option value="1001">Box 1 - Bonsai #01-#06</option>
+                                <option value="1007">Box 2 - Bonsai #07-#12</option>
+                            </select>
+                            <div id="positionn_place2" style="width: 100%; display: none"><select class="selectsub" id="positionn_place" name="positionn_place" style="width:100%;background: #d8d8d8;color: #555">
+                                <option value="00">Select box first</option>
+                            </select></div>
+                            <button id="ChangePosition" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center">Change</button>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="bonsai_details_seedling">
+                    <div class="center_content">
+                        <div class="centercolumn_left">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">-</div>
+                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
+                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"></div>
+                            <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                                <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
+                            </div>
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Type</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Nature</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Combined Points (CP)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Foliage (F)</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Branches (B)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Trunk (T)</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Roots (R)</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">-</div>
+                        </div>
+                        <div class="centercolumn_right">
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Pick a seedling to plant:</div>
+                            <button id="seedlinga_center" class="" onclick="ChooseSeedling(1)"><span id="seedlinga_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button> 
+                            <button id="seedlingb_center" class="" onclick="ChooseSeedling(2)"><span id="seedlingb_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingc_center" class="" onclick="ChooseSeedling(3)"><span id="seedlingc_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingd_center" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlinge_center" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingf_center" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="Button" class="green" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="PlantSeedling()">Plant (6 seconds)</button>
+                        </div>
+                    </div> 
+                </div>
             </div>
             
             <div class="rightcolumn">
-                <div class="rightcolumntitle"><p>Action Options Column</p></div>
-                <div class="Feld"><button id=VSalvage onclick="ViewSalvage()">Salvaging</button></div>
+                <button class="collapsible_open" id="collapsible-button-2" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seedlings (<span id="seedling_number">0</span>/6)</button>
+                    <div class="collapsible_open-content" id="collapsible-section-2">
+                        <div class="rightcolumn_content2">
+                            <div id="seedlinga_right"><span id="seedlinga_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                            <div id="seedlingb_right"><span id="seedlingb_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                            <div id="seedlingc_right"><span id="seedlingc_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                            <div id="seedlingd_right"><span id="seedlingd_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                            <div id="seedlinge_right"><span id="seedlinge_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                            <div id="seedlingf_right"><span id="seedlingf_type"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                        </div>
+                    </div>
+                <button class="collapsible_open" id="collapsible-button-3" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Workers</button>
+                <div class="collapsible_open-content" id="collapsible-section-3">
+                    <div class="rightcolumn_content2"> 
+                        <div class="Field" style="width: 41px;background: #d8d8d8;color: #555;height: auto;display: flex;align-items:center">
+                            <img src="Images/you.svg" width="20" height="20">
+                        </div>
+                        <div style="width: 199px;display: flex;align-items:center; flex-wrap: wrap">
+                        <div id=youskills style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width: 25px; height: 30px;background: #d8d8d8; display: flex; align-items: center; padding: 0px">
+                                <img src="Images/skill.svg" width="20" height="20">
+                            </div>    
+                            <div class="Field" style="width: 174px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center; padding: 0px; font-size: 10px">
+                                &nbsp;Skill level&nbsp;<span id="skilllevel" style="display: flex;align-items: center">0</span>&nbsp;(<span id="skillexp_left" style="display: flex;align-items: center">20</span>&nbsp;XP to next)
+                            </div>
+                        </div></div>
+                        <div class="Field" style="width: 199px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">
+                                <span id="worker1_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task</span>
+                                &nbsp;<span id="zeit_worker01" style="display: flex;align-items: center; padding-bottom: 5px"></span>
+                        </div>
+                        </div> 
+                        <div id="worker02div" style="width: 240px; height: 30px; display: none">
+                            <div class="Field" style="width:100%;background: #f1f1f1;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
+                                <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
+                                <span id="worker2_task" style="display: flex;align-items:center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task</span>
+                                &nbsp;<span id="zeit_worker02" style="display: flex;align-items: center; padding-bottom: 5px"></span>
+                            </div>
+                        </div>
+                        <div id="worker03div" style="width: 240px; height: 30px; display: none">    
+                            <div class="Field" style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
+                                <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
+                                <span id="worker3_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task</span>
+                                &nbsp;<span id="zeit_worker03" style="display: flex;align-items: center; padding-bottom: 5px"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                <button class="collapsible_open" id="collapsible-button-1" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
+                </div></div>
+                <div class="collapsible_open-content" id="collapsible-section-1">
+                    <div class="rightcolumn_content2">
+                        <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/money.svg" width="20" height="20">&nbsp;Money
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="money" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                        </div>
+                        </div></div>
+                        <div id=resources_2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/organic_waste.svg" width="20" height="20">&nbsp;Organic waste
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="organic_waste" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/compost.svg" width="20" height="20">&nbsp;Compost
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
+                            <span id="compost" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        </div></div>
+                        <div id=resources_3 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/bolt.svg" width="20" height="20">&nbsp;Nuts & bolts
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="bolt" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/metal.svg" width="20" height="20">&nbsp;Scrap metal
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
+                            <span id="metal" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/wire.svg" width="20" height="20">&nbsp;Wires
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
+                            <span id="wire" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/board.svg" width="20" height="20">&nbsp;Electronic boards
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
+                            <span id="board" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        </div></div>
+                    </div>
+                </div>
+                
             </div>
         </div>
-    
+    </div>
+   
+    <!-- Modal Change Name -->
+    <div id="m_name" class="modal_name">
+        <div class="modal_name-content">
+                <div class="Field" style="background: #777;color: white;height: 40px;width: 200px; display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                    <input type="text" id="nname" placeholder="New name" style="width: 90%; height: 60%; background: #f1f1f1; border: 0px">  
+                </div>
+                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                    <button id="Button_Modal_Name" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Change</button>
+                    <button id="modal_name_close" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
+             
+                </div>      
+        </div>
     </div>
     
+    <!-- Modal Change Position -->
+    <div id="m_position" class="modal_position">
+        <div class="modal_position-content">
+                <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 240px;display: flex;align-items:center">Switch positions?</div>
+                <div id=BonsaiOld style="color: #555"><p style="text-align: left; margin-left: 5px; margin-top: 5px; margin-bottom: 1px; font-family:Arial; font-size: 8px"><span id="bonsaiold_nr">#1</span></p><span id="bonsaiold_name">-</span><br><span id="bonsaiold_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaiold_level">-</span><br>CP <span id="bonsaiold_cp">-</span></div>
+                <div id=BonsaiNew style="color: #555"><p style="text-align: left; margin-left: 5px; margin-top: 5px; margin-bottom: 1px; font-family:Arial; font-size: 8px"><span id="bonsainew_nr">#2</span></p><span id="bonsainew_name">-</span><br><span id="bonsainew_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsainew_level">-</span><br>CP <span id="bonsainew_cp">-</span></div>
+                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 240px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                    <button id="Button_Modal_Position" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Change</button>
+                    <button id="modal_position_close" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
+                </div>      
+          
+        </div>
+    </div>
+
+
+    <script src="growing.js"></script> 
+    <script src="storage.js"></script> 
+    <script src="crafting.js"></script>
     <script src="script.js"></script> 
     <script src="jquery-3.6.0.min.js"></script>
-    <script>StartGame();</script>
-    
+    <link href="select2.min.css" rel="stylesheet" />
+    <script src="select2.min.js"></script>
 </body>
 </html>
