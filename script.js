@@ -132,6 +132,7 @@ var trunk_new= 0;
 var roots_new= 0;
 var leftpoints= 0;
 var levels= 0;
+var time=0;
 
 window.onload = function () {
     $('#positionn_batch').select2({
@@ -174,6 +175,7 @@ window.onload = function () {
     document.getElementById("board").innerHTML = resources.board;
     document.getElementById("shop_board").innerHTML = resources.board;
     
+    w = new Worker("interval.js");
 }
 
 function experience(exp) {
@@ -197,8 +199,9 @@ function experience(exp) {
 }
 
 /*1 Sekunden Intervallfunktion*/
-setInterval(function() { 
-    console.log("Time");
+worker.addEventListener('message', function(e) {
+    time +=1;
+    console.log(time);
     menu_change();
     menu_shop_change();
 
@@ -272,7 +275,7 @@ setInterval(function() {
     if (bonsai76.growing==1){
         Bonsai_Growing_Intervall(bonsai76);
     }
-}, 1000)/*1 Sekunden Intervallfunktion*/
+}/*1 Sekunden Intervallfunktion*/
 
 /*30 Sekunden Autosave Intervall*/
 setInterval(function Autosave() {
