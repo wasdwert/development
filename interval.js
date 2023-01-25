@@ -5,14 +5,13 @@ var interval=1000;
 
 lastinterval= Date.now();
 
-function interval() {
+function intervaltimer() {
     setTimeout(function() { 
         thisinterval= Date.now();
         interval= intervall-(lastinterval-thisinterval+1000);
         lastinterval=thisinterval;
         console.log(interval);
         self.postMessage("Ping");
-        console.log("Ping");
-        interval();
+        intervaltimer();
     }, interval)/*1 Sekunden Intervallfunktion*/
 }
