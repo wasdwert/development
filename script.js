@@ -199,7 +199,7 @@ function experience(exp) {
 }
 
 /*1 Sekunden Intervallfunktion*/
-worker.addEventListener('message', function(e) {
+w.addEventListener('message', function(e) {
     time +=1;
     console.log(time);
     menu_change();
