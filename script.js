@@ -136,6 +136,7 @@ var time=0;
 var lastinterval=0;
 var thisinterval=0;
 var interval=1000;
+var w = new Worker ("interval.js");
 
 window.onload = function () {
     $('#positionn_batch').select2({
