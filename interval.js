@@ -11,7 +11,7 @@ self.addEventListener('message', function(e) {
 function startinterval() {
     setTimeout(function() { 
         thisinterval= Date.now();
-        interval= interval-(lastinterval-thisinterval+1000);
+        interval= interval-(thisinterval-lastinterval-1000);
         lastinterval=thisinterval;
         console.log(interval);
         self.postMessage("Ping");
