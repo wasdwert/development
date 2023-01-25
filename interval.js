@@ -1,11 +1,12 @@
 /*1 Sekunden Intervallfunktion*/
-var lastinterval=Date.now;
+var lastinterval=0;
 var thisinterval=0;
 var interval=1000;
 
-document.onload = function () {
+self.addEventListener('message', function(e) {
+    lastinterval= Date.now();
     startinterval();
-}
+});
 
 function startinterval() {
     setTimeout(function() { 

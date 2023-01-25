@@ -179,6 +179,7 @@ window.onload = function () {
     document.getElementById("board").innerHTML = resources.board;
     document.getElementById("shop_board").innerHTML = resources.board;
     
+    w.postMessage('Start');
 }
 
 function experience(exp) {
