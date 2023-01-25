@@ -138,7 +138,6 @@ var thisinterval=0;
 var interval=1000;
 
 window.onload = function () {
-    w = new worker ('interval.js');
     $('#positionn_batch').select2({
             minimumResultsForSearch: Infinity
         });
