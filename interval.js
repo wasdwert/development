@@ -1,10 +1,9 @@
 /*1 Sekunden Intervallfunktion*/
-var lastinterval=0;
+var lastinterval=Date.now;
 var thisinterval=0;
 var interval=1000;
 
-window.onload = function () {
-    lastinterval= Date.now();
+document.onload = function () {
     startinterval();
 }
 
