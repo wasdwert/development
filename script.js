@@ -53,9 +53,9 @@ var equipment = {
 }
 
 var resources = {
-    money: 50,
+    money: 0,
     organic_waste: 0,
-    compost: 100,
+    compost: 0,
     bolt: 5,
     metal: 3,
     wire: 2,
@@ -4282,7 +4282,7 @@ function learn_robot() {
                 state.workers_available-=1;
                 worker01.busy=1;
                 worker01.learning="Robot";
-                worker01.learning_zeit=3;
+                worker01.learning_zeit=30;
                 document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)";
                 document.getElementById("worker1_task").innerHTML = '<img src="Images/learning.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Learning';
                 skills.robot=1;
@@ -4322,7 +4322,7 @@ function learn_compost() {
                 state.workers_available-=1;
                 worker01.busy=1;
                 worker01.learning="Compost";
-                worker01.learning_zeit=3;
+                worker01.learning_zeit=60;
                 document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)";
                 document.getElementById("worker1_task").innerHTML = '<img src="Images/learning.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Learning';
                 skills.compost=1;
@@ -4362,7 +4362,7 @@ function learn_growing() {
                 state.workers_available-=1;
                 worker01.busy=1;
                 worker01.learning="Growing";
-                worker01.learning_zeit=3;
+                worker01.learning_zeit=skillgrowingtime[skills.growing];
                 document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)";
                 document.getElementById("worker1_task").innerHTML = '<img src="Images/learning.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Learning';
                 skills.growing_act=1;

@@ -139,7 +139,7 @@ function craft_robot() {
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
                         cr_compost.producing = 1;
-                        worker01.crafting_zeit = 3;
+                        worker01.crafting_zeit = 180;
                         document.getElementById("zeit_worker01").innerHTML = "("+worker01.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker1_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }
@@ -169,7 +169,7 @@ function craft_robot() {
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
                         cr_compost.producing = 1;
-                        worker02.crafting_zeit = 300;
+                        worker02.crafting_zeit = 180;
                         document.getElementById("zeit_worker02").innerHTML = "("+worker02.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker2_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }
@@ -199,7 +199,7 @@ function craft_robot() {
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
                         cr_compost.producing = 1;
-                        worker03.crafting_zeit = 300;
+                        worker03.crafting_zeit = 180;
                         document.getElementById("zeit_worker03").innerHTML = "("+worker03.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker3_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }

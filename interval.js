@@ -12,6 +12,9 @@ function startinterval() {
     setTimeout(function() { 
         thisinterval= Date.now();
         interval= interval-(thisinterval-lastinterval-1000);
+        if (interval<=0) {
+            interval=1000;
+        }
         lastinterval=thisinterval;
         console.log(interval);
         self.postMessage("Ping");
