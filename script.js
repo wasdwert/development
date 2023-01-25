@@ -133,9 +133,12 @@ var roots_new= 0;
 var leftpoints= 0;
 var levels= 0;
 var time=0;
-var w=0;
+var lastinterval=0;
+var thisinterval=0;
+var interval=1000;
 
 window.onload = function () {
+    w = new worker ('interval.js');
     $('#positionn_batch').select2({
             minimumResultsForSearch: Infinity
         });
@@ -176,7 +179,6 @@ window.onload = function () {
     document.getElementById("board").innerHTML = resources.board;
     document.getElementById("shop_board").innerHTML = resources.board;
     
-    w = new Worker("interval.js");
 }
 
 function experience(exp) {
@@ -200,7 +202,7 @@ function experience(exp) {
 }
 
 /*1 Sekunden Intervallfunktion*/
-w.addEventListener('message', function(e) {
+w.addEventListener('message', function(e){
     time +=1;
     console.log(time);
     menu_change();
@@ -276,7 +278,8 @@ w.addEventListener('message', function(e) {
     if (bonsai76.growing==1){
         Bonsai_Growing_Intervall(bonsai76);
     }
-}, false)/*1 Sekunden Intervallfunktion*/
+})/*1 Sekunden Intervallfunktion*/
+
 
 /*30 Sekunden Autosave Intervall*/
 setInterval(function Autosave() {
