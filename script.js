@@ -275,7 +275,7 @@ worker.addEventListener('message', function(e) {
     if (bonsai76.growing==1){
         Bonsai_Growing_Intervall(bonsai76);
     }
-}/*1 Sekunden Intervallfunktion*/
+})/*1 Sekunden Intervallfunktion*/
 
 /*30 Sekunden Autosave Intervall*/
 setInterval(function Autosave() {
