@@ -133,6 +133,7 @@ var roots_new= 0;
 var leftpoints= 0;
 var levels= 0;
 var time=0;
+var w=0;
 
 window.onload = function () {
     $('#positionn_batch').select2({
