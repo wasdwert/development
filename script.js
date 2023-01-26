@@ -4577,7 +4577,7 @@ function t004() {
     document.getElementById("ButtonT004").style.cursor= "auto";
     ButtonT004.className = "";
     task_triggers.task004=2;
-    experience(0);  
+    experience(1);  
     }
     else {}
 }
@@ -4598,11 +4598,11 @@ function t005() {
     document.getElementById("ButtonT005").style.cursor= "auto";
     ButtonT005.className = "";
     task_triggers.task005=2;
-    experience(0);  
+    experience(2);  
         
     if (task_triggers.task005==2 & task_triggers.task006==3) {
         task_triggers.task006=4;
-        document.getElementById("t006goal").innerHTML = "Click to finish";  
+        document.getElementById("t006goal").innerHTML = "Click to finish  (Reward: 3 XP)";  
         document.getElementById("ButtonT006").style.cursor= "pointer";
         ButtonT006.className = "grey";
         
@@ -4616,7 +4616,7 @@ function t005() {
 }
 
 function t006() {
-    if (task_triggers.task006==4) {
+    if (task_triggers.task006==3) {
     $(document).ready(function(){
         $('#Skill_Compost').show();
         $('#youskills').show();
@@ -4628,8 +4628,8 @@ function t006() {
     document.getElementById("t006goal").innerText = "Finished";
     document.getElementById("ButtonT006").style.cursor= "auto";
     ButtonT006.className = "";
-    task_triggers.task006=5;
-    experience(0);     
+    task_triggers.task006=4;
+    experience(3);     
     }
     else {}
 }
@@ -4646,7 +4646,7 @@ function t007() {
     document.getElementById("ButtonT007").style.cursor= "auto";
     ButtonT007.className = "";
     task_triggers.task007=5;
-    experience(10); //Change later!!! 
+    experience(5);
         
     if (task_triggers.task007==5 & task_triggers.task008==1) {
         task_triggers.task008=2;
@@ -4846,7 +4846,7 @@ function task003trigger() {
 
 function task004trigger() {
     task_triggers.task004=1;
-    document.getElementById("t004goal").innerHTML = "Click to finish";  
+    document.getElementById("t004goal").innerHTML = "Click to finish (Reward: 1 XP)";  
     document.getElementById("ButtonT004").style.cursor= "pointer";
     ButtonT004.className = "grey";
         
@@ -4859,7 +4859,7 @@ function task004trigger() {
 function task005trigger() {
     if (task_triggers.task004==2 & task_triggers.task005==0) {
         task_triggers.task005=1;
-        document.getElementById("t005goal").innerHTML = "Click to finish";  
+        document.getElementById("t005goal").innerHTML = "Click to finish (Reward: 2 XP)";  
         document.getElementById("ButtonT005").style.cursor= "pointer";
         ButtonT005.className = "grey";
         
@@ -4871,12 +4871,12 @@ function task005trigger() {
 }
 
 function task006trigger(bonsaixx) {
-    if (bonsaixx.level==5 & task_triggers.task006<3) {
+    if (bonsaixx.level==5 & task_triggers.task006<2) {
             task_triggers.task006 +=1;
     }
-    if (task_triggers.task005==2 & task_triggers.task006==3) {
-        task_triggers.task006=4;
-        document.getElementById("t006goal").innerHTML = "Click to finish";  
+    if (task_triggers.task005==2 & task_triggers.task006==2) {
+        task_triggers.task006=3;
+        document.getElementById("t006goal").innerHTML = "Click to finish (Reward: 3 XP)";  
         document.getElementById("ButtonT006").style.cursor= "pointer";
         ButtonT006.className = "grey";
         
@@ -4891,9 +4891,9 @@ function task007trigger() {
     if (task_triggers.task007<3) {
         task_triggers.task007 +=1;
     }
-    if (task_triggers.task006==5 & task_triggers.task007==3) {
+    if (task_triggers.task006==4 & task_triggers.task007==3) {
         task_triggers.task007=4;
-        document.getElementById("t007goal").innerHTML = "Click to finish (Reward: 10 XP)";  
+        document.getElementById("t007goal").innerHTML = "Click to finish (Reward: 5 XP)";  
         document.getElementById("ButtonT007").style.cursor= "pointer";
         ButtonT007.className = "grey";
         
