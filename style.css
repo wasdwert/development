@@ -14,6 +14,60 @@
 }
 }
 
+@media screen and (min-width: 1150px) {
+    .leftcolumn_pc {
+        display: show;
+    }
+    .rightcolumn_pc {
+        display: show;
+    }
+    .headcontainer_pc {
+        display: show;
+    }
+    .leftcolumn_mobile {
+        display: none;
+    }
+    .rightcolumn_mobile {
+        display: none;
+    }
+    .headcontainer_mobile {
+        display: none;
+    }
+    .leftcolumn {
+        width: 240px;;
+    }
+    .rightcolumn {
+        width: 240px;;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    .leftcolumn_pc {
+        display: none;
+    }
+    .rightcolumn_pc {
+        display: none;
+    }
+    .headcontainer_pc {
+        display: none;
+    }
+    .leftcolumn_mobile {
+        display: show;
+    }
+    .rightcolumn_mobile {
+        display: show;
+    }
+    .headcontainer_mobile {
+        display: show;
+    }
+    .leftcolumn {
+        width: 120px;;
+    }
+    .rightcolumn {
+        width: 120px;;
+    }
+}
+
 .game {
     box-sizing: border-box;
     justify-content: center;
@@ -79,7 +133,6 @@
     display: inline-flex; /* using flexbox to align items */
     flex-direction: column;
     align-items: center;
-    width: 240px;
     margin: 5px;
 }
 
@@ -125,67 +178,20 @@
     font-size: 15px;
 }
 
-#ButtonBonsaiA {
+#ButtonBonsaiA_mobile, #ButtonBonsaiB_mobile, #ButtonBonsaiC_mobile, #ButtonBonsaiD_mobile, #ButtonBonsaiE_mobile, #ButtonBonsaiF_mobile {
     box-sizing: border-box;
-    width: 120px;
-	height: 120px;
+    width: 60px;
+	height: 60px;
 	background: #f1f1f1;
     background-image: url(Images/none.svg);
-    background-size: 120px, 120px;
+    background-size: 60px, 60px;
     border: 0px;
     font-family: Arial;
-    font-size: 13px;
+    font-size: 8px;
     cursor: pointer;
 }
-#ButtonBonsaiB {
-    box-sizing: border-box;
-    width: 120px;
-	height: 120px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 120px, 120px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    cursor: pointer;
-}
-#ButtonBonsaiC {
-    box-sizing: border-box;
-    width: 120px;
-	height: 120px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 120px, 120px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    cursor: pointer;
-}
-#ButtonBonsaiD {
-    box-sizing: border-box;
-    width: 120px;
-	height: 120px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 120px, 120px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    cursor: pointer;
-}
-#ButtonBonsaiE {
-    box-sizing: border-box;
-    width: 120px;
-	height: 120px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 120px, 120px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    cursor: pointer;
-}
-#ButtonBonsaiF {
+
+#ButtonBonsaiA, #ButtonBonsaiB, #ButtonBonsaiC, #ButtonBonsaiD, #ButtonBonsaiE, #ButtonBonsaiF{
     box-sizing: border-box;
     width: 120px;
 	height: 120px;
@@ -222,7 +228,21 @@
 #ButtonNavigationBonDex, #ButtonNavigationLearn, #ButtonNavigationTasks, #ButtonNavigationExpedition, #ButtonNavigationCraft, #ButtonNavigationShop, #ButtonNavigationOptions, #ButtonNavigationAchievements {
     box-sizing: border-box;
     width: 137.5px;
-	height: 40px;
+	height: 30px;
+	background: #777;
+    border: 0px;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#ButtonNavigationBonDex_mobile, #ButtonNavigationLearn_mobile, #ButtonNavigationTasks_mobile, #ButtonNavigationExpedition_mobile, #ButtonNavigationCraft_mobile, #ButtonNavigationShop_mobile, #ButtonNavigationOptions_mobile, #ButtonNavigationAchievements_mobile {
+    box-sizing: border-box;
+    width: 107.5px;
+	height: 30px;
 	background: #777;
     border: 0px;
     color: white;
@@ -485,7 +505,22 @@
     margin: 5px;
 }
 
-#seedlinga_right {
+#seedlinga_right_mobile, #seedlingb_right_mobile, #seedlingc_right_mobile, #seedlingd_right_mobile, #seedlinge_right_mobile, #seedlingf_right_mobile {
+    box-sizing: border-box;
+    width: 40px;
+	height: 40px;
+	background: #f1f1f1;
+    background-image: url(Images/none_small.svg);
+    background-size: 40px, 40px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seedlinga_right, #seedlingb_right, #seedlingc_right, #seedlingd_right, #seedlinge_right, #seedlingf_right {
     box-sizing: border-box;
     width: 80px;
 	height: 80px;
@@ -500,162 +535,7 @@
     align-items: center;
 }
 
-#seedlinga_center {
-    box-sizing: border-box;
-    width: 105px;
-	height: 105px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 105px, 105px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
-
-#seedlingb_right {
-    box-sizing: border-box;
-    width: 80px;
-	height: 80px;
-	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
-    background-size: 80px, 80px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#seedlingb_center {
-    box-sizing: border-box;
-    width: 105px;
-	height: 105px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 105px, 105px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
-
-#seedlingc_right {
-    box-sizing: border-box;
-    width: 80px;
-	height: 80px;
-	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
-    background-size: 80px, 80px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#seedlingc_center {
-    box-sizing: border-box;
-    width: 105px;
-	height: 105px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 105px, 105px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
-
-#seedlingd_right {
-    box-sizing: border-box;
-    width: 80px;
-	height: 80px;
-	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
-    background-size: 80px, 80px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#seedlingd_center {
-    box-sizing: border-box;
-    width: 105px;
-	height: 105px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 105px, 105px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
-
-#seedlinge_right {
-    box-sizing: border-box;
-    width: 80px;
-	height: 80px;
-	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
-    background-size: 80px, 80px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#seedlinge_center {
-    box-sizing: border-box;
-    width: 105px;
-	height: 105px;
-	background: #f1f1f1;
-    background-image: url(Images/none.svg);
-    background-size: 105px, 105px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: auto;
-}
-
-#seedlingf_right {
-    box-sizing: border-box;
-    width: 80px;
-	height: 80px;
-	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
-    background-size: 80px, 80px;
-    border: 0px;
-    font-family: Arial;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#seedlingf_center {
+#seedlinga_center, #seedlingb_center, #seedlingc_center, #seedlingd_center, #seedlinge_center, #seedlingf_center {
     box-sizing: border-box;
     width: 105px;
 	height: 105px;
@@ -675,6 +555,18 @@
 .rightcolumn_content2 {
     box-sizing: border-box;
     width: 240px;
+    background-color: #f1f1f1;
+	border: 0px;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* to force items on multiple lines */
+}
+
+.rightcolumn_content2_mobile {
+    box-sizing: border-box;
+    width: 120px;
     background-color: #f1f1f1;
 	border: 0px;
     font-family: Arial;

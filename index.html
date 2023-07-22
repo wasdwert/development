@@ -3,29 +3,44 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Bonsai Master</title>
+    <title>Bonsai Master v0.0.1 (Alpha 1)</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="background">
+    <body class="background">
     <div id="snackbar"><span id="snack_message">-</span></div> 
     <div class="game">
-        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master</strong></p></div>
-        <div class="headcontainer">
-            <button id=ButtonNavigationBonDex class="" onclick="ViewBonDex(z=0)" style="cursor: auto"></button>
-            <button id=ButtonNavigationLearn class="" onclick="ViewLearning(z=0)" style="cursor: auto"></button>
-            <button id=ButtonNavigationTasks class=green onclick="ViewTasks(z=0)">Tasks</button>
-            <button id=ButtonNavigationExpedition class=green onclick="ViewExpedition(z=0)">Expedition</button>
-            <button id=ButtonNavigationCraft class="" onclick="ViewCrafting(z=0)" style="cursor: auto"></button>
-            <button id=ButtonNavigationShop class="" onclick="ViewShopping(z=0)" style="cursor: auto"></button>
-            <button id=ButtonNavigationOptions class=green onclick="ViewOptions(z=0)">Options</button>
-            <button id=ButtonNavigationAchievements class="" onclick="ViewAchievements(z=0)" style="cursor: auto"></button>
+        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master v0.0.1 (Alpha 1)</strong></p></div>
+        <div class="headcontainer_pc">
+            <div class="headcontainer">
+                <button id=ButtonNavigationBonDex class="" onclick="ViewBonDex(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationLearn class="" onclick="ViewLearning(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationTasks class=green onclick="ViewTasks(z=0)">Tasks</button>
+                <button id=ButtonNavigationExpedition class=green onclick="ViewExpedition(z=0)">Expedition</button>
+                <button id=ButtonNavigationCraft class="" onclick="ViewCrafting(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationShop class="" onclick="ViewShopping(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationOptions class="" onclick="ViewOptions(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationAchievements class="" onclick="ViewAchievements(z=0)" style="cursor: auto"></button>
+            </div>
+        </div>
+        <div class="headcontainer_mobile">
+            <div class="headcontainer">
+                <button id=ButtonNavigationBonDex_mobile class="" onclick="ViewBonDex(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationLearn_mobile class="" onclick="ViewLearning(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationTasks_mobile class=green onclick="ViewTasks(z=0)">Tasks</button>
+                <button id=ButtonNavigationExpedition_mobile class=green onclick="ViewExpedition(z=0)">Expedition</button>
+                <button id=ButtonNavigationCraft_mobile class="" onclick="ViewCrafting(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationShop_mobile class="" onclick="ViewShopping(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationOptions_mobile class="" onclick="ViewOptions(z=0)" style="cursor: auto"></button>
+                <button id=ButtonNavigationAchievements_mobile class="" onclick="ViewAchievements(z=0)" style="cursor: auto"></button>
+            </div>
         </div>
         
         <div class="gamecontainer">
             <div class="leftcolumn">
-                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: none">Bonsais</button>
-                <div class="collapsible_open-content" id="collapsible-section-0" style="display: none">
+            <div class="leftcolumn_pc">
+                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bonsais</button>
+                <div class="collapsible_open-content" id="collapsible-section-0" style="display: show">
                     <div class="rightcolumn_content2">    
                     <select class="select" id="menu" onchange="menu_change()">
                         <option value="1">Box 1 - Bonsai #01-#06</option>
@@ -39,6 +54,24 @@
                     <button id=ButtonBonsaiF class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name">-</span><br><span id="bonsaif_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaif_level">-</span><br>CP <span id="bonsaif_cp">-</span></button>
                     </div>
                 </div>
+            </div>
+            <div class="leftcolumn_mobile">
+                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bonsais</button>
+                <div class="collapsible_open-content" id="collapsible-section-0" style="display: show">
+                    <div class="rightcolumn_content2_mobile">    
+                    <select class="select" id="menu" onchange="menu_change()">
+                        <option value="1">Box 1</option>
+                        <option value="7">Box 2</option>
+                    </select>
+                    <button id=ButtonBonsaiA_mobile class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_name" style="font-size: 8px">-</span><br><span id="bonsaia_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    <button id=ButtonBonsaiB_mobile class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_name" style="font-size: 8px">-</span><br><span id="bonsaib_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    <button id=ButtonBonsaiC_mobile class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_name" style="font-size: 8px">-</span><br><span id="bonsaic_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    <button id=ButtonBonsaiD_mobile class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_name" style="font-size: 8px">-</span><br><span id="bonsaid_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    <button id=ButtonBonsaiE_mobile class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_name" style="font-size: 8px">-</span><br><span id="bonsaie_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    <button id=ButtonBonsaiF_mobile class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name" style="font-size: 8px">-</span><br><span id="bonsaif_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                    </div>
+                </div>
+            </div>
             </div>
             
             <div class="centercolumn">
@@ -1040,6 +1073,7 @@
             </div>
             
             <div class="rightcolumn">
+            <div class="rightcolumn_pc">
                 <button class="collapsible_open" id="collapsible-button-2" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seedlings (<span id="seedling_number">0</span>/6)</button>
                     <div class="collapsible_open-content" id="collapsible-section-2">
                         <div class="rightcolumn_content2">
@@ -1142,9 +1176,112 @@
                         </div></div>
                     </div>
                 </div>
-                
+            </div>
+            <div class="rightcolumn_mobile">
+                <button class="collapsible_open" id="collapsible-button-2" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seedlings</button>
+                    <div class="collapsible_open-content" id="collapsible-section-2">
+                        <div class="rightcolumn_content2_mobile">
+                            <div id="seedlinga_right_mobile"><span id="seedlinga_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlingb_right_mobile"><span id="seedlingb_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlingc_right_mobile"><span id="seedlingc_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlingd_right_mobile"><span id="seedlingd_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlinge_right_mobile"><span id="seedlinge_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlingf_right_mobile"><span id="seedlingf_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                        </div>
+                    </div>
+                <button class="collapsible_open" id="collapsible-button-3" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Workers</button>
+                <div class="collapsible_open-content" id="collapsible-section-3">
+                    <div class="rightcolumn_content2_mobile"> 
+                        <div class="Field" style="width: 41px;background: #d8d8d8;color: #555;height: auto;display: flex;align-items:center">
+                            <img src="Images/you.svg" width="20" height="20">
+                        </div>
+                        <div style="width: 79px;display: flex;align-items:center; flex-wrap: wrap">
+                        <div id=youskills style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width: 25px; height: 30px;background: #d8d8d8; display: flex; align-items: center; padding: 0px">
+                                <img src="Images/skill.svg" width="20" height="20">
+                            </div>    
+                            <div class="Field" style="width: 54px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center; padding: 0px; font-size: 10px">
+                                &nbsp;Lvl.&nbsp;<span id="skilllevel" style="display: flex;align-items: center">0</span>
+                            </div>
+                        </div></div>
+                        <div class="Field" style="width: 79px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">
+                                <span id="worker1_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                        </div>
+                        </div> 
+                        <div id="worker02div" style="width: 120px; height: 30px; display: none">
+                            <div class="Field" style="width:100%;background: #f1f1f1;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
+                                <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
+                                <span id="worker2_task" style="display: flex;align-items:center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                            </div>
+                        </div>
+                        <div id="worker03div" style="width: 120px; height: 30px; display: none">    
+                            <div class="Field" style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
+                                <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
+                                <span id="worker3_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                <button class="collapsible_open" id="collapsible-button-1" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
+                </div></div>
+                <div class="collapsible_open-content" id="collapsible-section-1">
+                    <div class="rightcolumn_content2_mobile">
+                        <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/money.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="money" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                        </div>
+                        </div></div>
+                        <div id=resources_2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/organic_waste.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="organic_waste" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/compost.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
+                            <span id="compost" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        </div></div>
+                        <div id=resources_3 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/bolt.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
+                            <span id="bolt" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/metal.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
+                            <span id="metal" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/wire.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
+                            <span id="wire" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
+                            <img src="Images/board.svg" width="20" height="20">
+                        </div>
+                        <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
+                            <span id="board" style="display: flex;align-items:center">0</span>/100
+                        </div>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
+        
+        <div class="gametitle"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>© 2023 wasdwert - Icons from svgrepo.com, Pictures from pixabay.com</strong></p></div>
     </div>
    
     <!-- Modal Change Name -->
