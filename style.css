@@ -564,7 +564,7 @@
 
 .centercolumn_right_mobile {
     box-sizing: border-box;
-    width: 157,5px; /* Could be more or less, depending on screen size */
+    width: 157.5px; /* Could be more or less, depending on screen size */
     height: auto;
     justify-content: center;
     background-color: #f1f1f1;
