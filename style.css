@@ -33,6 +33,9 @@
     .rightcolumn_mobile {
         display: none;
     }
+    .rightcolumn_mobilexs {
+        display: none;
+    }
     .centercolumn_mobile {
         display: none;
     }
@@ -72,6 +75,9 @@
     .rightcolumn_mobile {
         display: show;
     }
+    .rightcolumn_mobilexs {
+        display: none;
+    }
     .centercolumn_mobile {
         display: none;
     }
@@ -109,6 +115,9 @@
         display: show;
     }
     .rightcolumn_mobile {
+        display: none;
+    }
+    .rightcolumn_mobilexs {
         display: show;
     }
     .centercolumn_mobile {
@@ -124,7 +133,7 @@
         width: 120px;;
     }
     .rightcolumn {
-        width: 120px;;
+        width: 80px;;
     }
     .centercolumn {
         width: 300px;;
@@ -276,7 +285,7 @@
 
 #ButtonNavigationBonDex_mobilexs, #ButtonNavigationLearn_mobilexs, #ButtonNavigationTasks_mobilexs, #ButtonNavigationExpedition_mobilexs, #ButtonNavigationCraft_mobilexs, #ButtonNavigationShop_mobilexs, #ButtonNavigationOptions_mobilexs, #ButtonNavigationAchievements_mobilexs {
     box-sizing: border-box;
-    width: 68.75px;
+    width: 63.75px;
 	height: 30px;
 	background: #777;
     border: 0px;
@@ -643,6 +652,18 @@
 .rightcolumn_content2_mobile {
     box-sizing: border-box;
     width: 120px;
+    background-color: #f1f1f1;
+	border: 0px;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* to force items on multiple lines */
+}
+
+.rightcolumn_content2_mobilexs {
+    box-sizing: border-box;
+    width: 80px;
     background-color: #f1f1f1;
 	border: 0px;
     font-family: Arial;
