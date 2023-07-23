@@ -1,6 +1,6 @@
 @media screen and (max-width: 1000px) {
 .background {
-    background: url(Images/background.jpg) center no-repeat;
+    background: url(Images/background.jpg) 50% 15% no-repeat;
     background-attachment: fixed;
     background-size: 1000px, auto;
 }
@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 1000px) {
 .background {
-    background: url(Images/background.jpg) center no-repeat;
+    background: url(Images/background.jpg) 50% 15% no-repeat;
     background-attachment: fixed;
     background-size: 100%, auto;
 }
