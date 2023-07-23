@@ -92,6 +92,27 @@
                     </div>
                 </div>
             </div>
+            <div class="leftcolumn_mobilexs">
+                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bon</button>
+                <div class="collapsible_open-content" id="collapsible-section-0" style="display: show">
+                    <div class="rightcolumn_content2_mobilexs">    
+                        <select class="select" id="menu" onchange="menu_change()">
+                            <option value="1">House</option>
+                            <option value="11">GH I</option>
+                        </select>
+                        <button id=ButtonBonsaiA_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiB_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiC_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiD_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiE_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiF_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiG_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaig_nr">#7</span></p><span id="bonsaig_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiH_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaih_nr">#8</span></p><span id="bonsaih_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiI_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaii_nr">#9</span></p><span id="bonsaii_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiJ_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaij_nr">#10</span></p><span id="bonsaij_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                    </div>
+                </div>
+            </div>
             </div>
             
             <div class="centercolumn">
@@ -1096,47 +1117,47 @@
                 <div class="tasks">
                     <div class="center_content_mobile">    
                         <div class="centercolumn_left_mobile">
-                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Tasks</div>
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 30px;display: flex;align-items:center">Tasks</div>
                             
                             <button class="collapsible_open_a" id="collapsible-button-6" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Open Tasks</button>
                                 <div class="collapsible_open_a-content_a" id="collapsible-section-6" style="width: 280px">
                                 <div class="rightcolumn_content2" style="width: 280px">
-                                    <button id=T000 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewT000()">Main goal: Bonsai master</button>
-                                    <button id=T001 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewT001()">Tutorial: Expeditions</button>
-                                    <button id=T002 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
-                                    <button id=T003 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
-                                    <button id=T004 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT004()">Tutorial: Learn building robots</button>
-                                    <button id=T005 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT005()">Tutorial: Craft a robot</button>
-                                    <button id=T006 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT006()">Tutorial: Bonsai growing</button>
-                                    <button id=T007 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT007()">Tutorial: Compost</button>
-                                    <button id=T008 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
-                                    <button id=T009 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT009()">Tutorial: Growing Skill</button>
-                                    <button id=T010 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT010()">Tutorial: Shopping</button>
-                                    <button id=T011 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT011()">Tutorial: Shopping #2</button>
-                                    <button id=T012 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT012()">Tutorial: Shaping Skill</button>
-                                    <button id=T013 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT013()">Tutorial: Patience Skill</button>
-                                    <button id=T014 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
+                                    <button id=T000 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show; font-size: 10px" onclick="ViewT000()">Main goal: Bonsai master</button>
+                                    <button id=T001 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show; font-size: 10px" onclick="ViewT001()">Tutorial: Expeditions</button>
+                                    <button id=T002 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
+                                    <button id=T003 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
+                                    <button id=T004 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT004()">Tutorial: Learn building robots</button>
+                                    <button id=T005 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT005()">Tutorial: Craft a robot</button>
+                                    <button id=T006 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT006()">Tutorial: Bonsai growing</button>
+                                    <button id=T007 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT007()">Tutorial: Compost</button>
+                                    <button id=T008 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
+                                    <button id=T009 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT009()">Tutorial: Growing Skill</button>
+                                    <button id=T010 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT010()">Tutorial: Shopping</button>
+                                    <button id=T011 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT011()">Tutorial: Shopping #2</button>
+                                    <button id=T012 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT012()">Tutorial: Shaping Skill</button>
+                                    <button id=T013 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT013()">Tutorial: Patience Skill</button>
+                                    <button id=T014 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
                                 </div>
                                 </div>
                             
                             <button class="collapsible_open2_a" id="collapsible-button-7" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Finished Tasks</button>
                                 <div class="collapsible_open2_a-content2_a" id="collapsible-section-7" style="width: 280px; max-height: 0px">
                                 <div class="rightcolumn_content2" style="width: 280px">
-                                    <button id=T000C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT000()">Main goal: Bonsai master</button>
-                                    <button id=T001C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT001()">Tutorial: Expeditions</button>
-                                    <button id=T002C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
-                                    <button id=T003C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
-                                    <button id=T004C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT004()">Tutorial: Learn building robots</button>
-                                    <button id=T005C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT005()">Tutorial: Craft a robot</button>
-                                    <button id=T006C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT006()">Tutorial: Bonsai growing</button>
-                                    <button id=T007C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT007()">Tutorial: Compost</button>
-                                    <button id=T008C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
-                                    <button id=T009C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT009()">Tutorial: Growing Skill</button>
-                                    <button id=T010C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT010()">Tutorial: Shopping</button>
-                                    <button id=T011C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT011()">Tutorial: Shopping #2</button>
-                                    <button id=T012C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT012()">Tutorial: Shaping Skill</button>
-                                    <button id=T013C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT013()">Tutorial: Patience Skill</button>
-                                    <button id=T014C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
+                                    <button id=T000C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT000()">Main goal: Bonsai master</button>
+                                    <button id=T001C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT001()">Tutorial: Expeditions</button>
+                                    <button id=T002C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT002()">Tutorial: Plant a bonsai</button>
+                                    <button id=T003C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT003()">Tutorial: Bonsai species and potential</button>
+                                    <button id=T004C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT004()">Tutorial: Learn building robots</button>
+                                    <button id=T005C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT005()">Tutorial: Craft a robot</button>
+                                    <button id=T006C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT006()">Tutorial: Bonsai growing</button>
+                                    <button id=T007C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT007()">Tutorial: Compost</button>
+                                    <button id=T008C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT008()">Tutorial: Level Up Bonsai</button>
+                                    <button id=T009C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT009()">Tutorial: Growing Skill</button>
+                                    <button id=T010C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT010()">Tutorial: Shopping</button>
+                                    <button id=T011C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT011()">Tutorial: Shopping #2</button>
+                                    <button id=T012C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT012()">Tutorial: Shaping Skill</button>
+                                    <button id=T013C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT013()">Tutorial: Patience Skill</button>
+                                    <button id=T014C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT014()">Tutorial: A nicely grown bonsai</button>
                                 </div>
                                 </div>
                         </div>

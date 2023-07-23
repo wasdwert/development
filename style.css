@@ -30,6 +30,9 @@
     .leftcolumn_mobile {
         display: none;
     }
+    .leftcolumn_mobilexs {
+        display: none;
+    }
     .rightcolumn_mobile {
         display: none;
     }
@@ -72,6 +75,9 @@
     .leftcolumn_mobile {
         display: show;
     }
+    .leftcolumn_mobilexs {
+        display: none;
+    }
     .rightcolumn_mobile {
         display: show;
     }
@@ -112,6 +118,9 @@
         display: none;
     }
     .leftcolumn_mobile {
+        display: none;
+    }
+    .leftcolumn_mobilexs {
         display: show;
     }
     .rightcolumn_mobile {
@@ -130,7 +139,7 @@
         display: show;
     }
     .leftcolumn {
-        width: 120px;;
+        width: 80px;;
     }
     .rightcolumn {
         width: 80px;;
@@ -222,6 +231,19 @@
     font-size: 15px;
 }
 
+#ButtonBonsaiA_mobilexs, #ButtonBonsaiB_mobilexs, #ButtonBonsaiC_mobilexs, #ButtonBonsaiD_mobilexs, #ButtonBonsaiE_mobilexs, #ButtonBonsaiF_mobilexs, #ButtonBonsaiG_mobilexs, #ButtonBonsaiH_mobilexs, #ButtonBonsaiI_mobilexs, #ButtonBonsaiJ_mobilexs {
+    box-sizing: border-box;
+    width: 40px;
+	height: 40px;
+	background: #f1f1f1;
+    background-image: url(Images/none.svg);
+    background-size: 40px, 40px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 8px;
+    cursor: pointer;
+}
+
 #ButtonBonsaiA_mobile, #ButtonBonsaiB_mobile, #ButtonBonsaiC_mobile, #ButtonBonsaiD_mobile, #ButtonBonsaiE_mobile, #ButtonBonsaiF_mobile, #ButtonBonsaiG_mobile, #ButtonBonsaiH_mobile, #ButtonBonsaiI_mobile, #ButtonBonsaiJ_mobile {
     box-sizing: border-box;
     width: 60px;
@@ -285,7 +307,7 @@
 
 #ButtonNavigationBonDex_mobilexs, #ButtonNavigationLearn_mobilexs, #ButtonNavigationTasks_mobilexs, #ButtonNavigationExpedition_mobilexs, #ButtonNavigationCraft_mobilexs, #ButtonNavigationShop_mobilexs, #ButtonNavigationOptions_mobilexs, #ButtonNavigationAchievements_mobilexs {
     box-sizing: border-box;
-    width: 63.75px;
+    width: 58.75px;
 	height: 30px;
 	background: #777;
     border: 0px;
