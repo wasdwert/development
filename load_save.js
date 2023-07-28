@@ -1,7 +1,4 @@
 var time=0;
-var lastinterval=0;
-var thisinterval=0;
-var interval=1000;
 var w = new Worker ("interval.js");
 
 window.onload = function () {
@@ -31,26 +28,26 @@ window.onload = function () {
     fetchimage_seedling ("e", seedling5);
     fetchimage_seedling ("f", seedling6);
     
-    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
-    document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
-    document.getElementById("skill_growing_time").innerHTML = skillgrowingtime[skills.growing];
-    document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
-    document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
-    document.getElementById("skill_shaping_time").innerHTML = skillshapingtime[skills.shaping];
+    //document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
+    //document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
+    //document.getElementById("skill_growing_time").innerHTML = skillgrowingtime[skills.growing];
+    //document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
+    //document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
+    //document.getElementById("skill_shaping_time").innerHTML = skillshapingtime[skills.shaping];
     
-    document.getElementById("skilllevel").innerHTML = skills.level;
-    document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
-    document.getElementById("money").innerHTML = resources.money;
-    document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-    document.getElementById("compost").innerHTML = resources.compost;
-    document.getElementById("bolt").innerHTML = resources.bolt;
-    document.getElementById("shop_bolt").innerHTML = resources.bolt;
-    document.getElementById("metal").innerHTML = resources.metal;
-    document.getElementById("shop_metal").innerHTML = resources.metal;
-    document.getElementById("wire").innerHTML = resources.wire;
-    document.getElementById("shop_wire").innerHTML = resources.wire;
-    document.getElementById("board").innerHTML = resources.board;
-    document.getElementById("shop_board").innerHTML = resources.board;
+    //document.getElementById("skilllevel").innerHTML = skills.level;
+    //document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+    //document.getElementById("money").innerHTML = resources.money;
+    //document.getElementById("organic_waste").innerHTML = resources.organic_waste;
+    //document.getElementById("compost").innerHTML = resources.compost;
+    //document.getElementById("bolt").innerHTML = resources.bolt;
+    //document.getElementById("shop_bolt").innerHTML = resources.bolt;
+    //document.getElementById("metal").innerHTML = resources.metal;
+    //document.getElementById("shop_metal").innerHTML = resources.metal;
+    //document.getElementById("wire").innerHTML = resources.wire;
+    //document.getElementById("shop_wire").innerHTML = resources.wire;
+    //document.getElementById("board").innerHTML = resources.board;
+    //document.getElementById("shop_board").innerHTML = resources.board;
     
     w.postMessage('Start');
 }
