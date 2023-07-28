@@ -1,3 +1,5 @@
+var w = new Worker ("interval.js");
+
 window.onload = function () {
     $('#positionn_batch').select2({
             minimumResultsForSearch: Infinity

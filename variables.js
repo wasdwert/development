@@ -11,7 +11,6 @@ var state = {
 }
 
 var x=1;
-var w = new Worker ("interval.js");
 
 var worker01 = {
     busy: 0,
