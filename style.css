@@ -236,7 +236,7 @@
     width: 40px;
 	height: 40px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 40px, 40px;
     border: 0px;
     font-family: Arial;
@@ -249,7 +249,7 @@
     width: 60px;
 	height: 60px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 60px, 60px;
     border: 0px;
     font-family: Arial;
@@ -262,7 +262,7 @@
     width: 120px;
 	height: 120px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 120px, 120px;
     border: 0px;
     font-family: Arial;
@@ -612,12 +612,27 @@
     margin: 5px;
 }
 
+#seedlinga_right_mobilexs, #seedlingb_right_mobilexs, #seedlingc_right_mobilexs, #seedlingd_right_mobilexs, #seedlinge_right_mobilexs, #seedlingf_right_mobilexs {
+    box-sizing: border-box;
+    width: 40px;
+	height: 40px;
+	background: #f1f1f1;
+    background-image: url(Images/treequality/none_small.svg);
+    background-size: 40px, 40px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #seedlinga_right_mobile, #seedlingb_right_mobile, #seedlingc_right_mobile, #seedlingd_right_mobile, #seedlinge_right_mobile, #seedlingf_right_mobile {
     box-sizing: border-box;
     width: 40px;
 	height: 40px;
 	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
+    background-image: url(Images/treequality/none_small.svg);
     background-size: 40px, 40px;
     border: 0px;
     font-family: Arial;
@@ -632,7 +647,7 @@
     width: 80px;
 	height: 80px;
 	background: #f1f1f1;
-    background-image: url(Images/none_small.svg);
+    background-image: url(Images/treequality/none_small.svg);
     background-size: 80px, 80px;
     border: 0px;
     font-family: Arial;
@@ -647,7 +662,7 @@
     width: 105px;
 	height: 105px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 105px, 105px;
     border: 0px;
     font-family: Arial;
@@ -849,7 +864,7 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-/* Collapsible Sub - Closed by default - END*/
+/* Collapsible - Closed by default - END*/
 
 /* Collapsible Sub - Closed by default - START*/
 /* Style the button that is used to open and close the collapsible content */
@@ -1066,7 +1081,7 @@
     width: 120px;
 	height: 120px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 120px, 120px;
     border: 0px;
     font-family: Arial;
@@ -1078,7 +1093,7 @@
     width: 120px;
 	height: 120px;
 	background: #f1f1f1;
-    background-image: url(Images/none.svg);
+    background-image: url(Images/treequality/none.svg);
     background-size: 120px, 120px;
     border: 0px;
     font-family: Arial;

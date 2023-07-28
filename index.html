@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Bonsai Master v0.0.1 (Alpha 1)</title>
+    <title>Bonsai Master v0.0.2 (Alpha 2)</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
     <body class="background">
     <div id="snackbar"><span id="snack_message">-</span></div> 
     <div class="game">
-        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master v0.0.1 (Alpha 1)</strong></p></div>
+        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master v0.0.2 (Alpha 2)</strong></p></div>
         <div class="headcontainer_pc">
             <div class="headcontainer">
                 <button id=ButtonNavigationBonDex class=green onclick="ViewBonDex(z=0)">BonDex</button>
@@ -58,58 +58,58 @@
                             <option value="1">House - Bonsai #01-#10</option>
                             <option value="11">Greenhouse I - Bonsai #11-#20</option>
                         </select>
-                        <button id=ButtonBonsaiA class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_name">-</span><br><span id="bonsaia_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaia_level">-</span><br>CP <span id="bonsaia_cp">-</span></button>
-                        <button id=ButtonBonsaiB class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_name">-</span><br><span id="bonsaib_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaib_level">-</span><br>CP <span id="bonsaib_cp">-</span></button>
-                        <button id=ButtonBonsaiC class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_name">-</span><br><span id="bonsaic_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaic_level">-</span><br>CP <span id="bonsaic_cp">-</span></button>
-                        <button id=ButtonBonsaiD class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_name">-</span><br><span id="bonsaid_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaid_level">-</span><br>CP <span id="bonsaid_cp">-</span></button>
-                        <button id=ButtonBonsaiE class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_name">-</span><br><span id="bonsaie_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaie_level">-</span><br>CP <span id="bonsaie_cp">-</span></button>
-                        <button id=ButtonBonsaiF class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name">-</span><br><span id="bonsaif_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaif_level">-</span><br>CP <span id="bonsaif_cp">-</span></button>
-                        <button id=ButtonBonsaiG class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaig_nr">#7</span></p><span id="bonsaig_name">-</span><br><span id="bonsaig_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaig_level">-</span><br>CP <span id="bonsaig_cp">-</span></button>
-                        <button id=ButtonBonsaiH class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaih_nr">#8</span></p><span id="bonsaih_name">-</span><br><span id="bonsaih_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaih_level">-</span><br>CP <span id="bonsaih_cp">-</span></button>
-                        <button id=ButtonBonsaiI class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaii_nr">#9</span></p><span id="bonsaii_name">-</span><br><span id="bonsaii_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaii_level">-</span><br>CP <span id="bonsaii_cp">-</span></button>
-                        <button id=ButtonBonsaiJ class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaij_nr">#10</span></p><span id="bonsaij_name">-</span><br><span id="bonsaij_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaij_level">-</span><br>CP <span id="bonsaij_cp">-</span></button>
+                        <button id=ButtonBonsaiA class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_name">-</span><br><span id="bonsaia_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaia_level">-</span><br>CP <span id="bonsaia_cp">-</span></button>
+                        <button id=ButtonBonsaiB class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_name">-</span><br><span id="bonsaib_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaib_level">-</span><br>CP <span id="bonsaib_cp">-</span></button>
+                        <button id=ButtonBonsaiC class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_name">-</span><br><span id="bonsaic_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaic_level">-</span><br>CP <span id="bonsaic_cp">-</span></button>
+                        <button id=ButtonBonsaiD class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_name">-</span><br><span id="bonsaid_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaid_level">-</span><br>CP <span id="bonsaid_cp">-</span></button>
+                        <button id=ButtonBonsaiE class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_name">-</span><br><span id="bonsaie_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaie_level">-</span><br>CP <span id="bonsaie_cp">-</span></button>
+                        <button id=ButtonBonsaiF class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name">-</span><br><span id="bonsaif_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaif_level">-</span><br>CP <span id="bonsaif_cp">-</span></button>
+                        <button id=ButtonBonsaiG class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaig_nr">#7</span></p><span id="bonsaig_name">-</span><br><span id="bonsaig_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaig_level">-</span><br>CP <span id="bonsaig_cp">-</span></button>
+                        <button id=ButtonBonsaiH class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaih_nr">#8</span></p><span id="bonsaih_name">-</span><br><span id="bonsaih_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaih_level">-</span><br>CP <span id="bonsaih_cp">-</span></button>
+                        <button id=ButtonBonsaiI class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaii_nr">#9</span></p><span id="bonsaii_name">-</span><br><span id="bonsaii_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaii_level">-</span><br>CP <span id="bonsaii_cp">-</span></button>
+                        <button id=ButtonBonsaiJ class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaij_nr">#10</span></p><span id="bonsaij_name">-</span><br><span id="bonsaij_types"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaij_level">-</span><br>CP <span id="bonsaij_cp">-</span></button>
                     </div>
                 </div>
             </div>
             <div class="leftcolumn_mobile">
-                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bonsais</button>
-                <div class="collapsible_open-content" id="collapsible-section-0" style="display: show">
+                <button class="collapsible_open" id="collapsible-button-0_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bonsais</button>
+                <div class="collapsible_open-content" id="collapsible-section-0_mobile" style="display: show">
                     <div class="rightcolumn_content2_mobile">    
                         <select class="select" id="menu" onchange="menu_change()">
                             <option value="1">House</option>
                             <option value="11">GH I</option>
                         </select>
-                        <button id=ButtonBonsaiA_mobile class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_name" style="font-size: 8px">-</span><br><span id="bonsaia_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiB_mobile class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_name" style="font-size: 8px">-</span><br><span id="bonsaib_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiC_mobile class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_name" style="font-size: 8px">-</span><br><span id="bonsaic_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiD_mobile class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_name" style="font-size: 8px">-</span><br><span id="bonsaid_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiE_mobile class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_name" style="font-size: 8px">-</span><br><span id="bonsaie_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiF_mobile class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_name" style="font-size: 8px">-</span><br><span id="bonsaif_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiG_mobile class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaig_nr">#7</span></p><span id="bonsaig_name" style="font-size: 8px">-</span><br><span id="bonsaig_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiH_mobile class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaih_nr">#8</span></p><span id="bonsaih_name" style="font-size: 8px">-</span><br><span id="bonsaih_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiI_mobile class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaii_nr">#9</span></p><span id="bonsaii_name" style="font-size: 8px">-</span><br><span id="bonsaii_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
-                        <button id=ButtonBonsaiJ_mobile class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 8px"><span id="bonsaij_nr">#10</span></p><span id="bonsaij_name" style="font-size: 8px">-</span><br><span id="bonsaij_type"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiA_mobile class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaia_nr_mobile">#1</span></p><span id="bonsaia_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaia_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiB_mobile class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaib_nr_mobile">#2</span></p><span id="bonsaib_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaib_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiC_mobile class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaic_nr_mobile">#3</span></p><span id="bonsaic_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaic_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiD_mobile class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaid_nr_mobile">#4</span></p><span id="bonsaid_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaid_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiE_mobile class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaie_nr_mobile">#5</span></p><span id="bonsaie_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaie_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiF_mobile class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaif_nr_mobile">#6</span></p><span id="bonsaif_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaif_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiG_mobile class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaig_nr_mobile">#7</span></p><span id="bonsaig_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaig_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiH_mobile class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaih_nr_mobile">#8</span></p><span id="bonsaih_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaih_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiI_mobile class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaii_nr_mobile">#9</span></p><span id="bonsaii_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaii_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
+                        <button id=ButtonBonsaiJ_mobile class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaij_nr_mobile">#10</span></p><span id="bonsaij_name_mobile" style="font-size: 8px">-</span><br><span id="bonsaij_types_mobile"><img src="Images/pot.svg" width="30" height="30"></span></button>
                     </div>
                 </div>
             </div>
             <div class="leftcolumn_mobilexs">
-                <button class="collapsible_open" id="collapsible-button-0" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bon</button>
-                <div class="collapsible_open-content" id="collapsible-section-0" style="display: show">
+                <button class="collapsible_open" id="collapsible-button-0_mobilexs" onclick="toggleCollapsibleSectionWithAnimation.call(this)" style="display: show">Bon</button>
+                <div class="collapsible_open-content" id="collapsible-section-0_mobilexs" style="display: show">
                     <div class="rightcolumn_content2_mobilexs">    
                         <select class="select" id="menu" onchange="menu_change()">
                             <option value="1">House</option>
                             <option value="11">GH I</option>
                         </select>
-                        <button id=ButtonBonsaiA_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaia_nr">#1</span></p><span id="bonsaia_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiB_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaib_nr">#2</span></p><span id="bonsaib_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiC_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaic_nr">#3</span></p><span id="bonsaic_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiD_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaid_nr">#4</span></p><span id="bonsaid_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiE_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaie_nr">#5</span></p><span id="bonsaie_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiF_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaif_nr">#6</span></p><span id="bonsaif_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiG_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaig_nr">#7</span></p><span id="bonsaig_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiH_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaih_nr">#8</span></p><span id="bonsaih_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiI_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaii_nr">#9</span></p><span id="bonsaii_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
-                        <button id=ButtonBonsaiJ_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaij_nr">#10</span></p><span id="bonsaij_type"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiA_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=1)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaia_nr_mobilexs">#1</span></p><span id="bonsaia_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiB_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=2)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaib_nr_mobilexs">#2</span></p><span id="bonsaib_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiC_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=3)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaic_nr_mobilexs">#3</span></p><span id="bonsaic_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiD_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=4)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaid_nr_mobilexs">#4</span></p><span id="bonsaid_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiE_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=5)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaie_nr_mobilexs">#5</span></p><span id="bonsaie_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiF_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=6)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaif_nr_mobilexs">#6</span></p><span id="bonsaif_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiG_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=7)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaig_nr_mobilexs">#7</span></p><span id="bonsaig_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiH_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=8)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaih_nr_mobilexs">#8</span></p><span id="bonsaih_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiI_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=9)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaii_nr_mobilexs">#9</span></p><span id="bonsaii_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
+                        <button id=ButtonBonsaiJ_mobilexs class=darker_grey onclick="ViewBonsai_Details(z=10)"; style="color: #555"><p style="text-align: left; margin: 1px; font-family:Arial; font-size: 6px"><span id="bonsaij_nr_mobilexs">#10</span></p><span id="bonsaij_types_mobilexs"><img src="Images/pot.svg" width="25" height="25"></span></button>
                     </div>
                 </div>
             </div>
@@ -696,7 +696,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlinga_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinga_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlinga_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinga_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -708,7 +708,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingb_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingb_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingb_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingb_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -722,7 +722,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingc_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingc_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingc_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingc_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -734,7 +734,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingd_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingd_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingd_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingd_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -748,7 +748,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlinge_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinge_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlinge_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinge_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -760,7 +760,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingf_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingf_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingf_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingf_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -783,7 +783,7 @@
                                 <div style="overflow-y: scroll; height: 360px">
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiA_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaia_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiA_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaia_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -808,7 +808,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiB_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaib_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiB_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaib_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -833,7 +833,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiC_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaic_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiC_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaic_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -858,7 +858,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiD_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaid_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiD_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaid_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -883,7 +883,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiE_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaie_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiE_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaie_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -908,7 +908,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiF_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaif_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiF_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaif_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -931,6 +931,106 @@
                                     </div>
                                     </div>
                                 </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiG_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaig_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaig_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaig_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaig_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaig_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaig_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=7)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiH_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaih_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaih_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaih_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaih_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaih_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaih_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=8)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiI_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaii_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaii_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaii_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaii_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaii_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaii_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=9)"></button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                        <div id="ButtonBonsaiJ_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaij_types_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaij_name_sell style="display: flex; align-content: center; justify-content: center">-</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        Level&nbsp;<span id=bonsaij_level_sell style="display: flex; align-content: center; justify-content: center">0</span>
+                                    </div>
+                                    <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        CP&nbsp;<span id=bonsaij_cp_sell style="display: flex; align-content: center; justify-content: center">0.0</span>
+                                    </div>
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <span id=bonsaij_price_sell style="display: flex; align-content: center; justify-content: center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                                    </div>
+                                    <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_bonsaij_sell" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/sell.svg); background-size: 60px, 24px;)" onclick="SellBonsai(sbonsai=10)"></button>
+                                    </div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -945,26 +1045,34 @@
                             </div>
                             <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
                                 <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_status">-</span></div>
-                            <div id="bonsai_detail_rarity" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                            <div id="bonsai_detail_treequality" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
-                            <div id=bdcc_l_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_level">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Type</div>
+                            <div id=bdcc_l_t12 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Treetype</div>
                                 <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_treetype">-</span></div>
+                            </div>
+                            <div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Treetypegroup</div>
+                                <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_treetypegroup">-</span>
                             </div></div>
-                            <div id=bdcc_l_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Styletype</div>
+                                <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_styletype">-</span></div>
+                            </div></div>
+                            <div id=bdcc_l_t13 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Nature</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_nature">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t14 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t14 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Combined Points (CP)</div>
                                 <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_cp">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t15 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t15 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Foliage (F)</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_foliage">-</span></div>
                             <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Branches (B)</div>
@@ -976,10 +1084,10 @@
                             </div></div>
                         </div>
                         <div class="centercolumn_right">
-                            <div id=bdcc_r_t1 style="display: none; width: 100%">
+                            <div id=bdcc_r_t1 style="display: show; width: 100%">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Grow bonsai</div>
                             </div> 
-                            <div id=bdcc_r_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level2">-</span></div>
                                 <div id=bdcc_r_t111 style="display: none; width: 142px"><div style="display: flex; width: 100%; flex-wrap: wrap">
@@ -995,13 +1103,13 @@
                                 </div></div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level_new2">-</span></div>
                             </div></div>
-                            <div id=bdcc_r_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t12 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">CP</div>
                                 <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp2">-</span></div>
                                 <div class="Field" style="width:142px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center"></div>
                                 <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp_new2">-</span></div>
                             </div></div>
-                            <div id=bdcc_r_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t13 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Stats</div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Old</div>
                                 <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Shape points</div>
@@ -1058,7 +1166,7 @@
                                 <div class="Field" style="width:40px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_leftpoints">-</span></div>
                                 <div class="Field" style="width: 110px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: flex-start">Shape points</div>
                             </div></div>
-                            <div id=bdcc_r_t19 style="display: none; width: 100%">
+                            <div id=bdcc_r_t19 style="display: show; width: 100%">
                             <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
                             </div>
                             <div id=bdcc_r_t2 class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Change bonsai position</div>
@@ -1080,7 +1188,7 @@
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">-</div>
                             <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
                                 <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"></div>
-                            <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                            <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
@@ -1119,8 +1227,8 @@
                         <div class="centercolumn_left_mobile">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 30px;display: flex;align-items:center">Tasks</div>
                             
-                            <button class="collapsible_open_a" id="collapsible-button-6" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Open Tasks</button>
-                                <div class="collapsible_open_a-content_a" id="collapsible-section-6" style="width: 280px">
+                            <button class="collapsible_open_a" id="collapsible-button-6_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Open Tasks</button>
+                                <div class="collapsible_open_a-content_a" id="collapsible-section-6_mobile" style="width: 280px">
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=T000 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show; font-size: 10px" onclick="ViewT000()">Main goal: Bonsai master</button>
                                     <button id=T001 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show; font-size: 10px" onclick="ViewT001()">Tutorial: Expeditions</button>
@@ -1140,8 +1248,8 @@
                                 </div>
                                 </div>
                             
-                            <button class="collapsible_open2_a" id="collapsible-button-7" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Finished Tasks</button>
-                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-7" style="width: 280px; max-height: 0px">
+                            <button class="collapsible_open2_a" id="collapsible-button-7_mobile" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Finished Tasks</button>
+                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-7_mobile" style="width: 280px; max-height: 0px">
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=T000C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT000()">Main goal: Bonsai master</button>
                                     <button id=T001C class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none; font-size: 10px" onclick="ViewT001()">Tutorial: Expeditions</button>
@@ -1512,8 +1620,8 @@
                     <div class="center_content_mobile">    
                         <div class="centercolumn_left_mobile">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Learning</div>
-                            <button class="collapsible_open_a" id="collapsible-button-4" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Learnable</button>
-                                <div class="collapsible_open_a-content_a" id="collapsible-section-4" style="width: 280px">
+                            <button class="collapsible_open_a" id="collapsible-button-4_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Learnable</button>
+                                <div class="collapsible_open_a-content_a" id="collapsible-section-4_mobile" style="width: 280px">
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=Skill_Robot class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillRobot()">Building Robots</button>
                                     <button id=Skill_Compost class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillCompost()">Crafting Compost</button>
@@ -1522,8 +1630,8 @@
                                     <button id=Skill_Patience class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillPatience()">Patience/Memory increase</button>
                                 </div>
                                 </div>
-                            <button class="collapsible_open2_a" id="collapsible-button-5" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Learned</button>
-                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-5" style="width: 280px; max-height: 0px">
+                            <button class="collapsible_open2_a" id="collapsible-button-5_mobile" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Learned</button>
+                                <div class="collapsible_open2_a-content2_a" id="collapsible-section-5_mobile" style="width: 280px; max-height: 0px">
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=Skill_Robot_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillRobot()">Building Robots</button>
                                     <button id=Skill_Compost_Learned class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px; display: none" onclick="ViewSkillCompost()">Crafting Compost</button>
@@ -1688,7 +1796,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlinga_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinga_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlinga_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinga_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1700,7 +1808,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingb_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingb_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingb_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingb_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1714,7 +1822,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingc_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingc_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingc_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingc_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1726,7 +1834,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingd_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingd_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingd_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingd_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1740,7 +1848,7 @@
                                 </div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlinge_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinge_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlinge_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlinge_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1752,7 +1860,7 @@
                                     </div>
                                     </div>
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="seedlingf_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingf_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="seedlingf_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="seedlingf_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">Sell for</div>
@@ -1775,7 +1883,7 @@
                                 <div style="overflow-y: scroll; height: 360px">
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiA_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaia_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiA_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaia_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1800,7 +1908,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiB_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaib_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiB_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaib_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1825,7 +1933,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiC_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaic_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiC_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaic_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1850,7 +1958,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiD_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaid_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiD_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaid_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1875,7 +1983,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiE_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaie_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiE_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaie_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1900,7 +2008,7 @@
                                 </div>
                                 <div class="Field" style="width:298.2px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 80px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                        <div id="ButtonBonsaiF_sell" style="width: 80px; height: 80px; background-image: url(Images/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaif_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
+                                        <div id="ButtonBonsaiF_sell" style="width: 80px; height: 80px; background-image: url(Images/treequality/none_small.svg); background-size: 80px 80px; display: flex;align-items:center; justify-content: center"><span id="bonsaif_type_sell"><img src="Images/pot.svg" width="43.75" height="43.75"></span></div>
                                     </div>
                                     <div class="Field" style="width: 140.7px;background: #f1f1f1;color: #555;height: 80px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                                     <div class="Field" style="width: 140.7px;background: #d8d8d8;color: #555;height: 26.67px; padding: 0px;display: flex;align-items: center; justify-content: center">
@@ -1937,26 +2045,26 @@
                             </div>
                             <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
                                 <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_status">-</span></div>
-                            <div id="bonsai_detail_rarity" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                            <div id="bonsai_detail_rarity" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
-                            <div id=bdcc_l_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_level">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t12 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Type</div>
                                 <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_treetype">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t13 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Nature</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_nature">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t14 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t14 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Combined Points (CP)</div>
                                 <div class="Field" style="width:40%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_cp">-</span></div>
                             </div></div>
-                            <div id=bdcc_l_t15 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_l_t15 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Foliage (F)</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_foliage">-</span></div>
                             <div class="Field" style="width:60%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">Branches (B)</div>
@@ -1968,10 +2076,10 @@
                             </div></div>
                         </div>
                         <div class="centercolumn_right_mobile">
-                            <div id=bdcc_r_t1 style="display: none; width: 100%">
+                            <div id=bdcc_r_t1 style="display: show; width: 100%">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Grow bonsai</div>
                             </div> 
-                            <div id=bdcc_r_t11 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level2">-</span></div>
                                 <div id=bdcc_r_t111 style="display: none; width: 142px"><div style="display: flex; width: 100%; flex-wrap: wrap">
@@ -1987,13 +2095,13 @@
                                 </div></div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_level_new2">-</span></div>
                             </div></div>
-                            <div id=bdcc_r_t12 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t12 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">CP</div>
                                 <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp2">-</span></div>
                                 <div class="Field" style="width:142px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center"></div>
                                 <div class="Field" style="width: 59px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_cp_new2">-</span></div>
                             </div></div>
-                            <div id=bdcc_r_t13 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=bdcc_r_t13 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Stats</div>
                                 <div class="Field" style="width: 59px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Old</div>
                                 <div class="Field" style="width:142px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Shape points</div>
@@ -2050,7 +2158,7 @@
                                 <div class="Field" style="width:40px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center"><span id="bonsai_detail_leftpoints">-</span></div>
                                 <div class="Field" style="width: 110px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: flex-start">Shape points</div>
                             </div></div>
-                            <div id=bdcc_r_t19 style="display: none; width: 100%">
+                            <div id=bdcc_r_t19 style="display: show; width: 100%">
                             <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
                             </div>
                             <div id=bdcc_r_t2 class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Change bonsai position</div>
@@ -2072,7 +2180,7 @@
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">-</div>
                             <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
                                 <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"></div>
-                            <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/none_big.svg); background-size: 280px, 120px">
+                            <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
@@ -2213,19 +2321,19 @@
                 </div>
             </div>
             <div class="rightcolumn_mobile">
-                <button class="collapsible_open" id="collapsible-button-2" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seedlings</button>
-                    <div class="collapsible_open-content" id="collapsible-section-2">
+                <button class="collapsible_open" id="collapsible-button-2_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seedlings</button>
+                    <div class="collapsible_open-content" id="collapsible-section-2_mobile">
                         <div class="rightcolumn_content2_mobile">
-                            <div id="seedlinga_right_mobile"><span id="seedlinga_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingb_right_mobile"><span id="seedlingb_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingc_right_mobile"><span id="seedlingc_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingd_right_mobile"><span id="seedlingd_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlinge_right_mobile"><span id="seedlinge_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingf_right_mobile"><span id="seedlingf_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlinga_right_mobile"><span id="seedlinga_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingb_right_mobile"><span id="seedlingb_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingc_right_mobile"><span id="seedlingc_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingd_right_mobile"><span id="seedlingd_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlinge_right_mobile"><span id="seedlinge_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingf_right_mobile"><span id="seedlingf_type_mobile"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
                         </div>
                     </div>
-                <button class="collapsible_open" id="collapsible-button-3" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Workers</button>
-                <div class="collapsible_open-content" id="collapsible-section-3">
+                <button class="collapsible_open" id="collapsible-button-3_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Workers</button>
+                <div class="collapsible_open-content" id="collapsible-section-3_mobile">
                     <div class="rightcolumn_content2_mobile"> 
                         <div class="Field" style="width: 41px;background: #d8d8d8;color: #555;height: auto;display: flex;align-items:center">
                             <img src="Images/you.svg" width="20" height="20">
@@ -2258,9 +2366,9 @@
                     </div>
                 </div>
                 <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                <button class="collapsible_open" id="collapsible-button-1" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
+                <button class="collapsible_open" id="collapsible-button-1_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
                 </div></div>
-                <div class="collapsible_open-content" id="collapsible-section-1">
+                <div class="collapsible_open-content" id="collapsible-section-1_mobile">
                     <div class="rightcolumn_content2_mobile">
                         <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
@@ -2314,19 +2422,19 @@
                 </div>
             </div>
             <div class="rightcolumn_mobilexs">
-                <button class="collapsible_open" id="collapsible-button-2" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seed</button>
-                    <div class="collapsible_open-content" id="collapsible-section-2">
+                <button class="collapsible_open" id="collapsible-button-2_mobilexs" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Seed</button>
+                    <div class="collapsible_open-content" id="collapsible-section-2_mobilexs">
                         <div class="rightcolumn_content2_mobilexs">
-                            <div id="seedlinga_right_mobile"><span id="seedlinga_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingb_right_mobile"><span id="seedlingb_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingc_right_mobile"><span id="seedlingc_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingd_right_mobile"><span id="seedlingd_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlinge_right_mobile"><span id="seedlinge_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
-                            <div id="seedlingf_right_mobile"><span id="seedlingf_type"><img src="Images/pot.svg" width="21,875" height="21,875"></span></div>
+                            <div id="seedlinga_right_mobilexs"><span id="seedlinga_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingb_right_mobilexs"><span id="seedlingb_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingc_right_mobilexs"><span id="seedlingc_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingd_right_mobilexs"><span id="seedlingd_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlinge_right_mobilexs"><span id="seedlinge_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
+                            <div id="seedlingf_right_mobilexs"><span id="seedlingf_type_mobilexs"><img src="Images/pot.svg" width="21.875" height="21.875"></span></div>
                         </div>
                     </div>
-                <button class="collapsible_open" id="collapsible-button-3" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Work</button>
-                <div class="collapsible_open-content" id="collapsible-section-3">
+                <button class="collapsible_open" id="collapsible-button-3_mobilexs" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Work</button>
+                <div class="collapsible_open-content" id="collapsible-section-3_mobilexs">
                     <div class="rightcolumn_content2_mobilexs"> 
                         <div class="Field" style="width: 41px;background: #d8d8d8;color: #555;height: auto;display: flex;align-items:center">
                             <img src="Images/you.svg" width="20" height="20">
@@ -2359,9 +2467,9 @@
                     </div>
                 </div>
                 <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                <button class="collapsible_open" id="collapsible-button-1" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Res</button>
+                <button class="collapsible_open" id="collapsible-button-1_mobilexs" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Res</button>
                 </div></div>
-                <div class="collapsible_open-content" id="collapsible-section-1">
+                <div class="collapsible_open-content" id="collapsible-section-1_mobilexs">
                     <div class="rightcolumn_content2_mobilexs">
                         <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
@@ -2448,7 +2556,14 @@
         </div>
     </div>
 
+    <script src="load_save.js"></script> 
     <script src="navigation.js"></script> 
+    <script src="storage.js"></script> 
+    <script src="growing.js"></script>
+    <script src="fetchfunctions.js"></script>
+    <script src="expedition.js"></script> 
+    <script src="variables.js"></script> 
+    <script src="interval.js"></script> 
     <script src="jquery-3.6.0.min.js"></script>
     <link href="select2.min.css" rel="stylesheet" />
     <script src="select2.min.js"></script>
