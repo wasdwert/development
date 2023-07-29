@@ -11,6 +11,11 @@ var state = {
     workerstandin: 0,
 }
 
+var statistics = {
+    seedlings_total: 0,
+    bonsais_total: 0,
+}
+
 var x=1;
 
 var worker01 = {
