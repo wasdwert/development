@@ -1,6 +1,7 @@
 var state = {
-    random_species: 0,
-    random_rarity: 0,
+    random_treetype: 0,
+    random_treequality: 0,
+    random_shiny: 0,
     random_nature: 0,
     bonsai_showing: 0,
     workers_total: 1,
@@ -45,6 +46,30 @@ var worker03 = {
     crafting: 0,
     crafting_zeit: 0,
     crafting_zeitone: 0,
+}
+
+/* Expedition treetypes and treequality discovered */
+var exp_area01 = {
+    alltreetype: 0,
+    treetype01: 0,
+    treetype02: 0,
+    treetype03: 0,
+    alltreequality: 0,
+    treequality01: 0,
+    treequality02: 0,
+}
+
+var exp_area02 = {
+    alltreetype: 0,
+    treetype01: 0,
+    treetype02: 0,
+    treetype03: 0,
+    treetype04: 0,
+    treetype05: 0,
+    alltreequality: 0,
+    treequality01: 0,
+    treequality02: 0,
+    treequality03: 0,
 }
 
 /* Bonsai variables */
