@@ -93,41 +93,65 @@ w.addEventListener('message', function(e){
     
     //learning_countdown();
     
-    if (bonsai11.growing==1) {
-        Bonsai_Growing_Intervall(bonsai11);
+    if (bonsai001.growing==1) {
+        Bonsai_Growing_Intervall(bonsai001);
     }
-    if (bonsai12.growing==1) {
-        Bonsai_Growing_Intervall(bonsai12);
+    if (bonsai002.growing==1) {
+        Bonsai_Growing_Intervall(bonsai002);
     }
-    if (bonsai13.growing==1) {
-        Bonsai_Growing_Intervall(bonsai13);
+    if (bonsai003.growing==1) {
+        Bonsai_Growing_Intervall(bonsai003);
     }
-    if (bonsai14.growing==1) {
-        Bonsai_Growing_Intervall(bonsai14);
+    if (bonsai004.growing==1) {
+        Bonsai_Growing_Intervall(bonsai004);
     }
-    if (bonsai15.growing==1) {
-        Bonsai_Growing_Intervall(bonsai15);
+    if (bonsai005.growing==1) {
+        Bonsai_Growing_Intervall(bonsai005);
     }
-    if (bonsai16.growing==1) {
-        Bonsai_Growing_Intervall(bonsai16);
+    if (bonsai006.growing==1) {
+        Bonsai_Growing_Intervall(bonsai006);
     }
-    if (bonsai71.growing==1) {
-        Bonsai_Growing_Intervall(bonsai71);
+    if (bonsai007.growing==1) {
+        Bonsai_Growing_Intervall(bonsai007);
     }
-    if (bonsai72.growing==1) {
-        Bonsai_Growing_Intervall(bonsai72);
+    if (bonsai008.growing==1) {
+        Bonsai_Growing_Intervall(bonsai008);
     }
-    if (bonsai73.growing==1) {
-        Bonsai_Growing_Intervall(bonsai73);
+    if (bonsai009.growing==1) {
+        Bonsai_Growing_Intervall(bonsai009);
     }
-    if (bonsai74.growing==1) {
-        Bonsai_Growing_Intervall(bonsai74);
+    if (bonsai010.growing==1) {
+        Bonsai_Growing_Intervall(bonsai010);
     }
-    if (bonsai75.growing==1) {
-        Bonsai_Growing_Intervall(bonsai75);
+    if (bonsai011.growing==1) {
+        Bonsai_Growing_Intervall(bonsai011);
     }
-    if (bonsai76.growing==1){
-        Bonsai_Growing_Intervall(bonsai76);
+    if (bonsai012.growing==1){
+        Bonsai_Growing_Intervall(bonsai012);
+    }
+    if (bonsai013.growing==1){
+        Bonsai_Growing_Intervall(bonsai013);
+    }
+    if (bonsai014.growing==1){
+        Bonsai_Growing_Intervall(bonsai014);
+    }
+    if (bonsai015.growing==1){
+        Bonsai_Growing_Intervall(bonsai015);
+    }
+    if (bonsai016.growing==1){
+        Bonsai_Growing_Intervall(bonsai016);
+    }
+    if (bonsai017.growing==1){
+        Bonsai_Growing_Intervall(bonsai017);
+    }
+    if (bonsai018.growing==1){
+        Bonsai_Growing_Intervall(bonsai018);
+    }
+    if (bonsai019.growing==1){
+        Bonsai_Growing_Intervall(bonsai019);
+    }
+    if (bonsai020.growing==1){
+        Bonsai_Growing_Intervall(bonsai020);
     }
 })/*1 Sekunden Intervallfunktion*/
 
