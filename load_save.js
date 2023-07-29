@@ -87,11 +87,11 @@ w.addEventListener('message', function(e){
         }
     }
     
-    crafting_countdown(worker01);
-    crafting_countdown(worker02);
-    crafting_countdown(worker03);
+    //crafting_countdown(worker01);
+    //crafting_countdown(worker02);
+    //crafting_countdown(worker03);
     
-    learning_countdown();
+    //learning_countdown();
     
     if (bonsai11.growing==1) {
         Bonsai_Growing_Intervall(bonsai11);
