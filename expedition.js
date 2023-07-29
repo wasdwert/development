@@ -117,7 +117,7 @@ function randommaschine(seedlingx, worker) {
         seedlingx.treequality=1;
         seedlingx.shiny=1;
         seedlingx.price= seedlingx.treetypegroup*seedlingx.treequality;
-        experience(1);
+        //experience(1);
     }
     else if (statistics.seedlings_total==3) {
         seedlingx.treetype=2;
@@ -125,7 +125,7 @@ function randommaschine(seedlingx, worker) {
         seedlingx.treequality=1;
         seedlingx.shiny=1;
         seedlingx.price= seedlingx.treetypegroup*seedlingx.treequality;
-        experience(1);
+        //experience(1);
 
     }
     else {
@@ -171,7 +171,7 @@ function randommaschine(seedlingx, worker) {
             }
         }
         seedlingx.price= seedlingx.treetypegroup*seedlingx.treequality;
-        experience(1);
+        //experience(1);
     }
     else if (worker.expedition==2) {
         if (state.random_treetype>=0.99)  { //Random for treetype
@@ -231,7 +231,7 @@ function randommaschine(seedlingx, worker) {
             }
         }
         seedlingx.price= seedlingx.treetypegroup*seedlingx.treequality;
-        experience(2);
+        //experience(2);
     }
     }
 }
