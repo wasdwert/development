@@ -3,16 +3,16 @@ var w = new Worker ("interval.js");
 
 window.onload = function () {
     if (localStorage.getItem('state') == null) {
-    
+
     }
     else {
         $(document).ready(function(){
-            $('.NewGame').hide();
-            $('.NewGame2').show();
-            $('.LoadGame').show();
-        });      
+            $('#NewGame').hide();
+            $('#NewGame2').show();
+            $('#LoadGame').show();
+        });  
     }
-    
+
     $('#positionn_batch').select2({
             minimumResultsForSearch: Infinity
         });
@@ -193,86 +193,45 @@ function NewGame2() {
     });  
 }
 
+function LoadGame() {
+    state = JSON.parse(localStorage.getItem('state'));
+    statistics = JSON.parse(localStorage.getItem('statistics'));
+    worker01 = JSON.parse(localStorage.getItem('worker01'));
+    worker02 = JSON.parse(localStorage.getItem('worker02'));
+    worker03 = JSON.parse(localStorage.getItem('worker03'));
+    exp_area01 = JSON.parse(localStorage.getItem('exp_area01'));
+    exp_area02 = JSON.parse(localStorage.getItem('exp_area02'));
+    seedling1 = JSON.parse(localStorage.getItem('seedling1'));
+    seedling2 = JSON.parse(localStorage.getItem('seedling2'));
+    seedling3 = JSON.parse(localStorage.getItem('seedling3'));
+    seedling4 = JSON.parse(localStorage.getItem('seedling4'));
+    seedling5 = JSON.parse(localStorage.getItem('seedling5'));
+    seedling6 = JSON.parse(localStorage.getItem('seedling6'));
+    $(document).ready(function(){
+        $('.startscreen').hide();
+        $('.game').show();
+    });  
+}
+
 function ViewOptions() {
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
+    localStorage.setItem('statistics', JSON.stringify(statistics));
+    localStorage.setItem('worker01', JSON.stringify(worker01));
+    localStorage.setItem('worker02', JSON.stringify(worker02));
+    localStorage.setItem('worker03', JSON.stringify(worker03));
+    localStorage.setItem('exp_area01', JSON.stringify(exp_area01));
+    localStorage.setItem('exp_area02', JSON.stringify(exp_area02));
+    localStorage.setItem('seedling1', JSON.stringify(seedling1));
+    localStorage.setItem('seedling2', JSON.stringify(seedling2));
+    localStorage.setItem('seedling3', JSON.stringify(seedling3));
+    localStorage.setItem('seedling4', JSON.stringify(seedling4));
+    localStorage.setItem('seedling5', JSON.stringify(seedling5));
+    localStorage.setItem('seedling6', JSON.stringify(seedling6));
+
     document.getElementById("snack_message").innerText = "Game saved";
     var snackb = document.getElementById("snackbar");
     snackb.className = "show";
     setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
 
 }
-
-/* Tutorial? Modal*/
-// Get the modal
-var modaltutorial = document.getElementById("m_tutorial");
-
-// Get the button that opens the modal
-var btntutorial = document.getElementById("NewGame");
-
-// Get the <span> element that closes the modal
-var spantutorial_yes = document.getElementById("Button_Modal_Tutorial_Yes");
-var spantutorial_no = document.getElementById("Button_Modal_Tutorial_No");
-
-// When the user clicks on the button, open the modal
-btntutorial.onclick = function() {
-    modaltutorial.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spantutorial_yes.onclick = function() {
-    $(document).ready(function(){
-        $('.startscreen').hide();
-        $('.game').show();
-    }); 
-    modaltutorial.style.display = "none";
-}
-
-spantutorial_no.onclick = function() {
-    $(document).ready(function(){
-        $('.startscreen').hide();
-        $('.game').show();
-    }); 
-    modaltutorial.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function(event) {
-    if (event.target == modaltutorial) {
-        modaltutorial.style.display = "none";
-    }
-}) 
-
-
-/* New Game, Sure? Modal*/
-// Get the modal
-var modalnewgame = document.getElementById("m_newgame");
-
-// Get the button that opens the modal
-var btnnewgame = document.getElementById("x");
-
-// Get the <span> element that closes the modal
-var spannewgame = document.getElementById("modal_newgame_close");
-var spannewgameclose = document.getElementById("Button_Modal_NewGame");
-
-// When the user clicks on the button, open the modal
-btnnewgame.onclick = function() {
-    modalnewgame.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spannewgame.onclick = function() {
-    modalnewgame.style.display = "none";
-}
-
-spannewgameclose.onclick = function() {
-    ChangeNewGame();
-    modalnewgame.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function(event) {
-    if (event.target == modalnewgame) {
-        modalnewgame.style.display = "none";
-    }
-}) 
