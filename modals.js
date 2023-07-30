@@ -62,7 +62,6 @@ spannewgame_no.onclick = function() {
 
 spannewgame_yes.onclick = function() {
     modalnewgame.style.display = "none";
-    localStorage.clear(); //LocalStorage cleared
     modaltutorial.style.display = "block";
 }
 
