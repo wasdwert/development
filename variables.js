@@ -7,14 +7,14 @@ var state = {
     bonsai_showing: 0,
     workers_total: 1,
     workers_available: 1,
-    seedlings: 1,
-    seedlings_ontheway: 1,
+    seedlings: 0,
+    seedlings_ontheway: 0,
     workerstandin: 0,
     
 }
 
 var statistics = {
-    seedlings_total: 1,
+    seedlings_total: 0,
     bonsais_total: 0,
 }
 
@@ -107,11 +107,11 @@ natures[15]= "Consolidated";
 natures[16]= "Earthed";
 
 var seedling1 = {
-    treetype: 1,
+    treetype: 0,
     treetypegroup: 0,
     styletype: 0,
-    treequality: 1,
-    shiny: 1,
+    treequality: 0,
+    shiny: 0,
     planting_choosen: 0,
     price: 0,
 }

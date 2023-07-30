@@ -144,6 +144,26 @@ function LoadGame() {
     seedling4 = JSON.parse(localStorage.getItem('seedling4'));
     seedling5 = JSON.parse(localStorage.getItem('seedling5'));
     seedling6 = JSON.parse(localStorage.getItem('seedling6'));
+    bonsai001 = JSON.parse(localStorage.getItem('bonsai001'));
+    bonsai002 = JSON.parse(localStorage.getItem('bonsai002'));
+    bonsai003 = JSON.parse(localStorage.getItem('bonsai003'));
+    bonsai004 = JSON.parse(localStorage.getItem('bonsai004'));
+    bonsai005 = JSON.parse(localStorage.getItem('bonsai005'));
+    bonsai006 = JSON.parse(localStorage.getItem('bonsai006'));
+    bonsai007 = JSON.parse(localStorage.getItem('bonsai007'));
+    bonsai008 = JSON.parse(localStorage.getItem('bonsai008'));
+    bonsai009 = JSON.parse(localStorage.getItem('bonsai009'));
+    bonsai010 = JSON.parse(localStorage.getItem('bonsai010'));
+    bonsai011 = JSON.parse(localStorage.getItem('bonsai011'));
+    bonsai012 = JSON.parse(localStorage.getItem('bonsai012'));
+    bonsai013 = JSON.parse(localStorage.getItem('bonsai013'));
+    bonsai014 = JSON.parse(localStorage.getItem('bonsai014'));
+    bonsai015 = JSON.parse(localStorage.getItem('bonsai015'));
+    bonsai016 = JSON.parse(localStorage.getItem('bonsai016'));
+    bonsai017 = JSON.parse(localStorage.getItem('bonsai017'));
+    bonsai018 = JSON.parse(localStorage.getItem('bonsai018'));
+    bonsai019 = JSON.parse(localStorage.getItem('bonsai019'));
+    bonsai020 = JSON.parse(localStorage.getItem('bonsai020'));
     startup();
     
 }
@@ -219,6 +239,26 @@ function ViewOptions() {
     localStorage.setItem('seedling4', JSON.stringify(seedling4));
     localStorage.setItem('seedling5', JSON.stringify(seedling5));
     localStorage.setItem('seedling6', JSON.stringify(seedling6));
+    localStorage.setItem('bonsai001', JSON.stringify(bonsai001));
+    localStorage.setItem('bonsai002', JSON.stringify(bonsai002));
+    localStorage.setItem('bonsai003', JSON.stringify(bonsai003));
+    localStorage.setItem('bonsai004', JSON.stringify(bonsai004));
+    localStorage.setItem('bonsai005', JSON.stringify(bonsai005));
+    localStorage.setItem('bonsai006', JSON.stringify(bonsai006));
+    localStorage.setItem('bonsai007', JSON.stringify(bonsai007));
+    localStorage.setItem('bonsai008', JSON.stringify(bonsai008));
+    localStorage.setItem('bonsai009', JSON.stringify(bonsai009));
+    localStorage.setItem('bonsai010', JSON.stringify(bonsai010));
+    localStorage.setItem('bonsai011', JSON.stringify(bonsai011));
+    localStorage.setItem('bonsai012', JSON.stringify(bonsai012));
+    localStorage.setItem('bonsai013', JSON.stringify(bonsai013));
+    localStorage.setItem('bonsai014', JSON.stringify(bonsai014));
+    localStorage.setItem('bonsai015', JSON.stringify(bonsai015));
+    localStorage.setItem('bonsai016', JSON.stringify(bonsai016));
+    localStorage.setItem('bonsai017', JSON.stringify(bonsai017));
+    localStorage.setItem('bonsai018', JSON.stringify(bonsai018));
+    localStorage.setItem('bonsai019', JSON.stringify(bonsai019));
+    localStorage.setItem('bonsai020', JSON.stringify(bonsai020));
 
     document.getElementById("snack_message").innerText = "Game saved";
     var snackb = document.getElementById("snackbar");

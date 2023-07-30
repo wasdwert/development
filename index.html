@@ -2542,50 +2542,47 @@
   
     <!-- Modal New Game, Sure? -->
     <div id="m_newgame" class="modal_newgame">
-        <div class="modal_newgame-content">
-                <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 200px;display: flex;align-items:center">Sure, you want to start a new game? Old save file will be lost!</div>
-                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+        <div class="modal_newgame-content" style="width: 300px">
+                <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 300px;display: flex;align-items:center">Sure, you want to start a new game? Old save file will be lost!</div>
+                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 300px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
                     <button id="Button_Modal_NewGame_Yes" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Yes</button>
-                    <button id="Button_Modal_NewGame_No" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">No</button>
-             
+                    <button id="Button_Modal_NewGame_No" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">No</button>
                 </div>      
         </div>
     </div>
         
     <!-- Modal New Game, Sure? -->
     <div id="m_tutorial" class="modal_tutorial">
-        <div class="modal_tutorial-content">
+        <div class="modal_tutorial-content" style="width: 200px">
                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 200px;display: flex;align-items:center">Start with tutorial?</div>
                 <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
-                    <button id="Button_Modal_Tutorial_Yes" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Yes</button>
-                    <button id="Button_Modal_Tutorial_No" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">No</button>
-             
+                    <button id="Button_Modal_Tutorial_Yes" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Yes</button>
+                    <button id="Button_Modal_Tutorial_No" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">No</button>
                 </div>      
         </div>
     </div>
     
     <!-- Modal Change Name -->
     <div id="m_name" class="modal_name">
-        <div class="modal_name-content">
+        <div class="modal_name-content" style="width: 200px">
                 <div class="Field" style="background: #777;color: white;height: 40px;width: 200px; display: flex;align-items:center;justify-content: center;padding-left: 0px">
                     <input type="text" id="nname" placeholder="New name" style="width: 90%; height: 60%; background: #f1f1f1; border: 0px">  
                 </div>
                 <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
-                    <button id="Button_Modal_Name" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Change</button>
-                    <button id="modal_name_close" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
-             
+                    <button id="Button_Modal_Name_Change" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Change</button>
+                    <button id="Button_Modal_Name_Cancel" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
                 </div>      
         </div>
     </div>
     
     <!-- Modal Change Position -->
     <div id="m_position" class="modal_position">
-        <div class="modal_position-content">
+        <div class="modal_position-content" style="width: 240px">
                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 240px;display: flex;align-items:center">Switch positions?</div>
                 <div id=BonsaiOld style="color: #555"><p style="text-align: left; margin-left: 5px; margin-top: 5px; margin-bottom: 1px; font-family:Arial; font-size: 8px"><span id="bonsaiold_nr">#1</span></p><span id="bonsaiold_name">-</span><br><span id="bonsaiold_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsaiold_level">-</span><br>CP <span id="bonsaiold_cp">-</span></div>
                 <div id=BonsaiNew style="color: #555"><p style="text-align: left; margin-left: 5px; margin-top: 5px; margin-bottom: 1px; font-family:Arial; font-size: 8px"><span id="bonsainew_nr">#2</span></p><span id="bonsainew_name">-</span><br><span id="bonsainew_type"><img src="Images/pot.svg" width="50" height="50"></span><br>Level <span id="bonsainew_level">-</span><br>CP <span id="bonsainew_cp">-</span></div>
                 <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 240px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
-                    <button id="Button_Modal_Position" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Change</button>
+                    <button id="Button_Modal_Position" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Change</button>
                     <button id="modal_position_close" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
                 </div>      
           
@@ -2600,6 +2597,7 @@
     <script src="fetchfunctions.js"></script>
     <script src="expedition.js"></script> 
     <script src="modals.js"></script> 
+    <script src="bonsais.js"></script> 
     <script src="jquery-3.6.0.min.js"></script>
     <link href="select2.min.css" rel="stylesheet" />
     <script src="select2.min.js"></script>
