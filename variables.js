@@ -1,4 +1,5 @@
 var state = {
+    zeitsave: 0,
     random_treetype: 0,
     random_treequality: 0,
     random_shiny: 0,
@@ -9,10 +10,11 @@ var state = {
     seedlings: 1,
     seedlings_ontheway: 1,
     workerstandin: 0,
+    
 }
 
 var statistics = {
-    seedlings_total: 0,
+    seedlings_total: 1,
     bonsais_total: 0,
 }
 

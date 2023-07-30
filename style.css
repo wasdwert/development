@@ -149,9 +149,26 @@
     }
 }
 
-.game {
+.game, .startscreen {
     box-sizing: border-box;
     justify-content: center;
+}
+
+#NewGame, #LoadGame {
+    box-sizing: border-box;
+	height: 40px;
+    width: 120px;
+	background: #777;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+    margin: 10px;
 }
 
 .headcontainer {

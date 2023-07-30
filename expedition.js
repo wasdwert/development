@@ -102,9 +102,9 @@ function seedling_countdown(worker) {
     state.seedlings +=1;
     statistics.seedlings_total +=1;
         
-    task001trigger();
+    //task001trigger();
         
-    task003trigger();
+    //task003trigger();
     
     document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});  
     }

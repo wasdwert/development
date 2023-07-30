@@ -2,6 +2,17 @@ var time=0;
 var w = new Worker ("interval.js");
 
 window.onload = function () {
+    if (localStorage.getItem('state') == null) {
+    
+    }
+    else {
+        $(document).ready(function(){
+            $('.NewGame').hide();
+            $('.NewGame2').show();
+            $('.LoadGame').show();
+        });      
+    }
+    
     $('#positionn_batch').select2({
             minimumResultsForSearch: Infinity
         });
@@ -158,10 +169,103 @@ w.addEventListener('message', function(e){
 
 /*30 Sekunden Autosave Intervall*/
 setInterval(function Autosave() {
-
+    state.zeitsave = Date.now();
+    localStorage.setItem('state', JSON.stringify(state));
+    
     document.getElementById("snack_message").innerText = "Game saved";
     var snackb = document.getElementById("snackbar");
     snackb.className = "show";
     setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
 
 }, 30000)
+
+function NewGame() {
+    $(document).ready(function(){
+        $('.startscreen').hide();
+        $('.game').show();
+    });  
+}
+
+function NewGame2() {
+    $(document).ready(function(){
+        $('.startscreen').hide();
+        $('.game').show();
+    });  
+}
+
+function ViewOptions() {
+    state.zeitsave = Date.now();
+    localStorage.setItem('state', JSON.stringify(state));
+    document.getElementById("snack_message").innerText = "Game saved";
+    var snackb = document.getElementById("snackbar");
+    snackb.className = "show";
+    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+
+}
+
+/* Tutorial? Modal*/
+// Get the modal
+var modalname = document.getElementById("m_tutorial");
+
+// Get the button that opens the modal
+var btnname = document.getElementById("NewGame");
+
+// Get the <span> element that closes the modal
+var spanname = document.getElementById("Button_Modal_Tutorial_Yes");
+var spannameclose = document.getElementById("Button_Modal_Tutorial_No");
+
+// When the user clicks on the button, open the modal
+btnname.onclick = function() {
+    modalname.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanname.onclick = function() {
+    modalname.style.display = "none";
+}
+
+spannameclose.onclick = function() {
+    ChangeName();
+    modalname.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == modalname) {
+        modalname.style.display = "none";
+    }
+}) 
+
+
+/* New Game, Sure? Modal*/
+// Get the modal
+var modalname = document.getElementById("m_newgame");
+
+// Get the button that opens the modal
+var btnname = document.getElementById("NewGame2");
+
+// Get the <span> element that closes the modal
+var spanname = document.getElementById("modal_newgame_close");
+var spannameclose = document.getElementById("Button_Modal_NewGame");
+
+// When the user clicks on the button, open the modal
+btnname.onclick = function() {
+    modalname.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanname.onclick = function() {
+    modalname.style.display = "none";
+}
+
+spannameclose.onclick = function() {
+    ChangeName();
+    modalname.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == modalname) {
+        modalname.style.display = "none";
+    }
+}) 

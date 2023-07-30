@@ -9,8 +9,19 @@
 </head>
     <body class="background">
     <div id="snackbar"><span id="snack_message">-</span></div> 
-    <div class="game">
+    <div class="startscreen">
         <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master v0.0.2 (Alpha 2)</strong></p></div>
+        <div class="gamecontainer">
+            <button id=NewGame class=green onclick="NewGame()">New Game</button>
+            <button id=NewGame2 class=green onclick="NewGame2()" style="display: none">New Game</button>
+            <button id=LoadGame class=green onclick="LoadGame()" style="display: none">Load Game</button>
+        </div>
+        <div class="gametitle"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>© 2023 wasdwert - Icons from svgrepo.com, Pictures from pixabay.com</strong></p></div>
+    </div>
+        
+    <div class="game" style="display: none">
+        <div class="gametitle"><img src="Images/bonsai.svg" width="50" height="50"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>&nbsp;Bonsai Master v0.0.2 (Alpha 2)</strong></p></div>
+        
         <div class="headcontainer_pc">
             <div class="headcontainer">
                 <button id=ButtonNavigationBonDex class=green onclick="ViewBonDex(z=0)">BonDex</button>
@@ -2527,7 +2538,31 @@
         
         <div class="gametitle"><p style="font-family:Arial; font-size: 16px; color: #555"><strong>© 2023 wasdwert - Icons from svgrepo.com, Pictures from pixabay.com</strong></p></div>
     </div>
-   
+  
+    <!-- Modal New Game, Sure? -->
+    <div id="m_newgame" class="modal_name">
+        <div class="modal_name-content">
+                <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 200px;display: flex;align-items:center">Sure, you want to start a new game? Old save file will be lost!</div>
+                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                    <button id="Button_Modal_NewGame" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Yes</button>
+                    <button id="modal_newgame_close" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">No</button>
+             
+                </div>      
+        </div>
+    </div>
+        
+    <!-- Modal New Game, Sure? -->
+    <div id="m_tutorial" class="modal_name">
+        <div class="modal_name-content">
+                <div class="Field" style="width:100%;background: #777;color: white;height: 40px; width: 200px;display: flex;align-items:center">Start with tutorial?</div>
+                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 200px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                    <button id="Button_Modal_Tutorial_Yes" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">Yes</button>
+                    <button id="Button_Modal_Tutorial_No" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="ChangeName()">No</button>
+             
+                </div>      
+        </div>
+    </div>
+    
     <!-- Modal Change Name -->
     <div id="m_name" class="modal_name">
         <div class="modal_name-content">
