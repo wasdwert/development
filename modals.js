@@ -101,8 +101,8 @@ var modalchange = document.getElementById("m_position");
 var btnchange = document.getElementById("ChangePosition");
 
 // Get the <span> element that closes the modal
-var spanchange = document.getElementById("modal_position_close");
-var spanchangeclose = document.getElementById("Button_Modal_Position");
+var spanchange_cancel = document.getElementById("Button_Modal_Position_Close");
+var spanchange_change = document.getElementById("Button_Modal_Position_Change");
 
 // When the user clicks on the button, open the modal
 btnchange.onclick = function() {
@@ -149,11 +149,11 @@ btnchange.onclick = function() {
 }
     
 // When the user clicks on <span> (x), close the modal
-spanchange.onclick = function() {
+spanchange_cancel.onclick = function() {
     modalchange.style.display = "none";
 }
 
-spanchangeclose.onclick = function() {
+spanchange_change.onclick = function() {
     ChangePosition();
     modalchange.style.display = "none";
 }
