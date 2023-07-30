@@ -20,6 +20,7 @@ spantutorial_yes.onclick = function() {
         $('.startscreen').hide();
         $('.game').show();
     }); 
+    startup();
     modaltutorial.style.display = "none";
 }
 
@@ -28,6 +29,7 @@ spantutorial_no.onclick = function() {
         $('.startscreen').hide();
         $('.game').show();
     }); 
+    startup();
     modaltutorial.style.display = "none";
 }
 
@@ -62,6 +64,7 @@ spannewgame_no.onclick = function() {
 
 spannewgame_yes.onclick = function() {
     modalnewgame.style.display = "none";
+    localStorage.clear(); //LocalStorage cleared
     modaltutorial.style.display = "block";
 }
 

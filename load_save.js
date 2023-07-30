@@ -130,14 +130,6 @@ setInterval(function Autosave() {
 
 }, 30000)
 
-function NewGame() {
-    startup(); 
-}
-
-function NewGame2() {
-    startup(); 
-}
-
 function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
     statistics = JSON.parse(localStorage.getItem('statistics'));
