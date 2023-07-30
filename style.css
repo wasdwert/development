@@ -973,7 +973,7 @@
 
 /* Edit Name Modal */
  /* The Modal (background) */
-.modal_name {
+.modal_name, .modal_newgame, .modal_tutorial {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -987,7 +987,7 @@
 }
 
 /* Modal Content/Box */
-.modal_name-content {
+.modal_name-content, .modal_newgame-content, .modal_tutorial-content {
     width: 200px;
     background-color: #f1f1f1;
     margin: 5% auto; /* 15% from the top and centered */

@@ -205,67 +205,74 @@ function ViewOptions() {
 
 /* Tutorial? Modal*/
 // Get the modal
-var modalname = document.getElementById("m_tutorial");
+var modaltutorial = document.getElementById("m_tutorial");
 
 // Get the button that opens the modal
-var btnname = document.getElementById("NewGame");
+var btntutorial = document.getElementById("NewGame");
 
 // Get the <span> element that closes the modal
-var spanname = document.getElementById("Button_Modal_Tutorial_Yes");
-var spannameclose = document.getElementById("Button_Modal_Tutorial_No");
+var spantutorial_yes = document.getElementById("Button_Modal_Tutorial_Yes");
+var spantutorial_no = document.getElementById("Button_Modal_Tutorial_No");
 
 // When the user clicks on the button, open the modal
-btnname.onclick = function() {
-    modalname.style.display = "block";
+btntutorial.onclick = function() {
+    modaltutorial.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-spanname.onclick = function() {
-    modalname.style.display = "none";
+spantutorial_yes.onclick = function() {
+    $(document).ready(function(){
+        $('.startscreen').hide();
+        $('.game').show();
+    }); 
+    modaltutorial.style.display = "none";
 }
 
-spannameclose.onclick = function() {
-    ChangeName();
-    modalname.style.display = "none";
+spantutorial_no.onclick = function() {
+    $(document).ready(function(){
+        $('.startscreen').hide();
+        $('.game').show();
+    }); 
+    modaltutorial.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function(event) {
-    if (event.target == modalname) {
-        modalname.style.display = "none";
+    if (event.target == modaltutorial) {
+        modaltutorial.style.display = "none";
     }
 }) 
 
 
 /* New Game, Sure? Modal*/
 // Get the modal
-var modalname = document.getElementById("m_newgame");
+var modalnewgame = document.getElementById("m_newgame");
 
 // Get the button that opens the modal
-var btnname = document.getElementById("NewGame2");
+var btnnewgame = document.getElementById("x");
 
 // Get the <span> element that closes the modal
-var spanname = document.getElementById("modal_newgame_close");
-var spannameclose = document.getElementById("Button_Modal_NewGame");
+var spannewgame = document.getElementById("modal_newgame_close");
+var spannewgameclose = document.getElementById("Button_Modal_NewGame");
 
 // When the user clicks on the button, open the modal
-btnname.onclick = function() {
-    modalname.style.display = "block";
+btnnewgame.onclick = function() {
+    modalnewgame.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-spanname.onclick = function() {
-    modalname.style.display = "none";
+spannewgame.onclick = function() {
+    modalnewgame.style.display = "none";
 }
 
-spannameclose.onclick = function() {
-    ChangeName();
-    modalname.style.display = "none";
+spannewgameclose.onclick = function() {
+    ChangeNewGame();
+    modalnewgame.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function(event) {
-    if (event.target == modalname) {
-        modalname.style.display = "none";
+    if (event.target == modalnewgame) {
+        modalnewgame.style.display = "none";
     }
 }) 
