@@ -3,7 +3,6 @@ function Bonsai_Growing(bonsaixx) {
     if (bonsaixx.growing==1) {   
         document.getElementById("Button_Grow_Zeit").innerHTML = bonsaixx.growing_zeit;
         document.getElementById("bonsai_detail_treequality").style.backgroundImage = fetchbonsaitreequality_big(bonsaixx);
-        document.getElementById("bonsai_detail_status").innerHTML = "Growing ("+bonsaixx.growing_zeit+"&nbsp;seconds)"; 
         document.getElementById("bonsai_detail_name").innerText = bonsaixx.name; 
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];
@@ -82,7 +81,6 @@ function Bonsai_Growing(bonsaixx) {
     }
     else {
         document.getElementById("bonsai_detail_treequality").style.backgroundImage = fetchbonsaitreequality_big(bonsaixx);
-        document.getElementById("bonsai_detail_status").innerText = "Idle"; 
         document.getElementById("bonsai_detail_name").innerText = bonsaixx.name; 
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];

@@ -239,6 +239,7 @@ function fetchbonsaimenu_shop(number1, number2, a, b, c, d, e, f, g, h, i, j) {
 function fetchimage_seedling (x, y) {
     document.getElementById("seedling"+x+"_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, y, "43.75", "43.75");
     document.getElementById("seedling"+x+"_type_c").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, y, "43.75", "43.75");
+    document.getElementById("seedling"+x+"_type_c_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, y, "43.75", "43.75");
     document.getElementById("seedling"+x+"_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, y, "21.875", "21.875");
     document.getElementById("seedling"+x+"_type_mobilexs").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, y, "21.875", "21.875");
     
@@ -247,6 +248,7 @@ function fetchimage_seedling (x, y) {
     
     document.getElementById("seedling"+x+"_right").style.backgroundImage= fetchbonsaitreequality_small(y);
     document.getElementById("seedling"+x+"_center").style.backgroundImage= fetchbonsaitreequality(y);
+    document.getElementById("seedling"+x+"_center_mobile").style.backgroundImage= fetchbonsaitreequality_small(y);
     document.getElementById("seedling"+x+"_right_mobile").style.backgroundImage= fetchbonsaitreequality_small(y);
     document.getElementById("seedling"+x+"_right_mobilexs").style.backgroundImage= fetchbonsaitreequality_small(y);
 }

@@ -1054,8 +1054,6 @@
                                 <span id="bonsai_detail_name">-</span>
                                 &nbsp;<button id="EditName" class="edit" style="width: 15px; height: 15px; background-image: url(Images/edit.svg); background-size: 15px, 15px"></button>
                             </div>
-                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
-                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_status">-</span></div>
                             <div id="bonsai_detail_treequality" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
@@ -1227,6 +1225,12 @@
                             <button id="seedlingd_center" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlinge_center" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlingf_center" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <select class="select" id="menu" onchange="style_change()">
+                                <option value="0">Choose a style for your bonsai</option>
+                                <option value="1">Chokan - Formal Upright Style</option>
+                                <option value="2">Moyogi - Informal Upright Style</option>
+                                <option value="3">Shakan - Slanting Style</option>
+                            </select>
                             <button id="Button" class="green" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="PlantSeedling()">Plant (6 seconds)</button>
                         </div>
                     </div> 
@@ -2054,8 +2058,6 @@
                                 <span id="bonsai_detail_name">-</span>
                                 &nbsp;<button id="EditName" class="edit" style="width: 15px; height: 15px; background-image: url(Images/edit.svg); background-size: 15px, 15px"></button>
                             </div>
-                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
-                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><span id="bonsai_detail_status">-</span></div>
                             <div id="bonsai_detail_rarity" class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
                                 <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
@@ -2213,12 +2215,18 @@
                         </div>
                         <div class="centercolumn_right_mobile">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Pick a seedling to plant:</div>
-                            <button id="seedlinga_center" class="" onclick="ChooseSeedling(1)"><span id="seedlinga_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button> 
-                            <button id="seedlingb_center" class="" onclick="ChooseSeedling(2)"><span id="seedlingb_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <button id="seedlingc_center" class="" onclick="ChooseSeedling(3)"><span id="seedlingc_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <button id="seedlingd_center" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <button id="seedlinge_center" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <button id="seedlingf_center" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlinga_center_mobile" class="" onclick="ChooseSeedling(1)"><span id="seedlinga_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button> 
+                            <button id="seedlingb_center_mobile" class="" onclick="ChooseSeedling(2)"><span id="seedlingb_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingc_center_mobile" class="" onclick="ChooseSeedling(3)"><span id="seedlingc_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingd_center_mobile" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlinge_center_mobile" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <button id="seedlingf_center_mobile" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
+                            <select class="select" id="menu" onchange="style_change()">
+                                <option value="0">Choose a style for your bonsai</option>
+                                <option value="1">Chokan - Formal Upright Style</option>
+                                <option value="2">Moyogi - Informal Upright Style</option>
+                                <option value="3">Shakan - Slanting Style</option>
+                            </select>
                             <button id="Button" class="green" style="width:100%;display: flex;align-items:center;justify-content: center" onclick="PlantSeedling()">Plant (6 seconds)</button>
                         </div>
                     </div> 
@@ -2359,19 +2367,19 @@
                             </div>
                         </div></div>
                         <div class="Field" style="width: 79px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">
-                                <span id="worker1_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                                <span id="worker1_task_mobile" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
                         </div>
                         </div> 
                         <div id="worker02div" style="width: 120px; height: 30px; display: none">
                             <div class="Field" style="width:100%;background: #f1f1f1;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
                                 <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
-                                <span id="worker2_task" style="display: flex;align-items:center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                                <span id="worker2_task_mobile" style="display: flex;align-items:center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
                             </div>
                         </div>
                         <div id="worker03div" style="width: 120px; height: 30px; display: none">    
                             <div class="Field" style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
                                 <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
-                                <span id="worker3_task" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
+                                <span id="worker3_task_mobile" style="display: flex;align-items: center; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready</span>
                             </div>
                         </div>
                     </div>
@@ -2460,19 +2468,19 @@
                             </div>
                         </div></div>
                         <div class="Field" style="width: 39px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">
-                                <span id="worker1_task" style="display: flex;align-items: center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
+                                <span id="worker1_task_mobilexs" style="display: flex;align-items: center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
                         </div>
                         </div> 
                         <div id="worker02div" style="width: 80px; height: 30px; display: none">
                             <div class="Field" style="width:100%;background: #f1f1f1;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
                                 <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
-                                <span id="worker2_task" style="display: flex;align-items:center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
+                                <span id="worker2_task_mobilexs" style="display: flex;align-items:center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
                             </div>
                         </div>
                         <div id="worker03div" style="width: 80px; height: 30px; display: none">    
                             <div class="Field" style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 10px; padding-top: 5px; font-size: 10px">
                                 <img src="Images/robot.svg" width="20" height="20" style="padding-right: 11px">
-                                <span id="worker3_task" style="display: flex;align-items: center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
+                                <span id="worker3_task_mobilexs" style="display: flex;align-items: center; padding-left: 9.5px; padding-bottom: 5px"><img src="Images/idle.svg" width="20" height="20"></span>
                             </div>
                         </div>
                     </div>

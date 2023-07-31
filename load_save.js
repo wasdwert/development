@@ -224,7 +224,7 @@ function startup() {
     w.postMessage('Start');
 }
 
-function ViewOptions() {
+function ViewOptions() { //Current Saving Option//
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));

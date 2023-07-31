@@ -690,6 +690,22 @@
     cursor: auto;
 }
 
+#seedlinga_center_mobile, #seedlingb_center_mobile, #seedlingc_center_mobile, #seedlingd_center_mobile, #seedlinge_center_mobile, #seedlingf_center_mobile {
+    box-sizing: border-box;
+    width: 78.75px;
+	height: 78.75px;
+	background: #f1f1f1;
+    background-image: url(Images/treequality/none.svg);
+    background-size: 78.75px, 78.75px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+}
+
 /* Collapsible Menus Container*/
 .rightcolumn_content2 {
     box-sizing: border-box;

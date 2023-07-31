@@ -28,6 +28,8 @@ function expedition_worker (place, worker, worker2, worker3) {
             worker.expedition_time=document.getElementById("neighborhood_time").value;
             document.getElementById("zeit_"+worker2).innerHTML = "("+worker.expedition_zeit+"&nbsp;seconds left)";
             document.getElementById(worker3+"_task").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition'; 
+            document.getElementById(worker3+"_task_mobile").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition';
+            document.getElementById(worker3+"_task_mobilexs").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">';
             state.seedlings_ontheway +=1;
         }
         else if (worker.expedition==2) {
@@ -35,6 +37,8 @@ function expedition_worker (place, worker, worker2, worker3) {
             worker.expedition_time=document.getElementById("cityboundaries_time").value;                    
             document.getElementById("zeit"+worker2).innerHTML = "("+worker.expedition_zeit+"&nbsp;seconds left)";
             document.getElementById(worker3+"_task").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition'; 
+            document.getElementById(worker3+"_task_mobile").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition';
+            document.getElementById(worker3+"_task_mobilexs").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">';
             state.seedlings_ontheway +=1;
         }
     }
@@ -112,6 +116,7 @@ function seedling_countdown(worker) {
 
 function randommaschine(seedlingx, worker) {
     if (statistics.seedlings_total==0) {
+        seedlingx.id=1;
         seedlingx.treetype=1;
         seedlingx.treetypegroup=1;
         seedlingx.treequality=1;
@@ -120,6 +125,7 @@ function randommaschine(seedlingx, worker) {
         //experience(1);
     }
     else if (statistics.seedlings_total==3) {
+        seedlingx.id=4;
         seedlingx.treetype=2;
         seedlingx.treetypegroup=1;
         seedlingx.treequality=1;
@@ -133,6 +139,7 @@ function randommaschine(seedlingx, worker) {
     state.random_treequality =Math.random();
     state.random_shiny =Math.random();
     if (worker.expedition==1) {
+        seedlingx.id=statistics.seedlings_total+1;
         if (state.random_treetype>=0.95) { //Random for treetype
             seedlingx.treetype=4;
             seedlingx.treetypegroup=2;
@@ -174,6 +181,7 @@ function randommaschine(seedlingx, worker) {
         //experience(1);
     }
     else if (worker.expedition==2) {
+        seedlingx.id=statistics.seedlings_total+1;
         if (state.random_treetype>=0.99)  { //Random for treetype
             seedlingx.treetype=3;
             seedlingx.treetypegroup=1;
@@ -255,9 +263,9 @@ function area_bonsais_found(seedlingx, worker) {
                     exp_area01.alltreetype=1;
                 }
             }
-            else if (seedlingx.treetype==3) {
+            else if (seedlingx.treetype==4) {
                 exp_area01.treetype03=1;
-                document.getElementById("area01_tt03").innerHTML = '<img src="Images/bonsai03_stamp.svg" width="35" height="35">';
+                document.getElementById("area01_tt03").innerHTML = '<img src="Images/bonsai04_stamp.svg" width="35" height="35">';
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype03==3) {
                     exp_area01.alltreetype=1;
                 }
