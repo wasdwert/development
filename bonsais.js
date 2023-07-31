@@ -334,8 +334,6 @@ function PlantSeedlingPick(seedlingX, worker) {
     }
 }
 
-
-
 function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
@@ -380,6 +378,12 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
         document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
         document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';
+    }
+    else if (worker==worker03) {
+        document.getElementById("zeit_worker03").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+        document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+        document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';
     }
     
     Bonsai_Details(bonsaixx);
@@ -572,4 +576,56 @@ function cpdistributionaftercare(bonsaixx) {
     bonsaixx.branches_new +=bonsaixx.branches;
     bonsaixx.trunk_new +=bonsaixx.trunk;
     bonsaixx.roots_new +=bonsaixx.roots;
+}
+
+function naturerandom() {
+    state.random_nature =Math.random();
+    if (state.random_nature>=0.9375) {
+        return 1;
+    }
+    else if (state.random_nature>=0.875) {
+        return 2;
+    }
+    else if (state.random_nature>=0.8125) {
+        return 3;
+    }
+    else if (state.random_nature>=0.75) {
+        return 4;
+    }
+    else if (state.random_nature>=0.6875) {
+        return 5;
+    }
+    else if (state.random_nature>=0.625) {
+        return 6;
+    }
+    else if (state.random_nature>=0.5625) {
+        return 7;
+    }
+    else if (state.random_nature>=0.5) {
+        return 8;
+    }
+    else if (state.random_nature>=0.4375) {
+        return 9;
+    }
+    else if (state.random_nature>=0.375) {
+        return 10;
+    }
+    else if (state.random_nature>=0.3125) {
+        return 11;
+    }
+    else if (state.random_nature>=0.25) {
+        return 12;
+    }
+    else if (state.random_nature>=0.1875) {
+        return 13;
+    }
+    else if (state.random_nature>=0.125) {
+        return 14;
+    }
+    else if (state.random_nature>=0.0625) {
+        return 15;
+    }
+    else {
+        return 16;
+    }
 }
