@@ -578,6 +578,53 @@ function cpdistributionaftercare(bonsaixx) {
     bonsaixx.roots_new +=bonsaixx.roots;
 }
 
+function naturedistribution(bonsaixx, fbtr) {
+    if (fbtr==1) {
+        if (bonsaixx.nature==1 || bonsaixx.nature==3 || bonsaixx.nature==4 || bonsaixx.nature==5 || bonsaixx.nature==7 || bonsaixx.nature==8 || bonsaixx.nature==9 || bonsaixx.nature==11 || bonsaixx.nature==12 || bonsaixx.nature==13) {
+        return 1;
+        }
+        if (bonsaixx.nature==2 || bonsaixx.nature==6 || bonsaixx.nature==10) {
+        return 2;
+        }
+        if (bonsaixx.nature==14 || bonsaixx.nature==15 || bonsaixx.nature==16) {
+        return 0;
+        }
+    }
+    if (fbtr==2) {
+        if (bonsaixx.nature==1 || bonsaixx.nature==2 || bonsaixx.nature==4 || bonsaixx.nature==5 || bonsaixx.nature==6 || bonsaixx.nature==8 || bonsaixx.nature==9 || bonsaixx.nature==13 || bonsaixx.nature==15 || bonsaixx.nature==16) {
+        return 1;
+        }
+        if (bonsaixx.nature==3 || bonsaixx.nature==7 || bonsaixx.nature==14) {
+        return 2;
+        }
+        if (bonsaixx.nature==10 || bonsaixx.nature==11 || bonsaixx.nature==12) {
+        return 0;
+        }
+    }
+    if (fbtr==3) {
+        if (bonsaixx.nature==1 || bonsaixx.nature==2 || bonsaixx.nature==3 || bonsaixx.nature==5 || bonsaixx.nature==9 || bonsaixx.nature==10 || bonsaixx.nature==12 || bonsaixx.nature==13 || bonsaixx.nature==14 || bonsaixx.nature==16) {
+        return 1;
+        }
+        if (bonsaixx.nature==4 || bonsaixx.nature==11 || bonsaixx.nature==15) {
+        return 2;
+        }
+        if (bonsaixx.nature==6 || bonsaixx.nature==7 || bonsaixx.nature==8) {
+        return 0;
+        }
+    }
+    if (fbtr==4) {
+        if (bonsaixx.nature==1 || bonsaixx.nature==5 || bonsaixx.nature==6 || bonsaixx.nature==7 || bonsaixx.nature==9 || bonsaixx.nature==10 || bonsaixx.nature==11 || bonsaixx.nature==13 || bonsaixx.nature==14 || bonsaixx.nature==15) {
+        return 1;
+        }
+        if (bonsaixx.nature==8 || bonsaixx.nature==12 || bonsaixx.nature==16) {
+        return 2;
+        }
+        if (bonsaixx.nature==2 || bonsaixx.nature==3 || bonsaixx.nature==4) {
+        return 0;
+        }
+    }
+}
+
 function naturerandom() {
     state.random_nature =Math.random();
     if (state.random_nature>=0.9375) {
@@ -627,5 +674,244 @@ function naturerandom() {
     }
     else {
         return 16;
+    }
+}
+
+/* Bonsai Growing Intervall*/
+function Bonsai_Growing_Intervall(bonsaixx) {
+    bonsaixx.growing_zeit -=1;
+    if (bonsaixx.growing_zeit==0) {
+        statistics.bonsais_total +=1;
+        //task002trigger();
+        //levels=bonsaixx.level_new-bonsaixx.level;
+        bonsaixx.growing=0;
+        bonsaixx.level=bonsaixx.level_new;
+        bonsaixx.foliage=bonsaixx.foliage_new;
+        bonsaixx.branches=bonsaixx.branches_new;
+        bonsaixx.trunk=bonsaixx.trunk_new;
+        bonsaixx.roots=bonsaixx.roots_new;
+        bonsaixx.price = bonsaixx.level*bonsaixx.treetypegroup*bonsaixx.rarity;
+        bonsaixx.level_new +=1;
+        bonsaixx.level_lp =0;
+        bonsaixx.foliage_lp =0;
+        bonsaixx.branches_lp =0;
+        bonsaixx.trunk_lp =0;
+        bonsaixx.roots_lp =0;
+        resources.organic_waste +=levels;
+        document.getElementById("organic_waste").innerHTML= resources.organic_waste;
+        if (bonsaixx.treequality==1) {
+            cpdistribution(bonsaixx, level_cp_tq1);
+            cpdistributionaftercare(bonsaixx)
+            bonsaixx.growing_zeit = grow_time_tq1[bonsaixx.level];
+            //levels =levels*1;
+            //experience(levels);
+        }
+        if (bonsaixx.treequality==2) {
+            cpdistribution(bonsaixx, level_cp_tq2);
+            cpdistributionaftercare(bonsaixx)
+            bonsaixx.growing_zeit = grow_time_tq2[bonsaixx.level];
+            //levels =levels*2;
+            //experience(levels);
+        }
+        if (bonsaixx.treequality==3) {
+            cpdistribution(bonsaixx, level_cp_tq3);
+            cpdistributionaftercare(bonsaixx)
+            bonsaixx.growing_zeit = grow_time_tq3[bonsaixx.level];
+            //levels =levels*3;
+            //experience(levels);
+        }
+    
+        //levels=0;
+        menu_change();
+        menu_shop_change();
+        
+        //task006trigger(bonsaixx);
+        //task008trigger(bonsaixx);
+        //if (bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots>=30 & skills.growing>=1 & task_triggers.task009<1) {
+        //    task_triggers.task009 +=1;
+        //}
+        //task009trigger();
+        //if (bonsaixx.foliage>=20 || bonsaixx.branches>=20 || bonsaixx.trunk>=20 || bonsaixx.roots>=20) {
+        //    if (skills.shaping>=1 & task_triggers.task012<1) {
+        //        task_triggers.task012 +=1;
+        //    }
+        //}
+        //task012trigger();
+    }
+    
+    if (bonsaixx==bonsai001) {
+        worker_growing_check(bonsaixx, 1);   
+    }
+    else if (bonsaixx==bonsai002) {
+        worker_growing_check(bonsaixx, 2);   
+    }
+    else if (bonsaixx==bonsai003) {
+        worker_growing_check(bonsaixx, 3);   
+    }
+    else if (bonsaixx==bonsai004) {
+        worker_growing_check(bonsaixx, 4);   
+    }
+    else if (bonsaixx==bonsai005) {
+        worker_growing_check(bonsaixx, 5);   
+    }
+    else if (bonsaixx==bonsai006) {
+        worker_growing_check(bonsaixx, 6);   
+    }
+    else if (bonsaixx==bonsai007) {
+        worker_growing_check(bonsaixx, 7);   
+    }
+    else if (bonsaixx==bonsai008) {
+        worker_growing_check(bonsaixx, 8);   
+    }
+    else if (bonsaixx==bonsai009) {
+        worker_growing_check(bonsaixx, 9);   
+    }
+    else if (bonsaixx==bonsai010) {
+        worker_growing_check(bonsaixx, 10);   
+    }
+    else if (bonsaixx==bonsai011) {
+        worker_growing_check(bonsaixx, 11);   
+    }
+    else if (bonsaixx==bonsai012) {
+        worker_growing_check(bonsaixx, 12);   
+    }
+    else if (bonsaixx==bonsai013) {
+        worker_growing_check(bonsaixx, 13);   
+    }
+    else if (bonsaixx==bonsai014) {
+        worker_growing_check(bonsaixx, 14);   
+    }
+    else if (bonsaixx==bonsai015) {
+        worker_growing_check(bonsaixx, 15);   
+    }
+    else if (bonsaixx==bonsai016) {
+        worker_growing_check(bonsaixx, 16);   
+    }
+    else if (bonsaixx==bonsai017) {
+        worker_growing_check(bonsaixx, 17);   
+    }
+    else if (bonsaixx==bonsai018) {
+        worker_growing_check(bonsaixx, 18);   
+    }
+    else if (bonsaixx==bonsai019) {
+        worker_growing_check(bonsaixx, 19);   
+    }
+    else if (bonsaixx==bonsai020) {
+        worker_growing_check(bonsaixx, 20);   
+    }
+    
+    if (state.bonsai_showing==1) {
+        Bonsai_Growing(bonsai001);  
+    }
+    else if (state.bonsai_showing==2) {
+        Bonsai_Growing(bonsai002);
+    }
+    else if (state.bonsai_showing==3) {
+        Bonsai_Growing(bonsai003);
+    }
+    else if (state.bonsai_showing==4) {
+        Bonsai_Growing(bonsai004);
+    }
+    else if (state.bonsai_showing==5) {
+        Bonsai_Growing(bonsai005);
+    }
+    else if (state.bonsai_showing==6) {
+        Bonsai_Growing(bonsai006);
+    }
+    else if (state.bonsai_showing==7) {
+        Bonsai_Growing(bonsai007);
+    }
+    else if (state.bonsai_showing==8) {
+        Bonsai_Growing(bonsai008);
+    }
+    else if (state.bonsai_showing==9) {
+        Bonsai_Growing(bonsai009);
+    }
+    else if (state.bonsai_showing==10) {
+        Bonsai_Growing(bonsai010);
+    }
+    else if (state.bonsai_showing==11) {
+        Bonsai_Growing(bonsai011);
+    }
+    else if (state.bonsai_showing==12) {
+        Bonsai_Growing(bonsai012);
+    }
+    else if (state.bonsai_showing==13) {
+        Bonsai_Growing(bonsai013);
+    }
+    else if (state.bonsai_showing==14) {
+        Bonsai_Growing(bonsai014);
+    }
+    else if (state.bonsai_showing==15) {
+        Bonsai_Growing(bonsai015);
+    }
+    else if (state.bonsai_showing==16) {
+        Bonsai_Growing(bonsai016);
+    }
+    else if (state.bonsai_showing==17) {
+        Bonsai_Growing(bonsai017);
+    }
+    else if (state.bonsai_showing==18) {
+        Bonsai_Growing(bonsai018);
+    }
+    else if (state.bonsai_showing==19) {
+        Bonsai_Growing(bonsai019);
+    }
+    else if (state.bonsai_showing==20) {
+        Bonsai_Growing(bonsai020);
+    }
+}
+
+function worker_growing_check(bonsaixx, number) {
+    if (worker01.growing==number) {
+        if (bonsaixx.growing==1) {
+            document.getElementById("zeit_worker01").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+            document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+            document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';  
+        }
+        else if (bonsaixx.growing==0) {
+            worker01.growing = 0;
+            worker01.busy = 0;
+            state.workers_available +=1;
+            document.getElementById("zeit_worker01").innerHTML = "";  
+            document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
+        }
+    }
+    else if (worker02.growing==number) {
+        if (bonsaixx.growing==1) {
+            document.getElementById("zeit_worker02").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+            document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+            document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';   
+        }
+        else if (bonsaixx.growing==0) {
+            worker02.growing = 0;
+            worker02.busy = 0;
+            state.workers_available +=1;
+            document.getElementById("zeit_worker02").innerHTML = "";  
+            document.getElementById("worker2_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';  
+        }
+    }
+    else if (worker03.growing==number) {
+        if (bonsaixx.growing==1) {
+            document.getElementById("zeit_worker03").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+            document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+            document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';   
+        }
+        else if (bonsaixx.growing==0) {
+            worker03.growing = 0;
+            worker03.busy = 0;
+            state.workers_available +=1;
+            document.getElementById("zeit_worker03").innerHTML = "";  
+            document.getElementById("worker3_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
+        }
     }
 }

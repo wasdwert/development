@@ -27,7 +27,9 @@ w.addEventListener('message', function(e){
         seedling_countdown(worker01);
         if (worker01.expedition==0) {
             document.getElementById("zeit_worker01").innerHTML = "";  
-            document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
         }
     }
     if (worker02.expedition>0) {
@@ -37,6 +39,8 @@ w.addEventListener('message', function(e){
         if (worker02.expedition==0) {
             document.getElementById("zeit_worker02").innerHTML = "";  
             document.getElementById("worker2_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">'; 
         }
     }
     if (worker03.expedition>0) {
@@ -45,7 +49,9 @@ w.addEventListener('message', function(e){
         seedling_countdown(worker03);
         if (worker03.expedition==0) {
             document.getElementById("zeit_worker03").innerHTML = "";  
-            document.getElementById("worker3_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker3_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';  
         }
     }
     
