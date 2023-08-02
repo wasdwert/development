@@ -18,7 +18,18 @@ var statistics = {
     bonsais_total: 0,
 }
 
+var resources = {
+    money: 0,
+    organic_waste: 0,
+    compost: 0,
+    bolt: 5,
+    metal: 3,
+    wire: 2,
+    board: 1,
+}
+
 var x=1;
+var levels=0;
 
 var worker01 = {
     busy: 0,

@@ -153,25 +153,36 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 seedling1.planting_choosen=1;
             }
             else {
+                document.getElementById("seedling"+a+"_center").style.backgroundColor= "#f1f1f1";
                 document.getElementById("seedling"+a+"_center_mobile").style.backgroundColor= "#f1f1f1";
                 if (seedling2.treetype>0) {
                     seedlingb_center.className = "darker_grey";
+                    seedlingb_center_mobile.className = "darker_grey";
+                    document.getElementById("seedling"+b+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+b+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling3.treetype>0) {
                     seedlingc_center.className = "darker_grey";
+                    seedlingc_center_mobile.className = "darker_grey";
+                    document.getElementById("seedling"+c+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+c+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling4.treetype>0) {
                     seedlingd_center.className = "darker_grey";
+                    seedlingd_center_mobile.className = "darker_grey";
+                    document.getElementById("seedling"+d+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+d+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling5.treetype>0) {
                     seedlinge_center.className = "darker_grey";
+                    seedlinge_center_mobile.className = "darker_grey";
+                    document.getElementById("seedling"+e+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+e+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling6.treetype>0) {
                     seedlingf_center.className = "darker_grey";
+                    seedlingf_center_mobile.className = "darker_grey";
+                    document.getElementById("seedling"+f+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+f+"_center_mobile").style.cursor= "pointer";
                 }
                 seedling1.planting_choosen=0;    
@@ -683,7 +694,7 @@ function Bonsai_Growing_Intervall(bonsaixx) {
     if (bonsaixx.growing_zeit==0) {
         statistics.bonsais_total +=1;
         //task002trigger();
-        //levels=bonsaixx.level_new-bonsaixx.level;
+        levels=bonsaixx.level_new-bonsaixx.level;
         bonsaixx.growing=0;
         bonsaixx.level=bonsaixx.level_new;
         bonsaixx.foliage=bonsaixx.foliage_new;
@@ -721,7 +732,7 @@ function Bonsai_Growing_Intervall(bonsaixx) {
             //experience(levels);
         }
     
-        //levels=0;
+        levels=0;
         menu_change();
         menu_shop_change();
         
@@ -876,7 +887,7 @@ function worker_growing_check(bonsaixx, number) {
             state.workers_available +=1;
             document.getElementById("zeit_worker01").innerHTML = "";  
             document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
-            document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready'; 
             document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
         }
     }
@@ -893,7 +904,7 @@ function worker_growing_check(bonsaixx, number) {
             state.workers_available +=1;
             document.getElementById("zeit_worker02").innerHTML = "";  
             document.getElementById("worker2_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
-            document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready'; 
             document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';  
         }
     }
@@ -910,7 +921,7 @@ function worker_growing_check(bonsaixx, number) {
             state.workers_available +=1;
             document.getElementById("zeit_worker03").innerHTML = "";  
             document.getElementById("worker3_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
-            document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
+            document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready'; 
             document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
         }
     }

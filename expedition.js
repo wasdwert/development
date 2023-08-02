@@ -58,6 +58,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
             document.getElementById("seedlinga_center").style.cursor= "pointer";
             seedlinga_center.className = "darker_grey";
+            document.getElementById("seedlinga_center_mobile").style.cursor= "pointer";
+            seedlinga_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling1, worker);
         }
         else if (seedling2.treetype<1) {
@@ -66,6 +68,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
             document.getElementById("seedlingb_center").style.cursor= "pointer";
             seedlingb_center.className = "darker_grey";
+            document.getElementById("seedlingb_center_mobile").style.cursor= "pointer";
+            seedlingb_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling2, worker);
         }
         else if (seedling3.treetype<1) {
@@ -74,6 +78,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
             document.getElementById("seedlingc_center").style.cursor= "pointer";
             seedlingc_center.className = "darker_grey";
+            document.getElementById("seedlingc_center_mobile").style.cursor= "pointer";
+            seedlingc_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling3, worker);
         }
         else if (seedling4.treetype<1) {
@@ -82,6 +88,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
             document.getElementById("seedlingd_center").style.cursor= "pointer";
             seedlingd_center.className = "darker_grey";
+            document.getElementById("seedlingd_center_mobile").style.cursor= "pointer";
+            seedlingd_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling4, worker);
         }
         else if (seedling5.treetype<1) {
@@ -90,6 +98,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
             document.getElementById("seedlinge_center").style.cursor= "pointer";
             seedlinge_center.className = "darker_grey";
+            document.getElementById("seedlinge_center_mobile").style.cursor= "pointer";
+            seedlinge_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling5, worker);
         }
         else if (seedling6.treetype<1) {
@@ -98,6 +108,8 @@ function seedling_countdown(worker) {
             document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
             document.getElementById("seedlingf_center").style.cursor= "pointer";
             seedlingf_center.className = "darker_grey";
+            document.getElementById("seedlingf_center_mobile").style.cursor= "pointer";
+            seedlingf_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling6, worker);
         }
     worker.expedition = 0;

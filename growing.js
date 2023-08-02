@@ -61,13 +61,13 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
         document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
         
-        if (resources.compost>0 & bonsaixx.growing_zeit>60) {
-        document.getElementById("Button_Grow").style.cursor= "pointer";
-        document.getElementById("Button_Grow").className = "grey";
-        document.getElementById("Button_Grow_Text").innerHTML = "Growing:";
+        //if (resources.compost>0 & bonsaixx.growing_zeit>60) {
+        //document.getElementById("Button_Grow").style.cursor= "pointer";
+        //document.getElementById("Button_Grow").className = "grey";
+        //document.getElementById("Button_Grow_Text").innerHTML = "Growing:";
      
-        document.getElementById("Button_Grow_Zeit").innerHTML = "&nbsp;Give compost (-60 seconds)";
-        }
+        //document.getElementById("Button_Grow_Zeit").innerHTML = "&nbsp;Give compost (-60 seconds)";
+        //}
         else {
         document.getElementById("Button_Grow").style.cursor= "auto";
         document.getElementById("Button_Grow").className = "";
