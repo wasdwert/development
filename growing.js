@@ -68,13 +68,13 @@ function Bonsai_Growing(bonsaixx) {
      
         //document.getElementById("Button_Grow_Zeit").innerHTML = "&nbsp;Give compost (-60 seconds)";
         //}
-        else {
+        //else {
         document.getElementById("Button_Grow").style.cursor= "auto";
         document.getElementById("Button_Grow").className = "";
         document.getElementById("Button_Grow_Text").innerHTML = "Growing";
      
         document.getElementById("Button_Grow_Zeit").innerHTML = "";
-        }
+        //}
         
         document.getElementById("ChangePosition").style.cursor= "auto";
         document.getElementById("ChangePosition").className = "";
