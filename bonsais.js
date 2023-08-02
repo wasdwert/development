@@ -440,6 +440,10 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 document.getElementById("seedling"+e+"_center_mobile").style.cursor= "auto";
                 document.getElementById("seedling"+f+"_center_mobile").style.cursor= "auto";
                 seedling1.planting_choosen=1;
+                $(document).ready(function(){
+                    $('#menu_style').show();
+                    $('#menu_style_mobile').show();
+                });
             }
             else {
                 document.getElementById("seedling"+a+"_center").style.backgroundColor= "#f1f1f1";
@@ -474,9 +478,80 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                     document.getElementById("seedling"+f+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+f+"_center_mobile").style.cursor= "pointer";
                 }
-                seedling1.planting_choosen=0;    
+                seedling1.planting_choosen=0; 
+                $(document).ready(function(){
+                    $('#menu_style').hide();
+                    $('#menu_style_mobile').hide();
+                });
+                document.getElementById('menu_style').value="0";
+                document.getElementById('menu_style_mobile').value="0";
+                document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
+                document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
             }
         }
+    }
+}
+
+function style_change (x) {
+    if (x==1) {
+        document.getElementById('menu_style_mobile').value=document.getElementById('menu_style').value
+        if (seedling1.planting_choosen==1) {
+            style_change2 (seedling1);
+        }
+        else if (seedling2.planting_choosen==1) {
+            style_change2 (seedling2);
+        }
+        else if (seedling3.planting_choosen==1) {
+            style_change2 (seedling3);
+        }
+        else if (seedling4.planting_choosen==1) {
+            style_change2 (seedling4);
+        }
+        else if (seedling5.planting_choosen==1) {
+            style_change2 (seedling5);
+        }
+        else if (seedling6.planting_choosen==1) {
+            style_change2 (seedling6);
+        }
+    }
+    else if (x==2) {
+        document.getElementById('menu_style').value=document.getElementById('menu_style_mobile').value
+        if (seedling1.planting_choosen==1) {
+            style_change2 (seedling1);
+        }
+        else if (seedling2.planting_choosen==1) {
+            style_change2 (seedling2);
+        }
+        else if (seedling3.planting_choosen==1) {
+            style_change2 (seedling3);
+        }
+        else if (seedling4.planting_choosen==1) {
+            style_change2 (seedling4);
+        }
+        else if (seedling5.planting_choosen==1) {
+            style_change2 (seedling5);
+        }
+        else if (seedling6.planting_choosen==1) {
+            style_change2 (seedling6);
+        }
+    }
+}
+
+function style_change2 (x) {
+    if (document.getElementById('menu_style_mobile').value==1) {
+        x.styletype=1;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
+    else if (document.getElementById('menu_style_mobile').value==2) {
+        x.styletype=2;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
+    else if (document.getElementById('menu_style_mobile').value==3) {
+        x.styletype=3;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
     }
 }
 
@@ -497,27 +572,75 @@ function PlantSeedling() {
         var snackb = document.getElementById("snackbar");
         snackb.className = "show";
         setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
-    }     
+    }   
 }
 
 function PlantSeedling2(worker) {
     if (seedling1.planting_choosen==1) {
-        PlantSeedlingPick(seedling1, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling1, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else if (seedling2.planting_choosen==1) {
-        PlantSeedlingPick(seedling2, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling2, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else if (seedling3.planting_choosen==1) {
-        PlantSeedlingPick(seedling3, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling3, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else if (seedling4.planting_choosen==1) {
-        PlantSeedlingPick(seedling4, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling4, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else if (seedling5.planting_choosen==1) {
-        PlantSeedlingPick(seedling5, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling5, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else if (seedling6.planting_choosen==1) {
-        PlantSeedlingPick(seedling6, worker);
+        if (seedling1.styletype>0) {
+            PlantSeedlingPick(seedling6, worker);
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        }  
     }
     else {
         document.getElementById("snack_message").innerText = "Choose a seedling to plant first";
@@ -640,6 +763,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     bonsaixx.name = treetypename[seedlingx.treetype];
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
+    bonsaixx.styletype = seedlingx.styletype;
     bonsaixx.treequality = seedlingx.treequality;
     bonsaixx.shiny = seedlingx.shiny;
     bonsaixx.nature = naturerandom();

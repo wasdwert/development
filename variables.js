@@ -137,22 +137,22 @@ natures[16]= "Earthed";
 
 var seedling1 = {
     id: 0,
-    treetype: 0,
+    treetype: 1,
     treetypegroup: 0,
     styletype: 0,
-    treequality: 0,
-    shiny: 0,
+    treequality: 1,
+    shiny: 1,
     planting_choosen: 0,
     price: 0,
 }
 
 var seedling2 = {
     id: 0,
-    treetype: 0,
+    treetype: 2,
     treetypegroup: 0,
     styletype: 0,
-    treequality: 0,
-    shiny: 0,
+    treequality: 1,
+    shiny: 1,
     planting_choosen: 0,
     price: 0,
 }

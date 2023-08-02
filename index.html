@@ -1194,11 +1194,9 @@
                 <div class="bonsai_details_seedling">
                     <div class="center_content">
                         <div class="centercolumn_left">
-                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">-</div>
-                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
-                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"></div>
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">Preview</div>
                             <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
-                                <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
+                                <span id="seedling_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
@@ -1225,7 +1223,7 @@
                             <button id="seedlingd_center" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlinge_center" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlingf_center" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <select class="select" id="menu" onchange="style_change()">
+                            <select class="select_style" id="menu_style" onchange="style_change(1)" style="display: none">
                                 <option value="0">Choose a style for your bonsai</option>
                                 <option value="1">Chokan - Formal Upright Style</option>
                                 <option value="2">Moyogi - Informal Upright Style</option>
@@ -2190,11 +2188,9 @@
                 <div class="bonsai_details_seedling">
                     <div class="center_content_mobile">
                         <div class="centercolumn_left_mobile">
-                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">-</div>
-                            <div class="Field" style="width:20%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Status</div>
-                                <div class="Field" style="width:80%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"></div>
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center;justify-content: center">Preview</div>
                             <div class="Field" style="width:100%;background: #f1f1f1;color: white;height: 120px; padding: 0px; display: flex;align-items:center;justify-content: space-evenly; background-image: url(Images/treequality/none_big.svg); background-size: 280px, 120px">
-                                <span id="bonsai_detail_type"><img src="Images/pot.svg" width="100" height="100"></span>
+                                <span id="seedling_detail_type_mobile"><img src="Images/pot.svg" width="100" height="100"></span>
                             </div>
                             <div class="Field" style="width:60%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
                                 <div class="Field" style="width:40%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">-</div>
@@ -2221,7 +2217,7 @@
                             <button id="seedlingd_center_mobile" class="" onclick="ChooseSeedling(4)"><span id="seedlingd_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlinge_center_mobile" class="" onclick="ChooseSeedling(5)"><span id="seedlinge_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
                             <button id="seedlingf_center_mobile" class="" onclick="ChooseSeedling(6)"><span id="seedlingf_type_c_mobile"><img src="Images/pot.svg" width="43.75" height="43.75"></span></button>
-                            <select class="select" id="menu" onchange="style_change()">
+                            <select class="select_style" id="menu_style_mobile" onchange="style_change(2)" style="display: none">
                                 <option value="0">Choose a style for your bonsai</option>
                                 <option value="1">Chokan - Formal Upright Style</option>
                                 <option value="2">Moyogi - Informal Upright Style</option>
