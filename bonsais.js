@@ -21,6 +21,297 @@ function ChangeName() {
     }
 }
 
+/* Change position functions */
+function PositionChangeBox() {
+    $(document).ready(function() {
+        $("#positionn_batch").change(function() {
+            var val = $(positionn_batch).val();
+            if (val == "1000") {
+                $('#positionn_place2').hide();
+                $("#positionn_place").html("<option value='00'>Select box first</option>");
+            } else if (val == "1001") {
+                $('#positionn_place2').show();
+                if (state.bonsai_showing==1) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                }
+                else if (state.bonsai_showing==2) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                }
+                else if (state.bonsai_showing==3) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                }
+                else if (state.bonsai_showing==4) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='5'>15</option><option value='6'>16</option>");
+                }
+                else if (state.bonsai_showing==5) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='6'>16</option>");
+                }
+                else if (state.bonsai_showing==6) {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option>");
+                }
+                else {
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='11'>11</option><option value='12'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                }
+            } else if (val == "1007") {
+                $('#positionn_place2').show();
+                if (state.bonsai_showing==7) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                }
+                else if (state.bonsai_showing==8) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                }
+                else if (state.bonsai_showing==9) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                }
+                else if (state.bonsai_showing==10) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='11'>75</option><option value='12'>76</option>");
+                }
+                else if (state.bonsai_showing==11) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='12'>76</option>");
+                }
+                else if (state.bonsai_showing==12) {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option>");
+                }
+                else {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                }
+            }
+        });
+        $('#positionn_place').select2({
+            templateResult: formatState,
+            templateSelection: formatState,
+            minimumResultsForSearch: Infinity
+        });
+    });
+}
+
+function formatState (state) {
+    if (!state.id) { return state.text; }
+    if (state.text=="Select place1" || state.text=="Select place2") {
+        var $state = $(
+            '<span style="display:flex; align-items:center">Select place</span>'
+        );
+        return $state;
+    }
+    else if (state.text=="Select box first") {
+        var $state = $(
+            '<span style="display:flex; align-items:center">Select box first</span>'
+        );
+        return $state;
+    }
+    else {
+        if (state.text==11) {
+            nr=1;
+            formatstateimage(bonsai11);
+        }
+        if (state.text==12) {
+            nr=2;
+            formatstateimage(bonsai12);
+        }
+        if (state.text==13) {
+            nr=3;
+            formatstateimage(bonsai13);
+        }
+        if (state.text==14) {
+            nr=4;
+            formatstateimage(bonsai14);
+        }
+        if (state.text==15) {
+            nr=5;
+            formatstateimage(bonsai15);
+        }
+        if (state.text==16) {
+            nr=6;
+            formatstateimage(bonsai16);
+        }
+        if (state.text==71) {
+            nr=7;
+            formatstateimage(bonsai71);
+        }
+        if (state.text==72) {
+            nr=8;
+            formatstateimage(bonsai72);
+        }
+        if (state.text==73) {
+            nr=9;
+            formatstateimage(bonsai73);
+        }
+        if (state.text==74) {
+            nr=10;
+            formatstateimage(bonsai74);
+        }
+        if (state.text==75) {
+            nr=11;
+            formatstateimage(bonsai75);
+        }
+        if (state.text==76) {
+            nr=12;
+            formatstateimage(bonsai76);
+        }
+        var $state = $(
+            '<span style="display:flex; align-items:center">#'+ nr +'&nbsp;' + image +'&nbsp;'+ name +'&nbsp;Lv.&nbsp;'+ level +'&nbsp;CP&nbsp;'+ cp +'</span>'
+        );
+        return $state;
+    }
+ }
+
+function formatstateimage(bonsaixx) {
+    if (bonsaixx.treetype==0) {
+        image='<img src="Images/b00r00.svg" width="25" height="25">';
+    }
+    else if (bonsaixx.treetype==1) {
+        if (bonsaixx.rarity==1) {
+            image='<img src="Images/b01r01.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==2) {
+            image='<img src="Images/b01r02.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==3) {
+            image='<img src="Images/b01r03.svg" width="25" height="25">';
+        }
+    }
+    else if (bonsaixx.treetype==2) {
+        if (bonsaixx.rarity==1) {
+            image='<img src="Images/b02r01.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==2) {
+            image='<img src="Images/b02r02.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==3) {
+            image='<img src="Images/b02r03.svg" width="25" height="25">';
+        }
+    }
+    else if (bonsaixx.treetype==3) {
+        if (bonsaixx.rarity==1) {
+            image='<img src="Images/b03r01.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==2) {
+            image='<img src="Images/b03r02.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==3) {
+            image='<img src="Images/b03r03.svg" width="25" height="25">';
+        }
+    }
+    else if (bonsaixx.treetype==4) {
+        if (bonsaixx.rarity==1) {
+            image='<img src="Images/b04r01.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==2) {
+            image='<img src="Images/b04r02.svg" width="25" height="25">';
+        }
+        else if (bonsaixx.rarity==3) {
+            image='<img src="Images/b04r03.svg" width="25" height="25">';
+        }
+    }
+    name=bonsaixx.name;
+    level=bonsaixx.level;
+    cp=bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots;
+}
+
+function ChangePosition() {
+    bonsaiplaceholder=SearchBonsaiShowing();
+    if (x==1) {
+        if (z==1) {
+            bonsai11=SearchBonsaiReplacement();
+        }
+        else if (z==2) {
+            bonsai12=SearchBonsaiReplacement();
+        }
+        else if (z==3) {
+            bonsai13=SearchBonsaiReplacement();
+        }
+        else if (z==4) {
+            bonsai14=SearchBonsaiReplacement();
+        }
+        else if (z==5) {
+            bonsai15=SearchBonsaiReplacement();
+        }
+        else if (z==6) {
+            bonsai16=SearchBonsaiReplacement();
+        }
+    }
+    else if (x==7) {
+        if (z==1) {
+            bonsai71=SearchBonsaiReplacement();
+        }
+        else if (z==2) {
+            bonsai72=SearchBonsaiReplacement();
+        }
+        else if (z==3) {
+            bonsai73=SearchBonsaiReplacement();
+        }
+        else if (z==4) {
+            bonsai74=SearchBonsaiReplacement();
+        }
+        else if (z==5) {
+            bonsai75=SearchBonsaiReplacement();
+        }
+        else if (z==6) {
+            bonsai76=SearchBonsaiReplacement();
+        }
+    }
+    if (document.getElementById("positionn_place").value==1) {
+        bonsai11=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==2) {
+        bonsai12=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==3) {
+        bonsai13=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==4) {
+        bonsai14=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==5) {
+        bonsai15=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==6) {
+        bonsai16=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==7) {
+        bonsai71=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==8) {
+        bonsai72=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==9) {
+        bonsai73=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==10) {
+        bonsai74=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==11) {
+        bonsai75=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==12) {
+        bonsai76=bonsaiplaceholder;
+    }
+    
+    if (SearchBonsaiShowing().treetype==0) {
+        $(document).ready(function(){
+            $('.tasks').hide();
+            $('.expedition').hide();
+            $('.crafting').hide();
+            $('.learning').hide();
+            $('.shopping').hide();
+            $('.bonsai_details').hide();
+            $('.bonsai_details_seedling').show();
+            });
+    }
+    else {
+        Bonsai_Growing(SearchBonsaiShowing());
+        $(document).ready(function() {
+            $("#positionn_batch").html("<option value='1000'>Select box</option><option value='1001'>Box 1 - Bonsai #01-#06</option><option value='1007'>Box 2 - Bonsai #07-#12</option>");
+            $("#positionn_place").html("<option value='00'>Select box first</option>");
+        });
+    }
+    $(document).ready(function() {
+        $('#positionn_place2').hide();
+    });
+    menu_change();
+    menu_shop_change();
+}
+
 function SearchBonsaiShowing() {
     if (x==1) {
         if (z==1) {
@@ -88,8 +379,6 @@ function SearchBonsaiShowing() {
     }
 }
 
-
-    
 /* Seedling Planting functions */
 function ChooseSeedling(x) {
     if (x==1) {
@@ -406,7 +695,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.seedlings_ontheway -=1;
     document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
     if (seedling1.planting_choosen==1) {
-        console.log("Hello");
         seedling1.id=0;
         seedling1.treetype=0;
         seedling1.treetypegroup=0;
