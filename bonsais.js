@@ -703,7 +703,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling1.shiny=0;
         seedling1.price=0;
         document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
-        document.getElementById("seedlinga_type_sell").innerHTML = fetchbonsaiimage_sell(seedling1);
         fetchimage_seedling ("a", seedling1);
         document.getElementById("seedlinga_center").style.cursor= "auto"; 
         seedlinga_center.className = "";
