@@ -406,16 +406,21 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.seedlings_ontheway -=1;
     document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
     if (seedling1.planting_choosen==1) {
-        seedling1.species=0;
+        console.log("Hello");
+        seedling1.id=0;
         seedling1.treetype=0;
         seedling1.treetypegroup=0;
-        seedling1.rarity=0;
+        seedling1.styletype=0;
+        seedling1.treequality=0;
+        seedling1.shiny=0;
         seedling1.price=0;
         document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
         document.getElementById("seedlinga_type_sell").innerHTML = fetchbonsaiimage_sell(seedling1);
-        fetchimage_seedlinga ();
+        fetchimage_seedling ("a", seedling1);
         document.getElementById("seedlinga_center").style.cursor= "auto"; 
         seedlinga_center.className = "";
+        document.getElementById("seedlinga_center_mobile").style.cursor= "auto"; 
+        seedlinga_center_mobile.className = "";
         PlantSeedlingReset()
     }
     else if (seedling2.planting_choosen==1) {
@@ -488,39 +493,57 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
 function PlantSeedlingReset() {
     seedling1.planting_choosen=0;
     document.getElementById("seedlinga_center").style.backgroundColor= "#f1f1f1";
+    document.getElementById("seedlinga_center_mobile").style.backgroundColor= "#f1f1f1";
     seedling2.planting_choosen=0;
     document.getElementById("seedlingb_center").style.backgroundColor= "#f1f1f1";
+    document.getElementById("seedlingb_center_mobile").style.backgroundColor= "#f1f1f1";
     seedling3.planting_choosen=0;
     document.getElementById("seedlingc_center").style.backgroundColor= "#f1f1f1";
+    document.getElementById("seedlingc_center_mobile").style.backgroundColor= "#f1f1f1";
     seedling4.planting_choosen=0;
     document.getElementById("seedlingd_center").style.backgroundColor= "#f1f1f1";    
+    document.getElementById("seedlingd_center_mobile").style.backgroundColor= "#f1f1f1";
     seedling5.planting_choosen=0;
-    document.getElementById("seedlinge_center").style.backgroundColor= "#f1f1f1";         
+    document.getElementById("seedlinge_center").style.backgroundColor= "#f1f1f1";       
+    document.getElementById("seedlinge_center_mobile").style.backgroundColor= "#f1f1f1";  
     seedling6.planting_choosen=0;
-    document.getElementById("seedlingf_center").style.backgroundColor= "#f1f1f1";                 
+    document.getElementById("seedlingf_center").style.backgroundColor= "#f1f1f1";       
+    document.getElementById("seedlingf_center_mobile").style.backgroundColor= "#f1f1f1";          
     if (seedling1.treetype>0) {
         document.getElementById("seedlinga_center").style.cursor= "pointer";
         seedlinga_center.className = "darker_grey";
+        document.getElementById("seedlinga_center_mobile").style.cursor= "pointer";
+        seedlinga_center_mobile.className = "darker_grey";
     }
     if (seedling2.treetype>0) {
         document.getElementById("seedlingb_center").style.cursor= "pointer";
         seedlingb_center.className = "darker_grey";
+        document.getElementById("seedlingb_center_mobile").style.cursor= "pointer";
+        seedlingb_center_mobile.className = "darker_grey";
     } 
     if (seedling3.treetype>0) {
         document.getElementById("seedlingc_center").style.cursor= "pointer";
         seedlingc_center.className = "darker_grey";
+        document.getElementById("seedlingc_center_mobile").style.cursor= "pointer";
+        seedlingc_center_mobile.className = "darker_grey";
     }
     if (seedling4.treetype>0) {
         document.getElementById("seedlingd_center").style.cursor= "pointer";
         seedlingd_center.className = "darker_grey";
+        document.getElementById("seedlingd_center_mobile").style.cursor= "pointer";
+        seedlingd_center_mobile.className = "darker_grey";
     }
     if (seedling5.treetype>0) {
         document.getElementById("seedlinge_center").style.cursor= "pointer";
         seedlinge_center.className = "darker_grey";
+        document.getElementById("seedlinge_center_mobile").style.cursor= "pointer";
+        seedlinge_center_mobile.className = "darker_grey";
     }
     if (seedling6.treetype>0) {
         document.getElementById("seedlingf_center").style.cursor= "pointer";
         seedlingf_center.className = "darker_grey";
+        document.getElementById("seedlingf_center_mobile").style.cursor= "pointer";
+        seedlingf_center_mobile.className = "darker_grey";
     }
 }
 
