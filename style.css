@@ -234,6 +234,20 @@
     font-size: 15px;
 }
 
+.select_style_mobile {
+    box-sizing: border-box;
+    width: 157.5px;
+	height: 30px;
+	background: #9f9f9f;
+    border: 0px;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
 .selectsub {
     box-sizing: border-box;
     width: 240px;

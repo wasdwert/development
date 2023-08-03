@@ -236,6 +236,160 @@ function Bonsai_Growing(bonsaixx) {
     }
 }
 
+/* Grow bonsai functions */
+function GrowBonsaiWorkerPick(bonsaixx) {
+    if (state.workers_available>0) {
+        if (worker01.busy==0) {
+            state.workers_available -=1;
+            GrowBonsaiWorkerPick2 (bonsaixx, worker01);
+            state.workerstandin = 1;
+        } 
+        else if (worker02.busy==0) {
+            state.workers_available -=1;
+            GrowBonsaiWorkerPick2 (bonsaixx, worker02);
+            state.workerstandin = 2;
+        }
+        else if (worker03.busy==0) {
+            state.workers_available -=1;
+            GrowBonsaiWorkerPick2 (bonsaixx, worker03);
+            state.workerstandin = 3;
+        }
+    }
+    else {
+        document.getElementById("snack_message").innerText = "No workers available";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+    }
+}
+
+function GrowBonsaiWorkerPick2 (bonsaixx, worker) {
+    if (bonsaixx==bonsai001) {
+        worker.growing = 1;  
+    }
+    else if (bonsaixx==bonsai002) {
+        worker.growing = 2;   
+    }
+    else if (bonsaixx==bonsai003) {
+        worker.growing = 3;  
+    }
+    else if (bonsaixx==bonsai004) {
+        worker.growing = 4;   
+    }
+    else if (bonsaixx==bonsai005) {
+        worker.growing = 5;  
+    }
+    else if (bonsaixx==bonsai006) {
+        worker.growing = 6;   
+    }
+    else if (bonsaixx==bonsai007) {
+        worker.growing = 7;  
+    }
+    else if (bonsaixx==bonsai008) {
+        worker.growing = 8;   
+    }
+    else if (bonsaixx==bonsai009) {
+        worker.growing = 9;   
+    }
+    else if (bonsaixx==bonsai010) {
+        worker.growing = 10;  
+    }
+    else if (bonsaixx==bonsai011) {
+        worker.growing = 11;  
+    }
+    else if (bonsaixx==bonsai012) {
+        worker.growing = 12;   
+    }
+    else if (bonsaixx==bonsai013) {
+        worker.growing = 13;   
+    }
+    else if (bonsaixx==bonsai014) {
+        worker.growing = 14;   
+    }
+    else if (bonsaixx==bonsai015) {
+        worker.growing = 15;   
+    }
+    else if (bonsaixx==bonsai016) {
+        worker.growing = 16;   
+    }
+    else if (bonsaixx==bonsai017) {
+        worker.growing = 17;   
+    }
+    else if (bonsaixx==bonsai018) {
+        worker.growing = 18;   
+    }
+    else if (bonsaixx==bonsai019) {
+        worker.growing = 19;   
+    }
+    else if (bonsaixx==bonsai020) {
+        worker.growing = 20;   
+    }
+}
+
+function GrowBonsai() {
+    if (SearchBonsaiShowing().leftpoints>=0.1) {
+        document.getElementById("snack_message").innerHTML = "Distribute all shape points first. &#32;"+ SearchBonsaiShowing().leftpoints.toLocaleString('en', {minimumFractionDigits: 1}) +"&#32; points left.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+    }
+    else {    
+        if (SearchBonsaiShowing().growing==0) {
+            GrowBonsaiWorkerPick(SearchBonsaiShowing());
+            if (state.workerstandin>0) {
+                SearchBonsaiShowing().growing = 1;
+                
+                if (state.workerstandin==1) {
+                    worker01.busy = 1;
+                    document.getElementById("zeit_worker01").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+                    document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+                    state.workerstandin = 0;
+                }
+                else if (state.workerstandin==2) {
+                    worker02.busy = 1;
+                    document.getElementById("zeit_worker02").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+                    document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+                    state.workerstandin = 0;
+                }
+                else if (state.workerstandin==3) {
+                    worker03.busy = 1;
+                    document.getElementById("zeit_worker03").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+                    document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+                    state.workerstandin = 0;
+                }
+    
+                Bonsai_Details(SearchBonsaiShowing());
+    
+                menu_change();
+                menu_shop_change();
+            }
+            else {
+            }
+        }
+        else {
+            if (resources.compost>0 & SearchBonsaiShowing().growing_zeit>60) {
+                SearchBonsaiShowing().growing_zeit -=60;
+                resources.compost -=1;
+                document.getElementById("compost").innerText = resources.compost.toLocaleString('en', {minimumFractionDigits: 0});
+                
+                Bonsai_Details(SearchBonsaiShowing());
+                SearchWorker();
+    
+                menu_change();
+                menu_shop_change();
+            }
+            else {
+            document.getElementById("snack_message").innerText = "Bonsai already growing";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            }
+        }
+    }
+}
+
+
+
 /* Bonsai Growing Leftpoints Distribution Buttons*/
 var btn_lm1 = document.getElementById("bonsai_level_minus_1");
 var btn_lp1 = document.getElementById("bonsai_level_plus_1");
