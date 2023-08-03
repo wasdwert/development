@@ -30,6 +30,7 @@ var resources = {
 
 var x=1;
 var levels=0;
+var idstring=0;
 
 var worker01 = {
     busy: 0,
