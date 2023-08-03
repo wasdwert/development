@@ -761,7 +761,7 @@ function PlantSeedlingPick(seedlingX, worker) {
 function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
-    bonsaixx.name = treetypename[seedlingx.treetype];
+    bonsaixx.name = treetypename[seedlingx.treetype]+bonsai.id.toString().padStart(5, '0');
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
     bonsaixx.styletype = seedlingx.styletype;
