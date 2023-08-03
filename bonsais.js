@@ -396,8 +396,8 @@ function ChooseSeedling(x) {
     else if (x==5) {
         ChooseSeedling2(seedling5, seedling1, seedling2, seedling3, seedling4, seedling6, "e", "a", "b", "c", "d", "f", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlingf_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlingf_center_mobile)
     }
-    else {
-        ChooseSeedling2(seedling6, seedling1, seedling2, seedling3, seedling4, seedling5, "e", "a", "b", "c", "d", "e", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile)
+    else if (x==6) {
+        ChooseSeedling2(seedling6, seedling1, seedling2, seedling3, seedling4, seedling5, "f", "a", "b", "c", "d", "e", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile)
     }
 }
 
@@ -479,6 +479,7 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                     document.getElementById("seedling"+f+"_center_mobile").style.cursor= "pointer";
                 }
                 seedling1.planting_choosen=0; 
+                seedling1.styletype=0;
                 $(document).ready(function(){
                     $('#menu_style').hide();
                     $('#menu_style_mobile').hide();
@@ -588,7 +589,7 @@ function PlantSeedling2(worker) {
         }  
     }
     else if (seedling2.planting_choosen==1) {
-        if (seedling1.styletype>0) {
+        if (seedling2.styletype>0) {
             PlantSeedlingPick(seedling2, worker);
         }
         else {
@@ -599,7 +600,7 @@ function PlantSeedling2(worker) {
         }  
     }
     else if (seedling3.planting_choosen==1) {
-        if (seedling1.styletype>0) {
+        if (seedling3.styletype>0) {
             PlantSeedlingPick(seedling3, worker);
         }
         else {
@@ -610,7 +611,7 @@ function PlantSeedling2(worker) {
         }  
     }
     else if (seedling4.planting_choosen==1) {
-        if (seedling1.styletype>0) {
+        if (seedling4.styletype>0) {
             PlantSeedlingPick(seedling4, worker);
         }
         else {
@@ -621,7 +622,7 @@ function PlantSeedling2(worker) {
         }  
     }
     else if (seedling5.planting_choosen==1) {
-        if (seedling1.styletype>0) {
+        if (seedling5.styletype>0) {
             PlantSeedlingPick(seedling5, worker);
         }
         else {
@@ -632,7 +633,7 @@ function PlantSeedling2(worker) {
         }  
     }
     else if (seedling6.planting_choosen==1) {
-        if (seedling1.styletype>0) {
+        if (seedling6.styletype>0) {
             PlantSeedlingPick(seedling6, worker);
         }
         else {
