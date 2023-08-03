@@ -818,6 +818,14 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.seedlings -=1;
     state.seedlings_ontheway -=1;
     document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
+    $(document).ready(function(){
+        $('#menu_style').hide();
+        $('#menu_style_mobile').hide();
+    });
+    document.getElementById('menu_style').value="0";
+    document.getElementById('menu_style_mobile').value="0";
+    document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
+    document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';        
     if (seedling1.planting_choosen==1) {
         seedling1.id=0;
         seedling1.treetype=0;
