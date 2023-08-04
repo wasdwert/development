@@ -758,11 +758,36 @@ function PlantSeedlingPick(seedlingX, worker) {
     }
 }
 
+function treename (seedlingx) {
+    if (seedlingx.treetype==1) {
+        if (seedlingx.styletype==1) {
+            return 'MR'+idstring.toString().padStart(5, '0')+'CH';
+        }
+        else if (seedlingx.styletype==2) {
+            return 'MR'+idstring.toString().padStart(5, '0')+'MO';
+        }
+        else if (seedlingx.styletype==3) {
+            return 'MR'+idstring.toString().padStart(5, '0')+'SK';
+        }
+    }
+    else if (seedlingx.treetype==2) {
+        if (seedlingx.styletype==1) {
+            return 'SK'+idstring.toString().padStart(5, '0')+'CH';
+        }
+        else if (seedlingx.styletype==2) {
+            return 'SK'+idstring.toString().padStart(5, '0')+'MO';
+        }
+        else if (seedlingx.styletype==3) {
+            return 'SK'+idstring.toString().padStart(5, '0')+'SK';
+        }
+    }
+}
+
 function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
     idstring=seedlingx.id;
-    bonsaixx.name = treetypename[seedlingx.treetype]+idstring.toString().padStart(5, '0');
+    bonsaixx.name = treename(seedlingx);
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
     bonsaixx.styletype = seedlingx.styletype;
