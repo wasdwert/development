@@ -763,7 +763,16 @@ function treename (seedlingx) {
         return treename2 (seedlingx, 'MR');
     }
     else if (seedlingx.treetype==2) {
-        return treename2 (seedlingx, 'SK');
+        return treename2 (seedlingx, 'DE');
+    }
+    else if (seedlingx.treetype==3) {
+        return treename2 (seedlingx, 'YB');
+    }
+    else if (seedlingx.treetype==4) {
+        return treename2 (seedlingx, 'OT');
+    }
+    else if (seedlingx.treetype==5) {
+        return treename2 (seedlingx, 'HI');
     }
 }
 
@@ -776,6 +785,18 @@ function treename2 (seedlingx, a) {
     }
     else if (seedlingx.styletype==3) {
         return a+idstring.toString().padStart(5, '0')+'SK';
+    }
+    else if (seedlingx.styletype==4) {
+        return a+idstring.toString().padStart(5, '0')+'HA';
+    }
+    else if (seedlingx.styletype==5) {
+        return a+idstring.toString().padStart(5, '0')+'SO';
+    }
+    else if (seedlingx.styletype==6) {
+        return a+idstring.toString().padStart(5, '0')+'KE';
+    }
+    else if (seedlingx.styletype==7) {
+        return a+idstring.toString().padStart(5, '0')+'KA';
     }
 }
 
