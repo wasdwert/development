@@ -204,6 +204,8 @@ var seedling6 = {
 
 var bonsaiplaceholder = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,

@@ -1,5 +1,7 @@
 var bonsai001 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -29,6 +31,8 @@ var bonsai001 = {
 
 var bonsai002 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -58,6 +62,8 @@ var bonsai002 = {
 
 var bonsai003 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -87,6 +93,8 @@ var bonsai003 = {
 
 var bonsai004 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -116,6 +124,8 @@ var bonsai004 = {
 
 var bonsai005 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -145,6 +155,8 @@ var bonsai005 = {
 
 var bonsai006 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -174,6 +186,8 @@ var bonsai006 = {
 
 var bonsai007 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -203,6 +217,8 @@ var bonsai007 = {
 
 var bonsai008 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -232,6 +248,8 @@ var bonsai008 = {
 
 var bonsai009 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -261,6 +279,8 @@ var bonsai009 = {
 
 var bonsai010 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -290,6 +310,8 @@ var bonsai010 = {
 
 var bonsai011 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -319,6 +341,8 @@ var bonsai011 = {
 
 var bonsai012 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -348,6 +372,8 @@ var bonsai012 = {
 
 var bonsai013 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -377,6 +403,8 @@ var bonsai013 = {
 
 var bonsai014 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -406,6 +434,8 @@ var bonsai014 = {
 
 var bonsai015 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -435,6 +465,8 @@ var bonsai015 = {
 
 var bonsai016 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -464,6 +496,8 @@ var bonsai016 = {
 
 var bonsai017 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -493,6 +527,8 @@ var bonsai017 = {
 
 var bonsai018 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -522,6 +558,8 @@ var bonsai018 = {
 
 var bonsai019 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -551,6 +589,8 @@ var bonsai019 = {
 
 var bonsai020 = {
     name: "-",
+    id:0,
+    id_string:0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
