@@ -760,10 +760,10 @@ function PlantSeedlingPick(seedlingX, worker) {
 
 function treename (seedlingx) {
     if (seedlingx.treetype==1) {
-        treename2 (seedlingx, "MR");
+        return treename2 (seedlingx, 'MR');
     }
     else if (seedlingx.treetype==2) {
-        treename2 (seedlingx, "SK");
+        return treename2 (seedlingx, 'SK');
     }
 }
 
@@ -784,6 +784,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     worker.busy = 1;
     bonsaixx.id = seedlingx.id;
     idstring=seedlingx.id;
+    console.log(bonsaixx.name);
     bonsaixx.name = treename(seedlingx);
     console.log(bonsaixx.name);
     bonsaixx.idstring = bonsaixx.name;
