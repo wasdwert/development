@@ -63,14 +63,18 @@ function ViewShopping() {
 function ViewExNeighborhood() {
     $(document).ready(function(){
         $('#neighborhood').show();
+        $('#neighborhood_mobile').show();
         $('#cityboundaries').hide();
+        $('#cityboundaries_mobile').hide();
     });
 }
 
 function ViewExCityBoundaries() {
     $(document).ready(function(){
         $('#neighborhood').hide();
+        $('#neighborhood_mobile').hide();
         $('#cityboundaries').show();
+        $('#cityboundaries_mobile').show();
     });
 }
 
