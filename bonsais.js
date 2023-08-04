@@ -785,6 +785,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     bonsaixx.id = seedlingx.id;
     idstring=seedlingx.id;
     bonsaixx.name = treename(seedlingx);
+    console.log(bonsaixx.name);
     bonsaixx.idstring = bonsaixx.name;
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
