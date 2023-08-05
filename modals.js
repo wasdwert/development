@@ -130,7 +130,7 @@ btnchange.onclick = function() {
             else {
                 document.getElementById("bonsaiold_nr").innerText = "#"+state.bonsai_showing;
                 document.getElementById("bonsaiold_name").innerText = SearchBonsaiShowing().name.toLocaleString('en', {minimumFractionDigits: 0});
-                document.getElementById("bonsaiold_type").innerHTML = fetchbonsaiimage(SearchBonsaiShowing());
+                document.getElementById("bonsaiold_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, SearchBonsaiShowing(), "100", "100");
                 document.getElementById("BonsaiOld").style.backgroundImage= fetchbonsairarity(SearchBonsaiShowing());
                 document.getElementById("bonsaiold_level").innerText = SearchBonsaiShowing().level.toLocaleString('en', {minimumFractionDigits: 0});
                 document.getElementById("bonsaiold_cp").innerHTML = SearchBonsaiShowing().foliage+SearchBonsaiShowing().branches+SearchBonsaiShowing().trunk+SearchBonsaiShowing().roots;
@@ -138,7 +138,7 @@ btnchange.onclick = function() {
                 document.getElementById("bonsainew_nr").innerText = "#"+document.getElementById("positionn_place").value;
                 document.getElementById("bonsainew_name").innerText = SearchBonsaiReplacement().name.toLocaleString('en', {minimumFractionDigits: 0});
                 document.getElementById("bonsainew_type").innerHTML = fetchbonsaiimage(SearchBonsaiReplacement());
-                document.getElementById("BonsaiNew").style.backgroundImage= fetchbonsairarity(SearchBonsaiReplacement());
+                document.getElementById("BonsaiNew").style.backgroundImage= fetchbonsairarity(fetchbonsaiimage2, SearchBonsaiReplacement(), "100", "100");
                 document.getElementById("bonsainew_level").innerText = SearchBonsaiReplacement().level.toLocaleString('en', {minimumFractionDigits: 0});
                 document.getElementById("bonsainew_cp").innerHTML = SearchBonsaiReplacement().foliage+SearchBonsaiReplacement().branches+SearchBonsaiReplacement().trunk+SearchBonsaiReplacement().roots;
                 
