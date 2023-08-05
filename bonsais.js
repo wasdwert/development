@@ -23,7 +23,6 @@ function ChangeName() {
 
 /* Change position functions */
 function PositionChangeBox() {
-    console.log(state.bonsai_showing);
     $(document).ready(function() {
         $("#positionn_batch").change(function() {
             var val = $(positionn_batch).val();
@@ -32,7 +31,6 @@ function PositionChangeBox() {
                 $("#positionn_place").html("<option value='00'>Select box first</option>");
             } else if (val == "1001") {
                 $('#positionn_place2').show();
-                console.log(state.bonsai_showing);
                 if (state.bonsai_showing==1) {
                     PostionChangeBox2 ("2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
@@ -274,42 +272,66 @@ function ChangePosition() {
     bonsaiplaceholder=SearchBonsaiShowing();
     if (x==1) {
         if (z==1) {
-            bonsai11=SearchBonsaiReplacement();
+            bonsai001=SearchBonsaiReplacement();
         }
         else if (z==2) {
-            bonsai12=SearchBonsaiReplacement();
+            bonsai002=SearchBonsaiReplacement();
         }
         else if (z==3) {
-            bonsai13=SearchBonsaiReplacement();
+            bonsai003=SearchBonsaiReplacement();
         }
         else if (z==4) {
-            bonsai14=SearchBonsaiReplacement();
+            bonsai004=SearchBonsaiReplacement();
         }
         else if (z==5) {
-            bonsai15=SearchBonsaiReplacement();
+            bonsai005=SearchBonsaiReplacement();
         }
         else if (z==6) {
-            bonsai16=SearchBonsaiReplacement();
+            bonsai006=SearchBonsaiReplacement();
+        }
+        else if (z==7) {
+            bonsai007=SearchBonsaiReplacement();
+        }
+        else if (z==8) {
+            bonsai008=SearchBonsaiReplacement();
+        }
+        else if (z==9) {
+            bonsai009=SearchBonsaiReplacement();
+        }
+        else if (z==10) {
+            bonsai010=SearchBonsaiReplacement();
         }
     }
-    else if (x==7) {
+    else if (x==11) {
         if (z==1) {
-            bonsai71=SearchBonsaiReplacement();
+            bonsai011=SearchBonsaiReplacement();
         }
         else if (z==2) {
-            bonsai72=SearchBonsaiReplacement();
+            bonsai012=SearchBonsaiReplacement();
         }
         else if (z==3) {
-            bonsai73=SearchBonsaiReplacement();
+            bonsai013=SearchBonsaiReplacement();
         }
         else if (z==4) {
-            bonsai74=SearchBonsaiReplacement();
+            bonsai014=SearchBonsaiReplacement();
         }
         else if (z==5) {
-            bonsai75=SearchBonsaiReplacement();
+            bonsai015=SearchBonsaiReplacement();
         }
         else if (z==6) {
-            bonsai76=SearchBonsaiReplacement();
+            bonsai016=SearchBonsaiReplacement();
+        }
+        else if (z==7) {
+            bonsai017=SearchBonsaiReplacement();
+        }
+        else if (z==8) {
+            bonsai018=SearchBonsaiReplacement();
+        }
+        else if (z==9) {
+            bonsai019=SearchBonsaiReplacement();
+        }
+        else if (z==10) {
+            bonsai020=SearchBonsaiReplacement();
         }
     }
     if (document.getElementById("positionn_place").value==1) {
@@ -462,6 +484,69 @@ function SearchBonsaiShowing() {
         else if (z==10) {
             return bonsai020;
         }
+    }
+}
+
+function SearchBonsaiReplacement() {
+    if (document.getElementById("positionn_place").value==1) {
+        return bonsai001;
+    }
+    else if (document.getElementById("positionn_place").value==2) {
+        return bonsai002;
+    }
+    else if (document.getElementById("positionn_place").value==3) {
+        return bonsai003;
+    }
+    else if (document.getElementById("positionn_place").value==4) {
+        return bonsai004;
+    }
+    else if (document.getElementById("positionn_place").value==5) {
+        return bonsai005;
+    }
+    else if (document.getElementById("positionn_place").value==6) {
+        return bonsai006;
+    }
+    else if (document.getElementById("positionn_place").value==7) {
+        return bonsai007;
+    }
+    else if (document.getElementById("positionn_place").value==8) {
+        return bonsai008;
+    }
+    else if (document.getElementById("positionn_place").value==9) {
+        return bonsai009;
+    }
+    else if (document.getElementById("positionn_place").value==10) {
+        return bonsai010;
+    }
+    else if (document.getElementById("positionn_place").value==11) {
+        return bonsai011;
+    }
+    else if (document.getElementById("positionn_place").value==12) {
+        return bonsai012;
+    }
+    else if (document.getElementById("positionn_place").value==13) {
+        return bonsai013;
+    }
+    else if (document.getElementById("positionn_place").value==14) {
+        return bonsai014;
+    }
+    else if (document.getElementById("positionn_place").value==15) {
+        return bonsai015;
+    }
+    else if (document.getElementById("positionn_place").value==16) {
+        return bonsai016;
+    }
+    else if (document.getElementById("positionn_place").value==17) {
+        return bonsai017;
+    }
+    else if (document.getElementById("positionn_place").value==18) {
+        return bonsai018;
+    }
+    else if (document.getElementById("positionn_place").value==19) {
+        return bonsai019;
+    }
+    else if (document.getElementById("positionn_place").value==20) {
+        return bonsai020;
     }
 }
 
