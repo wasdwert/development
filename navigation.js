@@ -160,8 +160,8 @@ function ViewBonsai_Details2(x, y) {
         state.bonsai_showing=y;
     }
     else {
-        Bonsai_Details(x); 
         state.bonsai_showing=y;
+        Bonsai_Details(x);
     }
 }
 

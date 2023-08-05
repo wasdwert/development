@@ -23,6 +23,7 @@ function ChangeName() {
 
 /* Change position functions */
 function PositionChangeBox() {
+    console.log(state.bonsai_showing);
     $(document).ready(function() {
         $("#positionn_batch").change(function() {
             var val = $(positionn_batch).val();
