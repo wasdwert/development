@@ -99,6 +99,17 @@ treetypename[3]= "Yubiwa";
 treetypename[4]= "Otosu";
 treetypename[5]= "Hi";
 
+const treetypegroupname = [];
+treetypegroupname[1]= "Raundo";
+treetypegroupname[2]= "Erementaru";
+treetypegroupname[3]= "Roku-men";
+treetypegroupname[4]= "Seikatsu";
+treetypegroupname[5]= "Sanmen";
+treetypegroupname[6]= "Shihen";
+treetypegroupname[7]= "Jinkō-teki";
+treetypegroupname[8]= "Sora";
+treetypegroupname[9]= "Shizen";
+
 const styletypename = [];
 styletypename[1]= "Chokan";
 styletypename[2]= "Moyogi";

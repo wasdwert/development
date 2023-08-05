@@ -9,6 +9,7 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];
+        document.getElementById("bonsai_detail_treetypegroup").innerText = treetypegroupname[bonsaixx.treetypegroup];
         document.getElementById("bonsai_detail_styletype").innerText = styletypename[bonsaixx.styletype];
         document.getElementById("bonsai_detail_nature").innerText = natures[bonsaixx.nature];
         document.getElementById("bonsai_detail_level").innerText = bonsaixx.level.toLocaleString('en', {minimumFractionDigits: 0});
@@ -91,6 +92,7 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];
+        document.getElementById("bonsai_detail_treetypegroup").innerText = treetypegroupname[bonsaixx.treetypegroup];
         document.getElementById("bonsai_detail_styletype").innerText = styletypename[bonsaixx.styletype];
         document.getElementById("bonsai_detail_nature").innerText = natures[bonsaixx.nature];
         document.getElementById("bonsai_detail_level").innerText = bonsaixx.level.toLocaleString('en', {minimumFractionDigits: 0});

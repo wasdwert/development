@@ -31,49 +31,74 @@ function PositionChangeBox() {
                 $("#positionn_place").html("<option value='00'>Select box first</option>");
             } else if (val == "1001") {
                 $('#positionn_place2').show();
+                console.log(state.bonsai_showing);
                 if (state.bonsai_showing==1) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                    PostionChangeBox2 ("2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==2) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                    PostionChangeBox2 ("1", "001", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==3) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==4) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='5'>15</option><option value='6'>16</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==5) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='6'>16</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "6", "006", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==6) {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>11</option><option value='2'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "5", "005", "7", "007", "8", "008", "9", "009", "10", "010");
                 }
-                else {
-                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='11'>11</option><option value='12'>12</option><option value='3'>13</option><option value='4'>14</option><option value='5'>15</option><option value='6'>16</option>");
-                }
-            } else if (val == "1007") {
-                $('#positionn_place2').show();
-                if (state.bonsai_showing==7) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                else if (state.bonsai_showing==7) {
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "8", "008", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==8) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "9", "009", "10", "010");
                 }
                 else if (state.bonsai_showing==9) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "10", "010");
                 }
                 else if (state.bonsai_showing==10) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='11'>75</option><option value='12'>76</option>");
-                }
-                else if (state.bonsai_showing==11) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='12'>76</option>");
-                }
-                else if (state.bonsai_showing==12) {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option>");
+                    PostionChangeBox2 ("1", "001", "2", "002", "3", "003", "4", "004", "5", "005", "6", "006", "7", "007", "8", "008", "9", "009");
                 }
                 else {
-                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='7'>71</option><option value='8'>72</option><option value='9'>73</option><option value='10'>74</option><option value='11'>75</option><option value='12'>76</option>");
+                    $("#positionn_place").html("<option value='0'>Select place1</option><option value='1'>001</option><option value='2'>002</option><option value='3'>003</option><option value='4'>004</option><option value='5'>005</option><option value='6'>006</option><option value='7'>007</option><option value='8'>008</option><option value='9'>009</option><option value='10'>010</option>");
+                }
+            } else if (val == "1011") {
+                $('#positionn_place2').show();
+                if (state.bonsai_showing==11) {
+                    PostionChangeBox2 ("12", "012", "13", "013", "14", "014", "15", "015", "16", "016", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==12) {
+                    PostionChangeBox2 ("11", "011", "13", "013", "14", "014", "15", "015", "16", "016", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==13) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "14", "014", "15", "015", "16", "016", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==14) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "15", "015", "16", "016", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==15) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "16", "016", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==16) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "15", "015", "17", "017", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==17) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "15", "015", "16", "016", "18", "018", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==18) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "15", "015", "16", "016", "17", "017", "19", "019", "20", "020");
+                }
+                else if (state.bonsai_showing==19) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "15", "015", "16", "016", "17", "017", "18", "018", "20", "020");
+                }
+                else if (state.bonsai_showing==20) {
+                    PostionChangeBox2 ("11", "011", "12", "012", "13", "013", "14", "014", "15", "015", "16", "016", "17", "017", "18", "018", "19", "019");
+                }
+                else {
+                    $("#positionn_place").html("<option value='0'>Select place2</option><option value='11'>011</option><option value='12'>012</option><option value='13'>013</option><option value='14'>014</option><option value='15'>015</option><option value='16'>016</option><option value='17'>017</option><option value='18'>018</option><option value='19'>019</option><option value='20'>020</option>");
                 }
             }
         });
@@ -83,6 +108,10 @@ function PositionChangeBox() {
             minimumResultsForSearch: Infinity
         });
     });
+}
+
+function PostionChangeBox2 (a, a2, b, b2, c, c2, d, d2, e, e2, f, f2, g, g2, h, h2, i, i2) {
+    return $("#positionn_place").html("<option value='0'>Select place1</option><option value='"+a+"'>"+a2+"</option><option value='"+b+"'>"+b2+"</option><option value='"+c+"'>"+c2+"</option><option value='"+d+"'>"+d2+"</option><option value='"+e+"'>"+e2+"</option><option value='"+f+"'>"+f2+"</option><option value='"+g+"'>"+g2+"</option><option value='"+h+"'>"+h2+"</option><option value='"+i+"'>"+i2+"</option>");
 }
 
 function formatState (state) {
@@ -100,53 +129,85 @@ function formatState (state) {
         return $state;
     }
     else {
-        if (state.text==11) {
+        if (state.text==1) {
             nr=1;
-            formatstateimage(bonsai11);
+            formatstateimage(bonsai001);
+        }
+        if (state.text==2) {
+            nr=2;
+            formatstateimage(bonsai002);
+        }
+        if (state.text==3) {
+            nr=3;
+            formatstateimage(bonsai003);
+        }
+        if (state.text==4) {
+            nr=4;
+            formatstateimage(bonsai004);
+        }
+        if (state.text==5) {
+            nr=5;
+            formatstateimage(bonsai005);
+        }
+        if (state.text==6) {
+            nr=6;
+            formatstateimage(bonsai006);
+        }
+        if (state.text==7) {
+            nr=7;
+            formatstateimage(bonsai007);
+        }
+        if (state.text==8) {
+            nr=8;
+            formatstateimage(bonsai008);
+        }
+        if (state.text==9) {
+            nr=9;
+            formatstateimage(bonsai009);
+        }
+        if (state.text==10) {
+            nr=10;
+            formatstateimage(bonsai010);
+        }
+        if (state.text==11) {
+            nr=11;
+            formatstateimage(bonsai011);
         }
         if (state.text==12) {
-            nr=2;
-            formatstateimage(bonsai12);
+            nr=12;
+            formatstateimage(bonsai012);
         }
         if (state.text==13) {
-            nr=3;
-            formatstateimage(bonsai13);
+            nr=13;
+            formatstateimage(bonsai013);
         }
         if (state.text==14) {
-            nr=4;
-            formatstateimage(bonsai14);
+            nr=14;
+            formatstateimage(bonsai014);
         }
         if (state.text==15) {
-            nr=5;
-            formatstateimage(bonsai15);
+            nr=15;
+            formatstateimage(bonsai015);
         }
         if (state.text==16) {
-            nr=6;
-            formatstateimage(bonsai16);
+            nr=16;
+            formatstateimage(bonsai016);
         }
-        if (state.text==71) {
-            nr=7;
-            formatstateimage(bonsai71);
+        if (state.text==17) {
+            nr=17;
+            formatstateimage(bonsai017);
         }
-        if (state.text==72) {
-            nr=8;
-            formatstateimage(bonsai72);
+        if (state.text==18) {
+            nr=18;
+            formatstateimage(bonsai018);
         }
-        if (state.text==73) {
-            nr=9;
-            formatstateimage(bonsai73);
+        if (state.text==19) {
+            nr=19;
+            formatstateimage(bonsai019);
         }
-        if (state.text==74) {
-            nr=10;
-            formatstateimage(bonsai74);
-        }
-        if (state.text==75) {
-            nr=11;
-            formatstateimage(bonsai75);
-        }
-        if (state.text==76) {
-            nr=12;
-            formatstateimage(bonsai76);
+        if (state.text==20) {
+            nr=20;
+            formatstateimage(bonsai020);
         }
         var $state = $(
             '<span style="display:flex; align-items:center">#'+ nr +'&nbsp;' + image +'&nbsp;'+ name +'&nbsp;Lv.&nbsp;'+ level +'&nbsp;CP&nbsp;'+ cp +'</span>'
@@ -160,46 +221,46 @@ function formatstateimage(bonsaixx) {
         image='<img src="Images/b00r00.svg" width="25" height="25">';
     }
     else if (bonsaixx.treetype==1) {
-        if (bonsaixx.rarity==1) {
+        if (bonsaixx.treequality==1) {
             image='<img src="Images/b01r01.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==2) {
+        else if (bonsaixx.treequality==2) {
             image='<img src="Images/b01r02.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==3) {
+        else if (bonsaixx.treequality==3) {
             image='<img src="Images/b01r03.svg" width="25" height="25">';
         }
     }
     else if (bonsaixx.treetype==2) {
-        if (bonsaixx.rarity==1) {
+        if (bonsaixx.treequality==1) {
             image='<img src="Images/b02r01.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==2) {
+        else if (bonsaixx.treequality==2) {
             image='<img src="Images/b02r02.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==3) {
+        else if (bonsaixx.treequality==3) {
             image='<img src="Images/b02r03.svg" width="25" height="25">';
         }
     }
     else if (bonsaixx.treetype==3) {
-        if (bonsaixx.rarity==1) {
+        if (bonsaixx.treequality==1) {
             image='<img src="Images/b03r01.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==2) {
+        else if (bonsaixx.treequality==2) {
             image='<img src="Images/b03r02.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==3) {
+        else if (bonsaixx.treequality==3) {
             image='<img src="Images/b03r03.svg" width="25" height="25">';
         }
     }
     else if (bonsaixx.treetype==4) {
-        if (bonsaixx.rarity==1) {
+        if (bonsaixx.treequality==1) {
             image='<img src="Images/b04r01.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==2) {
+        else if (bonsaixx.treequality==2) {
             image='<img src="Images/b04r02.svg" width="25" height="25">';
         }
-        else if (bonsaixx.rarity==3) {
+        else if (bonsaixx.treequality==3) {
             image='<img src="Images/b04r03.svg" width="25" height="25">';
         }
     }
@@ -251,40 +312,64 @@ function ChangePosition() {
         }
     }
     if (document.getElementById("positionn_place").value==1) {
-        bonsai11=bonsaiplaceholder;
+        bonsai001=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==2) {
-        bonsai12=bonsaiplaceholder;
+        bonsai002=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==3) {
-        bonsai13=bonsaiplaceholder;
+        bonsai003=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==4) {
-        bonsai14=bonsaiplaceholder;
+        bonsai004=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==5) {
-        bonsai15=bonsaiplaceholder;
+        bonsai005=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==6) {
-        bonsai16=bonsaiplaceholder;
+        bonsai006=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==7) {
-        bonsai71=bonsaiplaceholder;
+        bonsai007=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==8) {
-        bonsai72=bonsaiplaceholder;
+        bonsai008=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==9) {
-        bonsai73=bonsaiplaceholder;
+        bonsai009=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==10) {
-        bonsai74=bonsaiplaceholder;
+        bonsai010=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==11) {
-        bonsai75=bonsaiplaceholder;
+        bonsai011=bonsaiplaceholder;
     }
     else if (document.getElementById("positionn_place").value==12) {
-        bonsai76=bonsaiplaceholder;
+        bonsai012=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==13) {
+        bonsai013=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==14) {
+        bonsai014=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==15) {
+        bonsai015=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==16) {
+        bonsai016=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==17) {
+        bonsai017=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==18) {
+        bonsai018=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==19) {
+        bonsai019=bonsaiplaceholder;
+    }
+    else if (document.getElementById("positionn_place").value==20) {
+        bonsai020=bonsaiplaceholder;
     }
     
     if (SearchBonsaiShowing().treetype==0) {
@@ -301,7 +386,7 @@ function ChangePosition() {
     else {
         Bonsai_Growing(SearchBonsaiShowing());
         $(document).ready(function() {
-            $("#positionn_batch").html("<option value='1000'>Select box</option><option value='1001'>Box 1 - Bonsai #01-#06</option><option value='1007'>Box 2 - Bonsai #07-#12</option>");
+            $("#positionn_batch").html("<option value='1000'>Select box</option><option value='1001'>Bonsai #01-#10</option><option value='1011'>Bonsai #11-#20</option>");
             $("#positionn_place").html("<option value='00'>Select box first</option>");
         });
     }
@@ -805,9 +890,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     worker.busy = 1;
     bonsaixx.id = seedlingx.id;
     idstring=seedlingx.id;
-    console.log(bonsaixx.name);
     bonsaixx.name = treename(seedlingx);
-    console.log(bonsaixx.name);
     bonsaixx.idstring = bonsaixx.name;
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
