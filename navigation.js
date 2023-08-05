@@ -179,7 +179,7 @@ function Bonsai_Details(bonsaixxx) {
     Bonsai_Growing(bonsaixxx);
     PositionChangeBox();
     $(document).ready(function() {
-        $("#positionn_batch").html("<option value='1000'>Select box</option><option value='1011'>Bonsai #01-#10</option><option value='1011'>Bonsai #11-#20</option>");
+        $("#positionn_batch").html("<option value='1000'>Select box</option><option value='1001'>Bonsai #01-#10</option><option value='1011'>Bonsai #11-#20</option>");
         $("#positionn_place").html("<option value='00'>Select box first</option>");
         $('#positionn_place2').hide();
     });
