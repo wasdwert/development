@@ -1095,7 +1095,7 @@
                         </div>
                         <div class="centercolumn_right">
                             <div id=bdcc_r_t1 style="display: show; width: 100%">
-                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Grow bonsai</div>
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center"><span id="bonsai_detail_status">Grow bonsai</span></div>
                             </div> 
                             <div id=bdcc_r_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>
@@ -1177,7 +1177,18 @@
                                 <div class="Field" style="width: 110px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: flex-start">Shape points</div>
                             </div></div>
                             <div id=bdcc_r_t19 style="display: show; width: 100%">
-                            <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
+                                <div id=Growing1 style="display: show; width: 100%">
+                                    <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
+                                </div>
+                                <div id=Growing2 style="display: none; width: 100%">
+                                    <button id="Button_Grow2" class="grey" style="width: 157.5px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow2_Text">Give care (-1 second)</span><span id="Button_Grow2_Zeit"></span></button>
+                                    <button id="Button_Compost2" class="grey" style="width: 157.5px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Compost2_Text">Give compost (-60 seconds)</span></button> 
+                                </div>
+                                <div id=Growing3 style="display: none; width: 100%">
+                                    <button id="Button_Grow3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Grow3_Text">Give care (-1 second)</span><span id="Button_Grow3_Zeit"></span></button>
+                                    <button id="Button_Compost3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Compost3_Text">Give compost (-60 seconds)</span></button> 
+                                    <button id="Button_Fertilizer3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GrowBonsai()"><span id="Button_Fertilizer3_Text">Give fertilizer (-600 seconds)</span></button> 
+                                </div>
                             </div>
                             <div id=bdcc_r_t2 class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Change bonsai position</div>
                             <select class="selectsub" id="positionn_batch" name="positionn_batch" onchange="PositionChangeBox()" style="width:100%;background: #d8d8d8;color: #555">
@@ -2089,7 +2100,7 @@
                         </div>
                         <div class="centercolumn_right_mobile">
                             <div id=bdcc_r_t1 style="display: show; width: 100%">
-                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Grow bonsai</div>
+                            <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center"><span id="bonsai_detail_status_mobile">Grow bonsai</span></div>
                             </div> 
                             <div id=bdcc_r_t11 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                             <div class="Field" style="width:55px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Level</div>

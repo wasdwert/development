@@ -22,6 +22,7 @@ var resources = {
     money: 0,
     organic_waste: 0,
     compost: 0,
+    fertilizer: 0,
     bolt: 5,
     metal: 3,
     wire: 2,
