@@ -94,7 +94,7 @@ function Bonsai_Growing(bonsaixx) {
                 $('#Growing2').hide();
                 $('#Growing3').hide();
             });
-            if (bonsaixx.growing_zeit>0) {
+            if (bonsaixx.growing_zeit>1) {
                 document.getElementById("Button_Grow").style.cursor= "pointer";
                 document.getElementById("Button_Grow").className = "grey";
                 document.getElementById("Button_Grow_Text").innerHTML = "Give care (-1 second)";
