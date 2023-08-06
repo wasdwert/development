@@ -426,7 +426,80 @@ function GrowBonsai() {
     }
 }
 
+function SearchWorker() {
+    if (SearchBonsaiShowing()==bonsai001) {
+        SearchWorker2(1);
+    }
+    if (SearchBonsaiShowing()==bonsai002) {
+        SearchWorker2(2);
+    }
+    if (SearchBonsaiShowing()==bonsai003) {
+        SearchWorker2(3);
+    }
+    if (SearchBonsaiShowing()==bonsai004) {
+        SearchWorker2(4);
+    }
+    if (SearchBonsaiShowing()==bonsai005) {
+        SearchWorker2(5);
+    }
+    if (SearchBonsaiShowing()==bonsai006) {
+        SearchWorker2(6);
+    }
+    if (SearchBonsaiShowing()==bonsai007) {
+        SearchWorker2(7);
+    }
+    if (SearchBonsaiShowing()==bonsai008) {
+        SearchWorker2(8);
+    }
+    if (SearchBonsaiShowing()==bonsai009) {
+        SearchWorker2(9);
+    }
+    if (SearchBonsaiShowing()==bonsai010) {
+        SearchWorker2(10);
+    }
+    if (SearchBonsaiShowing()==bonsai011) {
+        SearchWorker2(11);
+    }
+    if (SearchBonsaiShowing()==bonsai012) {
+        SearchWorker2(12);
+    }
+    if (SearchBonsaiShowing()==bonsai013) {
+        SearchWorker2(13);
+    }
+    if (SearchBonsaiShowing()==bonsai014) {
+        SearchWorker2(14);
+    }
+    if (SearchBonsaiShowing()==bonsai015) {
+        SearchWorker2(15);
+    }
+    if (SearchBonsaiShowing()==bonsai016) {
+        SearchWorker2(16);
+    }
+    if (SearchBonsaiShowing()==bonsai017) {
+        SearchWorker2(17);
+    }
+    if (SearchBonsaiShowing()==bonsai018) {
+        SearchWorker2(18);
+    }
+    if (SearchBonsaiShowing()==bonsai019) {
+        SearchWorker2(19);
+    }
+    if (SearchBonsaiShowing()==bonsai020) {
+        SearchWorker2(20);
+    }
+}
 
+function SearchWorker2(x) {
+    if (worker01.growing==x) {
+        document.getElementById("zeit_worker01").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+    }
+    else if (worker02.growing==x) {
+        document.getElementById("zeit_worker02").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+    }
+    else if (worker03.growing==x) {
+        document.getElementById("zeit_worker03").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+    }
+}
 
 /* Bonsai Growing Leftpoints Distribution Buttons*/
 var btn_lm1 = document.getElementById("bonsai_level_minus_1");
