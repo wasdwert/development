@@ -94,18 +94,10 @@ function Bonsai_Growing(bonsaixx) {
                 $('#Growing2').hide();
                 $('#Growing3').hide();
             });
-            if (bonsaixx.growing_zeit>1) {
-                document.getElementById("Button_Grow").style.cursor= "pointer";
-                document.getElementById("Button_Grow").className = "grey";
-                document.getElementById("Button_Grow_Text").innerHTML = "Give care (-1 second)";
-                document.getElementById("Button_Grow_Zeit").innerHTML = "";
-            }
-            else {
-                document.getElementById("Button_Grow").style.cursor= "auto";
-                document.getElementById("Button_Grow").className = "";
-                document.getElementById("Button_Grow_Text").innerHTML = "Growing";
-                document.getElementById("Button_Grow_Zeit").innerHTML = "";
-            }
+            document.getElementById("Button_Grow").style.cursor= "pointer";
+            document.getElementById("Button_Grow").className = "grey";
+            document.getElementById("Button_Grow_Text").innerHTML = "Give care (-1 second)";
+            document.getElementById("Button_Grow_Zeit").innerHTML = "";
         }
         
         document.getElementById("ChangePosition").style.cursor= "auto";
@@ -382,7 +374,6 @@ function GrowBonsai() {
             GrowBonsaiWorkerPick(SearchBonsaiShowing());
             if (state.workerstandin>0) {
                 SearchBonsaiShowing().growing = 1;
-                
                 if (state.workerstandin==1) {
                     worker01.busy = 1;
                     document.getElementById("zeit_worker01").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
@@ -411,9 +402,10 @@ function GrowBonsai() {
             }
         }
         else {
-            if (SearchBonsaiShowing().growing_zeit>1) {
+            if (SearchBonsaiShowing().growing_zeit>0) {
                 SearchBonsaiShowing().growing_zeit -=1;
                 
+                Bonsai_Growing_Intervall(SearchBonsaiShowing());
                 Bonsai_Details(SearchBonsaiShowing());
                 SearchWorker();
     
@@ -423,6 +415,38 @@ function GrowBonsai() {
             else {
             }
         }
+    }
+}
+
+function GiveCompost() {
+    if (resources.compost>0 & SearchBonsaiShowing().growing_zeit>60) {
+        SearchBonsaiShowing().growing_zeit -=60;
+        resources.compost -=1;
+        document.getElementById("compost").innerText = resources.compost.toLocaleString('en', {minimumFractionDigits: 0});
+        
+        Bonsai_Details(SearchBonsaiShowing());
+        SearchWorker();
+    
+        menu_change();
+        menu_shop_change();
+    }
+    else {
+    }
+}
+
+function GiveFertilizer() {
+    if (resources.fertilizer>0 & SearchBonsaiShowing().growing_zeit>600) {
+        SearchBonsaiShowing().growing_zeit -=600;
+        resources.fertilizer -=1;
+        document.getElementById("compost").innerText = resources.fertilizer.toLocaleString('en', {minimumFractionDigits: 0});
+        
+        Bonsai_Details(SearchBonsaiShowing());
+        SearchWorker();
+    
+        menu_change();
+        menu_shop_change();
+    }
+    else {
     }
 }
 

@@ -578,7 +578,7 @@
     font-size: 15px;
 }
 
-#Button_Grow {
+#Button_Grow, #Button_Grow2, #Button_Compost2, #Button_Grow3, #Button_Compost3, #Button_Fertilizer3 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;

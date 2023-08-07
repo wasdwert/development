@@ -615,16 +615,16 @@
                     <div class="center_content">    
                         <div class="centercolumn_left">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Shopping</div>
-                            <div id=ShopEquipment style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=ShopEquipment style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                                 <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopEquipment()">Equipment</button>
                             </div></div>
-                            <div id=ShopResources style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=ShopResources style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                                 <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopResources()">Resources</button>
                             </div></div>
-                            <div id=ShopSeedlings style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=ShopSeedlings style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                                 <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopSeedlings()">Seedlings</button>
                             </div></div>
-                            <div id=ShopBonsais style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                            <div id=ShopBonsais style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                                 <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopBonsais()">Bonsais</button>
                             </div></div>
                         </div>
@@ -1181,13 +1181,17 @@
                                     <button id="Button_Grow" class="grey" style="width:100%; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onmouseup="GrowBonsai()"><span id="Button_Grow_Text">Grow</span><span id="Button_Grow_Zeit"></span></button> 
                                 </div>
                                 <div id=Growing2 style="display: none; width: 100%">
+                                    <div style="display: flex;align-items:center">
                                     <button id="Button_Grow2" class="grey" style="width: 157.5px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onmouseup="GrowBonsai()">Give care (-1 second)</button>
                                     <button id="Button_Compost2" class="grey" style="width: 157.5px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GiveCompost()"><span id="Button_Compost2_Text">Give compost (-60 seconds)</span></button> 
+                                    </div>
                                 </div>
                                 <div id=Growing3 style="display: none; width: 100%">
+                                    <div style="display: flex;align-items:center">
                                     <button id="Button_Grow3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onmouseup="GrowBonsai()">Give care (-1 second)</button>
                                     <button id="Button_Compost3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GiveCompost()"><span id="Button_Compost3_Text">Give compost (-60 seconds)</span></button> 
-                                    <button id="Button_Fertilizer3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GiveFertilizer()"><span id="Button_Fertilizer3_Text">Give fertilizer (-600 seconds)</span></button> 
+                                    <button id="Button_Fertilizer3" class="grey" style="width: 105px; background: #9f9f9f; display: flex;align-items:center;justify-content: center" onclick="GiveFertilizer()"><span id="Button_Fertilizer3_Text">Give fertilizer (-600 seconds)</span></button>
+                                    </div>
                                 </div>
                             </div>
                             <div id=bdcc_r_t2 class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Change bonsai position</div>
@@ -1729,21 +1733,21 @@
                     <div class="center_content_mobile">    
                         <div class="centercolumn_left_mobile">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Shopping</div>
-                            <div id=ShopEquipment style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopEquipment()">Equipment</button>
+                            <div id=ShopEquipment style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 30px;display: flex;align-items:center" onclick="ViewShopEquipment()">Equipment</button>
                             </div></div>
-                            <div id=ShopResources style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopResources()">Resources</button>
+                            <div id=ShopResources style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 30px;display: flex;align-items:center" onclick="ViewShopResources()">Resources</button>
                             </div></div>
-                            <div id=ShopSeedlings style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopSeedlings()">Seedlings</button>
+                            <div id=ShopSeedlings style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 30px;display: flex;align-items:center" onclick="ViewShopSeedlings()">Seedlings</button>
                             </div></div>
-                            <div id=ShopBonsais style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
-                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="ViewShopBonsais()">Bonsais</button>
+                            <div id=ShopBonsais style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 30px;display: flex;align-items:center" onclick="ViewShopBonsais()">Bonsais</button>
                             </div></div>
                         </div>
                         <div class="centercolumn_right_mobile">
-                            <div id=shop_equipment style="width: 100%; display: none">
+                            <div id=shop_equipment_mobile style="width: 100%; display: none">
                                 <div class="Field" style="width: 100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Equipment</div>
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/backpack.svg" width="20" height="20">&nbsp;Backpack</div>
@@ -1769,49 +1773,49 @@
                                 </div>
                                 </div></div>
                             </div>
-                            <div id=shop_resources style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                            <div id=shop_resources_mobile style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Resources</div>
-                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Item</div>
-                                    <div class="Field" style="width: 50px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Sell</div>
-                                    <span id="xxx" style="width:70px; text-align: center">You</span>
-                                    <div class="Field" style="width: 50px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Buy</div>
+                                <div class="Field" style="width:157.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 40px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Item</div>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Sell</div>
+                                    <span id="xxx" style="width:52.5px; text-align: center">You</span>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">Buy</div>
                                 </div>
-                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                    <div class="Field" style="width: 145px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/bolt.svg" width="20" height="20">&nbsp;Nuts & Bolts</div>
-                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                <div class="Field" style="width:157.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 40px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/bolt.svg" width="20" height="20"></div>
+                                    <div class="Field" style="width: 32.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
                                     <button id="shop_bolt_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
-                                    <span id="shop_bolt" style="width:40px; text-align: center">0</span>
+                                    <span id="shop_bolt_mobile" style="width:20.5px; text-align: center">0</span>
                                     <button id="shop_bolt_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
-                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 32.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
                                 </div>
-                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/metal.svg" width="20" height="20">&nbsp;Metal</div>
-                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                <div class="Field" style="width:157.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 40px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/metal.svg" width="20" height="20"></div>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">1&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
                                     <button id="shop_metal_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
-                                    <span id="shop_metal" style="width:40px; text-align: center">0</span>
+                                    <span id="shop_metal_mobile" style="width:20.5px; text-align: center">0</span>
                                     <button id="shop_metal_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
-                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;2&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
                                 </div>
-                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                    <div class="Field" style="width: 145px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/wire.svg" width="20" height="20">&nbsp;Wires</div>
-                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                <div class="Field" style="width:157.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 40px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/wire.svg" width="20" height="20"></div>
+                                    <div class="Field" style="width: 32.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
                                     <button id="shop_wire_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
-                                    <span id="shop_wire" style="width:40px; text-align: center">0</span>
+                                    <span id="shop_wire_mobile" style="width:20.5px; text-align: center">0</span>
                                     <button id="shop_wire_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
-                                    <div class="Field" style="width: 49px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;3&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 32.5px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;3&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
                                 </div>
-                                <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
-                                    <div class="Field" style="width: 145px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/board.svg" width="20" height="20">&nbsp;Electronic boards</div>
-                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
+                                <div class="Field" style="width:157.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 40px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/board.svg" width="20" height="20"></div>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">2&nbsp;<img src="Images/currency.svg" width="15" height="15">&nbsp;</div>
                                     <button id="shop_board_sell_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-right: 1px ;background-image: url(Images/minus.svg); background-size: 16px, 16px;)"></button>
-                                    <span id="shop_board" style="width:40px; text-align: center">0</span>
+                                    <span id="shop_board_mobile" style="width:20.5px; text-align: center">0</span>
                                     <button id="shop_board_buy_1" style="border: 0px;width: 16px; height: 16px; cursor: pointer; margin-left: 1px ;background-image: url(Images/plus.svg); background-size: 16px, 16px;)"></button>
-                                    <div class="Field" style="width: 49px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;4&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 32.5px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;4&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
                                 </div>
                                 
                             </div>
-                            <div id=shop_seedlings style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                            <div id=shop_seedlings_mobile style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Seedlings</div>
                                 <div class="Field" style="width:315px;background: #d8d8d8;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 75px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">Seedling</div>
@@ -1899,7 +1903,7 @@
                                 </div>
                                 
                             </div>
-                            <div id=shop_bonsais style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                            <div id=shop_bonsais_mobile style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Bonsais</div>
                                 <select class="select_shopping" id="menu_shopping" onchange="menu_shop_change()">
                                 <option value="1">Box 1 - Bonsai #01-#06</option>
@@ -2291,12 +2295,12 @@
                         </div>
                     </div>
                 </div>
-                <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                <div id=resources_0 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                 <button class="collapsible_open" id="collapsible-button-1" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
                 </div></div>
                 <div class="collapsible_open-content" id="collapsible-section-1">
                     <div class="rightcolumn_content2">
-                        <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_1 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/money.svg" width="20" height="20">&nbsp;Money
                         </div>
@@ -2304,7 +2308,7 @@
                             <span id="money" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
                         </div>
                         </div></div>
-                        <div id=resources_2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_2 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/organic_waste.svg" width="20" height="20">&nbsp;Organic waste
                         </div>
@@ -2318,7 +2322,7 @@
                             <span id="compost" style="display: flex;align-items:center">0</span>/100
                         </div>
                         </div></div>
-                        <div id=resources_3 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_3 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                          <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/bolt.svg" width="20" height="20">&nbsp;Nuts & bolts
                         </div>
@@ -2392,57 +2396,57 @@
                         </div>
                     </div>
                 </div>
-                <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                <div id=resources_0 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                 <button class="collapsible_open" id="collapsible-button-1_mobile" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Resources</button>
                 </div></div>
                 <div class="collapsible_open-content" id="collapsible-section-1_mobile">
                     <div class="rightcolumn_content2_mobile">
-                        <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_1 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/money.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
-                            <span id="money" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
+                            <span id="money_mobile" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="15" height="15">
                         </div>
                         </div></div>
-                        <div id=resources_2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_2 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/organic_waste.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
-                            <span id="organic_waste" style="display: flex;align-items:center">0</span>/100
+                            <span id="organic_waste_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/compost.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
-                            <span id="compost" style="display: flex;align-items:center">0</span>/100
+                            <span id="compost_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                         </div></div>
-                        <div id=resources_3 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_3 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                          <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/bolt.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">
-                            <span id="bolt" style="display: flex;align-items:center">0</span>/100
+                            <span id="bolt_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/metal.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
-                            <span id="metal" style="display: flex;align-items:center">0</span>/100
+                            <span id="metal_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                          <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/wire.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">   
-                            <span id="wire" style="display: flex;align-items:center">0</span>/100
+                            <span id="wire_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/board.svg" width="20" height="20">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end">  
-                            <span id="board" style="display: flex;align-items:center">0</span>/100
+                            <span id="board_mobile" style="display: flex;align-items:center">0</span>/100
                         </div>
                         </div></div>
                     </div>
@@ -2493,57 +2497,57 @@
                         </div>
                     </div>
                 </div>
-                <div id=resources_0 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                <div id=resources_0 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                 <button class="collapsible_open" id="collapsible-button-1_mobilexs" onclick="toggleCollapsibleSectionWithAnimation.call(this)">Res</button>
                 </div></div>
                 <div class="collapsible_open-content" id="collapsible-section-1_mobilexs">
                     <div class="rightcolumn_content2_mobilexs">
-                        <div id=resources_1 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_1 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/money.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">
-                            <span id="money" style="display: flex;align-items:center">1.000</span>&nbsp;<img src="Images/currency.svg" width="10" height="10">
+                            <span id="money_mobilexs" style="display: flex;align-items:center">0</span>&nbsp;<img src="Images/currency.svg" width="10" height="10">
                         </div>
                         </div></div>
-                        <div id=resources_2 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_2 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                         <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/organic_waste.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">
-                            <span id="organic_waste" style="display: flex;align-items:center">0</span>/100
+                            <span id="organic_waste_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/compost.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">  
-                            <span id="compost" style="display: flex;align-items:center">0</span>/100
+                            <span id="compost_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                         </div></div>
-                        <div id=resources_3 style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                        <div id=resources_3 style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                          <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/bolt.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">
-                            <span id="bolt" style="display: flex;align-items:center">0</span>/100
+                            <span id="bolt_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/metal.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">   
-                            <span id="metal" style="display: flex;align-items:center">0</span>/100
+                            <span id="metal_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                          <div class="Field" style="width:75%;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/wire.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #f1f1f1;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">   
-                            <span id="wire" style="display: flex;align-items:center">0</span>/100
+                            <span id="wire_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                         <div class="Field" style="width:75%;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center">
                             <img src="Images/board.svg" width="15" height="15">
                         </div>
                         <div class="Field" style="width:25%;background: #d8d8d8;color: #555;height: 30px;display: flex;padding-right: 10px; align-items:center; justify-content: flex-end; font-size: 10px">  
-                            <span id="board" style="display: flex;align-items:center">0</span>/100
+                            <span id="board_mobilexs" style="display: flex;align-items:center">0</span>/100
                         </div>
                         </div></div>
                     </div>

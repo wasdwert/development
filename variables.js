@@ -21,17 +21,33 @@ var statistics = {
 var resources = {
     money: 0,
     organic_waste: 0,
-    compost: 0,
-    fertilizer: 0,
+    compost: 10,
+    fertilizer: 1,
     bolt: 5,
     metal: 3,
     wire: 2,
     board: 1,
 }
 
+var skills = {
+    level: 0,
+    exp_nextlevel: 20,
+    robot: 0,
+    compost: 0,
+    growing: 0,
+    growing_act: 0,
+    growing_level: 2,
+    shaping: 0,
+    shaping_act: 0,
+    shaping_level: 4,
+    patience: 0,
+}
+
 var x=1;
 var levels=0;
 var idstring=0;
+var naturepoints=0;
+var leftpoints=0;
 
 var worker01 = {
     busy: 0,
@@ -148,8 +164,8 @@ natures[14]= "Dispersed";
 natures[15]= "Consolidated";
 natures[16]= "Earthed";
 
+/* Seedling variables */
 var seedling1 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -160,7 +176,6 @@ var seedling1 = {
 }
 
 var seedling2 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -171,7 +186,6 @@ var seedling2 = {
 }
 
 var seedling3 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -182,7 +196,6 @@ var seedling3 = {
 }
 
 var seedling4 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -193,7 +206,6 @@ var seedling4 = {
 }
 
 var seedling5 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,
@@ -204,7 +216,6 @@ var seedling5 = {
 }
 
 var seedling6 = {
-    id: 0,
     treetype: 0,
     treetypegroup: 0,
     styletype: 0,

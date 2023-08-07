@@ -210,6 +210,125 @@ function menu_shop_change() {
     }
 }
 
+/* Crafting Menu functions */
+function ViewCrCompost() {
+    $(document).ready(function(){
+        $('#cr_compost').show();
+        $('#cr_robot').hide();
+    });
+}
+
+function ViewCrRobot() {
+    $(document).ready(function(){
+        $('#cr_compost').hide();
+        $('#cr_robot').show();
+    });
+}
+
+/* Shopping Menu functions */
+function ViewShopEquipment() {
+    $(document).ready(function(){
+        $('#shop_equipment').show();
+        $('#shop_resources').hide();
+        $('#shop_seedlings').hide();
+        $('#shop_bonsais').hide();
+        $('#shop_equipment_mobile').show();
+        $('#shop_resources_mobile').hide();
+        $('#shop_seedlings_mobile').hide();
+        $('#shop_bonsais_mobile').hide();
+    });
+}
+
+function ViewShopResources() {
+    $(document).ready(function(){
+        $('#shop_equipment').hide();
+        $('#shop_resources').show();
+        $('#shop_seedlings').hide();
+        $('#shop_bonsais').hide();
+        $('#shop_equipment_mobile').hide();
+        $('#shop_resources_mobile').show();
+        $('#shop_seedlings_mobile').hide();
+        $('#shop_bonsais_mobile').hide();
+    });
+}
+
+function ViewShopSeedlings() {
+    $(document).ready(function(){
+        $('#shop_equipment').hide();
+        $('#shop_resources').hide();
+        $('#shop_seedlings').show();
+        $('#shop_bonsais').hide();
+        $('#shop_equipment_mobile').hide();
+        $('#shop_resources_mobile').hide();
+        $('#shop_seedlings_mobile').show();
+        $('#shop_bonsais_mobile').hide();
+    });
+}
+
+function ViewShopBonsais() {
+    $(document).ready(function(){
+        $('#shop_equipment').hide();
+        $('#shop_resources').hide();
+        $('#shop_seedlings').hide();
+        $('#shop_bonsais').show();
+        $('#shop_equipment_mobile').hide();
+        $('#shop_resources_mobile').hide();
+        $('#shop_seedlings_mobile').hide();
+        $('#shop_bonsais_mobile').show();
+    });
+}
+
+/* Learning Menu functions */
+function ViewSkillRobot() {
+    $(document).ready(function(){
+        $('#skill_robot').show();
+        $('#skill_compost').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillCompost() {
+    $(document).ready(function(){
+        $('#skill_robot').hide();
+        $('#skill_compost').show();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillGrowing() {
+    $(document).ready(function(){
+        $('#skill_robot').hide();
+        $('#skill_compost').hide();
+        $('#skill_growing').show();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillShaping() {
+    $(document).ready(function(){
+        $('#skill_robot').hide();
+        $('#skill_compost').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').show();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillPatience() {
+    $(document).ready(function(){
+        $('#skill_robot').hide();
+        $('#skill_compost').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').show();
+    });
+}
+
 /* Collapsible Menus - Main menu: Opened at start*/
 function toggleCollapsibleSectionWithAnimation() {
 	this.classList.toggle("active");

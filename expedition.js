@@ -128,7 +128,6 @@ function seedling_countdown(worker) {
 
 function randommaschine(seedlingx, worker) {
     if (statistics.seedlings_total==0) {
-        seedlingx.id=1;
         seedlingx.treetype=1;
         seedlingx.treetypegroup=1;
         seedlingx.treequality=1;
@@ -137,7 +136,6 @@ function randommaschine(seedlingx, worker) {
         //experience(1);
     }
     else if (statistics.seedlings_total==3) {
-        seedlingx.id=4;
         seedlingx.treetype=2;
         seedlingx.treetypegroup=1;
         seedlingx.treequality=1;
@@ -151,7 +149,6 @@ function randommaschine(seedlingx, worker) {
     state.random_treequality =Math.random();
     state.random_shiny =Math.random();
     if (worker.expedition==1) {
-        seedlingx.id=statistics.seedlings_total+1;
         if (state.random_treetype>=0.95) { //Random for treetype
             seedlingx.treetype=4;
             seedlingx.treetypegroup=2;
@@ -193,7 +190,6 @@ function randommaschine(seedlingx, worker) {
         //experience(1);
     }
     else if (worker.expedition==2) {
-        seedlingx.id=statistics.seedlings_total+1;
         if (state.random_treetype>=0.99)  { //Random for treetype
             seedlingx.treetype=3;
             seedlingx.treetypegroup=1;

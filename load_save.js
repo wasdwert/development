@@ -62,63 +62,83 @@ w.addEventListener('message', function(e){
     //learning_countdown();
     
     if (bonsai001.growing==1) {
+        bonsai001.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai001);
     }
     if (bonsai002.growing==1) {
+        bonsai002.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai002);
     }
     if (bonsai003.growing==1) {
+        bonsai003.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai003);
     }
     if (bonsai004.growing==1) {
+        bonsai004.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai004);
     }
     if (bonsai005.growing==1) {
+        bonsai005.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai005);
     }
     if (bonsai006.growing==1) {
+        bonsai006.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai006);
     }
     if (bonsai007.growing==1) {
+        bonsai007.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai007);
     }
     if (bonsai008.growing==1) {
+        bonsai008.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai008);
     }
     if (bonsai009.growing==1) {
+        bonsai009.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai009);
     }
     if (bonsai010.growing==1) {
+        bonsai010.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai010);
     }
     if (bonsai011.growing==1) {
+        bonsai011.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai011);
     }
     if (bonsai012.growing==1){
+        bonsai012.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai012);
     }
     if (bonsai013.growing==1){
+        bonsai013.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai013);
     }
     if (bonsai014.growing==1){
+        bonsai014.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai014);
     }
     if (bonsai015.growing==1){
+        bonsai015.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai015);
     }
     if (bonsai016.growing==1){
+        bonsai016.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai016);
     }
     if (bonsai017.growing==1){
+        bonsai017.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai017);
     }
     if (bonsai018.growing==1){
+        bonsai018.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai018);
     }
     if (bonsai019.growing==1){
+        bonsai019.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai019);
     }
     if (bonsai020.growing==1){
+        bonsai020.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai020);
     }
 })/*1 Sekunden Intervallfunktion*/
@@ -129,6 +149,8 @@ setInterval(function Autosave() {
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
+    localStorage.setItem('resources', JSON.stringify(resources));
+    localStorage.setItem('skills', JSON.stringify(skills));
     localStorage.setItem('worker01', JSON.stringify(worker01));
     localStorage.setItem('worker02', JSON.stringify(worker02));
     localStorage.setItem('worker03', JSON.stringify(worker03));
@@ -171,6 +193,8 @@ setInterval(function Autosave() {
 function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
     statistics = JSON.parse(localStorage.getItem('statistics'));
+    resources = JSON.parse(localStorage.getItem('resources'));
+    skills = JSON.parse(localStorage.getItem('skills'));
     worker01 = JSON.parse(localStorage.getItem('worker01'));
     worker02 = JSON.parse(localStorage.getItem('worker02'));
     worker03 = JSON.parse(localStorage.getItem('worker03'));
@@ -247,17 +271,35 @@ function startup() {
     
     //document.getElementById("skilllevel").innerHTML = skills.level;
     //document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
-    //document.getElementById("money").innerHTML = resources.money;
-    //document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-    //document.getElementById("compost").innerHTML = resources.compost;
-    //document.getElementById("bolt").innerHTML = resources.bolt;
-    //document.getElementById("shop_bolt").innerHTML = resources.bolt;
-    //document.getElementById("metal").innerHTML = resources.metal;
-    //document.getElementById("shop_metal").innerHTML = resources.metal;
-    //document.getElementById("wire").innerHTML = resources.wire;
-    //document.getElementById("shop_wire").innerHTML = resources.wire;
-    //document.getElementById("board").innerHTML = resources.board;
-    //document.getElementById("shop_board").innerHTML = resources.board;
+    document.getElementById("money").innerHTML = resources.money;
+    document.getElementById("money_mobile").innerHTML = resources.money;
+    document.getElementById("money_mobilexs").innerHTML = resources.money;
+    document.getElementById("organic_waste").innerHTML = resources.organic_waste;
+    document.getElementById("organic_waste_mobile").innerHTML = resources.organic_waste;
+    document.getElementById("organic_waste_mobilexs").innerHTML = resources.organic_waste;
+    document.getElementById("compost").innerHTML = resources.compost;
+    document.getElementById("compost_mobile").innerHTML = resources.compost;
+    document.getElementById("compost_mobilexs").innerHTML = resources.compost;
+    document.getElementById("bolt").innerHTML = resources.bolt;
+    document.getElementById("bolt_mobile").innerHTML = resources.bolt;
+    document.getElementById("bolt_mobilexs").innerHTML = resources.bolt;
+    document.getElementById("shop_bolt").innerHTML = resources.bolt;
+    document.getElementById("shop_bolt_mobile").innerHTML = resources.bolt;
+    document.getElementById("metal").innerHTML = resources.metal;
+    document.getElementById("metal_mobile").innerHTML = resources.metal;
+    document.getElementById("metal_mobilexs").innerHTML = resources.metal;
+    document.getElementById("shop_metal").innerHTML = resources.metal;
+    document.getElementById("shop_metal_mobile").innerHTML = resources.metal;
+    document.getElementById("wire").innerHTML = resources.wire;
+    document.getElementById("wire_mobile").innerHTML = resources.wire;
+    document.getElementById("wire_mobilexs").innerHTML = resources.wire;
+    document.getElementById("shop_wire").innerHTML = resources.wire;
+    document.getElementById("shop_wire_mobile").innerHTML = resources.wire;
+    document.getElementById("board").innerHTML = resources.board;
+    document.getElementById("board_mobile").innerHTML = resources.board;
+    document.getElementById("board_mobilexs").innerHTML = resources.board;
+    document.getElementById("shop_board").innerHTML = resources.board;
+    document.getElementById("shop_board_mobile").innerHTML = resources.board;
     
     w.postMessage('Start');
 }
@@ -266,6 +308,8 @@ function ViewOptions() { //Current Saving Option//
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
+    localStorage.setItem('resources', JSON.stringify(resources));
+    localStorage.setItem('skills', JSON.stringify(skills));
     localStorage.setItem('worker01', JSON.stringify(worker01));
     localStorage.setItem('worker02', JSON.stringify(worker02));
     localStorage.setItem('worker03', JSON.stringify(worker03));
