@@ -55,9 +55,9 @@ w.addEventListener('message', function(e){
         }
     }
     
-    //crafting_countdown(worker01);
-    //crafting_countdown(worker02);
-    //crafting_countdown(worker03);
+    crafting_countdown(worker01);
+    crafting_countdown(worker02);
+    crafting_countdown(worker03);
     
     learning_countdown();
     
