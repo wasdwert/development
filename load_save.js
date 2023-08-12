@@ -59,7 +59,7 @@ w.addEventListener('message', function(e){
     //crafting_countdown(worker02);
     //crafting_countdown(worker03);
     
-    //learning_countdown();
+    learning_countdown();
     
     if (bonsai001.growing==1) {
         bonsai001.growing_zeit -=1;
