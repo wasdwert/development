@@ -488,8 +488,8 @@
                     <div class="center_content">    
                         <div class="centercolumn_left">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting</div>
-                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrCompost()">Compost</button>
-                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrRobot()">Robot</button>
+                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: show" onclick="ViewCrCompost()">Compost</button>
+                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: show" onclick="ViewCrRobot()">Robot</button>
                         </div>
                         <div class="centercolumn_right">
                             <div id=cr_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
@@ -535,10 +535,10 @@
                                 <div class="collapsible_open_a-content_a" id="collapsible-section-4" style="width: 280px">
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=Skill_Robot class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillRobot()">Building Robots</button>
-                                    <button id=Skill_Compost class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillCompost()">Crafting Compost</button>
-                                    <button id=Skill_Growing class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillGrowing()">Growing #<span id="skill_growing_nr2">1</span></button>
-                                    <button id=Skill_Shaping class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillShaping()">Shaping #<span id="skill_shaping_nr2">1</span></button>
-                                    <button id=Skill_Patience class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: none" onclick="ViewSkillPatience()">Patience/Memory increase</button>
+                                    <button id=Skill_Compost class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillCompost()">Crafting Compost</button>
+                                    <button id=Skill_Growing class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillGrowing()">Growing #<span id="skill_growing_nr2">1</span></button>
+                                    <button id=Skill_Shaping class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillShaping()">Shaping #<span id="skill_shaping_nr2">1</span></button>
+                                    <button id=Skill_Patience class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillPatience()">Patience/Memory increase</button>
                                 </div>
                                 </div>
                             <button class="collapsible_open2_a" id="collapsible-button-5" onclick="toggleCollapsibleSectionWithAnimation2.call(this)">Learned</button>
@@ -638,7 +638,7 @@
                                         <button id="shop_equip_backpack" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/buy.svg); background-size: 60px, 24px;)" onclick="BuyBackpack()"></button>
                                     </div>
                                 </div>
-                                <div id=equipment_patience style="display: none; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
+                                <div id=equipment_patience style="display: show; width: 100%"><div style="display: flex; width: 100%; flex-wrap: wrap">
                                 <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
                                     <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/book.svg" width="20" height="20">&nbsp;Book of Patience</div>
                                     <div class="Field" style="width: 50px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;25&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
@@ -2617,6 +2617,8 @@
     <script src="expedition.js"></script> 
     <script src="modals.js"></script> 
     <script src="bonsais.js"></script> 
+    <script src="shopping.js"></script> 
+    <script src="learning.js"></script> 
     <script src="jquery-3.6.0.min.js"></script>
     <link href="select2.min.css" rel="stylesheet" />
     <script src="select2.min.js"></script>
