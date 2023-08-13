@@ -553,26 +553,26 @@ function SearchBonsaiReplacement() {
 /* Seedling Planting functions */
 function ChooseSeedling(x) {
     if (x==1) {
-        ChooseSeedling2(seedling1, seedling2, seedling3, seedling4, seedling5, seedling6, "a", "b", "c", "d", "e", "f", seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
+        ChooseSeedling2(seedling1, seedling2, seedling3, seedling4, seedling5, seedling6, "a", "b", "c", "d", "e", "f", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
     }
     else if (x==2) {
-        ChooseSeedling2(seedling2, seedling1, seedling3, seedling4, seedling5, seedling6, "b", "a", "c", "d", "e", "f", seedlinga_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlinga_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
+        ChooseSeedling2(seedling2, seedling1, seedling3, seedling4, seedling5, seedling6, "b", "a", "c", "d", "e", "f", seedlingb_center, seedlinga_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlingb_center_mobile, seedlinga_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
     }
     else if (x==3) {
-        ChooseSeedling2(seedling3, seedling1, seedling2, seedling4, seedling5, seedling6, "c", "a", "b", "d", "e", "f", seedlinga_center, seedlingb_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
+        ChooseSeedling2(seedling3, seedling1, seedling2, seedling4, seedling5, seedling6, "c", "a", "b", "d", "e", "f", seedlingc_center, seedlinga_center, seedlingb_center, seedlingd_center, seedlinge_center, seedlingf_center, seedlingc_center_mobile, seedlinga_center_mobile, seedlingb_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
     }
     else if (x==4) {
-        ChooseSeedling2(seedling4, seedling1, seedling2, seedling3, seedling5, seedling6, "d", "a", "b", "c", "e", "f", seedlinga_center, seedlingb_center, seedlingc_center, seedlinge_center, seedlingf_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
+        ChooseSeedling2(seedling4, seedling1, seedling2, seedling3, seedling5, seedling6, "d", "a", "b", "c", "e", "f", seedlingd_center, seedlinga_center, seedlingb_center, seedlingc_center, seedlinge_center, seedlingf_center, seedlingc_center_mobile, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlinge_center_mobile, seedlingf_center_mobile)
     }
     else if (x==5) {
-        ChooseSeedling2(seedling5, seedling1, seedling2, seedling3, seedling4, seedling6, "e", "a", "b", "c", "d", "f", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlingf_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlingf_center_mobile)
+        ChooseSeedling2(seedling5, seedling1, seedling2, seedling3, seedling4, seedling6, "e", "a", "b", "c", "d", "f", seedlinge_center, seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlingf_center, seedlinge_center_mobile, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlingf_center_mobile)
     }
     else if (x==6) {
-        ChooseSeedling2(seedling6, seedling1, seedling2, seedling3, seedling4, seedling5, "f", "a", "b", "c", "d", "e", seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile)
+        ChooseSeedling2(seedling6, seedling1, seedling2, seedling3, seedling4, seedling5, "f", "a", "b", "c", "d", "e", seedlingf_center, seedlinga_center, seedlingb_center, seedlingc_center, seedlingd_center, seedlinge_center, seedlingf_center_mobile, seedlinga_center_mobile, seedlingb_center_mobile, seedlingc_center_mobile, seedlingd_center_mobile, seedlinge_center_mobile)
     }
 }
 
-function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5, seedling6, a, b, c, d, e, f, seedling1_center, seedling2_center, seedling3_center, seedling4_center, seedling5_center, seedling1_center_mobile, seedling2_center_mobile, seedling3_center_mobile, seedling4_center_mobile, seedling5_center_mobile) {
+function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5, seedling6, a, b, c, d, e, f, seedling1_center, seedling2_center, seedling3_center, seedling4_center, seedling5_center, seedling6_center, seedling1_center_mobile, seedling2_center_mobile, seedling3_center_mobile, seedling4_center_mobile, seedling5_center_mobile, seedling6_center_mobile) {
     if (seedling1.treetype==0) {
         document.getElementById("snack_message").innerText = "No seedling available";
         var snackb = document.getElementById("snackbar");
@@ -589,22 +589,22 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
         else {
             if (seedling1.planting_choosen==0) {
                 document.getElementById("seedling"+a+"_center").style.backgroundColor= "#bbb";
-                seedling1_center.className = "";
                 seedling2_center.className = "";
                 seedling3_center.className = "";
                 seedling4_center.className = "";
                 seedling5_center.className = "";
+                seedling6_center.className = "";
                 document.getElementById("seedling"+b+"_center").style.cursor= "auto";
                 document.getElementById("seedling"+c+"_center").style.cursor= "auto";
                 document.getElementById("seedling"+d+"_center").style.cursor= "auto";
                 document.getElementById("seedling"+e+"_center").style.cursor= "auto";
                 document.getElementById("seedling"+f+"_center").style.cursor= "auto";
                 document.getElementById("seedling"+a+"_center_mobile").style.backgroundColor= "#bbb";
-                seedling1_center_mobile.className = "";
                 seedling2_center_mobile.className = "";
                 seedling3_center_mobile.className = "";
                 seedling4_center_mobile.className = "";
                 seedling5_center_mobile.className = "";
+                seedling6_center_mobile.className = "";
                 document.getElementById("seedling"+b+"_center_mobile").style.cursor= "auto";
                 document.getElementById("seedling"+c+"_center_mobile").style.cursor= "auto";
                 document.getElementById("seedling"+d+"_center_mobile").style.cursor= "auto";
@@ -620,32 +620,32 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 document.getElementById("seedling"+a+"_center").style.backgroundColor= "#f1f1f1";
                 document.getElementById("seedling"+a+"_center_mobile").style.backgroundColor= "#f1f1f1";
                 if (seedling2.treetype>0) {
-                    seedlingb_center.className = "darker_grey";
-                    seedlingb_center_mobile.className = "darker_grey";
+                    seedling2_center.className = "darker_grey";
+                    seedling2_center_mobile.className = "darker_grey";
                     document.getElementById("seedling"+b+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+b+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling3.treetype>0) {
-                    seedlingc_center.className = "darker_grey";
-                    seedlingc_center_mobile.className = "darker_grey";
+                    seedling3_center.className = "darker_grey";
+                    seedling3_center_mobile.className = "darker_grey";
                     document.getElementById("seedling"+c+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+c+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling4.treetype>0) {
-                    seedlingd_center.className = "darker_grey";
-                    seedlingd_center_mobile.className = "darker_grey";
+                    seedling4_center.className = "darker_grey";
+                    seedling4_center_mobile.className = "darker_grey";
                     document.getElementById("seedling"+d+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+d+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling5.treetype>0) {
-                    seedlinge_center.className = "darker_grey";
-                    seedlinge_center_mobile.className = "darker_grey";
+                    seedling5_center.className = "darker_grey";
+                    seedling5_center_mobile.className = "darker_grey";
                     document.getElementById("seedling"+e+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+e+"_center_mobile").style.cursor= "pointer";
                 }
                 if (seedling6.treetype>0) {
-                    seedlingf_center.className = "darker_grey";
-                    seedlingf_center_mobile.className = "darker_grey";
+                    seedling6_center.className = "darker_grey";
+                    seedling6_center_mobile.className = "darker_grey";
                     document.getElementById("seedling"+f+"_center").style.cursor= "pointer";
                     document.getElementById("seedling"+f+"_center_mobile").style.cursor= "pointer";
                 }

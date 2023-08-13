@@ -261,12 +261,24 @@ function startup() {
         document.getElementById("seedlinga_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlinga_center_mobile").style.backgroundColor= "#f1f1f1";
     }
+    if (seedling1.treetype>0) {
+        seedlinga_center.className = "darker_grey";
+        seedlinga_center_mobile.className = "darker_grey";
+        document.getElementById("seedlinga_center").style.cursor= "pointer";
+        document.getElementById("seedlinga_center_mobile").style.cursor= "pointer";
+    }
     fetchimage_seedling ("a", seedling1);
     if (seedling2.styletype>0) {
         seedling2.styletype=0;
         seedling2.planting_choosen=0;
         document.getElementById("seedlingb_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlingb_center_mobile").style.backgroundColor= "#f1f1f1";
+    }
+    if (seedling2.treetype>0) {
+        seedlingb_center.className = "darker_grey";
+        seedlingb_center_mobile.className = "darker_grey";
+        document.getElementById("seedlingb_center").style.cursor= "pointer";
+        document.getElementById("seedlingb_center_mobile").style.cursor= "pointer";
     }
     fetchimage_seedling ("b", seedling2);
     if (seedling3.styletype>0) {
@@ -275,12 +287,24 @@ function startup() {
         document.getElementById("seedlingc_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlingc_center_mobile").style.backgroundColor= "#f1f1f1";
     }
+    if (seedling3.treetype>0) {
+        seedlingc_center.className = "darker_grey";
+        seedlingc_center_mobile.className = "darker_grey";
+        document.getElementById("seedlingc_center").style.cursor= "pointer";
+        document.getElementById("seedlingc_center_mobile").style.cursor= "pointer";
+    }
     fetchimage_seedling ("c", seedling3);
     if (seedling4.styletype>0) {
         seedling4.styletype=0;
         seedling4.planting_choosen=0;
         document.getElementById("seedlingd_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlingd_center_mobile").style.backgroundColor= "#f1f1f1";
+    }
+    if (seedling4.treetype>0) {
+        seedlingd_center.className = "darker_grey";
+        seedlingd_center_mobile.className = "darker_grey";
+        document.getElementById("seedlingd_center").style.cursor= "pointer";
+        document.getElementById("seedlingd_center_mobile").style.cursor= "pointer";
     }
     fetchimage_seedling ("d", seedling4);
     if (seedling5.styletype>0) {
@@ -289,12 +313,24 @@ function startup() {
         document.getElementById("seedlinge_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlinge_center_mobile").style.backgroundColor= "#f1f1f1";
     }
+    if (seedling5.treetype>0) {
+        seedlinge_center.className = "darker_grey";
+        seedlinge_center_mobile.className = "darker_grey";
+        document.getElementById("seedlinge_center").style.cursor= "pointer";
+        document.getElementById("seedlinge_center_mobile").style.cursor= "pointer";
+    }
     fetchimage_seedling ("e", seedling5);
     if (seedling6.styletype>0) {
         seedling6.styletype=0;
         seedling6.planting_choosen=0;
         document.getElementById("seedlingf_center").style.backgroundColor= "#f1f1f1";
         document.getElementById("seedlingf_center_mobile").style.backgroundColor= "#f1f1f1";
+    }
+    if (seedling6.treetype>0) {
+        seedlingf_center.className = "darker_grey";
+        seedlingf_center_mobile.className = "darker_grey";
+        document.getElementById("seedlingf_center").style.cursor= "pointer";
+        document.getElementById("seedlingf_center_mobile").style.cursor= "pointer";
     }
     fetchimage_seedling ("f", seedling6);
     
