@@ -256,27 +256,45 @@ function startup() {
     menu_shop_change();
     
     if (seedling1.styletype>0) {
-        seedling1.styletype==0;
+        seedling1.styletype=0;
+        seedling1.planting_choosen=0;
+        document.getElementById("seedlinga_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlinga_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("a", seedling1);
     if (seedling2.styletype>0) {
-        seedling2.styletype==0;
+        seedling2.styletype=0;
+        seedling2.planting_choosen=0;
+        document.getElementById("seedlingb_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlingb_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("b", seedling2);
     if (seedling3.styletype>0) {
-        seedling3.styletype==0;
+        seedling3.styletype=0;
+        seedling3.planting_choosen=0;
+        document.getElementById("seedlingc_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlingc_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("c", seedling3);
     if (seedling4.styletype>0) {
-        seedling4.styletype==0;
+        seedling4.styletype=0;
+        seedling4.planting_choosen=0;
+        document.getElementById("seedlingd_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlingd_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("d", seedling4);
     if (seedling5.styletype>0) {
-        seedling5.styletype==0;
+        seedling5.styletype=0;
+        seedling5.planting_choosen=0;
+        document.getElementById("seedlinge_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlinge_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("e", seedling5);
     if (seedling6.styletype>0) {
-        seedling6.styletype==0;
+        seedling6.styletype=0;
+        seedling6.planting_choosen=0;
+        document.getElementById("seedlingf_center").style.backgroundColor= "#f1f1f1";
+        document.getElementById("seedlingf_center_mobile").style.backgroundColor= "#f1f1f1";
     }
     fetchimage_seedling ("f", seedling6);
     
