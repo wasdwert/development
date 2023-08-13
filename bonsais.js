@@ -1476,22 +1476,22 @@ function Bonsai_Growing_Intervall(bonsaixx) {
             cpdistribution(bonsaixx, level_cp_tq1);
             cpdistributionaftercare(bonsaixx)
             bonsaixx.growing_zeit = grow_time_tq1[bonsaixx.level];
-            //levels =levels*1;
-            //experience(levels);
+            levels =levels*1;
+            experience(levels);
         }
         if (bonsaixx.treequality==2) {
             cpdistribution(bonsaixx, level_cp_tq2);
             cpdistributionaftercare(bonsaixx)
             bonsaixx.growing_zeit = grow_time_tq2[bonsaixx.level];
-            //levels =levels*2;
-            //experience(levels);
+            levels =levels*2;
+            experience(levels);
         }
         if (bonsaixx.treequality==3) {
             cpdistribution(bonsaixx, level_cp_tq3);
             cpdistributionaftercare(bonsaixx)
             bonsaixx.growing_zeit = grow_time_tq3[bonsaixx.level];
-            //levels =levels*3;
-            //experience(levels);
+            levels =levels*3;
+            experience(levels);
         }
     
         levels=0;

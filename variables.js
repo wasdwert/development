@@ -32,6 +32,7 @@ var resources = {
 var skills = {
     level: 0,
     exp_nextlevel: 20,
+    skillpoints: 0,
     robot: 0,
     compost: 0,
     growing: 0,
@@ -42,6 +43,18 @@ var skills = {
     shaping_level: 4,
     patience: 0,
 }
+
+const skillexperience = [];
+skillexperience[0]= 20;
+skillexperience[1]= 24;
+skillexperience[2]= 29;
+skillexperience[3]= 35;
+skillexperience[4]= 41;
+skillexperience[5]= 50;
+skillexperience[6]= 60;
+skillexperience[7]= 72;
+skillexperience[8]= 86;
+skillexperience[9]= 103;
 
 var x=1;
 var levels=0;

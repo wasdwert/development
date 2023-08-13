@@ -1,3 +1,26 @@
+function experience(exp) {
+    if (exp<skills.exp_nextlevel) {
+        skills.exp_nextlevel= skills.exp_nextlevel-exp;
+        document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+    }
+    else if (exp>=skills.exp_nextlevel) {
+        exp = exp-skills.exp_nextlevel;
+        skills.level +=1;
+        skills.skillpoints +=2;
+        skills.exp_nextlevel= skillexperience[skills.level];
+        skills.exp_nextlevel= skills.exp_nextlevel-exp;
+        document.getElementById("skilllevel").innerHTML = skills.level;
+        document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+        document.getElementById("skillpoints").innerHTML = skills.skillpoints;
+        document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
+        document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
+        document.getElementById("snack_message").innerHTML = "Reached skill level&nbsp;"+ skills.level +". Congratulations!";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+    }
+}
+
 function learning_countdown() {
     if (worker01.learning == "Robot") {
         worker01.learning_zeit -=1;
