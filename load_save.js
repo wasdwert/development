@@ -255,11 +255,29 @@ function startup() {
     menu_change();
     menu_shop_change();
     
+    if (seedling1.styletype>0) {
+        seedling1.styletype==0;
+    }
     fetchimage_seedling ("a", seedling1);
+    if (seedling2.styletype>0) {
+        seedling2.styletype==0;
+    }
     fetchimage_seedling ("b", seedling2);
+    if (seedling3.styletype>0) {
+        seedling3.styletype==0;
+    }
     fetchimage_seedling ("c", seedling3);
+    if (seedling4.styletype>0) {
+        seedling4.styletype==0;
+    }
     fetchimage_seedling ("d", seedling4);
+    if (seedling5.styletype>0) {
+        seedling5.styletype==0;
+    }
     fetchimage_seedling ("e", seedling5);
+    if (seedling6.styletype>0) {
+        seedling6.styletype==0;
+    }
     fetchimage_seedling ("f", seedling6);
     
     //document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
