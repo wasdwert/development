@@ -488,8 +488,8 @@
                     <div class="center_content">    
                         <div class="centercolumn_left">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting</div>
-                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: show" onclick="ViewCrCompost()">Compost</button>
-                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: show" onclick="ViewCrRobot()">Robot</button>
+                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: hide" onclick="ViewCrCompost()">Compost</button>
+                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: hide" onclick="ViewCrRobot()">Robot</button>
                         </div>
                         <div class="centercolumn_right">
                             <div id=cr_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
@@ -1606,11 +1606,11 @@
                     <div class="center_content_mobile">    
                         <div class="centercolumn_left_mobile">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting</div>
-                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrCompost()">Compost</button>
-                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrRobot()">Robot</button>
+                            <button id=Craft_Compost_Mobile  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrCompost()">Compost</button>
+                            <button id=Craft_Robot_Mobile  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrRobot()">Robot</button>
                         </div>
                         <div class="centercolumn_right_mobile">
-                            <div id=cr_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
+                            <div id=cr_compost_mobile style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Compost</div>
                                 <div class="Field" style="width:140px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 87.5px; margin-right: 87.5px; margin-bottom: 0px; margin-top: 230px">
                                     Resources needed:
@@ -1628,7 +1628,7 @@
                                 </div>
                                 <button id=Button class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="craft_compost()">Craft (<span id="cr_compost_time">5</span>&nbsp;Seconds)</button>
                             </div>
-                            <div id=cr_robot style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
+                            <div id=cr_robot_mobile style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Robot</div>
                                 <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 285px">
                                     Resources needed:
@@ -2383,7 +2383,7 @@
                                 <img src="Images/skill.svg" width="20" height="20">
                             </div>    
                             <div class="Field" style="width: 54px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center; padding: 0px; font-size: 10px">
-                                &nbsp;Lvl.&nbsp;<span id="skilllevel" style="display: flex;align-items: center">0</span>
+                                &nbsp;Lvl.&nbsp;<span id="skilllevel_mobile" style="display: flex;align-items: center">0</span>
                             </div>
                         </div></div>
                         <div class="Field" style="width: 79px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">
@@ -2492,7 +2492,7 @@
                                 <img src="Images/skill.svg" width="20" height="20">
                             </div>    
                             <div class="Field" style="width: 19px;background: #d8d8d8;color: #555;height: 30px;display: flex;align-items:center; padding: 0px; font-size: 10px">
-                                <span id="skilllevel" style="display: flex;align-items: center">0</span>
+                                <span id="skilllevel_mobilexs" style="display: flex;align-items: center">0</span>
                             </div>
                         </div></div>
                         <div class="Field" style="width: 39px;background: #d8d8d8;color: #555;height: 30px;display: flex; padding-left: 0px; padding-top: 5px; font-size: 10px">

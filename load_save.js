@@ -334,15 +334,51 @@ function startup() {
     }
     fetchimage_seedling ("f", seedling6);
     
-    //document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
-    //document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
-    //document.getElementById("skill_growing_time").innerHTML = skillgrowingtime[skills.growing];
-    //document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
-    //document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
-    //document.getElementById("skill_shaping_time").innerHTML = skillshapingtime[skills.shaping];
+    if (skills.robot==1) {
+        $(document).ready(function(){
+            $('#Craft_Robot').show();
+            $('#Craft_Robot_Mobile').show();
+            $('#Skill_Robot').hide();
+            $('#Skill_Robot_Learned').show();
+        });
+    }
+    if (skills.compost==1) {
+        $(document).ready(function(){
+            $('#Craft_Compost').show();
+            $('#Craft_Compost_Mobile').show();
+            $('#resources_0').show();
+            $('#resources_2').show();
+            $('#Skill_Compost').hide();
+            $('#Skill_Compost_Learned').show();
+        });
+    }
     
-    //document.getElementById("skilllevel").innerHTML = skills.level;
-    //document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+    if (state.workers_total==3) {
+        $(document).ready(function() {
+            $('#worker02div').show();
+            $('#worker03div').show();
+        });
+    }
+    else if (state.workers_total==2) {
+        $(document).ready(function() {
+            $('#worker02div').show();
+        });
+    }
+    
+    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
+    document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
+    document.getElementById("skill_growing_time").innerHTML = skillgrowingtime[skills.growing];
+    document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
+    document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
+    document.getElementById("skill_shaping_time").innerHTML = skillshapingtime[skills.shaping];
+    
+    document.getElementById("skilllevel").innerHTML = skills.level;
+    document.getElementById("skilllevel_mobile").innerHTML = skills.level;
+    document.getElementById("skilllevel_mobilexs").innerHTML = skills.level;
+    document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+    document.getElementById("skillpoints").innerHTML = skills.skillpoints;
+    document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
+    document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
     document.getElementById("money").innerHTML = resources.money;
     document.getElementById("money_mobile").innerHTML = resources.money;
     document.getElementById("money_mobilexs").innerHTML = resources.money;

@@ -198,53 +198,49 @@ function SellSeedling(seedlingx) {
     if (seedlingx.treetype>0) {
         resources.money +=seedlingx.price;
         document.getElementById("money").innerText = resources.money;
-        seedlingx.species=0;
+        document.getElementById("money_mobile").innerText = resources.money;
+        document.getElementById("money_mobilexs").innerText = resources.money;
+        seedlingx.styletype=0;
         seedlingx.treetype=0;
         seedlingx.treetypegroup=0;
-        seedlingx.rarity=0;
+        seedlingx.treequality=0;
         seedlingx.price=0;
         state.seedlings -=1;
         state.seedlings_ontheway -=1;
         document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
         if (seedlingx==seedling1) {
         document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
-        document.getElementById("seedlinga_type_sell").innerHTML = fetchbonsaiimage_sell(seedling1);
-        fetchimage_seedlinga ();
+        fetchimage_seedling ("a", seedling1);
         document.getElementById("seedlinga_center").style.cursor= "auto"; 
         seedlinga_center.className = "";
         }
         if (seedlingx==seedling2) {
         document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
-        document.getElementById("seedlingb_type_sell").innerHTML = fetchbonsaiimage_sell(seedling2);
-        fetchimage_seedlingb ();
+        fetchimage_seedling ("b", seedling2);
         document.getElementById("seedlingb_center").style.cursor= "auto"; 
         seedlingb_center.className = "";
         }
         if (seedlingx==seedling3) {
         document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
-        document.getElementById("seedlingc_type_sell").innerHTML = fetchbonsaiimage_sell(seedling3);
-        fetchimage_seedlingc ();
+        fetchimage_seedling ("c", seedling3);
         document.getElementById("seedlingc_center").style.cursor= "auto"; 
         seedlingc_center.className = "";
         }
         if (seedlingx==seedling4) {
         document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
-        document.getElementById("seedlingd_type_sell").innerHTML = fetchbonsaiimage_sell(seedling4);
-        fetchimage_seedlingd ();
+        fetchimage_seedling ("d", seedling4);
         document.getElementById("seedlingd_center").style.cursor= "auto"; 
         seedlingd_center.className = "";
         }
         if (seedlingx==seedling5) {
         document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
-        document.getElementById("seedlinge_type_sell").innerHTML = fetchbonsaiimage_sell(seedling5);
-        fetchimage_seedlinge ();
+        fetchimage_seedling ("e", seedling5);
         document.getElementById("seedlinge_center").style.cursor= "auto"; 
         seedlinge_center.className = "";
         }
         if (seedlingx==seedling6) {
         document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
-        document.getElementById("seedlingf_type_sell").innerHTML = fetchbonsaiimage_sell(seedling6);
-        fetchimage_seedlingf ();
+        fetchimage_seedling ("f", seedling6);
         document.getElementById("seedlingf_center").style.cursor= "auto"; 
         seedlingf_center.className = "";
         }

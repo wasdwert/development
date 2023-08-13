@@ -214,14 +214,18 @@ function menu_shop_change() {
 function ViewCrCompost() {
     $(document).ready(function(){
         $('#cr_compost').show();
+        $('#cr_compost_mobile').show();
         $('#cr_robot').hide();
+        $('#cr_robot_mobile').hide();
     });
 }
 
 function ViewCrRobot() {
     $(document).ready(function(){
         $('#cr_compost').hide();
+        $('#cr_compost_mobile').hide();
         $('#cr_robot').show();
+        $('#cr_robot_mobile').show();
     });
 }
 

@@ -31,6 +31,7 @@ function learning_countdown() {
             state.workers_available +=1;
             $(document).ready(function(){
                 $('#Craft_Robot').show();
+                $('#Craft_Robot_Mobile').show();
                 $('#Skill_Robot').hide();
                 $('#Skill_Robot_Learned').show();
             });
@@ -50,6 +51,7 @@ function learning_countdown() {
             state.workers_available +=1;
             $(document).ready(function(){
                 $('#Craft_Compost').show();
+                $('#Craft_Compost_Mobile').show();
                 $('#resources_0').show();
                 $('#resources_2').show();
                 $('#Skill_Compost').hide();
