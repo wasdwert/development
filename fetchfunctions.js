@@ -464,3 +464,114 @@ function fetchbonsaitreequality_big(x) {
         return "url('Images/treequality/ten_big.svg')";
     }
 }
+
+function fetchvalues() {
+    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
+    document.getElementById("skill_growing_nr2").innerHTML = skills.growing+1;
+    document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
+    document.getElementById("skill_shaping_nr2").innerHTML = skills.shaping+1;
+    
+    document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0}); 
+    
+    document.getElementById("skilllevel").innerHTML = skills.level;
+    document.getElementById("skilllevel_mobile").innerHTML = skills.level;
+    document.getElementById("skilllevel_mobilexs").innerHTML = skills.level;
+    document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
+    document.getElementById("skillpoints").innerHTML = skills.skillpoints;
+    document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
+    document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
+    document.getElementById("money").innerHTML = resources.money;
+    document.getElementById("money_mobile").innerHTML = resources.money;
+    document.getElementById("money_mobilexs").innerHTML = resources.money;
+    document.getElementById("organic_waste").innerHTML = resources.organic_waste;
+    document.getElementById("organic_waste_mobile").innerHTML = resources.organic_waste;
+    document.getElementById("organic_waste_mobilexs").innerHTML = resources.organic_waste;
+    document.getElementById("compost").innerHTML = resources.compost;
+    document.getElementById("compost_mobile").innerHTML = resources.compost;
+    document.getElementById("compost_mobilexs").innerHTML = resources.compost;
+    document.getElementById("bolt").innerHTML = resources.bolt;
+    document.getElementById("bolt_mobile").innerHTML = resources.bolt;
+    document.getElementById("bolt_mobilexs").innerHTML = resources.bolt;
+    document.getElementById("shop_bolt").innerHTML = resources.bolt;
+    document.getElementById("shop_bolt_mobile").innerHTML = resources.bolt;
+    document.getElementById("metal").innerHTML = resources.metal;
+    document.getElementById("metal_mobile").innerHTML = resources.metal;
+    document.getElementById("metal_mobilexs").innerHTML = resources.metal;
+    document.getElementById("shop_metal").innerHTML = resources.metal;
+    document.getElementById("shop_metal_mobile").innerHTML = resources.metal;
+    document.getElementById("wire").innerHTML = resources.wire;
+    document.getElementById("wire_mobile").innerHTML = resources.wire;
+    document.getElementById("wire_mobilexs").innerHTML = resources.wire;
+    document.getElementById("shop_wire").innerHTML = resources.wire;
+    document.getElementById("shop_wire_mobile").innerHTML = resources.wire;
+    document.getElementById("board").innerHTML = resources.board;
+    document.getElementById("board_mobile").innerHTML = resources.board;
+    document.getElementById("board_mobilexs").innerHTML = resources.board;
+    document.getElementById("shop_board").innerHTML = resources.board;
+    document.getElementById("shop_board_mobile").innerHTML = resources.board;
+}
+
+function fetchunlocks() {
+    if (exp_area01.treetype01==1) {
+        document.getElementById("area01_tt01").innerHTML = '<img src="Images/bonsai01_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treetype02==1) {
+        document.getElementById("area01_tt02").innerHTML = '<img src="Images/bonsai02_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treetype03==1) {
+        document.getElementById("area01_tt03").innerHTML = '<img src="Images/bonsai04_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treequality01==1) {
+        document.getElementById("area01_po01").innerHTML = '<img src="Images/one_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treequality02==1) {
+        document.getElementById("area01_po02").innerHTML = '<img src="Images/two_stamp.svg" width="35" height="35">';
+    }
+    
+    if (skills.robot==1) {
+        $(document).ready(function(){
+            $('#Craft_Robot').show();
+            $('#Craft_Robot_Mobile').show();
+            $('#Skill_Robot').hide();
+            $('#Skill_Robot_Learned').show();
+        });
+    }
+    if (skills.compost==1) {
+        $(document).ready(function(){
+            $('#Craft_Compost').show();
+            $('#Craft_Compost_Mobile').show();
+            $('#resources_0').show();
+            $('#resources_2').show();
+            $('#Skill_Compost').hide();
+            $('#Skill_Compost_Learned').show();
+        });
+    }
+    
+    if (state.workers_total==3) {
+        $(document).ready(function() {
+            $('#worker02div').show();
+            $('#worker03div').show();
+        });
+    }
+    else if (state.workers_total==2) {
+        $(document).ready(function() {
+            $('#worker02div').show();
+        });
+    }
+    
+    if (skills.level>=2) {
+        document.getElementById("skill_growing_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    if (skills.skillpoints>=1) {
+        document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    if (equipment.book_growing1==1) {
+        document.getElementById("shop_equip_bookgrowing1").style.backgroundImage= "url('Images/bought.svg')";
+        if (skills.growing<10) {
+            document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        }
+        else if (skills.growing>=10) {
+            document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+        }
+    }
+}

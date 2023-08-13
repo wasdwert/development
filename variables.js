@@ -29,6 +29,13 @@ var resources = {
     board: 1,
 }
 
+var equipment = {
+    backpack: 0,
+    book_of_patience: 0,
+    memory_chips: 0,
+    book_growing1: 0,
+}
+
 var skills = {
     level: 0,
     exp_nextlevel: 20,
@@ -36,11 +43,9 @@ var skills = {
     robot: 0,
     compost: 0,
     growing: 0,
-    growing_act: 0,
-    growing_level: 2,
+    growing_book1: 0,
     shaping: 0,
-    shaping_act: 0,
-    shaping_level: 4,
+    shaping_book1: 0,
     patience: 0,
 }
 

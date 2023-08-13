@@ -18,7 +18,7 @@ function crafting_countdown(worker) {
             if (cr_compost.producing>0) {
                 worker.crafting_zeitone = cr_compost.time_original;
             }
-            task007trigger();
+            //task007trigger();
         }
         if (worker.crafting_zeit==0) {
             worker.crafting = 0;

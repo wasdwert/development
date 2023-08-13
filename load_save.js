@@ -150,6 +150,7 @@ setInterval(function Autosave() {
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
     localStorage.setItem('resources', JSON.stringify(resources));
+    localStorage.setItem('equipment', JSON.stringify(equipment));
     localStorage.setItem('skills', JSON.stringify(skills));
     localStorage.setItem('worker01', JSON.stringify(worker01));
     localStorage.setItem('worker02', JSON.stringify(worker02));
@@ -194,6 +195,7 @@ function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
     statistics = JSON.parse(localStorage.getItem('statistics'));
     resources = JSON.parse(localStorage.getItem('resources'));
+    equipment = JSON.parse(localStorage.getItem('equipment'));
     skills = JSON.parse(localStorage.getItem('skills'));
     worker01 = JSON.parse(localStorage.getItem('worker01'));
     worker02 = JSON.parse(localStorage.getItem('worker02'));
@@ -266,6 +268,7 @@ function startup() {
         seedlinga_center_mobile.className = "darker_grey";
         document.getElementById("seedlinga_center").style.cursor= "pointer";
         document.getElementById("seedlinga_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
     }
     fetchimage_seedling ("a", seedling1);
     if (seedling2.styletype>0) {
@@ -279,6 +282,7 @@ function startup() {
         seedlingb_center_mobile.className = "darker_grey";
         document.getElementById("seedlingb_center").style.cursor= "pointer";
         document.getElementById("seedlingb_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
     }
     fetchimage_seedling ("b", seedling2);
     if (seedling3.styletype>0) {
@@ -292,6 +296,7 @@ function startup() {
         seedlingc_center_mobile.className = "darker_grey";
         document.getElementById("seedlingc_center").style.cursor= "pointer";
         document.getElementById("seedlingc_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
     }
     fetchimage_seedling ("c", seedling3);
     if (seedling4.styletype>0) {
@@ -305,6 +310,7 @@ function startup() {
         seedlingd_center_mobile.className = "darker_grey";
         document.getElementById("seedlingd_center").style.cursor= "pointer";
         document.getElementById("seedlingd_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
     }
     fetchimage_seedling ("d", seedling4);
     if (seedling5.styletype>0) {
@@ -318,6 +324,7 @@ function startup() {
         seedlinge_center_mobile.className = "darker_grey";
         document.getElementById("seedlinge_center").style.cursor= "pointer";
         document.getElementById("seedlinge_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
     }
     fetchimage_seedling ("e", seedling5);
     if (seedling6.styletype>0) {
@@ -331,81 +338,13 @@ function startup() {
         seedlingf_center_mobile.className = "darker_grey";
         document.getElementById("seedlingf_center").style.cursor= "pointer";
         document.getElementById("seedlingf_center_mobile").style.cursor= "pointer";
+        document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
     }
     fetchimage_seedling ("f", seedling6);
     
-    if (skills.robot==1) {
-        $(document).ready(function(){
-            $('#Craft_Robot').show();
-            $('#Craft_Robot_Mobile').show();
-            $('#Skill_Robot').hide();
-            $('#Skill_Robot_Learned').show();
-        });
-    }
-    if (skills.compost==1) {
-        $(document).ready(function(){
-            $('#Craft_Compost').show();
-            $('#Craft_Compost_Mobile').show();
-            $('#resources_0').show();
-            $('#resources_2').show();
-            $('#Skill_Compost').hide();
-            $('#Skill_Compost_Learned').show();
-        });
-    }
+    fetchunlocks();
     
-    if (state.workers_total==3) {
-        $(document).ready(function() {
-            $('#worker02div').show();
-            $('#worker03div').show();
-        });
-    }
-    else if (state.workers_total==2) {
-        $(document).ready(function() {
-            $('#worker02div').show();
-        });
-    }
-    
-    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
-    document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
-    document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
-    document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
-    
-    document.getElementById("skilllevel").innerHTML = skills.level;
-    document.getElementById("skilllevel_mobile").innerHTML = skills.level;
-    document.getElementById("skilllevel_mobilexs").innerHTML = skills.level;
-    document.getElementById("skillexp_left").innerHTML = skills.exp_nextlevel;
-    document.getElementById("skillpoints").innerHTML = skills.skillpoints;
-    document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
-    document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
-    document.getElementById("money").innerHTML = resources.money;
-    document.getElementById("money_mobile").innerHTML = resources.money;
-    document.getElementById("money_mobilexs").innerHTML = resources.money;
-    document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-    document.getElementById("organic_waste_mobile").innerHTML = resources.organic_waste;
-    document.getElementById("organic_waste_mobilexs").innerHTML = resources.organic_waste;
-    document.getElementById("compost").innerHTML = resources.compost;
-    document.getElementById("compost_mobile").innerHTML = resources.compost;
-    document.getElementById("compost_mobilexs").innerHTML = resources.compost;
-    document.getElementById("bolt").innerHTML = resources.bolt;
-    document.getElementById("bolt_mobile").innerHTML = resources.bolt;
-    document.getElementById("bolt_mobilexs").innerHTML = resources.bolt;
-    document.getElementById("shop_bolt").innerHTML = resources.bolt;
-    document.getElementById("shop_bolt_mobile").innerHTML = resources.bolt;
-    document.getElementById("metal").innerHTML = resources.metal;
-    document.getElementById("metal_mobile").innerHTML = resources.metal;
-    document.getElementById("metal_mobilexs").innerHTML = resources.metal;
-    document.getElementById("shop_metal").innerHTML = resources.metal;
-    document.getElementById("shop_metal_mobile").innerHTML = resources.metal;
-    document.getElementById("wire").innerHTML = resources.wire;
-    document.getElementById("wire_mobile").innerHTML = resources.wire;
-    document.getElementById("wire_mobilexs").innerHTML = resources.wire;
-    document.getElementById("shop_wire").innerHTML = resources.wire;
-    document.getElementById("shop_wire_mobile").innerHTML = resources.wire;
-    document.getElementById("board").innerHTML = resources.board;
-    document.getElementById("board_mobile").innerHTML = resources.board;
-    document.getElementById("board_mobilexs").innerHTML = resources.board;
-    document.getElementById("shop_board").innerHTML = resources.board;
-    document.getElementById("shop_board_mobile").innerHTML = resources.board;
+    fetchvalues();
     
     w.postMessage('Start');
 }
@@ -415,6 +354,7 @@ function ViewOptions() { //Current Saving Option//
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
     localStorage.setItem('resources', JSON.stringify(resources));
+    localStorage.setItem('equipment', JSON.stringify(equipment));
     localStorage.setItem('skills', JSON.stringify(skills));
     localStorage.setItem('worker01', JSON.stringify(worker01));
     localStorage.setItem('worker02', JSON.stringify(worker02));

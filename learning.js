@@ -14,6 +14,12 @@ function experience(exp) {
         document.getElementById("skillpoints").innerHTML = skills.skillpoints;
         document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
         document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
+        if (skills.level==2) {
+            document.getElementById("skill_growing_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        }
+        if (skills.skillpoints>=1) {
+            document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        }
         document.getElementById("snack_message").innerHTML = "Reached skill level&nbsp;"+ skills.level +". Congratulations!";
         var snackb = document.getElementById("snackbar");
         snackb.className = "show";
@@ -231,43 +237,116 @@ function learn_compost() {
 }
 
 function learn_growing() {
-    if (skills.growing_act==0) {
-        if (skills.level>=skills.growing_level) {
-            if (worker01.busy==0) {
-                state.workers_available-=1;
-                worker01.busy=1;
-                worker01.learning="Growing";
-                worker01.learning_zeit=skillgrowingtime[skills.growing];
-                document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)";
-                document.getElementById("worker1_task").innerHTML = '<img src="Images/learning.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Learning';
-                skills.growing_act=1;
-                document.getElementById("Button_Skill_Growing").innerHTML = "Learning";
-                Button_Skill_Growing.className = "";
-                document.getElementById("Button_Skill_Growing").style.cursor= "auto";
+    if (skills.level>1) {
+        if (skills.skillpoints>=1) {
+            if (equipment.book_growing1==1) {
+                if (skills.growing<=8) {
+                    skills.skillpoints -=1;
+                    if (skills.skillpoints==0) {
+                        document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+                    }
+                    document.getElementById("skillpoints").innerHTML = skills.skillpoints;
+                    document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
+                    document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
+                    skills.growing +=1;
+                    skills.growing_book1 +=1;
+                    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
+                    document.getElementById("skill_growing_nr2").innerHTML = skills.growing+1;
+                    learn_growing2 (bonsai001);
+                    learn_growing2 (bonsai002);
+                    learn_growing2 (bonsai003);
+                    learn_growing2 (bonsai004);
+                    learn_growing2 (bonsai005);
+                    learn_growing2 (bonsai006);
+                    learn_growing2 (bonsai007);
+                    learn_growing2 (bonsai008);
+                    learn_growing2 (bonsai009);
+                    learn_growing2 (bonsai010);
+                    learn_growing2 (bonsai011);
+                    learn_growing2 (bonsai012);
+                    learn_growing2 (bonsai013);
+                    learn_growing2 (bonsai014);
+                    learn_growing2 (bonsai015);
+                    learn_growing2 (bonsai016);
+                    learn_growing2 (bonsai017);
+                    learn_growing2 (bonsai018);
+                    learn_growing2 (bonsai019);
+                    learn_growing2 (bonsai020);
+                }
+                else if (skills.growing>8) {
+                    skills.skillpoints -=1;
+                    if (skills.skillpoints==0) {
+                        document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+                    }
+                    document.getElementById("skillpoints").innerHTML = skills.skillpoints;
+                    document.getElementById("skillpoints_mobile").innerHTML = skills.skillpoints;
+                    document.getElementById("skillpoints_mobilexs").innerHTML = skills.skillpoints;
+                    skills.growing +=1;
+                    skills.growing_book1 +=1;
+                    document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
+                    document.getElementById("skill_growing_nr2").innerHTML = skills.growing+1;
+                    document.getElementById("skill_growing_book").innerHTML = 2;
+                    document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+                    learn_growing2 (bonsai001);
+                    learn_growing2 (bonsai002);
+                    learn_growing2 (bonsai003);
+                    learn_growing2 (bonsai004);
+                    learn_growing2 (bonsai005);
+                    learn_growing2 (bonsai006);
+                    learn_growing2 (bonsai007);
+                    learn_growing2 (bonsai008);
+                    learn_growing2 (bonsai009);
+                    learn_growing2 (bonsai010);
+                    learn_growing2 (bonsai011);
+                    learn_growing2 (bonsai012);
+                    learn_growing2 (bonsai013);
+                    learn_growing2 (bonsai014);
+                    learn_growing2 (bonsai015);
+                    learn_growing2 (bonsai016);
+                    learn_growing2 (bonsai017);
+                    learn_growing2 (bonsai018);
+                    learn_growing2 (bonsai019);
+                    learn_growing2 (bonsai020);
+                }
+                else if (skills.growing>9) {
+                    
+                }
             }
             else {
-                if (state.workers_available>=1) {
-                    document.getElementById("snack_message").innerText = "Only you can learn a skill";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
-                }
-                else {
-                    document.getElementById("snack_message").innerText = "You are busy with another task";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
-                }
+                document.getElementById("snack_message").innerText = "Need book: Growing #1 first";
+                var snackb = document.getElementById("snackbar");
+                snackb.className = "show";
+                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
+            document.getElementById("snack_message").innerText = "Not enough skill points";
             var snackb = document.getElementById("snackbar");
             snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
-        }    
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        }
     }
-    else {}
+    else {
+        document.getElementById("snack_message").innerText = "Skill level not high enough";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }    
+}
+
+function learn_growing2 (bonsaixx) {
+    if (bonsaixx.treequality==1) {
+        cpdistribution(bonsaixx, level_cp_tq1);
+        cpdistributionaftercare(bonsaixx)
+    }
+    if (bonsaixx.treequality==2) {
+        cpdistribution(bonsaixx, level_cp_tq2);
+        cpdistributionaftercare(bonsaixx)
+    }
+    if (bonsaixx.treequality==3) {
+        cpdistribution(bonsaixx, level_cp_tq3);
+        cpdistributionaftercare(bonsaixx)
+    }
 }
 
 function learn_shaping() {

@@ -112,7 +112,7 @@ function ViewBonsai_Details(z) {
             ViewBonsai_Details2(bonsai010, 10)
         }
     } 
-    else if (x==7) {
+    else if (x==11) {
         if (z==1) {
             ViewBonsai_Details2(bonsai011, 11)
         }

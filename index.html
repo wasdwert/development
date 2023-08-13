@@ -488,8 +488,8 @@
                     <div class="center_content">    
                         <div class="centercolumn_left">
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Crafting</div>
-                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: hide" onclick="ViewCrCompost()">Compost</button>
-                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: hide" onclick="ViewCrRobot()">Robot</button>
+                            <button id=Craft_Compost  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrCompost()">Compost</button>
+                            <button id=Craft_Robot  class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: none" onclick="ViewCrRobot()">Robot</button>
                         </div>
                         <div class="centercolumn_right">
                             <div id=cr_compost style="width:100%; display: none; background-image: url(Images/compost.jpg); background-size: 315px">
@@ -536,7 +536,7 @@
                                 <div class="rightcolumn_content2" style="width: 280px">
                                     <button id=Skill_Robot class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillRobot()">Building Robots</button>
                                     <button id=Skill_Compost class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillCompost()">Crafting Compost</button>
-                                    <button id=Skill_Growing class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillGrowing()">Growing #<span id="skill_growing_nr2">1</span></button>
+                                    <button id=Skill_Growing class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillGrowing()">Growing Part&nbsp;<span id="skill_growing_nr2">1</span></button>
                                     <button id=Skill_Shaping class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillShaping()">Shaping #<span id="skill_shaping_nr2">1</span></button>
                                     <button id=Skill_Patience class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewSkillPatience()">Patience/Memory increase</button>
                                 </div>
@@ -576,14 +576,16 @@
                                 <button id=Button_Skill_Compost class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_compost()"><span id=Skill_Compost_Button>Learn (60 Seconds)</span></button>
                             </div>
                             <div id=skill_growing style="width:100%; display: none; background-image: url(Images/growing.jpg); background-size: 315px">
-                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Growing #<span id="skill_growing_nr">1</span></div>
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Growing Part&nbsp;<span id="skill_growing_nr">1</span></div>
                                 <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 20px;display: flex;align-items:flex-end; justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 0px; margin-top: 195px">
                                     Required to learn:
                                 </div>
-                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
-                                    <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level&nbsp;<span id="skill_growing_level">2</span>
+                                <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 75.8px;display: flex;align-items:center;justify-content: center; flex-wrap: wrap; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
+                                    <div style="width: 240px; display: flex; align-content: center; justify-content: center"><img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level: 2&nbsp;<span id="skill_growing_rec1"><img src="Images/cross.svg" width="20" height="20"></span></div>
+                                    <div style="width: 240px; display: flex; align-content: center; justify-content: center"><img src="Images/book.svg" width="20" height="20">&nbsp;Book: Growing&nbsp;#<span id="skill_growing_book">1</span>&nbsp;<span id="skill_growing_rec2"><img src="Images/cross.svg" width="20" height="20"></span></div>
+                                    <div style="width: 240px; display: flex; align-content: center; justify-content: center"><img src="Images/skillpoints.svg" width="20" height="20">&nbsp;Skillpoints: 1&nbsp;<span id="skill_growing_rec3"><img src="Images/cross.svg" width="20" height="20"></span></div>
                                 </div>
-                                <button id=Button_Skill_Growing class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_growing()">Learn (<span id="skill_growing_time">300</span>&nbsp;Seconds)</button>
+                                <button id=Button_Skill_Growing class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_growing()">Learn</button>
                             </div>
                             <div id=skill_shaping style="width:100%; display: none; background-image: url(Images/shaping.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Shaping #<span id="skill_shaping_nr">1</span></div>
@@ -593,7 +595,7 @@
                                 <div class="Field" style="width:240px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center;justify-content: center; padding: 0px; margin-left: 37.5px; margin-right: 37.5px; margin-bottom: 15px; margin-top: 0px">
                                     <img src="Images/skill.svg" width="20" height="20">&nbsp;Skill level&nbsp;<span id="skill_shaping_level">4</span>
                                 </div>
-                                <button id=Button_Skill_Shaping class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_shaping()">Learn (<span id="skill_shaping_time">300</span>&nbsp;Seconds)</button>
+                                <button id=Button_Skill_Shaping class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px;display: flex;align-items:center" onclick="learn_shaping()">Learn</button>
                             </div>
                             <div id=skill_patience style="width:100%; display: none; background-image: url(Images/patience.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Patience/Memory increase</div>
@@ -654,6 +656,13 @@
                                     </div>
                                 </div>
                                 </div></div>
+                                <div class="Field" style="width:315px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items:center; justify-content: center">
+                                    <div class="Field" style="width: 187.5px;background: #f1f1f1;color: #555;height: 30px;display: flex;align-items:center"><img src="Images/book.svg" width="20" height="20">&nbsp;Book: Growing #1</div>
+                                    <div class="Field" style="width: 50px;background: #f1f1f1;color: #555;height: 30px; padding: 0px;display: flex;align-items: center; justify-content: center">&nbsp;5&nbsp;<img src="Images/currency.svg" width="15" height="15"></div>
+                                    <div class="Field" style="width: 77.5px;background: #f1f1f1;color: #555;height: 26.66px; padding: 0px;display: flex;align-items: center; justify-content: center">
+                                        <button id="shop_equip_bookgrowing1" style="border: 0px;width: 60px; height: 24px; cursor: pointer;background-image: url(Images/buy.svg); background-size: 60px, 24px;)" onclick="BuyBookGrowing1()"></button>
+                                    </div>
+                                </div>
                             </div>
                             <div id=shop_resources style="width:100%; display: none; background-image: url(Images/robot.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Resources</div>

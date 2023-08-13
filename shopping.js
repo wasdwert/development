@@ -278,3 +278,22 @@ function BuyMemoryChips() {
         document.getElementById("shop_equip_memorychips").style.backgroundImage= "url('Images/bought.svg')";
     }
 }
+
+function BuyBookGrowing1() {
+    if (equipment.book_growing1==0) {
+        if (resources.money>=5) {
+            resources.money -=5;
+            document.getElementById("money").innerText = resources.money;
+            equipment.book_growing1=1;
+            document.getElementById("shop_equip_bookgrowing1").style.backgroundImage= "url('Images/bought.svg')";
+            document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Not enough money";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        } 
+    }
+    else {}
+}
