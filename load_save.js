@@ -367,10 +367,8 @@ function startup() {
     
     document.getElementById("skill_growing_nr").innerHTML = skills.growing+1;
     document.getElementById("skill_growing_level").innerHTML = skills.growing_level;
-    document.getElementById("skill_growing_time").innerHTML = skillgrowingtime[skills.growing];
     document.getElementById("skill_shaping_nr").innerHTML = skills.shaping+1;
     document.getElementById("skill_shaping_level").innerHTML = skills.shaping_level;
-    document.getElementById("skill_shaping_time").innerHTML = skillshapingtime[skills.shaping];
     
     document.getElementById("skilllevel").innerHTML = skills.level;
     document.getElementById("skilllevel_mobile").innerHTML = skills.level;
