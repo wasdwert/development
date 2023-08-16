@@ -11,19 +11,23 @@ shop_bolt_sell.onclick = function() {
     if (resources.bolt>=1) {
         resources.money +=1;
         resources.bolt -=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_bolt").innerText = resources.bolt;
-        document.getElementById("bolt").innerText = resources.bolt;
+        fetchvalues();
+        fetchunlocks();
         }
+    else {
+        document.getElementById("snack_message").innerText = "You don't have any bolts left.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 shop_bolt_buy.onclick = function() {
     if (resources.money>=2) {
         resources.money -=2;
         resources.bolt +=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_bolt").innerText = resources.bolt;
-        document.getElementById("bolt").innerText = resources.bolt;
+        fetchvalues();
+        fetchunlocks();
     }
     else {
         document.getElementById("snack_message").innerText = "Not enough money";
@@ -37,19 +41,23 @@ shop_metal_sell.onclick = function() {
     if (resources.metal>=1) {
         resources.money +=1;
         resources.metal -=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_metal").innerText = resources.metal;
-        document.getElementById("metal").innerText = resources.metal;
+        fetchvalues();
+        fetchunlocks();
         }
+    else {
+        document.getElementById("snack_message").innerText = "You don't have any metal left.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 shop_metal_buy.onclick = function() {
     if (resources.money>=2) {
         resources.money -=2;
         resources.metal +=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_metal").innerText = resources.metal;
-        document.getElementById("metal").innerText = resources.metal;
+        fetchvalues();
+        fetchunlocks();
     }
     else {
         document.getElementById("snack_message").innerText = "Not enough money";
@@ -63,19 +71,23 @@ shop_wire_sell.onclick = function() {
     if (resources.wire>=1) {
         resources.money +=2;
         resources.wire -=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_wire").innerText = resources.wire;
-        document.getElementById("wire").innerText = resources.wire;
+        fetchvalues();
+        fetchunlocks();
         }
+    else {
+        document.getElementById("snack_message").innerText = "You don't have any wires left.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 shop_wire_buy.onclick = function() {
     if (resources.money>=3) {
         resources.money -=3;
         resources.wire +=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_wire").innerText = resources.wire;
-        document.getElementById("wire").innerText = resources.wire;
+        fetchvalues();
+        fetchunlocks();
     }
     else {
         document.getElementById("snack_message").innerText = "Not enough money";
@@ -89,19 +101,23 @@ shop_board_sell.onclick = function() {
     if (resources.board>=1) {
         resources.money +=2;
         resources.board -=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_board").innerText = resources.board;
-        document.getElementById("board").innerText = resources.board;
+        fetchvalues();
+        fetchunlocks();
         }
+    else {
+        document.getElementById("snack_message").innerText = "You don't have any electronic boards left.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 shop_board_buy.onclick = function() {
     if (resources.money>=4) {
         resources.money -=4;
         resources.board +=1;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("shop_board").innerText = resources.board;
-        document.getElementById("board").innerText = resources.board;
+        fetchvalues();
+        fetchunlocks();
     }
     else {
         document.getElementById("snack_message").innerText = "Not enough money";
@@ -197,9 +213,6 @@ function SellBonsaiExecution(bonsaixx) {
 function SellSeedling(seedlingx) {
     if (seedlingx.treetype>0) {
         resources.money +=seedlingx.price;
-        document.getElementById("money").innerText = resources.money;
-        document.getElementById("money_mobile").innerText = resources.money;
-        document.getElementById("money_mobilexs").innerText = resources.money;
         seedlingx.styletype=0;
         seedlingx.treetype=0;
         seedlingx.treetypegroup=0;
@@ -207,7 +220,6 @@ function SellSeedling(seedlingx) {
         seedlingx.price=0;
         state.seedlings -=1;
         state.seedlings_ontheway -=1;
-        document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
         if (seedlingx==seedling1) {
         document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
         fetchimage_seedling ("a", seedling1);
@@ -244,7 +256,9 @@ function SellSeedling(seedlingx) {
         document.getElementById("seedlingf_center").style.cursor= "auto"; 
         seedlingf_center.className = "";
         }
-        PlantSeedlingReset()
+        PlantSeedlingReset();
+        fetchvalues();
+        fetchunlocks();
     }
 }
 
@@ -283,10 +297,28 @@ function BuyBookGrowing1() {
     if (equipment.book_growing1==0) {
         if (resources.money>=5) {
             resources.money -=5;
-            document.getElementById("money").innerText = resources.money;
             equipment.book_growing1=1;
-            document.getElementById("shop_equip_bookgrowing1").style.backgroundImage= "url('Images/bought.svg')";
-            document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+            fetchvalues();
+            fetchunlocks();
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Not enough money";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        } 
+    }
+    else {}
+}
+
+function BuyBookShaping1() {
+    if (equipment.book_shaping1==0) {
+        if (resources.money>=5) {
+            resources.money -=5;
+            equipment.book_shaping1=1;
+            fetchvalues();
+            fetchunlocks();
+        
         }
         else {
             document.getElementById("snack_message").innerText = "Not enough money";

@@ -12,11 +12,11 @@ function crafting_countdown(worker) {
             document.getElementById("zeit_worker03").innerHTML = "("+worker.crafting_zeit+"&nbsp;seconds left)"; 
         } 
         if (worker.crafting_zeitone==0) {
-            resources.compost +=1;
-            document.getElementById("compost").innerText = resources.compost.toLocaleString('en', {minimumFractionDigits: 0}); 
-            cr_compost.producing -=1;
-            if (cr_compost.producing>0) {
-                worker.crafting_zeitone = cr_compost.time_original;
+            resources.compost1 +=1;
+            document.getElementById("compost1").innerText = resources.compost1.toLocaleString('en', {minimumFractionDigits: 0}); 
+            cr_compost1.producing -=1;
+            if (cr_compost1.producing>0) {
+                worker.crafting_zeitone = cr_compost1.time_original;
             }
             //task007trigger();
         }
@@ -24,8 +24,8 @@ function crafting_countdown(worker) {
             worker.crafting = 0;
             worker.busy = 0;
             state.workers_available +=1;
-            cr_compost.producing = 0;
-            cr_compost.ongoing = 0;
+            cr_compost1.producing = 0;
+            cr_compost1.ongoing = 0;
             if (worker01.crafting==0 & worker01.busy==0) {
                 document.getElementById("zeit_worker01").innerHTML = "";  
                 document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
@@ -68,8 +68,8 @@ function crafting_countdown(worker) {
                     $('#worker03div').show();
                 });
             }
-            cr_robot.producing = 0;
-            cr_robot.ongoing = 0;
+            cr_robot1.producing = 0;
+            cr_robot1.ongoing = 0;
             if (worker01.crafting==0 & worker01.busy==0) {
                 document.getElementById("zeit_worker01").innerHTML = "";  
                 document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
@@ -89,7 +89,7 @@ function crafting_countdown(worker) {
     }
 }
 
-var cr_compost = {
+var cr_compost1 = {
     q: 1,
     ow: 1,
     ow_original: 1,
@@ -99,34 +99,34 @@ var cr_compost = {
     producing: 0,
 }
 
-var cr_robot = {
+var cr_robot1 = {
     ongoing: 0,
     producing: 0,
 }
 
-function craft_compost() {
+function craft_compost1() {
     if (state.workers_available>0) {
-        if (cr_compost.ongoing==0) {
+        if (cr_compost1.ongoing==0) {
             if (worker01.busy==0) {
-                if (resources.organic_waste>=cr_compost.ow) {
-                    cr_compost.ongoing=1;
+                if (resources.organic_waste>=cr_compost1.ow) {
+                    cr_compost1.ongoing=1;
                     state.workers_available -=1;
                     worker01.busy =1;
                     worker01.crafting = "Compost";
-                    resources.organic_waste = resources.organic_waste-cr_compost.ow;
+                    resources.organic_waste = resources.organic_waste-cr_compost1.ow;
                     document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-                    cr_compost.producing = cr_compost.q;
-                    worker01.crafting_zeit = cr_compost.time;
-                    worker01.crafting_zeitone = cr_compost.time_original;
+                    cr_compost1.producing = cr_compost1.q;
+                    worker01.crafting_zeit = cr_compost1.time;
+                    worker01.crafting_zeitone = cr_compost1.time_original;
                     document.getElementById("zeit_worker01").innerHTML = "("+worker01.crafting_zeit+"&nbsp;seconds left)";
                     document.getElementById("worker1_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     
-                    cr_compost.q =1;
-                    document.getElementById("cr_compost_q").innerHTML= cr_compost.q;
-                    cr_compost.ow = cr_compost.q*cr_compost.ow_original;
-                    document.getElementById("cr_compost_ow").innerHTML= cr_compost.ow;
-                    cr_compost.time = cr_compost.q*cr_compost.time_original;
-                    document.getElementById("cr_compost_time").innerHTML= cr_compost.time;
+                    cr_compost1.q =1;
+                    document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+                    cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+                    document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+                    cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+                    document.getElementById("cr_compost1_time").innerHTML= cr_compost1.time;
                 }
                 else {
                     document.getElementById("snack_message").innerText = "Not enough resources";
@@ -136,25 +136,25 @@ function craft_compost() {
                 }
             }
             else if (worker02.busy==0) {
-                if (resources.organic_waste>=cr_compost.ow) {
-                    cr_compost.ongoing=1;
+                if (resources.organic_waste>=cr_compost1.ow) {
+                    cr_compost1.ongoing=1;
                     state.workers_available -=1;
                     worker02.busy =1;
                     worker02.crafting = "Compost";
-                    resources.organic_waste = resources.organic_waste-cr_compost.ow;
+                    resources.organic_waste = resources.organic_waste-cr_compost1.ow;
                     document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-                    cr_compost.producing = cr_compost.q;
-                    worker02.crafting_zeit = cr_compost.time;
-                    worker02.crafting_zeitone = cr_compost.time_original;
+                    cr_compost1.producing = cr_compost1.q;
+                    worker02.crafting_zeit = cr_compost1.time;
+                    worker02.crafting_zeitone = cr_compost1.time_original;
                     document.getElementById("zeit_worker02").innerHTML = "("+worker02.crafting_zeit+"&nbsp;seconds left)";
                     document.getElementById("worker2_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     
-                    cr_compost.q =1;
-                    document.getElementById("cr_compost_q").innerHTML= cr_compost.q;
-                    cr_compost.ow = cr_compost.q*cr_compost.ow_original;
-                    document.getElementById("cr_compost_ow").innerHTML= cr_compost.ow;
-                    cr_compost.time = cr_compost.q*cr_compost.time_original;
-                    document.getElementById("cr_compost_time").innerHTML= cr_compost.time;
+                    cr_compost1.q =1;
+                    document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+                    cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+                    document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+                    cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+                    document.getElementById("cr_compost1_time").innerHTML= cr_compost1.time;
                 }
                 else {
                     document.getElementById("snack_message").innerText = "Not enough resources";
@@ -164,25 +164,25 @@ function craft_compost() {
                 }
             }
             else if (worker03.busy==0) {
-                if (resources.organic_waste>=cr_compost.ow) {
-                    cr_compost.ongoing=1;
+                if (resources.organic_waste>=cr_compost1.ow) {
+                    cr_compost1.ongoing=1;
                     state.workers_available -=1;
                     worker03.busy =1;
                     worker03.crafting = "Compost";
-                    resources.organic_waste = resources.organic_waste-cr_compost.ow;
+                    resources.organic_waste = resources.organic_waste-cr_compost1.ow;
                     document.getElementById("organic_waste").innerHTML = resources.organic_waste;
-                    cr_compost.producing = cr_compost.q;
-                    worker03.crafting_zeit = cr_compost.time;
+                    cr_compost1.producing = cr_compost1.q;
+                    worker03.crafting_zeit = cr_compost1.time;
                     worker03.crafting_zeitone = cr_compost.time_original;
                     document.getElementById("zeit_worker03").innerHTML = "("+worker03.crafting_zeit+"&nbsp;seconds left)";
                     document.getElementById("worker3_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     
-                    cr_compost.q =1;
-                    document.getElementById("cr_compost_q").innerHTML= cr_compost.q;
-                    cr_compost.ow = cr_compost.q*cr_compost.ow_original;
-                    document.getElementById("cr_compost_ow").innerHTML= cr_compost.ow;
-                    cr_compost.time = cr_compost.q*cr_compost.time_original;
-                    document.getElementById("cr_compost_time").innerHTML= cr_compost.time;
+                    cr_compost1.q =1;
+                    document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+                    cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+                    document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+                    cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+                    document.getElementById("cr_compost1_time").innerHTML= cr_compost1.time;
                 }
                 else {
                     document.getElementById("snack_message").innerText = "Not enough resources";
@@ -207,13 +207,13 @@ function craft_compost() {
     }
 }
 
-function craft_robot() {
+function craft_robot1() {
     if (state.workers_total<3) { //For later electricity check, for now just a limiter
         if (state.workers_available>0) {
-            if (cr_robot.ongoing==0) {
+            if (cr_robot1.ongoing==0) {
                 if (worker01.busy==0) {
                     if (resources.bolt>=5 & resources.metal>=3 & resources.wire>=2 & resources.board>=1) {
-                        cr_robot.ongoing=1;
+                        cr_robot1.ongoing=1;
                         state.workers_available -=1;
                         worker01.busy =1;
                         worker01.crafting = "Robot";
@@ -229,7 +229,7 @@ function craft_robot() {
                         resources.board = resources.board-1;
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
-                        cr_compost.producing = 1;
+                        cr_robot1.producing = 1;
                         worker01.crafting_zeit = 180;
                         document.getElementById("zeit_worker01").innerHTML = "("+worker01.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker1_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
@@ -243,7 +243,7 @@ function craft_robot() {
                 }
                 else if (worker02.busy==0) {
                     if (resources.bolt>=5 & resources.metal>=3 & resources.wire>=2 & resources.board>=1) {
-                        cr_robot.ongoing=1;
+                        cr_robot1.ongoing=1;
                         state.workers_available -=1;
                         worker02.busy =1;
                         worker02.crafting = "Robot";
@@ -259,7 +259,7 @@ function craft_robot() {
                         resources.board = resources.board-1;
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
-                        cr_compost.producing = 1;
+                        cr_robot1.producing = 1;
                         worker02.crafting_zeit = 180;
                         document.getElementById("zeit_worker02").innerHTML = "("+worker02.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker2_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
@@ -273,7 +273,7 @@ function craft_robot() {
                 }
                 else if (worker03.busy==0) {
                     if (resources.bolt>=5 & resources.metal>=3 & resources.wire>=2 & resources.board>=1) {
-                        cr_robot.ongoing=1;
+                        cr_robot1.ongoing=1;
                         state.workers_available -=1;
                         worker03.busy =1;
                         worker03.crafting = "Robot";
@@ -289,7 +289,7 @@ function craft_robot() {
                         resources.board = resources.board-1;
                         document.getElementById("board").innerHTML = resources.board;
                         document.getElementById("shop_board").innerText = resources.board;
-                        cr_compost.producing = 1;
+                        cr_robot1.producing = 1;
                         worker03.crafting_zeit = 180;
                         document.getElementById("zeit_worker03").innerHTML = "("+worker03.crafting_zeit+"&nbsp;seconds left)";
                         document.getElementById("worker3_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
@@ -324,27 +324,27 @@ function craft_robot() {
     }
 }
 
-var cr_compost_m = document.getElementById("cr_compost_m");
-var cr_compost_p = document.getElementById("cr_compost_p");
+var cr_compost1_m = document.getElementById("cr_compost1_m");
+var cr_compost1_p = document.getElementById("cr_compost1_p");
 
-cr_compost_m.onclick = function() {
-    if (cr_compost.q>1) {
-        cr_compost.q -=1;
-        document.getElementById("cr_compost_q").innerHTML= cr_compost.q;
-        cr_compost.ow = cr_compost.q*cr_compost.ow_original;
-        document.getElementById("cr_compost_ow").innerHTML= cr_compost.ow;
-        cr_compost.time = cr_compost.q*cr_compost.time_original;
-        document.getElementById("cr_compost_time").innerHTML= cr_compost.time;
+cr_compost1_m.onclick = function() {
+    if (cr_compost1.q>1) {
+        cr_compost1.q -=1;
+        document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+        cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+        document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+        cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+        document.getElementById("cr_compost1_time").innerHTML= cr_compost1.time;
     }
 }
 
-cr_compost_p.onclick = function() {
-    if (cr_compost.q<=98) {
-        cr_compost.q +=1;
-        document.getElementById("cr_compost_q").innerHTML= cr_compost.q;
-        cr_compost.ow = cr_compost.q*cr_compost.ow_original;
-        document.getElementById("cr_compost_ow").innerHTML= cr_compost.ow;
-        cr_compost.time = cr_compost.q*cr_compost.time_original;
-        document.getElementById("cr_compost_time").innerHTML= cr_compost.time;
+cr_compost1_p.onclick = function() {
+    if (cr_compost1.q<=98) {
+        cr_compost1.q +=1;
+        document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+        cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+        document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+        cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+        document.getElementById("cr_compost1_time").innerHTML= cr_compost1.time;
     }
 }

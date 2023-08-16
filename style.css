@@ -378,6 +378,38 @@
     font-size: 15px;
 }
 
+#Button_equip_memorychips, #Button_equip_bookofpatience, #Button_equip_backpack, #Button_equip_bookgrowing1, #Button_equip_bookshaping1 {
+    box-sizing: border-box;
+	height: 30px;
+	background: #777;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#shop_bolt_sell_1, #shop_bolt_buy_1, #shop_metal_sell_1, #shop_metal_buy_1, #shop_wire_sell_1, #shop_wire_buy_1, #shop_board_sell_1, #shop_board_buy_1 {
+    box-sizing: border-box;
+	height: 30px;
+	background: #777;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
 #ButtonT000, #ButtonT001, #ButtonT002, #ButtonT003, #ButtonT004, #ButtonT005, #ButtonT006, #ButtonT007, #ButtonT008, #ButtonT009, #ButtonT010, #ButtonT011, #ButtonT012, #ButtonT013, #ButtonT014 {
     box-sizing: border-box;
 	height: 40px;
@@ -410,7 +442,7 @@
     font-size: 15px;
 }
 
-#Craft_Compost, #Craft_Robot {
+#Craft_Compost1, #Craft_Robot1 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -426,7 +458,7 @@
     font-size: 15px;
 }
 
-#Button_Skill_Robot, #Button_Skill_Compost, #Button_Skill_Growing, #Button_Skill_Shaping, #Button_Skill_Patience {
+#Button_Skill_Treestyles1, #Button_Skill_Robot1, #Button_Skill_Compost1, #Button_Skill_Growing, #Button_Skill_Shaping, #Button_Skill_Patience {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -442,7 +474,7 @@
     font-size: 15px;
 }
 
-#Skill_Robot, #Skill_Robot_Learned, #Skill_Compost, #Skill_Compost_Learned, #Skill_Growing, #Skill_Growing_Learned, #Skill_Shaping, #Skill_Shaping_Learned, #Skill_Patience, #Skill_Patience_Learned {
+#Skill_Treestyles1, #Skill_Treestyles1_Learned, #Skill_Robot1, #Skill_Robot1_Learned, #Skill_Compost1, #Skill_Compost1_Learned, #Skill_Growing, #Skill_Growing_Learned, #Skill_Shaping, #Skill_Shaping_Learned, #Skill_Patience, #Skill_Patience_Learned {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -1000,7 +1032,7 @@
 
 /* Edit Name Modal */
  /* The Modal (background) */
-.modal_name, .modal_newgame, .modal_tutorial, .modal_position{
+.modal_name, .modal_newgame, .modal_tutorial, .modal_position, .modal_milestone{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -1014,7 +1046,7 @@
 }
 
 /* Modal Content/Box */
-.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content {
+.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content, .modal_milestone-content {
     background-color: #f1f1f1;
     margin: 5% auto; /* 15% from the top and centered */
     padding: 5px;

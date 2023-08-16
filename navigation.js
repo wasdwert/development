@@ -211,21 +211,21 @@ function menu_shop_change() {
 }
 
 /* Crafting Menu functions */
-function ViewCrCompost() {
+function ViewCrCompost1() {
     $(document).ready(function(){
-        $('#cr_compost').show();
-        $('#cr_compost_mobile').show();
-        $('#cr_robot').hide();
-        $('#cr_robot_mobile').hide();
+        $('#cr_compost1').show();
+        $('#cr_compost1_mobile').show();
+        $('#cr_robot1').hide();
+        $('#cr_robot1_mobile').hide();
     });
 }
 
-function ViewCrRobot() {
+function ViewCrRobot1() {
     $(document).ready(function(){
-        $('#cr_compost').hide();
-        $('#cr_compost_mobile').hide();
-        $('#cr_robot').show();
-        $('#cr_robot_mobile').show();
+        $('#cr_compost1').hide();
+        $('#cr_compost1_mobile').hide();
+        $('#cr_robot1').show();
+        $('#cr_robot1_mobile').show();
     });
 }
 
@@ -282,21 +282,49 @@ function ViewShopBonsais() {
     });
 }
 
-/* Learning Menu functions */
-function ViewSkillRobot() {
+/* You Menu functions */
+function ViewStats() {
     $(document).ready(function(){
-        $('#skill_robot').show();
-        $('#skill_compost').hide();
+        $('#stats').show();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
         $('#skill_growing').hide();
         $('#skill_shaping').hide();
         $('#skill_patience').hide();
     });
 }
 
-function ViewSkillCompost() {
+function ViewSkillTreestyles1() {
     $(document).ready(function(){
-        $('#skill_robot').hide();
-        $('#skill_compost').show();
+        $('#stats').hide();
+        $('#skill_treestyle1').show();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillRobot1() {
+    $(document).ready(function(){
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').show();
+        $('#skill_compost1').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
+
+function ViewSkillCompost1() {
+    $(document).ready(function(){
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').show();
         $('#skill_growing').hide();
         $('#skill_shaping').hide();
         $('#skill_patience').hide();
@@ -305,8 +333,10 @@ function ViewSkillCompost() {
 
 function ViewSkillGrowing() {
     $(document).ready(function(){
-        $('#skill_robot').hide();
-        $('#skill_compost').hide();
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
         $('#skill_growing').show();
         $('#skill_shaping').hide();
         $('#skill_patience').hide();
@@ -315,8 +345,10 @@ function ViewSkillGrowing() {
 
 function ViewSkillShaping() {
     $(document).ready(function(){
-        $('#skill_robot').hide();
-        $('#skill_compost').hide();
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
         $('#skill_growing').hide();
         $('#skill_shaping').show();
         $('#skill_patience').hide();
@@ -325,8 +357,10 @@ function ViewSkillShaping() {
 
 function ViewSkillPatience() {
     $(document).ready(function(){
-        $('#skill_robot').hide();
-        $('#skill_compost').hide();
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
         $('#skill_growing').hide();
         $('#skill_shaping').hide();
         $('#skill_patience').show();

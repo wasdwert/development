@@ -343,7 +343,6 @@ function startup() {
     fetchimage_seedling ("f", seedling6);
     
     fetchunlocks();
-    
     fetchvalues();
     
     w.postMessage('Start');

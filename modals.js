@@ -60,6 +60,33 @@ spannewgame_yes.onclick = function() {
     modaltutorial.style.display = "block";
 }
 
+/* Milestone Modal*/
+// Get the modal
+var modalmilestone = document.getElementById("m_milestone");
+
+// Get the button that opens the modal
+//var btnmilestone = document.getElementById("XXX");
+
+// Get the <span> element that closes the modal
+var spanmilestoneclose = document.getElementById("Button_Modal_Milestone");
+
+// When the user clicks on the button, open the modal
+//btnmilestone.onclick = function() {
+//    modalmilestone.style.display = "block";
+//}
+
+// When the user clicks on <span> (x), close the modal
+spanmilestoneclose.onclick = function() {
+    modalmilestone.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == modalmilestone) {
+        modalmilestone.style.display = "none";
+    }
+}) 
+
 /* Edit Name Modal*/
 // Get the modal
 var modalname = document.getElementById("m_name");
@@ -130,14 +157,14 @@ btnchange.onclick = function() {
             else {
                 document.getElementById("bonsaiold_nr").innerText = "#"+state.bonsai_showing;
                 document.getElementById("bonsaiold_name").innerText = SearchBonsaiShowing().name.toLocaleString('en', {minimumFractionDigits: 0});
-                document.getElementById("bonsaiold_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, SearchBonsaiShowing(), "100", "100");
+                document.getElementById("bonsaiold_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, SearchBonsaiShowing(), "50", "50");
                 document.getElementById("BonsaiOld").style.backgroundImage= fetchbonsaitreequality(SearchBonsaiShowing());
                 document.getElementById("bonsaiold_level").innerText = SearchBonsaiShowing().level.toLocaleString('en', {minimumFractionDigits: 0});
                 document.getElementById("bonsaiold_cp").innerHTML = SearchBonsaiShowing().foliage+SearchBonsaiShowing().branches+SearchBonsaiShowing().trunk+SearchBonsaiShowing().roots;
                 
                 document.getElementById("bonsainew_nr").innerText = "#"+document.getElementById("positionn_place").value;
                 document.getElementById("bonsainew_name").innerText = SearchBonsaiReplacement().name.toLocaleString('en', {minimumFractionDigits: 0});
-                document.getElementById("bonsainew_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, SearchBonsaiReplacement(), "100", "100");
+                document.getElementById("bonsainew_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, SearchBonsaiReplacement(), "50", "50");
                 document.getElementById("BonsaiNew").style.backgroundImage= fetchbonsaitreequality(SearchBonsaiReplacement());
                 document.getElementById("bonsainew_level").innerText = SearchBonsaiReplacement().level.toLocaleString('en', {minimumFractionDigits: 0});
                 document.getElementById("bonsainew_cp").innerHTML = SearchBonsaiReplacement().foliage+SearchBonsaiReplacement().branches+SearchBonsaiReplacement().trunk+SearchBonsaiReplacement().roots;

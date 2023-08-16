@@ -10,7 +10,6 @@ var state = {
     seedlings: 0,
     seedlings_ontheway: 0,
     workerstandin: 0,
-    
 }
 
 var statistics = {
@@ -21,8 +20,8 @@ var statistics = {
 var resources = {
     money: 0,
     organic_waste: 0,
-    compost: 10,
-    fertilizer: 1,
+    compost1: 10,
+    fertilizer1: 1,
     bolt: 5,
     metal: 3,
     wire: 2,
@@ -31,21 +30,23 @@ var resources = {
 
 var equipment = {
     backpack: 0,
-    book_of_patience: 0,
-    memory_chips: 0,
+    book_of_patience1: 0,
+    memory_chips1: 0,
     book_growing1: 0,
+    book_shaping1: 0,
+    book_robot1: 1,
+    tools1: 1,
 }
 
 var skills = {
     level: 0,
     exp_nextlevel: 20,
     skillpoints: 0,
-    robot: 0,
-    compost: 0,
+    treestyles1: 0,
+    robot1: 0,
+    compost1: 0,
     growing: 0,
-    growing_book1: 0,
     shaping: 0,
-    shaping_book1: 0,
     patience: 0,
 }
 
@@ -61,6 +62,7 @@ skillexperience[7]= 72;
 skillexperience[8]= 86;
 skillexperience[9]= 103;
 
+var newOption = 0;
 var x=1;
 var levels=0;
 var idstring=0;

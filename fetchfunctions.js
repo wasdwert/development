@@ -486,9 +486,9 @@ function fetchvalues() {
     document.getElementById("organic_waste").innerHTML = resources.organic_waste;
     document.getElementById("organic_waste_mobile").innerHTML = resources.organic_waste;
     document.getElementById("organic_waste_mobilexs").innerHTML = resources.organic_waste;
-    document.getElementById("compost").innerHTML = resources.compost;
-    document.getElementById("compost_mobile").innerHTML = resources.compost;
-    document.getElementById("compost_mobilexs").innerHTML = resources.compost;
+    document.getElementById("compost1").innerHTML = resources.compost1;
+    document.getElementById("compost1_mobile").innerHTML = resources.compost1;
+    document.getElementById("compost1_mobilexs").innerHTML = resources.compost1;
     document.getElementById("bolt").innerHTML = resources.bolt;
     document.getElementById("bolt_mobile").innerHTML = resources.bolt;
     document.getElementById("bolt_mobilexs").innerHTML = resources.bolt;
@@ -512,6 +512,7 @@ function fetchvalues() {
 }
 
 function fetchunlocks() {
+    //Unlock treetypes and treequality in areas
     if (exp_area01.treetype01==1) {
         document.getElementById("area01_tt01").innerHTML = '<img src="Images/bonsai01_stamp.svg" width="35" height="35">';
     }
@@ -528,25 +529,7 @@ function fetchunlocks() {
         document.getElementById("area01_po02").innerHTML = '<img src="Images/two_stamp.svg" width="35" height="35">';
     }
     
-    if (skills.robot==1) {
-        $(document).ready(function(){
-            $('#Craft_Robot').show();
-            $('#Craft_Robot_Mobile').show();
-            $('#Skill_Robot').hide();
-            $('#Skill_Robot_Learned').show();
-        });
-    }
-    if (skills.compost==1) {
-        $(document).ready(function(){
-            $('#Craft_Compost').show();
-            $('#Craft_Compost_Mobile').show();
-            $('#resources_0').show();
-            $('#resources_2').show();
-            $('#Skill_Compost').hide();
-            $('#Skill_Compost_Learned').show();
-        });
-    }
-    
+    //Unlock workers
     if (state.workers_total==3) {
         $(document).ready(function() {
             $('#worker02div').show();
@@ -559,19 +542,132 @@ function fetchunlocks() {
         });
     }
     
+    //Unlock skilllevels
+    if (skills.level>=1) {
+        document.getElementById("skill_compost1_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
     if (skills.level>=2) {
         document.getElementById("skill_growing_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        document.getElementById("skill_shaping_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    
+    //Unlock skillpoints
+    if (skills.skillpoints==0) {
+        document.getElementById("skill_compost1_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+        document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+        document.getElementById("skill_shaping_rec3").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
     }
     if (skills.skillpoints>=1) {
+        document.getElementById("skill_compost1_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
         document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        document.getElementById("skill_shaping_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    
+    //Unlock equipment
+    if (equipment.tools1==1) {
+        $(document).ready(function() {
+            $('#you_equip_tools1').show();
+        });
+        document.getElementById("skill_treestyle_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    if (equipment.book_robot1==1) {
+        $(document).ready(function() {
+            $('#you_equip_bookrobot1').show();
+        });
+        document.getElementById("skill_robot1_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
     }
     if (equipment.book_growing1==1) {
-        document.getElementById("shop_equip_bookgrowing1").style.backgroundImage= "url('Images/bought.svg')";
+        $(document).ready(function() {
+            $('#shop_equip_bookgrowing1').hide();
+        });
+        $(document).ready(function() {
+            $('#you_equip_bookgrowing1').show();
+        });
         if (skills.growing<10) {
             document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
         }
         else if (skills.growing>=10) {
+            document.getElementById("skill_growing_book").innerHTML = 2;
             document.getElementById("skill_growing_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
         }
+    }
+    if (equipment.book_shaping1==1) {
+        $(document).ready(function() {
+            $('#shop_equip_bookshaping1').hide();
+        });
+        $(document).ready(function() {
+            $('#you_equip_bookshaping1').show();
+        });
+        if (skills.shaping<10) {
+            document.getElementById("skill_shaping_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        }
+        else if (skills.shaping>=10) {
+            document.getElementById("skill_shaping_book").innerHTML = 2;
+            document.getElementById("skill_shaping_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
+        }
+    }
+    
+    //Unlock skills
+    if (skills.treestyles1==1) {
+        newOption = new Option('Chokan - Formal Upright Style','1');
+        document.getElementById('menu_style').add(newOption,undefined);
+    
+        newOption = new Option('Moyogi - Informal Upright Style','2');
+        document.getElementById('menu_style').add(newOption,undefined);
+    
+        newOption = new Option('Shakan - Slanting Style','3');
+        document.getElementById('menu_style').add(newOption,undefined);
+    
+        newOption = new Option('Chokan - Formal Upright Style','1');
+        document.getElementById('menu_style_mobile').add(newOption,undefined);
+    
+        newOption = new Option('Moyogi - Informal Upright Style','2');
+        document.getElementById('menu_style_mobile').add(newOption,undefined);
+    
+        newOption = new Option('Shakan - Slanting Style','3');
+        document.getElementById('menu_style_mobile').add(newOption,undefined);
+    
+        $(document).ready(function(){
+            $('#Skill_Treestyles1').hide();
+            $('#Skill_Treestyles1_Learned').show();
+            $('#Skill_Treestyles1_Mobile').hide();
+            $('#Skill_Treestyles1_Learned_Mobile').show();
+        });
+        document.getElementById("skill_treestyle_rec1").innerHTML = '';
+        document.getElementById("Skill_Treestyles1_Button").innerHTML = "Learned";
+        Button_Skill_Treestyles1.className = "";
+        document.getElementById("Button_Skill_Treestyles1").style.cursor= "auto";
+    }
+    
+    if (skills.robot1==1) {
+        $(document).ready(function(){
+            $('#Craft_Robot1').show();
+            $('#Craft_Robot1_Mobile').show();
+            $('#Skill_Robot1').hide();
+            $('#Skill_Robot1_Learned').show();
+        });
+        document.getElementById("skill_robot1_rec1").innerHTML = '';
+        document.getElementById("Skill_Robot1_Button").innerHTML = "Learned";
+        Button_Skill_Robot1.className = "";
+        document.getElementById("Button_Skill_Robot1").style.cursor= "auto";
+    }
+    
+    if (skills.compost1==1) {
+        $(document).ready(function(){
+            $('#Craft_Compost1').show();
+            $('#Craft_Compost1_Mobile').show();
+            $('#resources_0').show();
+            $('#resources_2').show();
+            $('#Skill_Compost1').hide();
+            $('#Skill_Compost1_Learned').show();
+            $('#Skill_Compost1_Mobile').hide();
+            $('#Skill_Compost1_Learned_Mobile').show();
+        });
+        
+        document.getElementById("skill_compost1_rec1").innerHTML = ''; 
+        document.getElementById("skill_compost1_rec2").innerHTML = ''; 
+        document.getElementById("Skill_Compost1_Button").innerHTML = "Learned";
+        Button_Skill_Compost1.className = "";
+        document.getElementById("Button_Skill_Compost1").style.cursor= "auto";
     }
 }

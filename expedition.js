@@ -134,6 +134,7 @@ function randommaschine(seedlingx, worker) {
         seedlingx.shiny=1;
         seedlingx.price= seedlingx.treetypegroup*seedlingx.treequality;
         experience(1);
+        modalmilestone.style.display = "block";
     }
     else if (statistics.seedlings_total==3) {
         seedlingx.treetype=2;
