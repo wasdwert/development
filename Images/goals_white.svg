@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="goals_white.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.505"
+     inkscape:cx="400.9901"
+     inkscape:cy="399.0099"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
+  <rect
+     width="24"
+     height="24"
+     opacity="0"
+     id="rect2"
+     style="fill:#351717;fill-opacity:1"
+     x="0"
+     y="0" />
+  <path
+     d="m 22.666667,11.773333 a 1.3333333,1.3333333 0 0 0 -1.333334,1.333334 v 7.426666 a 0.8,0.8 0 0 1 -0.8,0.8 H 3.4666667 a 0.8,0.8 0 0 1 -0.8,-0.8 V 3.4666667 a 0.8,0.8 0 0 1 0.8,-0.8 H 16.226667 a 1.3333334,1.3333334 0 1 0 0,-2.666666650000001 H 3.4666667 A 3.48,3.48 0 0 0 0,3.4666667 V 20.533333 A 3.48,3.48 0 0 0 3.4666667,24 H 20.533333 A 3.48,3.48 0 0 0 24,20.533333 v -7.426666 a 1.3333333,1.3333333 0 0 0 -1.333333,-1.333334 z"
+     id="path4"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.33333" />
+  <path
+     d="m 10.293333,10.666667 a 1.3333333,1.3333333 0 0 0 -1.92,1.84 l 2.96,3.106666 a 1.3333333,1.3333333 0 0 0 0.96,0.413334 1.3333333,1.3333333 0 0 0 0.96,-0.4 l 9.04,-9.3333337 a 1.3389216,1.3389216 0 1 0 -1.92,-1.8666666 l -8.066666,8.3466663 z"
+     id="path6"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.33333" />
+</svg>
