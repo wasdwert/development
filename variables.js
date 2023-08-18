@@ -64,10 +64,16 @@ skillexperience[9]= 103;
 
 var newOption = 0;
 var x=1;
+var x_shop=1;
+var z=0;
 var levels=0;
 var idstring=0;
 var naturepoints=0;
 var leftpoints=0;
+var treestyles1set=0;
+var autosave=0;
+var styletype=0;
+var bonsaichoosen=0;
 
 var worker01 = {
     busy: 0,
@@ -130,6 +136,7 @@ var exp_area02 = {
 
 /* Bonsai variables */
 const treetypename = [];
+treetypename[0]= "-";
 treetypename[1]= "Maru";
 treetypename[2]= "Daen";
 treetypename[3]= "Yubiwa";
@@ -137,6 +144,7 @@ treetypename[4]= "Otosu";
 treetypename[5]= "Hi";
 
 const treetypegroupname = [];
+treetypegroupname[0]= "-";
 treetypegroupname[1]= "Raundo";
 treetypegroupname[2]= "Erementaru";
 treetypegroupname[3]= "Roku-men";
@@ -148,6 +156,7 @@ treetypegroupname[8]= "Sora";
 treetypegroupname[9]= "Shizen";
 
 const styletypename = [];
+styletypename[0]= "-";
 styletypename[1]= "Chokan";
 styletypename[2]= "Moyogi";
 styletypename[3]= "Shakan";
@@ -166,7 +175,7 @@ styletypename[15]= "Sabamiki";
 styletypename[16]= "Seki-joju";
 
 const natures = [];
-natures[0]= "";
+natures[0]= "-";
 natures[1]= "Balanced";
 natures[2]= "Leafed";
 natures[3]= "Branched";

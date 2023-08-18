@@ -127,44 +127,68 @@ shop_board_buy.onclick = function() {
     }
 }
 
-function SellBonsai(bonsai) {
+function SellBonsai(sbonsai) {
     if (x_shop==1) {
         if (sbonsai==1) {
-            SellBonsaiExecution(bonsai11);
+            SellBonsaiExecution(bonsai001);
         }
         else if (sbonsai==2) {
-            SellBonsaiExecution(bonsai12);
+            SellBonsaiExecution(bonsai002);
         }
         else if (sbonsai==3) {
-            SellBonsaiExecution(bonsai13);
+            SellBonsaiExecution(bonsai003);
         }
         else if (sbonsai==4) {
-            SellBonsaiExecution(bonsai14);
+            SellBonsaiExecution(bonsai004);
         }
         else if (sbonsai==5) {
-            SellBonsaiExecution(bonsai15);
+            SellBonsaiExecution(bonsai005);
         }
         else if (sbonsai==6) {
-            SellBonsaiExecution(bonsai16);
+            SellBonsaiExecution(bonsai006);
         }
-    }else if (x_shop==7) {
+        else if (sbonsai==7) {
+            SellBonsaiExecution(bonsai007);
+        }
+        else if (sbonsai==8) {
+            SellBonsaiExecution(bonsai008);
+        }
+        else if (sbonsai==9) {
+            SellBonsaiExecution(bonsai009);
+        }
+        else if (sbonsai==10) {
+            SellBonsaiExecution(bonsai010);
+        }
+    }else if (x_shop==11) {
         if (sbonsai==1) {
-            SellBonsaiExecution(bonsai71);
+            SellBonsaiExecution(bonsai011);
         }
         else if (sbonsai==2) {
-            SellBonsaiExecution(bonsai72);
+            SellBonsaiExecution(bonsai012);
         }
         else if (sbonsai==3) {
-            SellBonsaiExecution(bonsai73);
+            SellBonsaiExecution(bonsai013);
         }
         else if (sbonsai==4) {
-            SellBonsaiExecution(bonsai74);
+            SellBonsaiExecution(bonsai014);
         }
         else if (sbonsai==5) {
-            SellBonsaiExecution(bonsai75);
+            SellBonsaiExecution(bonsai015);
         }
         else if (sbonsai==6) {
-            SellBonsaiExecution(bonsai76);
+            SellBonsaiExecution(bonsai016);
+        }
+        else if (sbonsai==7) {
+            SellBonsaiExecution(bonsai017);
+        }
+        else if (sbonsai==8) {
+            SellBonsaiExecution(bonsai018);
+        }
+        else if (sbonsai==9) {
+            SellBonsaiExecution(bonsai019);
+        }
+        else if (sbonsai==10) {
+            SellBonsaiExecution(bonsai020);
         }
     }
 }
@@ -173,12 +197,14 @@ function SellBonsaiExecution(bonsaixx) {
     if (bonsaixx.treetype>0) {
         if (bonsaixx.growing==0) {
             resources.money +=bonsaixx.price;
-            document.getElementById("money").innerText = resources.money;
             bonsaixx.name="-";
-            bonsaixx.species= 0;
+            bonsaixx.id=0;
+            bonsaixx.idstring="-";
             bonsaixx.treetype=0;
             bonsaixx.treetypegroup=0;
-            bonsaixx.rarity=0;
+            bonsaixx.styletype=0;
+            bonsaixx.treequality=0;
+            bonsaixx.nature=0;
             bonsaixx.nature=0;
             bonsaixx.level=0;
             bonsaixx.foliage=0;
@@ -200,6 +226,9 @@ function SellBonsaiExecution(bonsaixx) {
             
             menu_change();
             menu_shop_change();
+            menu_contests_change();
+            fetchvalues();
+            fetchunlocks();
         }
         else {
             document.getElementById("snack_message").innerText = "Can not sell a growing bonsai";

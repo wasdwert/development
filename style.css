@@ -220,7 +220,7 @@
     font-size: 15px;
 }
 
-.select_shopping, .select_style {
+.select_shopping, .select_style, .select_contests {
     box-sizing: border-box;
     width: 315px;
 	height: 30px;
@@ -308,7 +308,7 @@
     align-items: center;
 }
 
-#ButtonNavigationBonDex, #ButtonNavigationLearn, #ButtonNavigationTasks, #ButtonNavigationExpedition, #ButtonNavigationCraft, #ButtonNavigationShop, #ButtonNavigationOptions, #ButtonNavigationAchievements {
+#ButtonNavigationBonDex, #ButtonNavigationLearn, #ButtonNavigationTasks, #ButtonNavigationExpedition, #ButtonNavigationCraft, #ButtonNavigationShop, #ButtonNavigationOptions, #ButtonNavigationCompetitions {
     box-sizing: border-box;
     width: 136.25px;
 	height: 30px;
@@ -322,7 +322,7 @@
     font-size: 15px;
 }
 
-#ButtonNavigationBonDex_mobile, #ButtonNavigationLearn_mobile, #ButtonNavigationTasks_mobile, #ButtonNavigationExpedition_mobile, #ButtonNavigationCraft_mobile, #ButtonNavigationShop_mobile, #ButtonNavigationOptions_mobile, #ButtonNavigationAchievements_mobile {
+#ButtonNavigationBonDex_mobile, #ButtonNavigationLearn_mobile, #ButtonNavigationTasks_mobile, #ButtonNavigationExpedition_mobile, #ButtonNavigationCraft_mobile, #ButtonNavigationShop_mobile, #ButtonNavigationOptions_mobile, #ButtonNavigationCompetitions_mobile {
     box-sizing: border-box;
     width: 106.25px;
 	height: 30px;
@@ -336,7 +336,7 @@
     font-size: 15px;
 }
 
-#ButtonNavigationBonDex_mobilexs, #ButtonNavigationLearn_mobilexs, #ButtonNavigationTasks_mobilexs, #ButtonNavigationExpedition_mobilexs, #ButtonNavigationCraft_mobilexs, #ButtonNavigationShop_mobilexs, #ButtonNavigationOptions_mobilexs, #ButtonNavigationAchievements_mobilexs {
+#ButtonNavigationBonDex_mobilexs, #ButtonNavigationLearn_mobilexs, #ButtonNavigationTasks_mobilexs, #ButtonNavigationExpedition_mobilexs, #ButtonNavigationCraft_mobilexs, #ButtonNavigationShop_mobilexs, #ButtonNavigationOptions_mobilexs, #ButtonNavigationCompetitions_mobilexs {
     box-sizing: border-box;
     width: 58.75px;
 	height: 30px;
@@ -490,6 +490,22 @@
     font-size: 15px;
 }
 
+#club_ttg01raundo, #club_st01chokan {
+    box-sizing: border-box;
+	height: 40px;
+	background: #777;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
 #ChangePosition {
     box-sizing: border-box;
 	height: 40px;
@@ -501,6 +517,18 @@
     cursor: pointer;
     font-family: Arial;
     font-size: 15px;
+}
+
+.bondex {
+    display:none;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+	border: 0px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .tasks {
@@ -552,6 +580,18 @@
 }
 
 .shopping {
+    display:none;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+	border: 0px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.competitions {
     display:none;
     box-sizing: border-box;
     width: 100%;
@@ -750,6 +790,36 @@
     justify-content: center;
     align-items: center;
     cursor: auto;
+}
+
+.bonsaiimage80 {
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    width: 80px; 
+    height: 80px; 
+    background: #f1f1f1; 
+    background-image: url(Images/treequality/none_small.svg); 
+    background-size: 80px 80px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items:center; 
+    justify-content: center
+}
+
+.contests {
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    display: flex; 
+    flex-wrap: wrap; 
+    align-content: center;
+    font-family: Arial;
+    font-size: 15px;
 }
 
 /* Collapsible Menus Container*/
@@ -1009,14 +1079,6 @@
     background-color: #777  !important;
 }
 
-.select:hover{
-    background-color: #777  !important;
-}
-
-.selectsub:hover{
-    background-color: #bbb  !important;
-}
-
 .edit {
     box-sizing: border-box;
 	height: 40px;
@@ -1032,7 +1094,7 @@
 
 /* Edit Name Modal */
  /* The Modal (background) */
-.modal_name, .modal_newgame, .modal_tutorial, .modal_position, .modal_milestone{
+.modal_name, .modal_newgame, .modal_tutorial, .modal_position, .modal_milestone, .modal_contests{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -1046,7 +1108,7 @@
 }
 
 /* Modal Content/Box */
-.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content, .modal_milestone-content {
+.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content, .modal_milestone-content, .modal_contests-content {
     background-color: #f1f1f1;
     margin: 5% auto; /* 15% from the top and centered */
     padding: 5px;
@@ -1066,10 +1128,45 @@
 	height: 40px;
 	background: #777;
     border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
     color: white;
     padding-left: 10px;
     text-align: left;
     cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.Button_Modal_Contests_Unavailable {
+    box-sizing: border-box;
+	height: 40px;
+	background: #cc0000;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: auto;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.Button_Modal_Contests_Choosen {
+    box-sizing: border-box;
+	height: 40px;
+	background: #189e00;
+    border: 0px;
+    border-bottom: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    cursor: auto;
     font-family: Arial;
     font-size: 15px;
 }

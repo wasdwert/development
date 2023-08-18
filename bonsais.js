@@ -18,6 +18,7 @@ function ChangeName() {
         document.getElementById("bonsai_detail_name").innerHTML = SearchBonsaiShowing().name;
         menu_change();
         menu_shop_change();
+        menu_contests_change();
     }
 }
 
@@ -418,6 +419,7 @@ function ChangePosition() {
     });
     menu_change();
     menu_shop_change();
+    menu_contests_change();
 }
 
 function SearchBonsaiShowing() {
@@ -611,9 +613,16 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 document.getElementById("seedling"+e+"_center_mobile").style.cursor= "auto";
                 document.getElementById("seedling"+f+"_center_mobile").style.cursor= "auto";
                 seedling1.planting_choosen=1;
+                
                 $(document).ready(function(){
-                    $('#menu_style').show();
-                    $('#menu_style_mobile').show();
+                    $('#menu_style2').show();
+                    if (treestyles1set==1) {
+                        $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+                    }
+                    $('#menu_style2_mobile').show();
+                    if (treestyles1set==1) {
+                        $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+                    }
                 });
             }
             else {
@@ -652,11 +661,9 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 seedling1.planting_choosen=0; 
                 seedling1.styletype=0;
                 $(document).ready(function(){
-                    $('#menu_style').hide();
-                    $('#menu_style_mobile').hide();
+                    $('#menu_style2').hide();
+                    $('#menu_style2_mobile').hide();
                 });
-                document.getElementById('menu_style').value="0";
-                document.getElementById('menu_style_mobile').value="0";
                 document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
                 document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
             }
@@ -666,7 +673,11 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
 
 function style_change (x) {
     if (x==1) {
-        document.getElementById('menu_style_mobile').value=document.getElementById('menu_style').value
+        styletype=document.getElementById('menu_style').value;
+        $('#menu_style').on('select2:select', function (e) {
+            $('#menu_style_mobile').val(styletype);
+            $('#menu_style_mobile').trigger('change');
+        });
         if (seedling1.planting_choosen==1) {
             style_change2 (seedling1);
         }
@@ -687,7 +698,11 @@ function style_change (x) {
         }
     }
     else if (x==2) {
-        document.getElementById('menu_style').value=document.getElementById('menu_style_mobile').value
+        styletype=document.getElementById('menu_style_mobile').value;
+        $('#menu_style_mobile').on('select2:select', function (e) {
+            $('#menu_style').val(styletype);
+            $('#menu_style').trigger('change');
+        });
         if (seedling1.planting_choosen==1) {
             style_change2 (seedling1);
         }
@@ -709,18 +724,23 @@ function style_change (x) {
     }
 }
 
-function style_change2 (x) {
-    if (document.getElementById('menu_style_mobile').value==1) {
+function style_change2 (x, a) {
+    if (styletype==0) {
+        x.styletype=0;
+        document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
+        document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
+    }
+    if (styletype==1) {
         x.styletype=1;
         document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
         document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
     }
-    else if (document.getElementById('menu_style_mobile').value==2) {
+    else if (styletype==2) {
         x.styletype=2;
         document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
         document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
     }
-    else if (document.getElementById('menu_style_mobile').value==3) {
+    else if (styletype==3) {
         x.styletype=3;
         document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
         document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
@@ -1031,6 +1051,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     
     menu_change();
     menu_shop_change();
+    menu_contests_change();
     
     state.seedlings -=1;
     state.seedlings_ontheway -=1;
@@ -1497,6 +1518,7 @@ function Bonsai_Growing_Intervall(bonsaixx) {
         levels=0;
         menu_change();
         menu_shop_change();
+        menu_contests_change();
         
         //task006trigger(bonsaixx);
         //task008trigger(bonsaixx);

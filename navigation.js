@@ -1,11 +1,27 @@
 /* Header menu functions */
+function ViewBonDex() {
+    $(document).ready(function(){
+        $('.bondex').show();
+        $('.tasks').hide();
+        $('.expedition').hide();
+        $('.crafting').hide();
+        $('.learning').hide();
+        $('.shopping').hide();
+        $('.competitions').hide();
+        $('.bonsai_details').hide();
+        $('.bonsai_details_seedling').hide();
+    });
+}
+
 function ViewTasks() {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').show();
         $('.expedition').hide();
         $('.crafting').hide();
         $('.learning').hide();
         $('.shopping').hide();
+        $('.competitions').hide();
         $('.bonsai_details').hide();
         $('.bonsai_details_seedling').hide();
     });
@@ -13,11 +29,13 @@ function ViewTasks() {
 
 function ViewExpedition() {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').hide();
         $('.expedition').show();
         $('.crafting').hide();
         $('.learning').hide();
         $('.shopping').hide();
+        $('.competitions').hide();
         $('.bonsai_details').hide();
         $('.bonsai_details_seedling').hide();
     });
@@ -25,11 +43,13 @@ function ViewExpedition() {
 
 function ViewCrafting() {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').hide();
         $('.expedition').hide();
         $('.crafting').show();
         $('.learning').hide();
         $('.shopping').hide();
+        $('.competitions').hide();
         $('.bonsai_details').hide();
         $('.bonsai_details_seedling').hide();
     });
@@ -37,11 +57,13 @@ function ViewCrafting() {
 
 function ViewLearning() {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').hide();
         $('.expedition').hide();
         $('.crafting').hide();
         $('.learning').show();
         $('.shopping').hide();
+        $('.competitions').hide();
         $('.bonsai_details').hide();
         $('.bonsai_details_seedling').hide();
     });
@@ -49,11 +71,27 @@ function ViewLearning() {
 
 function ViewShopping() {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').hide();
         $('.expedition').hide();
         $('.crafting').hide();
         $('.learning').hide();
         $('.shopping').show();
+        $('.competitions').hide();
+        $('.bonsai_details').hide();
+        $('.bonsai_details_seedling').hide();
+    });
+}
+
+function ViewCompetitions() {
+    $(document).ready(function(){
+        $('.bondex').hide();
+        $('.tasks').hide();
+        $('.expedition').hide();
+        $('.crafting').hide();
+        $('.learning').hide();
+        $('.shopping').hide();
+        $('.competitions').show();
         $('.bonsai_details').hide();
         $('.bonsai_details_seedling').hide();
     });
@@ -149,13 +187,15 @@ function ViewBonsai_Details(z) {
 function ViewBonsai_Details2(x, y) {
     if (x.treetype==0) {
         $(document).ready(function(){
-        $('.tasks').hide();
-        $('.expedition').hide();
-        $('.crafting').hide();
-        $('.learning').hide();
-        $('.shopping').hide();
-        $('.bonsai_details').hide();
-        $('.bonsai_details_seedling').show();
+            $('.bondex').hide();
+            $('.tasks').hide();
+            $('.expedition').hide();
+            $('.crafting').hide();
+            $('.learning').hide();
+            $('.shopping').hide();
+            $('.competitions').hide();
+            $('.bonsai_details').hide();
+            $('.bonsai_details_seedling').show();
         });
         state.bonsai_showing=y;
     }
@@ -168,11 +208,13 @@ function ViewBonsai_Details2(x, y) {
 /* Bonsai Detail Loadout */
 function Bonsai_Details(bonsaixxx) {
     $(document).ready(function(){
+        $('.bondex').hide();
         $('.tasks').hide();
         $('.expedition').hide();
         $('.crafting').hide();
         $('.learning').hide();
         $('.shopping').hide();
+        $('.competitions').hide();
         $('.bonsai_details').show();
         $('.bonsai_details_seedling').hide();
         });
@@ -186,8 +228,34 @@ function Bonsai_Details(bonsaixxx) {
 }
 
 /* Bonsai Menu Change */
-function menu_change() {
-    x = document.getElementById("menu").value;
+function menu_change(a) {
+    if (a==1) {
+        x = document.getElementById("menu").value;
+        $('#menu').on('select2:select', function (e) {
+            $('#menu_mobile').val(x);
+            $('#menu_mobilexs').val(x);
+            $('#menu_mobile').trigger('change');
+            $('#menu_mobilexs').trigger('change');
+        });
+    }
+    else if (a==2) {
+        x = document.getElementById("menu_mobile").value;
+        $('#menu_mobile').on('select2:select', function (e) {
+            $('#menu').val(x);
+            $('#menu_mobilexs').val(x);
+            $('#menu').trigger('change');
+            $('#menu_mobilexs').trigger('change');
+        });
+    }
+    else if (a==3) {
+        x = document.getElementById("menu_mobilexs").value;
+        $('#menu_mobilexs').on('select2:select', function (e) {
+            $('#menu').val(x);
+            $('#menu_mobile').val(x);
+            $('#menu').trigger('change');
+            $('#menu_mobile').trigger('change');
+        });
+    }
     if (x==1) {
         fetchbonsaimenu("00", "01", bonsai001, bonsai002, bonsai003, bonsai004, bonsai005, bonsai006, bonsai007, bonsai008, bonsai009, bonsai010)
         fetchbonsaimenu_mobile("00", "01", bonsai001, bonsai002, bonsai003, bonsai004, bonsai005, bonsai006, bonsai007, bonsai008, bonsai009, bonsai010)
@@ -200,8 +268,33 @@ function menu_change() {
     }
 }
 
-function menu_shop_change() {
-    x_shop = document.getElementById("menu_shopping").value;
+function menu_contests_change() {
+    x_contests = document.getElementById("menu_contests").value;
+    bonsaichoosen=0;
+    if (x_contests==1) {
+        fetchbonsaimenu_contests("00", "01", bonsai001, bonsai002, bonsai003, bonsai004, bonsai005, bonsai006, bonsai007, bonsai008, bonsai009, bonsai010)
+    }
+    else if (x_contests==11) {
+        fetchbonsaimenu_contests("01", "02", bonsai011, bonsai012, bonsai013, bonsai014, bonsai015, bonsai016, bonsai017, bonsai018, bonsai019, bonsai020)
+    }
+    contests_bonsaiunavailable();
+}
+
+function menu_shop_change(a) {
+    if (a==1) {
+        x_shop = document.getElementById("menu_shopping").value;
+        $('#menu_shopping').on('select2:select', function (e) {
+            $('#menu_shopping_mobile').val(x_shop);
+            $('#menu_shopping_mobile').trigger('change');
+        });
+    }
+    else if (a==2) {
+        x_shop = document.getElementById("menu_shopping_mobile").value;
+        $('#menu_shopping_mobile').on('select2:select', function (e) {
+            $('#menu_shopping').val(x_shop);
+            $('#menu_shopping').trigger('change');
+        });
+    }
     if (x_shop==1) {
         fetchbonsaimenu_shop("00", "01", bonsai001, bonsai002, bonsai003, bonsai004, bonsai005, bonsai006, bonsai007, bonsai008, bonsai009, bonsai010)
     }
@@ -364,6 +457,21 @@ function ViewSkillPatience() {
         $('#skill_growing').hide();
         $('#skill_shaping').hide();
         $('#skill_patience').show();
+    });
+}
+
+/* Contests Menu functions */
+function ViewClub_TTG01 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').show();
+        $('#Club_ST01').hide();
+    });
+}
+
+function ViewClub_ST01 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_ST01').show();
     });
 }
 

@@ -185,9 +185,87 @@ spanchange_change.onclick = function() {
     modalchange.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function(event) {
-    if (event.target == modalchange) {
-        modalchange.style.display = "none";
+/* Milestone Contests*/
+// Get the modal
+var modalcontests = document.getElementById("m_contests");
+
+// Get the button that opens the modal
+//var btncontests = document.getElementById("XXX");
+
+// Get the <span> element that closes the modal
+var spancontestsenter = document.getElementById("Button_Modal_Contests_Enter");
+var spancontestscancel = document.getElementById("Button_Modal_Contests_Cancel");
+var spancontestsbonsaia = document.getElementById("Button_Modal_Contests_BonsaiA");
+var spancontestsbonsaib = document.getElementById("Button_Modal_Contests_BonsaiB");
+var spancontestsbonsaic = document.getElementById("Button_Modal_Contests_BonsaiC");
+var spancontestsbonsaid = document.getElementById("Button_Modal_Contests_BonsaiD");
+var spancontestsbonsaie = document.getElementById("Button_Modal_Contests_BonsaiE");
+var spancontestsbonsaif = document.getElementById("Button_Modal_Contests_BonsaiF");
+var spancontestsbonsaig = document.getElementById("Button_Modal_Contests_BonsaiG");
+var spancontestsbonsaih = document.getElementById("Button_Modal_Contests_BonsaiH");
+var spancontestsbonsaii = document.getElementById("Button_Modal_Contests_BonsaiI");
+var spancontestsbonsaij = document.getElementById("Button_Modal_Contests_BonsaiJ");
+
+// When the user clicks on the button, open the modal
+//btncontests.onclick = function() {
+//    modalcontests.style.display = "block";
+//}
+
+// When the user clicks on <span> (x), close the modal
+spancontestsenter.onclick = function() {
+    if (bonsaichoosen==0) {
+        document.getElementById("snack_message").innerText = "Choose a bonsai first";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    
     }
-}) 
+    else {
+        modalcontests.style.display = "none";
+    
+        x_contests = 1;
+        document.getElementById("menu_contests").value=x_contests;       
+        $('#menu_contests').trigger('change');
+        contests_bonsaiunavailable();
+    }
+}
+
+spancontestscancel.onclick = function() {
+    modalcontests.style.display = "none";
+    bonsaichoosen=0;
+    x_contests = 1;
+    document.getElementById("menu_contests").value=x_contests;       
+    $('#menu_contests').trigger('change');
+    contests_bonsaiunavailable();
+}
+
+spancontestsbonsaia.onclick = function() {
+    contests_choosebonsai(x=1);
+}
+spancontestsbonsaib.onclick = function() {
+    contests_choosebonsai(x=2);   
+}
+spancontestsbonsaic.onclick = function() {
+    contests_choosebonsai(x=3);  
+}
+spancontestsbonsaid.onclick = function() {
+    contests_choosebonsai(x=4);   
+}
+spancontestsbonsaie.onclick = function() {
+    contests_choosebonsai(x=5);  
+}
+spancontestsbonsaif.onclick = function() {
+    contests_choosebonsai(x=6);   
+}
+spancontestsbonsaig.onclick = function() {
+    contests_choosebonsai(x=7);   
+}
+spancontestsbonsaih.onclick = function() {
+    contests_choosebonsai(x=8);   
+}
+spancontestsbonsaii.onclick = function() {
+    contests_choosebonsai(x=9);  
+}
+spancontestsbonsaij.onclick = function() {
+    contests_choosebonsai(x=10);      
+}

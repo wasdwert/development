@@ -34,26 +34,6 @@ function experience(exp) {
 }
 
 function learning_countdown() {
-    if (worker01.learning == "Robot") {
-        worker01.learning_zeit -=1;
-        document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)"; 
-        if (worker01.learning_zeit==0) {
-            worker01.learning = 0;
-            worker01.busy = 0;
-            state.workers_available +=1;
-            $(document).ready(function(){
-                $('#Craft_Robot').show();
-                $('#Craft_Robot_Mobile').show();
-                $('#Skill_Robot').hide();
-                $('#Skill_Robot_Learned').show();
-            });
-            document.getElementById("Skill_Robot_Button").innerHTML = "Learned";
-            document.getElementById("zeit_worker01").innerHTML = "";  
-            document.getElementById("worker1_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
-            
-            task004trigger();
-        }
-    }
     if (worker01.learning == "Patience") {
         worker01.learning_zeit -=1;
         document.getElementById("zeit_worker01").innerHTML = "("+worker01.learning_zeit+"&nbsp;seconds left)"; 
@@ -222,6 +202,10 @@ function learn_growing2 () {
 }
 
 function learn_growshape (bonsaixx) {
+    bonsaixx.foliage_lp=0;
+    bonsaixx.branches_lp=0;
+    bonsaixx.trunk_lp=0;
+    bonsaixx.roots_lp=0;
     if (bonsaixx.treequality==1) {
         cpdistribution(bonsaixx, level_cp_tq1);
         cpdistributionaftercare(bonsaixx)

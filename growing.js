@@ -68,19 +68,19 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
         document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
         
-        if (resources.fertilizer>0 & bonsaixx.growing_zeit>600) {
+        if (resources.fertilizer1>0 & bonsaixx.growing_zeit>600) {
             $(document).ready(function(){
                 $('#Growing1').hide();
                 $('#Growing2').hide();
                 $('#Growing3').show();
             });
-            if (resources.compost==0) {
+            if (resources.compost1==0) {
                 document.getElementById("Button_Compost3").style.cursor= "auto";
                 document.getElementById("Button_Compost3").className = "";
                 document.getElementById("Button_Compost3_Text").innerHTML = "";
             }
         }
-        else if (resources.compost>0 & bonsaixx.growing_zeit>60) {
+        else if (resources.compost1>0 & bonsaixx.growing_zeit>60) {
             $(document).ready(function(){
                 $('#Growing1').hide();
                 $('#Growing2').show();
@@ -397,6 +397,7 @@ function GrowBonsai() {
     
                 menu_change();
                 menu_shop_change();
+                menu_contests_change();
             }
             else {
             }
@@ -411,6 +412,7 @@ function GrowBonsai() {
     
                 menu_change();
                 menu_shop_change();
+                menu_contests_change();
             }
             else {
             }
@@ -418,33 +420,35 @@ function GrowBonsai() {
     }
 }
 
-function GiveCompost() {
-    if (resources.compost>0 & SearchBonsaiShowing().growing_zeit>60) {
+function GiveCompost1() {
+    if (resources.compost1>0 & SearchBonsaiShowing().growing_zeit>60) {
         SearchBonsaiShowing().growing_zeit -=60;
-        resources.compost -=1;
-        document.getElementById("compost").innerText = resources.compost.toLocaleString('en', {minimumFractionDigits: 0});
+        resources.compost1 -=1;
+        document.getElementById("compost1").innerText = resources.compost1.toLocaleString('en', {minimumFractionDigits: 0});
         
         Bonsai_Details(SearchBonsaiShowing());
         SearchWorker();
     
         menu_change();
         menu_shop_change();
+        menu_contests_change();
     }
     else {
     }
 }
 
-function GiveFertilizer() {
-    if (resources.fertilizer>0 & SearchBonsaiShowing().growing_zeit>600) {
+function GiveFertilizer1() {
+    if (resources.fertilizer1>0 & SearchBonsaiShowing().growing_zeit>600) {
         SearchBonsaiShowing().growing_zeit -=600;
-        resources.fertilizer -=1;
-        document.getElementById("compost").innerText = resources.fertilizer.toLocaleString('en', {minimumFractionDigits: 0});
+        resources.fertilizer1 -=1;
+        document.getElementById("fertilizer1").innerText = resources.fertilizer.toLocaleString('en', {minimumFractionDigits: 0});
         
         Bonsai_Details(SearchBonsaiShowing());
         SearchWorker();
     
         menu_change();
         menu_shop_change();
+        menu_contests_change();
     }
     else {
     }

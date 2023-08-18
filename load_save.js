@@ -20,6 +20,7 @@ w.addEventListener('message', function(e){
     console.log(time);
     menu_change();
     menu_shop_change();
+    menu_contests_change();
 
     if (worker01.expedition>0) {
         worker01.expedition_zeit -= 1;
@@ -141,11 +142,22 @@ w.addEventListener('message', function(e){
         bonsai020.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai020);
     }
+    autosave +=1;
+    if (autosave==30) {
+        SaveGame();
+        
+        document.getElementById("snack_message").innerText = "Game autosaved";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        
+        autosave=0;
+    }
 })/*1 Sekunden Intervallfunktion*/
 
 
 /*30 Sekunden Autosave Intervall*/
-setInterval(function Autosave() {
+function SaveGame() {
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
@@ -183,13 +195,7 @@ setInterval(function Autosave() {
     localStorage.setItem('bonsai018', JSON.stringify(bonsai018));
     localStorage.setItem('bonsai019', JSON.stringify(bonsai019));
     localStorage.setItem('bonsai020', JSON.stringify(bonsai020));
-    
-    document.getElementById("snack_message").innerText = "Game saved";
-    var snackb = document.getElementById("snackbar");
-    snackb.className = "show";
-    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
-
-}, 30000)
+}
 
 function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
@@ -228,8 +234,8 @@ function LoadGame() {
     bonsai018 = JSON.parse(localStorage.getItem('bonsai018'));
     bonsai019 = JSON.parse(localStorage.getItem('bonsai019'));
     bonsai020 = JSON.parse(localStorage.getItem('bonsai020'));
-    startup();
     
+    startup();
 }
 
 function startup() {
@@ -244,7 +250,25 @@ function startup() {
     $('#menu').select2({
             minimumResultsForSearch: Infinity
         });
+    $('#menu_mobile').select2({
+            minimumResultsForSearch: Infinity
+        });
+    $('#menu_mobilexs').select2({
+            minimumResultsForSearch: Infinity
+        });
     $('#menu_shopping').select2({
+            minimumResultsForSearch: Infinity
+        });
+    $('#menu_shopping_mobile').select2({
+            minimumResultsForSearch: Infinity
+        });
+    $('#menu_style').select2({
+            minimumResultsForSearch: Infinity
+        });
+    $('#menu_style_mobile').select2({
+            minimumResultsForSearch: Infinity
+        });
+    $('#menu_contests').select2({
             minimumResultsForSearch: Infinity
         });
     $('#neighborhood_time').select2({
@@ -256,6 +280,7 @@ function startup() {
     
     menu_change();
     menu_shop_change();
+    menu_contests_change();
     
     if (seedling1.styletype>0) {
         seedling1.styletype=0;
@@ -349,47 +374,10 @@ function startup() {
 }
 
 function ViewOptions() { //Current Saving Option//
-    state.zeitsave = Date.now();
-    localStorage.setItem('state', JSON.stringify(state));
-    localStorage.setItem('statistics', JSON.stringify(statistics));
-    localStorage.setItem('resources', JSON.stringify(resources));
-    localStorage.setItem('equipment', JSON.stringify(equipment));
-    localStorage.setItem('skills', JSON.stringify(skills));
-    localStorage.setItem('worker01', JSON.stringify(worker01));
-    localStorage.setItem('worker02', JSON.stringify(worker02));
-    localStorage.setItem('worker03', JSON.stringify(worker03));
-    localStorage.setItem('exp_area01', JSON.stringify(exp_area01));
-    localStorage.setItem('exp_area02', JSON.stringify(exp_area02));
-    localStorage.setItem('seedling1', JSON.stringify(seedling1));
-    localStorage.setItem('seedling2', JSON.stringify(seedling2));
-    localStorage.setItem('seedling3', JSON.stringify(seedling3));
-    localStorage.setItem('seedling4', JSON.stringify(seedling4));
-    localStorage.setItem('seedling5', JSON.stringify(seedling5));
-    localStorage.setItem('seedling6', JSON.stringify(seedling6));
-    localStorage.setItem('bonsai001', JSON.stringify(bonsai001));
-    localStorage.setItem('bonsai002', JSON.stringify(bonsai002));
-    localStorage.setItem('bonsai003', JSON.stringify(bonsai003));
-    localStorage.setItem('bonsai004', JSON.stringify(bonsai004));
-    localStorage.setItem('bonsai005', JSON.stringify(bonsai005));
-    localStorage.setItem('bonsai006', JSON.stringify(bonsai006));
-    localStorage.setItem('bonsai007', JSON.stringify(bonsai007));
-    localStorage.setItem('bonsai008', JSON.stringify(bonsai008));
-    localStorage.setItem('bonsai009', JSON.stringify(bonsai009));
-    localStorage.setItem('bonsai010', JSON.stringify(bonsai010));
-    localStorage.setItem('bonsai011', JSON.stringify(bonsai011));
-    localStorage.setItem('bonsai012', JSON.stringify(bonsai012));
-    localStorage.setItem('bonsai013', JSON.stringify(bonsai013));
-    localStorage.setItem('bonsai014', JSON.stringify(bonsai014));
-    localStorage.setItem('bonsai015', JSON.stringify(bonsai015));
-    localStorage.setItem('bonsai016', JSON.stringify(bonsai016));
-    localStorage.setItem('bonsai017', JSON.stringify(bonsai017));
-    localStorage.setItem('bonsai018', JSON.stringify(bonsai018));
-    localStorage.setItem('bonsai019', JSON.stringify(bonsai019));
-    localStorage.setItem('bonsai020', JSON.stringify(bonsai020));
-
+    SaveGame();
+    
     document.getElementById("snack_message").innerText = "Game saved";
     var snackb = document.getElementById("snackbar");
     snackb.className = "show";
     setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
-
 }

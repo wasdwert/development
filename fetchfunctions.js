@@ -164,6 +164,158 @@ function fetchbonsaimenu_mobilexs(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("ButtonBonsaiJ_mobilexs").style.backgroundImage= fetchbonsaitreequality_small(j);
 }
 
+function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j) {
+    document.getElementById("bonsaia_name_contests").innerText = a.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, a, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiA_contests").style.backgroundImage= fetchbonsaitreequality_small(a);
+    document.getElementById("bonsaia_level_contests").innerText = a.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_cp_contests").innerHTML = (Math.round((a.foliage+a.branches+a.trunk+a.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaia_ttg_contests").innerText = treetypegroupname[a.treetypegroup];
+    document.getElementById("bonsaia_st_contests").innerText = styletypename[a.styletype];
+    document.getElementById("bonsaia_nature_contests").innerText = natures[a.nature];
+    document.getElementById("bonsaia_f_contests").innerHTML = a.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_b_contests").innerHTML = a.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_t_contests").innerHTML = a.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_r_contests").innerHTML = a.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaia_nr_contests").innerText = "#"+number1+"1";
+    document.getElementById("bonsaia_idstring_contests").innerText = a.idstring;
+    
+    document.getElementById("bonsaib_name_contests").innerText = b.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, b, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiB_contests").style.backgroundImage= fetchbonsaitreequality_small(b);
+    document.getElementById("bonsaib_level_contests").innerText = b.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_cp_contests").innerHTML = (Math.round((b.foliage+b.branches+b.trunk+b.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaib_ttg_contests").innerText = treetypegroupname[b.treetypegroup];
+    document.getElementById("bonsaib_st_contests").innerText = styletypename[b.styletype];
+    document.getElementById("bonsaib_nature_contests").innerText = natures[b.nature];
+    document.getElementById("bonsaib_f_contests").innerHTML = b.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_b_contests").innerHTML = b.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_t_contests").innerHTML = b.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_r_contests").innerHTML = b.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaib_nr_contests").innerText = "#"+number1+"2";
+    document.getElementById("bonsaib_idstring_contests").innerText = b.idstring;
+    
+    document.getElementById("bonsaic_name_contests").innerText = c.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, c, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiC_contests").style.backgroundImage= fetchbonsaitreequality_small(c);
+    document.getElementById("bonsaic_level_contests").innerText = c.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_cp_contests").innerHTML = (Math.round((c.foliage+c.branches+c.trunk+c.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaic_ttg_contests").innerText = treetypegroupname[c.treetypegroup];
+    document.getElementById("bonsaic_st_contests").innerText = styletypename[c.styletype];
+    document.getElementById("bonsaic_nature_contests").innerText = natures[c.nature];
+    document.getElementById("bonsaic_f_contests").innerHTML = c.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_b_contests").innerHTML = c.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_t_contests").innerHTML = c.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_r_contests").innerHTML = c.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaic_nr_contests").innerText = "#"+number1+"3";
+    document.getElementById("bonsaic_idstring_contests").innerText = c.idstring;
+    
+    document.getElementById("bonsaid_name_contests").innerText = d.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, d, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiD_contests").style.backgroundImage= fetchbonsaitreequality_small(d);
+    document.getElementById("bonsaid_level_contests").innerText = d.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_cp_contests").innerHTML = (Math.round((d.foliage+d.branches+d.trunk+d.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaid_ttg_contests").innerText = treetypegroupname[d.treetypegroup];
+    document.getElementById("bonsaid_st_contests").innerText = styletypename[d.styletype];
+    document.getElementById("bonsaid_nature_contests").innerText = natures[d.nature];
+    document.getElementById("bonsaid_f_contests").innerHTML = d.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_b_contests").innerHTML = d.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_t_contests").innerHTML = d.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_r_contests").innerHTML = d.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaid_nr_contests").innerText = "#"+number1+"4";
+    document.getElementById("bonsaid_idstring_contests").innerText = d.idstring;
+    
+    document.getElementById("bonsaie_name_contests").innerText = e.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, e, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiE_contests").style.backgroundImage= fetchbonsaitreequality_small(e);
+    document.getElementById("bonsaie_level_contests").innerText = e.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_cp_contests").innerHTML = (Math.round((e.foliage+e.branches+e.trunk+e.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaie_ttg_contests").innerText = treetypegroupname[e.treetypegroup];
+    document.getElementById("bonsaie_st_contests").innerText = styletypename[e.styletype];
+    document.getElementById("bonsaie_nature_contests").innerText = natures[e.nature];
+    document.getElementById("bonsaie_f_contests").innerHTML = e.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_b_contests").innerHTML = e.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_t_contests").innerHTML = e.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_r_contests").innerHTML = e.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaie_nr_contests").innerText = "#"+number1+"5";
+    document.getElementById("bonsaie_idstring_contests").innerText = e.idstring;
+    
+    document.getElementById("bonsaif_name_contests").innerText = f.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, f, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiF_contests").style.backgroundImage= fetchbonsaitreequality_small(f);
+    document.getElementById("bonsaif_level_contests").innerText = f.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_cp_contests").innerHTML = (Math.round((f.foliage+f.branches+f.trunk+f.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaif_ttg_contests").innerText = treetypegroupname[f.treetypegroup];
+    document.getElementById("bonsaif_st_contests").innerText = styletypename[f.styletype];
+    document.getElementById("bonsaif_nature_contests").innerText = natures[f.nature];
+    document.getElementById("bonsaif_f_contests").innerHTML = f.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_b_contests").innerHTML = f.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_t_contests").innerHTML = f.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_r_contests").innerHTML = f.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaif_nr_contests").innerText = "#"+number1+"6";
+    document.getElementById("bonsaif_idstring_contests").innerText = f.idstring;
+    
+    document.getElementById("bonsaig_name_contests").innerText = g.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, g, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiG_contests").style.backgroundImage= fetchbonsaitreequality_small(g);
+    document.getElementById("bonsaig_level_contests").innerText = g.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_cp_contests").innerHTML = (Math.round((g.foliage+g.branches+g.trunk+g.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaig_ttg_contests").innerText = treetypegroupname[g.treetypegroup];
+    document.getElementById("bonsaig_st_contests").innerText = styletypename[g.styletype];
+    document.getElementById("bonsaig_nature_contests").innerText = natures[g.nature];
+    document.getElementById("bonsaig_f_contests").innerHTML = g.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_b_contests").innerHTML = g.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_t_contests").innerHTML = g.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_r_contests").innerHTML = g.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaig_nr_contests").innerText = "#"+number1+"7";
+    document.getElementById("bonsaig_idstring_contests").innerText = g.idstring;
+    
+    document.getElementById("bonsaih_name_contests").innerText = h.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, h, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiH_contests").style.backgroundImage= fetchbonsaitreequality_small(h);
+    document.getElementById("bonsaih_level_contests").innerText = h.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_cp_contests").innerHTML = (Math.round((h.foliage+h.branches+h.trunk+h.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaih_ttg_contests").innerText = treetypegroupname[h.treetypegroup];
+    document.getElementById("bonsaih_st_contests").innerText = styletypename[h.styletype];
+    document.getElementById("bonsaih_nature_contests").innerText = natures[h.nature];
+    document.getElementById("bonsaih_f_contests").innerHTML = h.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_b_contests").innerHTML = h.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_t_contests").innerHTML = h.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_r_contests").innerHTML = h.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaih_nr_contests").innerText = "#"+number1+"8";
+    document.getElementById("bonsaih_idstring_contests").innerText = h.idstring;
+    
+    document.getElementById("bonsaii_name_contests").innerText = i.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, i, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiI_contests").style.backgroundImage= fetchbonsaitreequality_small(i);
+    document.getElementById("bonsaii_level_contests").innerText = i.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_cp_contests").innerHTML = (Math.round((i.foliage+i.branches+i.trunk+i.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaii_ttg_contests").innerText = treetypegroupname[i.treetypegroup];
+    document.getElementById("bonsaii_st_contests").innerText = styletypename[i.styletype];
+    document.getElementById("bonsaii_nature_contests").innerText = natures[i.nature];
+    document.getElementById("bonsaii_f_contests").innerHTML = i.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_b_contests").innerHTML = i.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_t_contests").innerHTML = i.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_r_contests").innerHTML = i.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaii_nr_contests").innerText = "#"+number1+"9";
+    document.getElementById("bonsaii_idstring_contests").innerText = i.idstring;
+    
+    document.getElementById("bonsaij_name_contests").innerText = j.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, j, "43.75", "43.75");
+    document.getElementById("ButtonBonsaiJ_contests").style.backgroundImage= fetchbonsaitreequality_small(j);
+    document.getElementById("bonsaij_level_contests").innerText = j.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_cp_contests").innerHTML = (Math.round((j.foliage+j.branches+j.trunk+j.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaij_ttg_contests").innerText = treetypegroupname[j.treetypegroup];
+    document.getElementById("bonsaij_st_contests").innerText = styletypename[j.styletype];
+    document.getElementById("bonsaij_nature_contests").innerText = natures[j.nature];
+    document.getElementById("bonsaij_f_contests").innerHTML = j.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_b_contests").innerHTML = j.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_t_contests").innerHTML = j.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_r_contests").innerHTML = j.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaij_nr_contests").innerText = "#"+number2+"0";
+    document.getElementById("bonsaij_idstring_contests").innerText = j.idstring;
+}
+
 function fetchbonsaimenu_shop(number1, number2, a, b, c, d, e, f, g, h, i, j) {
     document.getElementById("bonsaia_price_sell").innerText = a.price.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaia_name_sell").innerText = a.name.toLocaleString('en', {minimumFractionDigits: 0});
@@ -609,24 +761,6 @@ function fetchunlocks() {
     
     //Unlock skills
     if (skills.treestyles1==1) {
-        newOption = new Option('Chokan - Formal Upright Style','1');
-        document.getElementById('menu_style').add(newOption,undefined);
-    
-        newOption = new Option('Moyogi - Informal Upright Style','2');
-        document.getElementById('menu_style').add(newOption,undefined);
-    
-        newOption = new Option('Shakan - Slanting Style','3');
-        document.getElementById('menu_style').add(newOption,undefined);
-    
-        newOption = new Option('Chokan - Formal Upright Style','1');
-        document.getElementById('menu_style_mobile').add(newOption,undefined);
-    
-        newOption = new Option('Moyogi - Informal Upright Style','2');
-        document.getElementById('menu_style_mobile').add(newOption,undefined);
-    
-        newOption = new Option('Shakan - Slanting Style','3');
-        document.getElementById('menu_style_mobile').add(newOption,undefined);
-    
         $(document).ready(function(){
             $('#Skill_Treestyles1').hide();
             $('#Skill_Treestyles1_Learned').show();
@@ -637,6 +771,7 @@ function fetchunlocks() {
         document.getElementById("Skill_Treestyles1_Button").innerHTML = "Learned";
         Button_Skill_Treestyles1.className = "";
         document.getElementById("Button_Skill_Treestyles1").style.cursor= "auto";
+        treestyles1set=1;
     }
     
     if (skills.robot1==1) {
