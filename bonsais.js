@@ -657,6 +657,12 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 $(document).ready(function(){
                     $('#menu_style2').hide();
                     $('#menu_style2_mobile').hide();
+           
+                    $('#menu_style').val(seedling1.styletype);
+                    $('#menu_style').trigger('change');
+           
+                    $('#menu_style_mobile').val(seedling1.styletype);
+                    $('#menu_style_mobile').trigger('change');
                 });
                 document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
                 document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
@@ -1051,11 +1057,15 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.seedlings_ontheway -=1;
     document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});
     $(document).ready(function(){
-        $('#menu_style').hide();
-        $('#menu_style_mobile').hide();
+        $('#menu_style2').hide();
+        $('#menu_style2_mobile').hide();
+           
+        $('#menu_style').val(0);
+        $('#menu_style').trigger('change');
+           
+        $('#menu_style_mobile').val(0);
+        $('#menu_style_mobile').trigger('change');
     });
-    document.getElementById('menu_style').value="0";
-    document.getElementById('menu_style_mobile').value="0";
     document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
     document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';        
     if (seedling1.planting_choosen==1) {

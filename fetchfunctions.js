@@ -808,4 +808,27 @@ function fetchunlocks() {
         Button_Skill_Compost1.className = "";
         document.getElementById("Button_Skill_Compost1").style.cursor= "auto";
     }
+    
+    //Unlock Clubs/Leagues
+    if (clubs_leagues.ttg01==3) {
+        $(document).ready(function(){
+            $('#ButtonTTG01_R1').hide();
+            $('#ButtonTTG01_R2').hide();
+            $('#ButtonTTG01_R3').hide();
+        });
+    }
+    else if (clubs_leagues.ttg01==2) {
+        $(document).ready(function(){
+            $('#ButtonTTG01_R1').hide();
+            $('#ButtonTTG01_R2').hide();
+            $('#ButtonTTG01_R3').show();
+        });
+    }
+    else if (clubs_leagues.ttg01==1) {
+        $(document).ready(function(){
+            $('#ButtonTTG01_R1').hide();
+            $('#ButtonTTG01_R2').show();
+            $('#ButtonTTG01_R3').hide();
+        });
+    }
 }

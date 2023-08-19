@@ -20,8 +20,10 @@ w.addEventListener('message', function(e){
     console.log(time);
     menu_change();
     menu_shop_change();
-    menu_contests_change();
-
+    if (contests_visible==1) {
+        menu_contests_change();
+    }
+    
     if (worker01.expedition>0) {
         worker01.expedition_zeit -= 1;
         document.getElementById("zeit_worker01").innerHTML = "("+worker01.expedition_zeit+"&nbsp;seconds left)";  
@@ -164,6 +166,7 @@ function SaveGame() {
     localStorage.setItem('resources', JSON.stringify(resources));
     localStorage.setItem('equipment', JSON.stringify(equipment));
     localStorage.setItem('skills', JSON.stringify(skills));
+    localStorage.setItem('clubs_leagues', JSON.stringify(clubs_leagues));
     localStorage.setItem('worker01', JSON.stringify(worker01));
     localStorage.setItem('worker02', JSON.stringify(worker02));
     localStorage.setItem('worker03', JSON.stringify(worker03));
@@ -203,6 +206,7 @@ function LoadGame() {
     resources = JSON.parse(localStorage.getItem('resources'));
     equipment = JSON.parse(localStorage.getItem('equipment'));
     skills = JSON.parse(localStorage.getItem('skills'));
+    clubs_leagues = JSON.parse(localStorage.getItem('clubs_leagues'));
     worker01 = JSON.parse(localStorage.getItem('worker01'));
     worker02 = JSON.parse(localStorage.getItem('worker02'));
     worker03 = JSON.parse(localStorage.getItem('worker03'));

@@ -62,6 +62,44 @@ skillexperience[7]= 72;
 skillexperience[8]= 86;
 skillexperience[9]= 103;
 
+var clubs_leagues = {
+    ttg01: 0,
+    ttg02: 0,
+    ttg03: 0,
+    ttg04: 0,
+    ttg05: 0,
+    ttg06: 0,
+    ttg07: 0,
+    ttg08: 0,
+    ttg09: 0,
+    st01: 0,
+    st02: 0,
+    st03: 0,
+    st04: 0,
+    st05: 0,
+    st06: 0,
+    st07: 0,
+    st08: 0,
+    st09: 0,
+    st10: 0,
+    st11: 0,
+    st12: 0,
+    st13: 0,
+    st14: 0,
+    st15: 0,
+    st16: 0,
+    lea01: 0,
+    lea02: 0,
+    lea03: 0,
+    lea04: 0,
+    lea05: 0,
+    lea06: 0,
+    lea07: 0,
+    lea08: 0,
+    lea09: 0,
+    lea10: 0,
+}
+
 var newOption = 0;
 var x=1;
 var x_shop=1;
@@ -73,9 +111,11 @@ var naturepoints=0;
 var leftpoints=0;
 var autosave=0;
 var styletype=0;
+var contests_visible=0;
 var bonsaichoosen=0;
 var bonsaichoosenx=0;
-var constestsx=0;
+var constestsz=0;
+var contests_id= "-";
 
 var worker01 = {
     busy: 0,
