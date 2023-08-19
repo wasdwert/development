@@ -616,13 +616,7 @@ function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5,
                 
                 $(document).ready(function(){
                     $('#menu_style2').show();
-                    if (treestyles1set==1) {
-                        $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
-                    }
                     $('#menu_style2_mobile').show();
-                    if (treestyles1set==1) {
-                        $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
-                    }
                 });
             }
             else {
@@ -969,25 +963,25 @@ function treename (seedlingx) {
 
 function treename2 (seedlingx, a) {
     if (seedlingx.styletype==1) {
-        return a+idstring.toString().padStart(5, '0')+'CH';
+        return a+id_string.toString().padStart(5, '0')+'CH';
     }
     else if (seedlingx.styletype==2) {
-        return a+idstring.toString().padStart(5, '0')+'MO';
+        return a+id_string.toString().padStart(5, '0')+'MO';
     }
     else if (seedlingx.styletype==3) {
-        return a+idstring.toString().padStart(5, '0')+'SK';
+        return a+id_string.toString().padStart(5, '0')+'SK';
     }
     else if (seedlingx.styletype==4) {
-        return a+idstring.toString().padStart(5, '0')+'HA';
+        return a+id_string.toString().padStart(5, '0')+'HA';
     }
     else if (seedlingx.styletype==5) {
-        return a+idstring.toString().padStart(5, '0')+'SO';
+        return a+id_string.toString().padStart(5, '0')+'SO';
     }
     else if (seedlingx.styletype==6) {
-        return a+idstring.toString().padStart(5, '0')+'KE';
+        return a+id_string.toString().padStart(5, '0')+'KE';
     }
     else if (seedlingx.styletype==7) {
-        return a+idstring.toString().padStart(5, '0')+'KA';
+        return a+id_string.toString().padStart(5, '0')+'KA';
     }
 }
 
@@ -995,9 +989,9 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
     bonsaixx.id = statistics.bonsais_total+1;
-    idstring=bonsaixx.id;
+    id_string=bonsaixx.id;
     bonsaixx.name = treename(seedlingx);
-    bonsaixx.idstring = bonsaixx.name;
+    bonsaixx.id_string = bonsaixx.name;
     bonsaixx.treetype = seedlingx.treetype;
     bonsaixx.treetypegroup = seedlingx.treetypegroup;
     bonsaixx.styletype = seedlingx.styletype;

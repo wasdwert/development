@@ -61,6 +61,10 @@ function learn_treestyles1() {
         skills.treestyles1=1;
         fetchvalues();
         fetchunlocks();
+        $(document).ready(function(){
+            $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+            $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+        });
     }
     else {}
 }

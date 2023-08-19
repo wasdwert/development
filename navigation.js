@@ -270,7 +270,6 @@ function menu_change(a) {
 
 function menu_contests_change() {
     x_contests = document.getElementById("menu_contests").value;
-    bonsaichoosen=0;
     if (x_contests==1) {
         fetchbonsaimenu_contests("00", "01", bonsai001, bonsai002, bonsai003, bonsai004, bonsai005, bonsai006, bonsai007, bonsai008, bonsai009, bonsai010)
     }

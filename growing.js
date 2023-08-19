@@ -5,7 +5,7 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_treequality").style.backgroundImage = fetchbonsaitreequality_big(bonsaixx);
         document.getElementById("bonsai_detail_name").innerText = bonsaixx.name; 
         document.getElementById("bonsai_detail_name_mobile").innerText = bonsaixx.name; 
-        document.getElementById("bonsai_detail_id").innerText = bonsaixx.idstring; 
+        document.getElementById("bonsai_detail_id").innerText = bonsaixx.id_string; 
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];
@@ -107,7 +107,7 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_treequality").style.backgroundImage = fetchbonsaitreequality_big(bonsaixx);
         document.getElementById("bonsai_detail_name").innerText = bonsaixx.name; 
         document.getElementById("bonsai_detail_name_mobile").innerText = bonsaixx.name;
-        document.getElementById("bonsai_detail_id").innerText = bonsaixx.idstring; 
+        document.getElementById("bonsai_detail_id").innerText = bonsaixx.id_string; 
         document.getElementById("bonsai_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "100", "100");
         document.getElementById("bonsai_detail_treetype").innerText = treetypename[bonsaixx.treetype];

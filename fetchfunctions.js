@@ -178,7 +178,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaia_t_contests").innerHTML = a.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaia_r_contests").innerHTML = a.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaia_nr_contests").innerText = "#"+number1+"1";
-    document.getElementById("bonsaia_idstring_contests").innerText = a.idstring;
+    document.getElementById("bonsaia_idstring_contests").innerText = a.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaib_name_contests").innerText = b.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaib_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, b, "43.75", "43.75");
@@ -193,7 +193,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaib_t_contests").innerHTML = b.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaib_r_contests").innerHTML = b.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaib_nr_contests").innerText = "#"+number1+"2";
-    document.getElementById("bonsaib_idstring_contests").innerText = b.idstring;
+    document.getElementById("bonsaib_idstring_contests").innerText = b.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaic_name_contests").innerText = c.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaic_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, c, "43.75", "43.75");
@@ -208,7 +208,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaic_t_contests").innerHTML = c.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaic_r_contests").innerHTML = c.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaic_nr_contests").innerText = "#"+number1+"3";
-    document.getElementById("bonsaic_idstring_contests").innerText = c.idstring;
+    document.getElementById("bonsaic_idstring_contests").innerText = c.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaid_name_contests").innerText = d.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaid_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, d, "43.75", "43.75");
@@ -223,7 +223,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaid_t_contests").innerHTML = d.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaid_r_contests").innerHTML = d.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaid_nr_contests").innerText = "#"+number1+"4";
-    document.getElementById("bonsaid_idstring_contests").innerText = d.idstring;
+    document.getElementById("bonsaid_idstring_contests").innerText = d.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaie_name_contests").innerText = e.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaie_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, e, "43.75", "43.75");
@@ -238,7 +238,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaie_t_contests").innerHTML = e.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaie_r_contests").innerHTML = e.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaie_nr_contests").innerText = "#"+number1+"5";
-    document.getElementById("bonsaie_idstring_contests").innerText = e.idstring;
+    document.getElementById("bonsaie_idstring_contests").innerText = e.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaif_name_contests").innerText = f.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaif_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, f, "43.75", "43.75");
@@ -253,7 +253,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaif_t_contests").innerHTML = f.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaif_r_contests").innerHTML = f.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaif_nr_contests").innerText = "#"+number1+"6";
-    document.getElementById("bonsaif_idstring_contests").innerText = f.idstring;
+    document.getElementById("bonsaif_idstring_contests").innerText = f.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaig_name_contests").innerText = g.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaig_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, g, "43.75", "43.75");
@@ -268,7 +268,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaig_t_contests").innerHTML = g.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaig_r_contests").innerHTML = g.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaig_nr_contests").innerText = "#"+number1+"7";
-    document.getElementById("bonsaig_idstring_contests").innerText = g.idstring;
+    document.getElementById("bonsaig_idstring_contests").innerText = g.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaih_name_contests").innerText = h.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaih_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, h, "43.75", "43.75");
@@ -283,7 +283,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaih_t_contests").innerHTML = h.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaih_r_contests").innerHTML = h.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaih_nr_contests").innerText = "#"+number1+"8";
-    document.getElementById("bonsaih_idstring_contests").innerText = h.idstring;
+    document.getElementById("bonsaih_idstring_contests").innerText = h.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaii_name_contests").innerText = i.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaii_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, i, "43.75", "43.75");
@@ -298,7 +298,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaii_t_contests").innerHTML = i.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaii_r_contests").innerHTML = i.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaii_nr_contests").innerText = "#"+number1+"9";
-    document.getElementById("bonsaii_idstring_contests").innerText = i.idstring;
+    document.getElementById("bonsaii_idstring_contests").innerText = i.id_string.toLocaleString('en', {minimumFractionDigits: 0});
     
     document.getElementById("bonsaij_name_contests").innerText = j.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaij_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, j, "43.75", "43.75");
@@ -313,7 +313,7 @@ function fetchbonsaimenu_contests(number1, number2, a, b, c, d, e, f, g, h, i, j
     document.getElementById("bonsaij_t_contests").innerHTML = j.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaij_r_contests").innerHTML = j.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaij_nr_contests").innerText = "#"+number2+"0";
-    document.getElementById("bonsaij_idstring_contests").innerText = j.idstring;
+    document.getElementById("bonsaij_idstring_contests").innerText = j.id_string.toLocaleString('en', {minimumFractionDigits: 0});
 }
 
 function fetchbonsaimenu_shop(number1, number2, a, b, c, d, e, f, g, h, i, j) {
@@ -771,7 +771,10 @@ function fetchunlocks() {
         document.getElementById("Skill_Treestyles1_Button").innerHTML = "Learned";
         Button_Skill_Treestyles1.className = "";
         document.getElementById("Button_Skill_Treestyles1").style.cursor= "auto";
-        treestyles1set=1;
+        $(document).ready(function(){
+            $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+            $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+        });
     }
     
     if (skills.robot1==1) {

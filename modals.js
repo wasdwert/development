@@ -233,6 +233,7 @@ spancontestsenter.onclick = function() {
 spancontestscancel.onclick = function() {
     modalcontests.style.display = "none";
     bonsaichoosen=0;
+    bonsaichoosenx=0;
     x_contests = 1;
     document.getElementById("menu_contests").value=x_contests;       
     $('#menu_contests').trigger('change');
@@ -240,32 +241,32 @@ spancontestscancel.onclick = function() {
 }
 
 spancontestsbonsaia.onclick = function() {
-    contests_choosebonsai(x=1);
+    contests_choosebonsai(constestsx=1);
 }
 spancontestsbonsaib.onclick = function() {
-    contests_choosebonsai(x=2);   
+    contests_choosebonsai(constestsx=2);   
 }
 spancontestsbonsaic.onclick = function() {
-    contests_choosebonsai(x=3);  
+    contests_choosebonsai(constestsx=3);  
 }
 spancontestsbonsaid.onclick = function() {
-    contests_choosebonsai(x=4);   
+    contests_choosebonsai(constestsx=4);   
 }
 spancontestsbonsaie.onclick = function() {
-    contests_choosebonsai(x=5);  
+    contests_choosebonsai(constestsx=5);  
 }
 spancontestsbonsaif.onclick = function() {
-    contests_choosebonsai(x=6);   
+    contests_choosebonsai(constestsx=6);   
 }
 spancontestsbonsaig.onclick = function() {
-    contests_choosebonsai(x=7);   
+    contests_choosebonsai(constestsx=7);   
 }
 spancontestsbonsaih.onclick = function() {
-    contests_choosebonsai(x=8);   
+    contests_choosebonsai(constestsx=8);   
 }
 spancontestsbonsaii.onclick = function() {
-    contests_choosebonsai(x=9);  
+    contests_choosebonsai(constestsx=9);  
 }
 spancontestsbonsaij.onclick = function() {
-    contests_choosebonsai(x=10);      
+    contests_choosebonsai(constestsx=10);      
 }

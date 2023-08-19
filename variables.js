@@ -65,15 +65,17 @@ skillexperience[9]= 103;
 var newOption = 0;
 var x=1;
 var x_shop=1;
+var x_contests=1;
 var z=0;
 var levels=0;
-var idstring=0;
+var id_string=0;
 var naturepoints=0;
 var leftpoints=0;
-var treestyles1set=0;
 var autosave=0;
 var styletype=0;
 var bonsaichoosen=0;
+var bonsaichoosenx=0;
+var constestsx=0;
 
 var worker01 = {
     busy: 0,
