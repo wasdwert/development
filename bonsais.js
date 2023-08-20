@@ -1259,47 +1259,47 @@ function cpdistribution2(bonsaixx, level_cp_tq, level_index) {
         leftpoints=level_cp_tq[level_index]-naturepoints;
     }
     if (bonsaixx.treetypegroup<=4) {
-        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 25);
+        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 25, skills);
     }
     else if (bonsaixx.treetypegroup<=6) {
-        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 32);
+        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 32, skills);
     }
     else if (bonsaixx.treetypegroup<=8) {
-        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 40);
+        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 40, skills);
     }
     else {
-        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 50);
+        cpdistribution_growing(bonsaixx, level_cp_tq, level_index, 50, skills);
     }
 }
 
-function cpdistribution_growing(bonsaixx, level_cp_tq, level_index, a) {
-    if (skills.growing>=a) {
-        cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a);
+function cpdistribution_growing(bonsaixx, level_cp_tq, level_index, a, b) {
+    if (b.growing>=a) {
+        cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
     }
     else {
-        if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.growing)* 10) / 10<skills.growing*0.4) {
-            if (skills.growing*0.4>leftpoints) {
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a);
+        if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.growing)* 10) / 10<b.growing*0.4) {
+            if (b.growing*0.4>leftpoints) {
+                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
             }
             else {
-                leftpoints=skills.growing*0.4;
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a);
+                leftpoints=b.growing*0.4;
+                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
             }
         }
         else {
-            if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.growing)* 10) / 10>leftpoints) {
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a);
+            if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.growing)* 10) / 10>leftpoints) {
+                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
             }
             else {
-                leftpoints=Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.growing)* 10) / 10;
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a);
+                leftpoints=Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.growing)* 10) / 10;
+                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
             }
         }
     }
 }
 
-function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
-    if (skills.shaping>=a) {
+function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b) {
+    if (b.shaping>=a) {
         bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
         bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
         bonsaixx.trunk_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 3))* 10) / 10;
@@ -1309,7 +1309,7 @@ function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
         leftpoints=0;
     }
     else {
-        if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.shaping)* 10) / 10==0) {
+        if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.shaping)* 10) / 10==0) {
             naturepoints=naturepoints+leftpoints;
             bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
             bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
@@ -1318,8 +1318,8 @@ function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
             naturepoints=0;
             leftpoints=0;
         }
-        else if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.shaping)* 10) / 10<skills.shaping*0.4) {
-            if (skills.shaping*0.4>leftpoints) {
+        else if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.shaping)* 10) / 10<b.shaping*0.4) {
+            if (b.shaping*0.4>leftpoints) {
                 bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
                 bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
                 bonsaixx.trunk_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 3))* 10) / 10;
@@ -1329,9 +1329,9 @@ function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
                 leftpoints=0;
             }
             else {
-                leftpoints=leftpoints-skills.shaping*0.4;
+                leftpoints=leftpoints-b.shaping*0.4;
                 naturepoints=naturepoints+leftpoints;
-                leftpoints=skills.shaping*0.4;
+                leftpoints=b.shaping*0.4;
                 bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
                 bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
                 bonsaixx.trunk_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 3))* 10) / 10;
@@ -1342,7 +1342,7 @@ function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
             }
         }
         else {
-            if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.shaping)* 10) / 10>leftpoints) {
+            if (Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.shaping)* 10) / 10>leftpoints) {
                 bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
                 bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
                 bonsaixx.trunk_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 3))* 10) / 10;
@@ -1352,9 +1352,9 @@ function cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a) {
                 leftpoints=0;
             }
             else {
-                leftpoints=leftpoints-Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.shaping)* 10) / 10;
+                leftpoints=leftpoints-Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.shaping)* 10) / 10;
                 naturepoints=naturepoints+leftpoints;
-                leftpoints=Math.round(((((level_cp_tq[level_index]/10)*8)/a)*skills.shaping)* 10) / 10;
+                leftpoints=Math.round(((((level_cp_tq[level_index]/10)*8)/a)*b.shaping)* 10) / 10;
                 bonsaixx.foliage_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 1))* 10) / 10;
                 bonsaixx.branches_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 2))* 10) / 10;
                 bonsaixx.trunk_new = Math.round(((naturepoints/4)*naturedistribution(bonsaixx, 3))* 10) / 10;

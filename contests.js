@@ -35,6 +35,45 @@ function club_ttg01_request3() {
     document.getElementById('modal_contests_overflow').scrollTop =0;
 }
 
+function club_ttg01_competition1() {
+    contests_visible=1;
+    contests_id="TTG01_C1";
+    menu_contests_change();
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+    
+    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Beginner";
+    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+    
+    modalcontests.style.display = "block";
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+}
+
+function club_ttg01_competition2() {
+    contests_visible=1;
+    contests_id="TTG01_C2";
+    menu_contests_change();
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+    
+    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Advanced";
+    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+    
+    modalcontests.style.display = "block";
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+}
+
+function club_ttg01_competition3() {
+    contests_visible=1;
+    contests_id="TTG01_C3";
+    menu_contests_change();
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+    
+    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Expert";
+    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+    
+    modalcontests.style.display = "block";
+    document.getElementById('modal_contests_overflow').scrollTop =0;
+}
+
 function contests_bonsaiunavailable() {
     if (x_contests==1) {
         contests_bonsaiunavailable2(bonsai001, Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA", constestsz=1);
@@ -124,6 +163,7 @@ function contests_bonsaiunavailable3(bonsaixx, a, b) {
             document.getElementById(b).innerText = "Unfit"; 
         }
     }
+    else {}
 } 
 
 function contests_choosebonsai(constestsz) {
@@ -212,7 +252,12 @@ function contests_choosebonsai2(bonsaixx, constestsz) {
             contests_choosebonsai3();
         }
     }
-     
+    else {
+        if (bonsaixx.id==0 || bonsaixx.growing==1) {}
+        else {
+            contests_choosebonsai3();
+        }
+    }
 }
 
 function contests_choosebonsai3() {
@@ -371,6 +416,10 @@ function contests_result() {
             }
         }
         if (contests_id=="TTG01_R1") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').show();
+                $('#modal_contests_result_competition').hide();
+            });            
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - First Request";
             document.getElementById("modal_contests_result_request_result").innerHTML = "The represented bonsai fits the requirements made in our request. Thank you very much.<br>You may proceed with the next request. Two more to go.";
             document.getElementById("modal_contests_result_request_reward").innerText = "3 XP";
@@ -380,11 +429,18 @@ function contests_result() {
                 $('#ButtonTTG01_R1').hide();
                 $('#ButtonTTG01_R2').show();
                 $('#ButtonTTG01_R3').hide();
+                $('#ButtonTTG01_C1').hide();
+                $('#ButtonTTG01_C2').hide();
+                $('#ButtonTTG01_C3').hide();
             });
             bonsaichoosen=0;
             bonsaichoosenx=0;
         }
         else if (contests_id=="TTG01_R2") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').show();
+                $('#modal_contests_result_competition').hide();
+            }); 
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Second Request";
             document.getElementById("modal_contests_result_request_result").innerHTML = "Once again the represented bonsai fits the requirements we made. Thank you very much.<br>You may proceed with the next request. One more to go.";
             document.getElementById("modal_contests_result_request_reward").innerText = "5 XP";
@@ -394,11 +450,18 @@ function contests_result() {
                 $('#ButtonTTG01_R1').hide();
                 $('#ButtonTTG01_R2').hide();
                 $('#ButtonTTG01_R3').show();
+                $('#ButtonTTG01_C1').hide();
+                $('#ButtonTTG01_C2').hide();
+                $('#ButtonTTG01_C3').hide();
             });
             bonsaichoosen=0;
             bonsaichoosenx=0;
         }
         else if (contests_id=="TTG01_R3") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').show();
+                $('#modal_contests_result_competition').hide();
+            }); 
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Third Request";
             document.getElementById("modal_contests_result_request_result").innerHTML = "Your third represented bonsai, has as usual, fit our requirements. We congratulate you to finishing all our requests.<br>You may proceed now with competing in our competitions.";
             document.getElementById("modal_contests_result_request_reward").innerText = "10 XP";
@@ -408,7 +471,99 @@ function contests_result() {
                 $('#ButtonTTG01_R1').hide();
                 $('#ButtonTTG01_R2').hide();
                 $('#ButtonTTG01_R3').hide();
+                $('#ButtonTTG01_C1').show();
+                $('#ButtonTTG01_C2').hide();
+                $('#ButtonTTG01_C3').hide();
             });
+            bonsaichoosen=0;
+            bonsaichoosenx=0;
+        }
+    }
+    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+        if (bonsaichoosenx==1) {
+            if (bonsaichoosen==1) {
+                contests_result_bonsaixb(bonsai001);
+            }
+            else if (bonsaichoosen==2) {
+                contests_result_bonsaixb(bonsai002);
+            }
+            else if (bonsaichoosen==3) {
+                contests_result_bonsaixb(bonsai003);
+            }
+            else if (bonsaichoosen==4) {
+                contests_result_bonsaixb(bonsai004);
+            }
+            else if (bonsaichoosen==5) {
+                contests_result_bonsaixb(bonsai005);
+            }
+            else if (bonsaichoosen==6) {
+                contests_result_bonsaixb(bonsai006);
+            }
+            else if (bonsaichoosen==7) {
+                contests_result_bonsaixb(bonsai007);
+            }
+            else if (bonsaichoosen==8) {
+                contests_result_bonsaixb(bonsai008);
+            }
+            else if (bonsaichoosen==9) {
+                contests_result_bonsaixb(bonsai009);
+            }
+            else if (bonsaichoosen==10) {
+                contests_result_bonsaixb(bonsai010);
+            }
+        }
+        else if (bonsaichoosenx==11) {
+            if (bonsaichoosen==1) {
+                contests_result_bonsaixb(bonsai011);
+            }
+            else if (bonsaichoosen==2) {
+                contests_result_bonsaixb(bonsai012);
+            }
+            else if (bonsaichoosen==3) {
+                contests_result_bonsaixb(bonsai013);
+            }
+            else if (bonsaichoosen==4) {
+                contests_result_bonsaixb(bonsai014);
+            }
+            else if (bonsaichoosen==5) {
+                contests_result_bonsaixb(bonsai015);
+            }
+            else if (bonsaichoosen==6) {
+                contests_result_bonsaixb(bonsai016);
+            }
+            else if (bonsaichoosen==7) {
+                contests_result_bonsaixb(bonsai017);
+            }
+            else if (bonsaichoosen==8) {
+                contests_result_bonsaixb(bonsai018);
+            }
+            else if (bonsaichoosen==9) {
+                contests_result_bonsaixb(bonsai019);
+            }
+            else if (bonsaichoosen==10) {
+                contests_result_bonsaixb(bonsai020);
+            }
+        }  
+        if (contests_id=="TTG01_C1") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').hide();
+                $('#modal_contests_result_competition').show();
+            }); 
+            contests_difficulty=1;
+            contests_comcalc();
+            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Beginner";
+            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
+            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
+            //experience(10);
+            //clubs_leagues.ttg01=3;
+            //$(document).ready(function(){
+            //    $('#ButtonTTG01_R1').hide();
+            //    $('#ButtonTTG01_R2').hide();
+            //    $('#ButtonTTG01_R3').hide();
+            //    $('#ButtonTTG01_C1').hide();
+            //    $('#ButtonTTG01_C2').hide();
+            //    $('#ButtonTTG01_C3').hide();
+            //}); 
             bonsaichoosen=0;
             bonsaichoosenx=0;
         }
@@ -429,4 +584,20 @@ function contests_result_bonsaixa(bonsaixx) {
     document.getElementById("bonsaixa_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaixa_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaixa_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
+}
+
+function contests_result_bonsaixb(bonsaixx) {
+    document.getElementById("bonsaixb_name_contests").innerText = bonsaixx.name.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "50", "50");
+    document.getElementById("ButtonBonsaiXB_contests").style.backgroundImage= fetchbonsaitreequality(bonsaixx);
+    document.getElementById("bonsaixb_level_contests").innerText = bonsaixx.level.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_cp_contests").innerHTML = (Math.round((bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});;
+    document.getElementById("bonsaixb_ttg_contests").innerText = treetypegroupname[bonsaixx.treetypegroup];
+    document.getElementById("bonsaixb_st_contests").innerText = styletypename[bonsaixx.styletype];
+    document.getElementById("bonsaixb_nature_contests").innerText = natures[bonsaixx.nature];
+    document.getElementById("bonsaixb_f_contests").innerHTML = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_b_contests").innerHTML = bonsaixx.branches.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
 }
