@@ -567,6 +567,52 @@ function contests_result() {
             bonsaichoosen=0;
             bonsaichoosenx=0;
         }
+        else if (contests_id=="TTG01_C2") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').hide();
+                $('#modal_contests_result_competition').show();
+            }); 
+            contests_difficulty=2;
+            contests_comcalc();
+            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Advanced";
+            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
+            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
+            //experience(10);
+            //clubs_leagues.ttg01=3;
+            //$(document).ready(function(){
+            //    $('#ButtonTTG01_R1').hide();
+            //    $('#ButtonTTG01_R2').hide();
+            //    $('#ButtonTTG01_R3').hide();
+            //    $('#ButtonTTG01_C1').hide();
+            //    $('#ButtonTTG01_C2').hide();
+            //    $('#ButtonTTG01_C3').hide();
+            //}); 
+            bonsaichoosen=0;
+            bonsaichoosenx=0;
+        }
+        else if (contests_id=="TTG01_C3") {
+            $(document).ready(function(){
+                $('#modal_contests_result_request').hide();
+                $('#modal_contests_result_competition').show();
+            }); 
+            contests_difficulty=3;
+            contests_comcalc();
+            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Expert";
+            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
+            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
+            //experience(10);
+            //clubs_leagues.ttg01=3;
+            //$(document).ready(function(){
+            //    $('#ButtonTTG01_R1').hide();
+            //    $('#ButtonTTG01_R2').hide();
+            //    $('#ButtonTTG01_R3').hide();
+            //    $('#ButtonTTG01_C1').hide();
+            //    $('#ButtonTTG01_C2').hide();
+            //    $('#ButtonTTG01_C3').hide();
+            //}); 
+            bonsaichoosen=0;
+            bonsaichoosenx=0;
+        }
     } 
 }
 
@@ -579,10 +625,10 @@ function contests_result_bonsaixa(bonsaixx) {
     document.getElementById("bonsaixa_ttg_contests").innerText = treetypegroupname[bonsaixx.treetypegroup];
     document.getElementById("bonsaixa_st_contests").innerText = styletypename[bonsaixx.styletype];
     document.getElementById("bonsaixa_nature_contests").innerText = natures[bonsaixx.nature];
-    document.getElementById("bonsaixa_f_contests").innerHTML = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixa_b_contests").innerHTML = bonsaixx.branches.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixa_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixa_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixa_f_contests").innerHTML = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixa_b_contests").innerHTML = bonsaixx.branches.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixa_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixa_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 1});
     document.getElementById("bonsaixa_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
 }
 
@@ -595,9 +641,9 @@ function contests_result_bonsaixb(bonsaixx) {
     document.getElementById("bonsaixb_ttg_contests").innerText = treetypegroupname[bonsaixx.treetypegroup];
     document.getElementById("bonsaixb_st_contests").innerText = styletypename[bonsaixx.styletype];
     document.getElementById("bonsaixb_nature_contests").innerText = natures[bonsaixx.nature];
-    document.getElementById("bonsaixb_f_contests").innerHTML = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixb_b_contests").innerHTML = bonsaixx.branches.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixb_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 0});
-    document.getElementById("bonsaixb_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 0});
+    document.getElementById("bonsaixb_f_contests").innerHTML = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixb_b_contests").innerHTML = bonsaixx.branches.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixb_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 1});
+    document.getElementById("bonsaixb_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 1});
     document.getElementById("bonsaixb_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
 }

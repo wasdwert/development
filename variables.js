@@ -21,7 +21,7 @@ var statistics = {
 var resources = {
     money: 0,
     organic_waste: 0,
-    compost1: 10,
+    compost1: 25,
     fertilizer1: 1,
     bolt: 5,
     metal: 3,

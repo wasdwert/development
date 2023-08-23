@@ -11,6 +11,42 @@ function contests_comcalc () {
             $('#modal_contests_result_c9').hide();
         });
     }
+    else if (contests_difficulty==2) {
+        $(document).ready(function(){
+            $('#modal_contests_result_c2').show();
+            $('#modal_contests_result_c3').show();
+            $('#modal_contests_result_c4').show();
+            $('#modal_contests_result_c5').show();
+            $('#modal_contests_result_c6').hide();
+            $('#modal_contests_result_c7').hide();
+            $('#modal_contests_result_c8').hide();
+            $('#modal_contests_result_c9').hide();
+        });
+    }
+    if (contests_difficulty==3) {
+        $(document).ready(function(){
+            $('#modal_contests_result_c2').show();
+            $('#modal_contests_result_c3').show();
+            $('#modal_contests_result_c4').show();
+            $('#modal_contests_result_c5').show();
+            $('#modal_contests_result_c6').show();
+            $('#modal_contests_result_c7').show();
+            $('#modal_contests_result_c8').hide();
+            $('#modal_contests_result_c9').hide();
+        });
+    }
+    if (contests_difficulty==4) {
+        $(document).ready(function(){
+            $('#modal_contests_result_c2').show();
+            $('#modal_contests_result_c3').show();
+            $('#modal_contests_result_c4').show();
+            $('#modal_contests_result_c5').show();
+            $('#modal_contests_result_c6').show();
+            $('#modal_contests_result_c7').show();
+            $('#modal_contests_result_c8').show();
+            $('#modal_contests_result_c9').show();
+        });
+    }
     contests_comcalc_level();
     contests_comcalc_treequality();
     contests_comcalc_ttt();
@@ -31,75 +67,78 @@ function contests_comcalc () {
     contests_comcalc_cp(contests_bonsai_c8, contests_bonsai_c8);
     contests_comcalc_cp(contests_bonsai_c9, contests_bonsai_c9);
     
-    fetchbonsaimenu_contests_competition(contests_bonsai_c1, contests_bonsai_c2, contests_bonsai_c3);  
+    fetchbonsaimenu_contests_competition(contests_bonsai_c1, contests_bonsai_c2, contests_bonsai_c3, contests_bonsai_c4, contests_bonsai_c5, contests_bonsai_c6, contests_bonsai_c7, contests_bonsai_c8, contests_bonsai_c9);  
 }
 
 //Level
 function contests_comcalc_level () {
     if (contests_id=="TTG01_C1") {
-        contests_bonsai_c1.level=Math.round(Math.random()*20);
+        contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
-        contests_bonsai_c2.level=Math.round(Math.random()*20);
+        contests_bonsai_c2.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c2);
-        contests_bonsai_c3.level=Math.round(Math.random()*20);
+        contests_bonsai_c3.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c3);
     }
     else if (contests_id=="TTG01_C2") {
-        contests_bonsai_c1.level=Math.round(Math.random()*20);
+        contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
-        contests_bonsai_c1.level +=20;
-        contests_bonsai_c2.level=Math.round(Math.random()*20);
+        contests_bonsai_c1.level +=15;
+        contests_bonsai_c2.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c2);
-        contests_bonsai_c2.level +=20;
-        contests_bonsai_c3.level=Math.round(Math.random()*20);
+        contests_bonsai_c2.level +=15;
+        contests_bonsai_c3.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c3);
-        contests_bonsai_c3.level +=20;
-        contests_bonsai_c4.level=Math.round(Math.random()*20);
+        contests_bonsai_c3.level +=15;
+        contests_bonsai_c4.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c4);
-        contests_bonsai_c4.level +=20;
-        contests_bonsai_c5.level=Math.round(Math.random()*20);
+        contests_bonsai_c4.level +=15;
+        contests_bonsai_c5.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c5);
-        contests_bonsai_c5.level +=20;
+        contests_bonsai_c5.level +=15;
     }
     else if (contests_id=="TTG01_C3") {
-        contests_bonsai_c1.level=Math.round(Math.random()*20);
+        contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
-        contests_bonsai_c1.level +=40;
-        contests_bonsai_c2.level=Math.round(Math.random()*20);
+        contests_bonsai_c1.level +=30;
+        contests_bonsai_c2.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c2);
-        contests_bonsai_c2.level +=40;
-        contests_bonsai_c3.level=Math.round(Math.random()*20);
+        contests_bonsai_c2.level +=30;
+        contests_bonsai_c3.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c3);
-        contests_bonsai_c3.level +=40;
-        contests_bonsai_c4.level=Math.round(Math.random()*20);
+        contests_bonsai_c3.level +=30;
+        contests_bonsai_c4.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c4);
-        contests_bonsai_c4.level +=40;
-        contests_bonsai_c5.level=Math.round(Math.random()*20);
+        contests_bonsai_c4.level +=30;
+        contests_bonsai_c5.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c5);
-        contests_bonsai_c5.level +=40;
-        contests_bonsai_c6.level=Math.round(Math.random()*20);
+        contests_bonsai_c5.level +=30;
+        contests_bonsai_c6.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c6);
-        contests_bonsai_c6.level +=40;
-        contests_bonsai_c7.level=Math.round(Math.random()*20);
+        contests_bonsai_c6.level +=30;
+        contests_bonsai_c7.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c7);
-        contests_bonsai_c7.level +=40;
+        contests_bonsai_c7.level +=30;
     }
 }
 
 function contests_comcalc_level20 (a) {
-    if (a.level>=16) {
+    if (a.level>=20) {
     }
-    else if (a.level>=12) {
+    else if (a.level>=16) {
         a.level +=1;
     }
-    else if (a.level>=8) {
+    else if (a.level>=12) {
         a.level +=2;
     }
-    else if (a.level>=4) {
+    else if (a.level>=8) {
         a.level +=3;
     }
-    else if (a.level>=0) {
+    else if (a.level>=4) {
         a.level +=4;
+    }
+    else if (a.level>=0) {
+        a.level +=5;
     }
 }
 
@@ -257,7 +296,7 @@ function contests_comcalc_distribution() {
 }
 
 function contests_comcalc_distribution2(a) {
-    a.distributiontype=Math.round(Math.random()*10);
+    a.distributiontype=Math.round(Math.random()*12);
     if (a.distributiontype==0) {
         a.distributiontype=1;
     }
@@ -384,35 +423,41 @@ function cpdistribution2_com(a, b, level_cp_tq, level_index) {
                 }
             }
         }
-    }    
+    } 
     if (a.distributiontype==1) { //equalalways
         cpcom_lp_equalalways(a);
     }
     else if (a.distributiontype==2) { //equalingout
-        
+        cpcom_lp_equalingout(a);
     }
     else if (a.distributiontype==3) { //one_str_equal
-        
+        cpcom_lp_one_str_equal(a);
     }  
     else if (a.distributiontype==4) { //one_str_random
-        
+        cpcom_lp_one_str_random(a);
     }
     else if (a.distributiontype==5) { //one_weak_equal
-        
+        cpcom_lp_one_weak_equal(a);
     }
     else if (a.distributiontype==6) { //one_weak_random
-        
+        cpcom_lp_one_weak_random(a);
     }
     else if (a.distributiontype==7) { //one_random
         cpcom_lp_onerandom(a);
     }
-    else if (a.distributiontype==8) { //two_str_ran
-        
+    else if (a.distributiontype==8) { //two_str_equal
+        cpcom_lp_two_str_equal(a);
     }
-    else if (a.distributiontype==9) { //two_weak_ran
-        
+    else if (a.distributiontype==9) { //two_str_random
+        cpcom_lp_two_str_random(a);
     }
-    else if (a.distributiontype==10) { //two_random
+    else if (a.distributiontype==10) { //two_weak_equal
+        cpcom_lp_two_weak_equal(a);
+    }
+    else if (a.distributiontype==11) { //two_weak_random
+        cpcom_lp_two_weak_random(a);
+    }
+    else if (a.distributiontype==12) { //two_random
         cpcom_lp_tworandom(a);
     }
 }
@@ -483,6 +528,266 @@ function cpcom_lp_equalalways(a) {
     a.roots +=a.leftpointstotal/4;
 }
 
+function cpcom_lp_equalingout (a) {
+    if (a.foliage==0) {
+        if (a.branches==a.trunk) {
+            cpcom_lp_equalingout2 (a, a.roots);
+            a.foliage +=a.roots_new;
+            a.trunk +=a.branches_new;
+            a.branches +=a.trunk_new;
+            a.roots +=a.foliage_new;
+        }
+        else if (a.branches==a.roots) {
+            cpcom_lp_equalingout2 (a, a.trunk);
+            a.foliage +=a.roots_new;
+            a.branches +=a.branches_new;
+            a.roots +=a.trunk_new;
+            a.trunk +=a.foliage_new;
+        }
+        else {
+            cpcom_lp_equalingout2 (a, a.branches);
+            a.foliage +=a.roots_new;
+            a.trunk +=a.branches_new;
+            a.roots +=a.trunk_new;
+            a.branches +=a.foliage_new;
+        }
+    }
+    else if (a.branches==0) {
+        if (a.foliage==a.trunk) {
+            cpcom_lp_equalingout2 (a, a.roots);
+            a.branches +=a.roots_new;
+            a.trunk +=a.branches_new;
+            a.foliage +=a.trunk_new;
+            a.roots +=a.foliage_new;
+        }
+        else if (a.foliage==a.roots) {
+            cpcom_lp_equalingout2 (a, a.trunk);
+            a.branches +=a.roots_new;
+            a.foliage +=a.branches_new;
+            a.roots +=a.trunk_new;
+            a.trunk +=a.foliage_new;
+        }
+        else {
+            cpcom_lp_equalingout2 (a, a.foliage);
+            a.branches +=a.roots_new;
+            a.trunk +=a.branches_new;
+            a.roots +=a.trunk_new;
+            a.foliage +=a.foliage_new;
+        }
+    }
+    else if (a.trunk==0) {
+        if (a.foliage==a.branches) {
+            cpcom_lp_equalingout2 (a, a.roots);
+            a.trunk +=a.roots_new;
+            a.branches +=a.branches_new;
+            a.foliage +=a.trunk_new;
+            a.roots +=a.foliage_new;
+        }
+        else if (a.foliage==a.roots) {
+            cpcom_lp_equalingout2 (a, a.branches);
+            a.trunk +=a.roots_new;
+            a.roots +=a.branches_new;
+            a.foliage +=a.trunk_new;
+            a.branches +=a.foliage_new;
+        }
+        else {
+            cpcom_lp_equalingout2 (a, a.foliage);
+            a.trunk +=a.roots_new;
+            a.branches +=a.branches_new;
+            a.roots +=a.trunk_new;
+            a.foliage +=a.foliage_new;
+        }
+    }
+    else if (a.roots==0) {
+        if (a.foliage==a.branches) {
+            cpcom_lp_equalingout2 (a, a.trunk);
+            a.roots +=a.roots_new;
+            a.branches +=a.branches_new;
+            a.foliage +=a.trunk_new;
+            a.trunk +=a.foliage_new;
+        }
+        else if (a.foliage==a.trunk) {
+            cpcom_lp_equalingout2 (a, a.branches);
+            a.roots +=a.roots_new;
+            a.foliage +=a.branches_new;
+            a.trunk +=a.trunk_new;
+            a.branches +=a.foliage_new;
+        }
+        else {
+            cpcom_lp_equalingout2 (a, a.foliage);
+            a.roots +=a.roots_new;
+            a.branches +=a.branches_new;
+            a.trunk +=a.trunk_new;
+            a.foliage +=a.foliage_new;
+        }
+    }
+    else {
+        a.foliage +=a.leftpoints/4;
+        a.branches +=a.leftpoints/4;
+        a.trunk +=a.leftpoints/4;
+        a.roots +=a.leftpoints/4;
+    } 
+    a.foliage_new=0;
+    a.branches_new=0;
+    a.trunk_new=0;
+    a.roots_new=0;  
+    a.leftpoints=0;
+    leftpoints=0;
+}
+
+function cpcom_lp_equalingout2 (a, b) {
+    a.leftpoints=0;
+    a.leftpoints=b;
+    leftpoints=0;
+    if (a.leftpointstotal>a.leftpoints*2) {
+        leftpoints=1;
+        cpcom_lp_equalingout3 (a)
+    }
+    else {
+        if (a.leftpointstotal>a.leftpoints/2) {
+            leftpoints=2;
+            cpcom_lp_equalingout3 (a)
+        }
+        else {
+            leftpoints=3;
+            cpcom_lp_equalingout3 (a)
+        }
+    }
+}
+
+function cpcom_lp_equalingout3 (a) {
+    a.foliage_new=0;
+    a.branches_new=0;
+    a.trunk_new=0;
+    a.roots_new=0; 
+    if (leftpoints==3) {
+        a.roots_new=a.leftpointstotal;
+    }
+    else if (leftpoints==2) {
+        a.roots_new=(a.leftpoints/2);
+        a.leftpointstotal=(a.leftpointstotal-(a.leftpoints/2));
+        a.leftpoints=Math.round((a.leftpointstotal/3)*10)/10;
+        a.roots_new +=a.leftpoints;
+        a.branches_new +=a.leftpoints;
+        a.trunk_new +=a.leftpoints;
+        a.leftpointstotal=(a.leftpointstotal-(a.leftpoints*3));
+        a.roots_new +=a.leftpointstotal;
+    }
+    else if (leftpoints==1) {
+        a.roots_new=a.leftpoints;
+        a.branches_new +=(a.leftpoints/2);
+        a.trunk_new +=(a.leftpoints/2);
+        a.leftpointstotal=(a.leftpointstotal-(a.leftpoints*2));
+        a.leftpoints=(a.leftpointstotal/4);
+        a.roots_new +=a.leftpoints;
+        a.foliage_new +=a.leftpoints;
+        a.branches_new +=a.leftpoints;
+        a.trunk_new +=a.leftpoints;
+    }
+}
+
+function cpcom_lp_one_str_equal (a) {
+    if (a.nature==2 || a.nature==6 || a.nature==10) {
+        a.foliage +=a.leftpointstotal;
+    }
+    else if (a.nature==3 || a.nature==7 || a.nature==14) {
+        a.branches +=a.leftpointstotal;
+    }
+    else if (a.nature==4 || a.nature==11 || a.nature==15) {
+        a.trunk +=a.leftpointstotal;
+    }
+    else if (a.nature==8 || a.nature==12 || a.nature==16) {
+        a.roots +=a.leftpointstotal;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        a.foliage +=a.leftpointstotal/4;
+        a.branches +=a.leftpointstotal/4;
+        a.trunk +=a.leftpointstotal/4;
+        a.roots +=a.leftpointstotal/4;
+    }
+}
+
+function cpcom_lp_one_str_random (a) {
+    if (a.nature==2 || a.nature==6 || a.nature==10) {
+        a.foliage +=a.leftpointstotal;
+    }
+    else if (a.nature==3 || a.nature==7 || a.nature==14) {
+        a.branches +=a.leftpointstotal;
+    }
+    else if (a.nature==4 || a.nature==11 || a.nature==15) {
+        a.trunk +=a.leftpointstotal;
+    }
+    else if (a.nature==8 || a.nature==12 || a.nature==16) {
+        a.roots +=a.leftpointstotal;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.75) {
+            a.foliage +=a.leftpointstotal;
+        }
+        else if (state.random_contests>=0.50) {
+            a.branches +=a.leftpointstotal;
+        }
+        else if (state.random_contests>=0.25) {
+            a.trunk +=a.leftpointstotal;
+        }
+        else {
+            a.roots +=a.leftpointstotal;
+        }
+    }
+}
+
+function cpcom_lp_one_weak_equal (a) {
+    if (a.nature==14 || a.nature==15 || a.nature==16) {
+        a.foliage +=a.leftpointstotal;
+    }
+    else if (a.nature==10 || a.nature==11 || a.nature==12) {
+        a.branches +=a.leftpointstotal;
+    }
+    else if (a.nature==6 || a.nature==7 || a.nature==8) {
+        a.trunk +=a.leftpointstotal;
+    }
+    else if (a.nature==2 || a.nature==3 || a.nature==4) {
+        a.roots +=a.leftpointstotal;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        a.foliage +=a.leftpointstotal/4;
+        a.branches +=a.leftpointstotal/4;
+        a.trunk +=a.leftpointstotal/4;
+        a.roots +=a.leftpointstotal/4;
+    }
+}
+
+function cpcom_lp_one_weak_random (a) {
+    if (a.nature==14 || a.nature==15 || a.nature==16) {
+        a.foliage +=a.leftpointstotal;
+    }
+    else if (a.nature==10 || a.nature==11 || a.nature==12) {
+        a.branches +=a.leftpointstotal;
+    }
+    else if (a.nature==6 || a.nature==7 || a.nature==8) {
+        a.trunk +=a.leftpointstotal;
+    }
+    else if (a.nature==2 || a.nature==3 || a.nature==4) {
+        a.roots +=a.leftpointstotal;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.75) {
+            a.foliage +=a.leftpointstotal;
+        }
+        else if (state.random_contests>=0.50) {
+            a.branches +=a.leftpointstotal;
+        }
+        else if (state.random_contests>=0.25) {
+            a.trunk +=a.leftpointstotal;
+        }
+        else {
+            a.roots +=a.leftpointstotal;
+        }
+    }
+}
+
 function cpcom_lp_onerandom(a) {
     state.random_contests =Math.random(); //Random number between 0 and 1
     if (state.random_contests>=0.75) {
@@ -496,6 +801,142 @@ function cpcom_lp_onerandom(a) {
     }
     else {
         a.roots +=a.leftpointstotal;
+    }
+}
+
+function cpcom_lp_two_str_equal (a) {
+    if (a.nature==2 || a.nature==6 || a.nature==10) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (a.nature==3 || a.nature==7 || a.nature==14) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (a.nature==4 || a.nature==11 || a.nature==15) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else if (a.nature==8 || a.nature==12 || a.nature==16) {
+        a.roots +=a.leftpointstotal/2;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        a.foliage +=a.leftpointstotal/8;
+        a.branches +=a.leftpointstotal/8;
+        a.trunk +=a.leftpointstotal/8;
+        a.roots +=a.leftpointstotal/8;
+    }
+    a.foliage +=a.leftpointstotal/8;
+    a.branches +=a.leftpointstotal/8;
+    a.trunk +=a.leftpointstotal/8;
+    a.roots +=a.leftpointstotal/8;
+}
+
+function cpcom_lp_two_str_random (a) {
+    if (a.nature==2 || a.nature==6 || a.nature==10) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (a.nature==3 || a.nature==7 || a.nature==14) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (a.nature==4 || a.nature==11 || a.nature==15) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else if (a.nature==8 || a.nature==12 || a.nature==16) {
+        a.roots +=a.leftpointstotal/2;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.75) {
+            a.foliage +=a.leftpointstotal/2;
+        }
+        else if (state.random_contests>=0.50) {
+            a.branches +=a.leftpointstotal/2;
+        }
+        else if (state.random_contests>=0.25) {
+            a.trunk +=a.leftpointstotal/2;
+        }
+        else {
+            a.roots +=a.leftpointstotal/2;
+        }
+    }
+    state.random_contests =Math.random(); //Random number between 0 and 1
+    if (state.random_contests>=0.75) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (state.random_contests>=0.50) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (state.random_contests>=0.25) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else {
+        a.roots +=a.leftpointstotal/2;
+    }
+}
+
+function cpcom_lp_two_weak_equal (a) {
+    if (a.nature==14 || a.nature==15 || a.nature==16) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (a.nature==10 || a.nature==11 || a.nature==12) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (a.nature==6 || a.nature==7 || a.nature==8) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else if (a.nature==2 || a.nature==3 || a.nature==4) {
+        a.roots +=a.leftpointstotal/2;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        a.foliage +=a.leftpointstotal/8;
+        a.branches +=a.leftpointstotal/8;
+        a.trunk +=a.leftpointstotal/8;
+        a.roots +=a.leftpointstotal/8;
+    }
+    a.foliage +=a.leftpointstotal/8;
+    a.branches +=a.leftpointstotal/8;
+    a.trunk +=a.leftpointstotal/8;
+    a.roots +=a.leftpointstotal/8;
+}
+
+function cpcom_lp_two_weak_random (a) {
+    if (a.nature==14 || a.nature==15 || a.nature==16) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (a.nature==10 || a.nature==11 || a.nature==12) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (a.nature==6 || a.nature==7 || a.nature==8) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else if (a.nature==2 || a.nature==3 || a.nature==4) {
+        a.roots +=a.leftpointstotal/2;
+    }
+    else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.75) {
+            a.foliage +=a.leftpointstotal/2;
+        }
+        else if (state.random_contests>=0.50) {
+            a.branches +=a.leftpointstotal/2;
+        }
+        else if (state.random_contests>=0.25) {
+            a.trunk +=a.leftpointstotal/2;
+        }
+        else {
+            a.roots +=a.leftpointstotal/2;
+        }
+    }
+    state.random_contests =Math.random(); //Random number between 0 and 1
+    if (state.random_contests>=0.75) {
+        a.foliage +=a.leftpointstotal/2;
+    }
+    else if (state.random_contests>=0.50) {
+        a.branches +=a.leftpointstotal/2;
+    }
+    else if (state.random_contests>=0.25) {
+        a.trunk +=a.leftpointstotal/2;
+    }
+    else {
+        a.roots +=a.leftpointstotal/2;
     }
 }
 
