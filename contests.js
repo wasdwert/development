@@ -1,6 +1,6 @@
 function club_ttg01_request1() {
-    contests_visible=1;
-    contests_id="TTG01_R1";
+    contests.visible=1;
+    contests.id="TTG01_R1";
     menu_contests_change();
     
     document.getElementById("modal_contests_title").innerText = "Club Raundo - First Request";
@@ -11,8 +11,8 @@ function club_ttg01_request1() {
 }
 
 function club_ttg01_request2() {
-    contests_visible=1;
-    contests_id="TTG01_R2";
+    contests.visible=1;
+    contests.id="TTG01_R2";
     menu_contests_change();
     
     document.getElementById("modal_contests_title").innerText = "Club Raundo - Second Request";
@@ -23,8 +23,8 @@ function club_ttg01_request2() {
 }
 
 function club_ttg01_request3() {
-    contests_visible=1;
-    contests_id="TTG01_R3";
+    contests.visible=1;
+    contests.id="TTG01_R3";
     menu_contests_change();
     document.getElementById('modal_contests_overflow').scrollTop =0;
     
@@ -36,8 +36,8 @@ function club_ttg01_request3() {
 }
 
 function club_ttg01_competition1() {
-    contests_visible=1;
-    contests_id="TTG01_C1";
+    contests.visible=1;
+    contests.id="TTG01_C1";
     menu_contests_change();
     document.getElementById('modal_contests_overflow').scrollTop =0;
     
@@ -49,8 +49,8 @@ function club_ttg01_competition1() {
 }
 
 function club_ttg01_competition2() {
-    contests_visible=1;
-    contests_id="TTG01_C2";
+    contests.visible=1;
+    contests.id="TTG01_C2";
     menu_contests_change();
     document.getElementById('modal_contests_overflow').scrollTop =0;
     
@@ -62,8 +62,8 @@ function club_ttg01_competition2() {
 }
 
 function club_ttg01_competition3() {
-    contests_visible=1;
-    contests_id="TTG01_C3";
+    contests.visible=1;
+    contests.id="TTG01_C3";
     menu_contests_change();
     document.getElementById('modal_contests_overflow').scrollTop =0;
     
@@ -76,37 +76,37 @@ function club_ttg01_competition3() {
 
 function contests_bonsaiunavailable() {
     if (x_contests==1) {
-        contests_bonsaiunavailable2(bonsai001, Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA", constestsz=1);
-        contests_bonsaiunavailable2(bonsai002, Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB", constestsz=2);
-        contests_bonsaiunavailable2(bonsai003, Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC", constestsz=3);
-        contests_bonsaiunavailable2(bonsai004, Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD", constestsz=4);
-        contests_bonsaiunavailable2(bonsai005, Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE", constestsz=5);
-        contests_bonsaiunavailable2(bonsai006, Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF", constestsz=6);
-        contests_bonsaiunavailable2(bonsai007, Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG", constestsz=7);
-        contests_bonsaiunavailable2(bonsai008, Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH", constestsz=8);
-        contests_bonsaiunavailable2(bonsai009, Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI", constestsz=9);
-        contests_bonsaiunavailable2(bonsai010, Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ", constestsz=10);
+        contests_bonsaiunavailable2(bonsai001, Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA", contests.z=1);
+        contests_bonsaiunavailable2(bonsai002, Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB", contests.z=2);
+        contests_bonsaiunavailable2(bonsai003, Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC", contests.z=3);
+        contests_bonsaiunavailable2(bonsai004, Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD", contests.z=4);
+        contests_bonsaiunavailable2(bonsai005, Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE", contests.z=5);
+        contests_bonsaiunavailable2(bonsai006, Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF", contests.z=6);
+        contests_bonsaiunavailable2(bonsai007, Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG", contests.z=7);
+        contests_bonsaiunavailable2(bonsai008, Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH", contests.z=8);
+        contests_bonsaiunavailable2(bonsai009, Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI", contests.z=9);
+        contests_bonsaiunavailable2(bonsai010, Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ", contests.z=10);
     }
     else if (x_contests==11) {
-        contests_bonsaiunavailable2(bonsai011, Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA", constestsz=1);
-        contests_bonsaiunavailable2(bonsai012, Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB", constestsz=2);
-        contests_bonsaiunavailable2(bonsai013, Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC", constestsz=3);
-        contests_bonsaiunavailable2(bonsai014, Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD", constestsz=4);
-        contests_bonsaiunavailable2(bonsai015, Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE", constestsz=5);
-        contests_bonsaiunavailable2(bonsai016, Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF", constestsz=6);
-        contests_bonsaiunavailable2(bonsai017, Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG", constestsz=7);
-        contests_bonsaiunavailable2(bonsai018, Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH", constestsz=8);
-        contests_bonsaiunavailable2(bonsai019, Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI", constestsz=9);
-        contests_bonsaiunavailable2(bonsai020, Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ", constestsz=10);
+        contests_bonsaiunavailable2(bonsai011, Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA", contests.z=1);
+        contests_bonsaiunavailable2(bonsai012, Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB", contests.z=2);
+        contests_bonsaiunavailable2(bonsai013, Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC", contests.z=3);
+        contests_bonsaiunavailable2(bonsai014, Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD", contests.z=4);
+        contests_bonsaiunavailable2(bonsai015, Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE", contests.z=5);
+        contests_bonsaiunavailable2(bonsai016, Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF", contests.z=6);
+        contests_bonsaiunavailable2(bonsai017, Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG", contests.z=7);
+        contests_bonsaiunavailable2(bonsai018, Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH", contests.z=8);
+        contests_bonsaiunavailable2(bonsai019, Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI", contests.z=9);
+        contests_bonsaiunavailable2(bonsai020, Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ", contests.z=10);
     }
 }
 
-function contests_bonsaiunavailable2(bonsaixx, a, b, constestsz) {
-    if (bonsaichoosen==constestsz) {
-        if (bonsaichoosenx==x_contests) {}
+function contests_bonsaiunavailable2(bonsaixx, a, b, contestsz) {
+    if (contests.bonsaichoosen==contests.z) {
+        if (contests.bonsaichoosenx==x_contests) {}
         else {
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
             if (bonsaixx.id==0) {
                 a.className = "Button_Modal_Contests_Unavailable";
                 document.getElementById(b).innerText = "Empty"; 
@@ -142,21 +142,21 @@ function contests_bonsaiunavailable2(bonsaixx, a, b, constestsz) {
 }
 
 function contests_bonsaiunavailable3(bonsaixx, a, b) {
-    if (contests_id=="TTG01_R1") {
+    if (contests.id=="TTG01_R1") {
         if (bonsaixx.id==0) {}
         else if (bonsaixx.treetypegroup!==1) {
             a.className = "Button_Modal_Contests_Unavailable";
             document.getElementById(b).innerText = "Unfit"; 
         }
     }
-    else if (contests_id=="TTG01_R2") {
+    else if (contests.id=="TTG01_R2") {
         if (bonsaixx.id==0) {}
         else if (bonsaixx.treetypegroup!==1 || bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots<10) {
             a.className = "Button_Modal_Contests_Unavailable";
             document.getElementById(b).innerText = "Unfit"; 
         }
     }
-    else if (contests_id=="TTG01_R3") {
+    else if (contests.id=="TTG01_R3") {
         if (bonsaixx.id==0) {}
         else if (bonsaixx.treetypegroup!==1 || bonsaixx.nature==2 || bonsaixx.nature==3 || bonsaixx.nature==4 || bonsaixx.nature==6 || bonsaixx.nature==7 || bonsaixx.nature==8 || bonsaixx.nature==10 || bonsaixx.nature==11 || bonsaixx.nature==12 || bonsaixx.nature==14 || bonsaixx.nature==15 || bonsaixx.nature==16 || bonsaixx.foliage<10) {
             a.className = "Button_Modal_Contests_Unavailable";
@@ -166,87 +166,87 @@ function contests_bonsaiunavailable3(bonsaixx, a, b) {
     else {}
 } 
 
-function contests_choosebonsai(constestsz) {
+function contests_choosebonsai(contestsz) {
     if (x_contests==1) {
-        if (constestsz==1) {
-            contests_choosebonsai2(bonsai001, constestsz);
+        if (contests.z==1) {
+            contests_choosebonsai2(bonsai001, contests.z);
         }
-        else if (constestsz==2) {
-            contests_choosebonsai2(bonsai002, constestsz);
+        else if (contests.z==2) {
+            contests_choosebonsai2(bonsai002, contests.z);
         }
-        else if (constestsz==3) {
-            contests_choosebonsai2(bonsai003, constestsz);
+        else if (contests.z==3) {
+            contests_choosebonsai2(bonsai003, contests.z);
         }
-        else if (constestsz==4) {
-            contests_choosebonsai2(bonsai004, constestsz);
+        else if (contests.z==4) {
+            contests_choosebonsai2(bonsai004, contests.z);
         }
-        else if (constestsz==5) {
-            contests_choosebonsai2(bonsai005, constestsz);
+        else if (contests.z==5) {
+            contests_choosebonsai2(bonsai005, contests.z);
         }
-        else if (constestsz==6) {
-            contests_choosebonsai2(bonsai006, constestsz);
+        else if (contests.z==6) {
+            contests_choosebonsai2(bonsai006, contests.z);
         }
-        else if (constestsz==7) {
-            contests_choosebonsai2(bonsai007, constestsz);
+        else if (contests.z==7) {
+            contests_choosebonsai2(bonsai007, contests.z);
         }
-        else if (constestsz==8) {
-            contests_choosebonsai2(bonsai008, constestsz);
+        else if (contests.z==8) {
+            contests_choosebonsai2(bonsai008, contests.z);
         }
-        else if (constestsz==9) {
-            contests_choosebonsai2(bonsai009, constestsz);
+        else if (contests.z==9) {
+            contests_choosebonsai2(bonsai009, contests.z);
         }
-        else if (constestsz==10) {
-            contests_choosebonsai2(bonsai010, constestsz);
+        else if (contests.z==10) {
+            contests_choosebonsai2(bonsai010, contests.z);
         }
     }
     else if (x_contests==11) {
-        if (constestsz==1) {
-            contests_choosebonsai2(bonsai011, constestsz);            
+        if (contests.z==1) {
+            contests_choosebonsai2(bonsai011, contests.z);            
         }
-        else if (constestsz==2) {
-            contests_choosebonsai2(bonsai012, constestsz);
+        else if (contests.z==2) {
+            contests_choosebonsai2(bonsai012, contests.z);
         }
-        else if (constestsz==3) {
-            contests_choosebonsai2(bonsai013, constestsz);
+        else if (contests.z==3) {
+            contests_choosebonsai2(bonsai013, contests.z);
         }
-        else if (constestsz==4) {
-            contests_choosebonsai2(bonsai014, constestsz);
+        else if (contests.z==4) {
+            contests_choosebonsai2(bonsai014, contests.z);
         }
-        else if (constestsz==5) {
-            contests_choosebonsai2(bonsai015, constestsz);
+        else if (contests.z==5) {
+            contests_choosebonsai2(bonsai015, contests.z);
         }
-        else if (constestsz==6) {
-            contests_choosebonsai2(bonsai016, constestsz);
+        else if (contests.z==6) {
+            contests_choosebonsai2(bonsai016, contests.z);
         }
-        else if (constestsz==7) {
-            contests_choosebonsai2(bonsai017, constestsz);
+        else if (contests.z==7) {
+            contests_choosebonsai2(bonsai017, contests.z);
         }
-        else if (constestsz==8) {
-            contests_choosebonsai2(bonsai018, constestsz);
+        else if (contests.z==8) {
+            contests_choosebonsai2(bonsai018, contests.z);
         }
-        else if (constestsz==9) {
-            contests_choosebonsai2(bonsai019, constestsz);
+        else if (contests.z==9) {
+            contests_choosebonsai2(bonsai019, contests.z);
         }
-        else if (constestsz==10) {
-            contests_choosebonsai2(bonsai020, constestsz);
+        else if (contests.z==10) {
+            contests_choosebonsai2(bonsai020, contests.z);
         }
     }
 }
         
-function contests_choosebonsai2(bonsaixx, constestsz) {
-    if (contests_id=="TTG01_R1") {
+function contests_choosebonsai2(bonsaixx, contestsz) {
+    if (contests.id=="TTG01_R1") {
         if (bonsaixx.id==0 || bonsaixx.growing==1 || bonsaixx.treetypegroup!==1) {}
         else {
             contests_choosebonsai3();
         }
     }
-    else if (contests_id=="TTG01_R2") {
+    else if (contests.id=="TTG01_R2") {
         if (bonsaixx.id==0 || bonsaixx.growing==1 || bonsaixx.treetypegroup!==1 || bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots<10) {}
         else {
             contests_choosebonsai3();
         }
     }
-    else if (contests_id=="TTG01_R3") {
+    else if (contests.id=="TTG01_R3") {
         if (bonsaixx.id==0 || bonsaixx.growing==1 || bonsaixx.treetypegroup!==1 || bonsaixx.nature==2 || bonsaixx.nature==3 || bonsaixx.nature==4 || bonsaixx.nature==6 || bonsaixx.nature==7 || bonsaixx.nature==8 || bonsaixx.nature==10 || bonsaixx.nature==11 || bonsaixx.nature==12 || bonsaixx.nature==14 || bonsaixx.nature==15 || bonsaixx.nature==16 || bonsaixx.foliage<10) {}
         else {
             contests_choosebonsai3();
@@ -261,70 +261,70 @@ function contests_choosebonsai2(bonsaixx, constestsz) {
 }
 
 function contests_choosebonsai3() {
-    if (bonsaichoosen==0) {
-        bonsaichoosen=constestsz;
-        bonsaichoosenx=x_contests;
-        if (bonsaichoosen==1) {
+    if (contests.bonsaichoosen==0) {
+        contests.bonsaichoosen=contests.z;
+        contests.bonsaichoosenx=x_contests;
+        if (contests.bonsaichoosen==1) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA");
         }
-        if (bonsaichoosen==2) {
+        if (contests.bonsaichoosen==2) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB"); 
         }
-        if (bonsaichoosen==3) {
+        if (contests.bonsaichoosen==3) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC"); 
         }
-        if (bonsaichoosen==4) {
+        if (contests.bonsaichoosen==4) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD"); 
         }
-        if (bonsaichoosen==5) {
+        if (contests.bonsaichoosen==5) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE");
         }
-        if (bonsaichoosen==6) {
+        if (contests.bonsaichoosen==6) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF");
         }
-        if (bonsaichoosen==7) {
+        if (contests.bonsaichoosen==7) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG");
         }
-        if (bonsaichoosen==8) {
+        if (contests.bonsaichoosen==8) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH");
         }
-        if (bonsaichoosen==9) {
+        if (contests.bonsaichoosen==9) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI");
         }
-        if (bonsaichoosen==10) {
+        if (contests.bonsaichoosen==10) {
             contests_choosebonsai3a(Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ");
         }
     }
     else {
-        if (bonsaichoosen==constestsz) {
-            if (constestsz==1) {
+        if (contests.bonsaichoosen==contests.z) {
+            if (contests.z==1) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiA, "Button_Modal_Contests_BonsaiA");
             }
-            if (constestsz==2) {
+            if (contests.z==2) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiB, "Button_Modal_Contests_BonsaiB");
             }
-            if (constestsz==3) {
+            if (contests.z==3) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiC, "Button_Modal_Contests_BonsaiC");
             }
-            if (constestsz==4) {
+            if (contests.z==4) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiD, "Button_Modal_Contests_BonsaiD");
             }
-            if (constestsz==5) {
+            if (contests.z==5) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiE, "Button_Modal_Contests_BonsaiE");
             }
-            if (constestsz==6) {
+            if (contests.z==6) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiF, "Button_Modal_Contests_BonsaiF");
             }
-            if (constestsz==7) {
+            if (contests.z==7) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiG, "Button_Modal_Contests_BonsaiG");
             }
-            if (constestsz==8) {
+            if (contests.z==8) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiH, "Button_Modal_Contests_BonsaiH");
             }
-            if (constestsz==9) {
+            if (contests.z==9) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiI, "Button_Modal_Contests_BonsaiI");
             }
-            if (constestsz==10) {
+            if (contests.z==10) {
                 contests_choosebonsai3b(Button_Modal_Contests_BonsaiJ, "Button_Modal_Contests_BonsaiJ");
             }
         }
@@ -345,77 +345,14 @@ function contests_choosebonsai3a(a, b) {
 function contests_choosebonsai3b(a, b) {
     a.className = "Button_Modal_Position_Class";
     document.getElementById(b).innerText = "Choose"; 
-    bonsaichoosen=0;
-    bonsaichoosenx=0;
+    contests.bonsaichoosen=0;
+    contests.bonsaichoosenx=0;
 }
 
 function contests_result() {
-    if (contests_id=="TTG01_R1" || contests_id=="TTG01_R2" || contests_id=="TTG01_R3") {
-        if (bonsaichoosenx==1) {
-            if (bonsaichoosen==1) {
-                contests_result_bonsaixa(bonsai001);
-            }
-            else if (bonsaichoosen==2) {
-                contests_result_bonsaixa(bonsai002);
-            }
-            else if (bonsaichoosen==3) {
-                contests_result_bonsaixa(bonsai003);
-            }
-            else if (bonsaichoosen==4) {
-                contests_result_bonsaixa(bonsai004);
-            }
-            else if (bonsaichoosen==5) {
-                contests_result_bonsaixa(bonsai005);
-            }
-            else if (bonsaichoosen==6) {
-                contests_result_bonsaixa(bonsai006);
-            }
-            else if (bonsaichoosen==7) {
-                contests_result_bonsaixa(bonsai007);
-            }
-            else if (bonsaichoosen==8) {
-                contests_result_bonsaixa(bonsai008);
-            }
-            else if (bonsaichoosen==9) {
-                contests_result_bonsaixa(bonsai009);
-            }
-            else if (bonsaichoosen==10) {
-                contests_result_bonsaixa(bonsai010);
-            }
-        }
-        else if (bonsaichoosenx==11) {
-            if (bonsaichoosen==1) {
-                contests_result_bonsaixa(bonsai011);
-            }
-            else if (bonsaichoosen==2) {
-                contests_result_bonsaixa(bonsai012);
-            }
-            else if (bonsaichoosen==3) {
-                contests_result_bonsaixa(bonsai013);
-            }
-            else if (bonsaichoosen==4) {
-                contests_result_bonsaixa(bonsai014);
-            }
-            else if (bonsaichoosen==5) {
-                contests_result_bonsaixa(bonsai015);
-            }
-            else if (bonsaichoosen==6) {
-                contests_result_bonsaixa(bonsai016);
-            }
-            else if (bonsaichoosen==7) {
-                contests_result_bonsaixa(bonsai017);
-            }
-            else if (bonsaichoosen==8) {
-                contests_result_bonsaixa(bonsai018);
-            }
-            else if (bonsaichoosen==9) {
-                contests_result_bonsaixa(bonsai019);
-            }
-            else if (bonsaichoosen==10) {
-                contests_result_bonsaixa(bonsai020);
-            }
-        }
-        if (contests_id=="TTG01_R1") {
+    if (contests.id=="TTG01_R1" || contests.id=="TTG01_R2" || contests.id=="TTG01_R3") {
+        contests_result_request();
+        if (contests.id=="TTG01_R1") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').show();
                 $('#modal_contests_result_competition').hide();
@@ -433,10 +370,10 @@ function contests_result() {
                 $('#ButtonTTG01_C2').hide();
                 $('#ButtonTTG01_C3').hide();
             });
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
-        else if (contests_id=="TTG01_R2") {
+        else if (contests.id=="TTG01_R2") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').show();
                 $('#modal_contests_result_competition').hide();
@@ -454,10 +391,10 @@ function contests_result() {
                 $('#ButtonTTG01_C2').hide();
                 $('#ButtonTTG01_C3').hide();
             });
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
-        else if (contests_id=="TTG01_R3") {
+        else if (contests.id=="TTG01_R3") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').show();
                 $('#modal_contests_result_competition').hide();
@@ -475,82 +412,20 @@ function contests_result() {
                 $('#ButtonTTG01_C2').hide();
                 $('#ButtonTTG01_C3').hide();
             });
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
     }
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
-        if (bonsaichoosenx==1) {
-            if (bonsaichoosen==1) {
-                contests_result_bonsaixb(bonsai001);
-            }
-            else if (bonsaichoosen==2) {
-                contests_result_bonsaixb(bonsai002);
-            }
-            else if (bonsaichoosen==3) {
-                contests_result_bonsaixb(bonsai003);
-            }
-            else if (bonsaichoosen==4) {
-                contests_result_bonsaixb(bonsai004);
-            }
-            else if (bonsaichoosen==5) {
-                contests_result_bonsaixb(bonsai005);
-            }
-            else if (bonsaichoosen==6) {
-                contests_result_bonsaixb(bonsai006);
-            }
-            else if (bonsaichoosen==7) {
-                contests_result_bonsaixb(bonsai007);
-            }
-            else if (bonsaichoosen==8) {
-                contests_result_bonsaixb(bonsai008);
-            }
-            else if (bonsaichoosen==9) {
-                contests_result_bonsaixb(bonsai009);
-            }
-            else if (bonsaichoosen==10) {
-                contests_result_bonsaixb(bonsai010);
-            }
-        }
-        else if (bonsaichoosenx==11) {
-            if (bonsaichoosen==1) {
-                contests_result_bonsaixb(bonsai011);
-            }
-            else if (bonsaichoosen==2) {
-                contests_result_bonsaixb(bonsai012);
-            }
-            else if (bonsaichoosen==3) {
-                contests_result_bonsaixb(bonsai013);
-            }
-            else if (bonsaichoosen==4) {
-                contests_result_bonsaixb(bonsai014);
-            }
-            else if (bonsaichoosen==5) {
-                contests_result_bonsaixb(bonsai015);
-            }
-            else if (bonsaichoosen==6) {
-                contests_result_bonsaixb(bonsai016);
-            }
-            else if (bonsaichoosen==7) {
-                contests_result_bonsaixb(bonsai017);
-            }
-            else if (bonsaichoosen==8) {
-                contests_result_bonsaixb(bonsai018);
-            }
-            else if (bonsaichoosen==9) {
-                contests_result_bonsaixb(bonsai019);
-            }
-            else if (bonsaichoosen==10) {
-                contests_result_bonsaixb(bonsai020);
-            }
-        }  
-        if (contests_id=="TTG01_C1") {
+    else if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+
+        if (contests.id=="TTG01_C1") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').hide();
                 $('#modal_contests_result_competition').show();
             }); 
-            contests_difficulty=1;
+            contests.difficulty=1;
             contests_comcalc();
+            contests_result_competition();
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Beginner";
             document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
             document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
@@ -564,16 +439,17 @@ function contests_result() {
             //    $('#ButtonTTG01_C2').hide();
             //    $('#ButtonTTG01_C3').hide();
             //}); 
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
-        else if (contests_id=="TTG01_C2") {
+        else if (contests.id=="TTG01_C2") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').hide();
                 $('#modal_contests_result_competition').show();
             }); 
-            contests_difficulty=2;
+            contests.difficulty=2;
             contests_comcalc();
+            contests_result_competition();
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Advanced";
             document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
             document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
@@ -587,16 +463,17 @@ function contests_result() {
             //    $('#ButtonTTG01_C2').hide();
             //    $('#ButtonTTG01_C3').hide();
             //}); 
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
-        else if (contests_id=="TTG01_C3") {
+        else if (contests.id=="TTG01_C3") {
             $(document).ready(function(){
                 $('#modal_contests_result_request').hide();
                 $('#modal_contests_result_competition').show();
             }); 
-            contests_difficulty=3;
+            contests.difficulty=3;
             contests_comcalc();
+            contests_result_competition();
             document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Expert";
             document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
             document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
@@ -610,12 +487,78 @@ function contests_result() {
             //    $('#ButtonTTG01_C2').hide();
             //    $('#ButtonTTG01_C3').hide();
             //}); 
-            bonsaichoosen=0;
-            bonsaichoosenx=0;
+            contests.bonsaichoosen=0;
+            contests.bonsaichoosenx=0;
         }
     } 
 }
 
+function contests_result_request() {
+    if (contests.bonsaichoosenx==1) {
+        if (contests.bonsaichoosen==1) {
+            contests_result_bonsaixa(bonsai001);
+        }
+        else if (contests.bonsaichoosen==2) {
+            contests_result_bonsaixa(bonsai002);
+        }
+        else if (contests.bonsaichoosen==3) {
+            contests_result_bonsaixa(bonsai003);
+        }
+        else if (contests.bonsaichoosen==4) {
+            contests_result_bonsaixa(bonsai004);
+        }
+        else if (contests.bonsaichoosen==5) {
+            contests_result_bonsaixa(bonsai005);
+        }
+        else if (contests.bonsaichoosen==6) {
+            contests_result_bonsaixa(bonsai006);
+        }
+        else if (contests.bonsaichoosen==7) {
+            contests_result_bonsaixa(bonsai007);
+        }
+        else if (contests.bonsaichoosen==8) {
+            contests_result_bonsaixa(bonsai008);
+        }
+        else if (contests.bonsaichoosen==9) {
+            contests_result_bonsaixa(bonsai009);
+        }
+        else if (contests.bonsaichoosen==10) {
+            contests_result_bonsaixa(bonsai010);
+        }
+    }
+    else if (contests.bonsaichoosenx==11) {
+        if (contests.bonsaichoosen==1) {
+            contests_result_bonsaixa(bonsai011);
+        }
+        else if (contests.bonsaichoosen==2) {
+            contests_result_bonsaixa(bonsai012);
+        }
+        else if (contests.bonsaichoosen==3) {
+            contests_result_bonsaixa(bonsai013);
+        }
+        else if (contests.bonsaichoosen==4) {
+            contests_result_bonsaixa(bonsai014);
+        }
+        else if (contests.bonsaichoosen==5) {
+            contests_result_bonsaixa(bonsai015);
+        }
+        else if (contests.bonsaichoosen==6) {
+            contests_result_bonsaixa(bonsai016);
+        }
+        else if (contests.bonsaichoosen==7) {
+            contests_result_bonsaixa(bonsai017);
+        }
+        else if (contests.bonsaichoosen==8) {
+            contests_result_bonsaixa(bonsai018);
+        }
+        else if (contests.bonsaichoosen==9) {
+            contests_result_bonsaixa(bonsai019);
+        }
+        else if (contests.bonsaichoosen==10) {
+            contests_result_bonsaixa(bonsai020);
+        }
+    }
+}
 function contests_result_bonsaixa(bonsaixx) {
     document.getElementById("bonsaixa_name_contests").innerText = bonsaixx.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaixa_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "50", "50");
@@ -632,6 +575,72 @@ function contests_result_bonsaixa(bonsaixx) {
     document.getElementById("bonsaixa_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
 }
 
+function contests_result_competition() {
+    if (contests.bonsaichoosenx==1) {
+        if (contests.bonsaichoosen==1) {
+            contests_result_bonsaixb(bonsai001);
+        }
+        else if (contests.bonsaichoosen==2) {
+            contests_result_bonsaixb(bonsai002);
+        }
+        else if (contests.bonsaichoosen==3) {
+            contests_result_bonsaixb(bonsai003);
+        }
+        else if (contests.bonsaichoosen==4) {
+            contests_result_bonsaixb(bonsai004);
+        }
+        else if (contests.bonsaichoosen==5) {
+            contests_result_bonsaixb(bonsai005);
+        }
+        else if (contests.bonsaichoosen==6) {
+            contests_result_bonsaixb(bonsai006);
+        }
+        else if (contests.bonsaichoosen==7) {
+            contests_result_bonsaixb(bonsai007);
+        }
+        else if (contests.bonsaichoosen==8) {
+            contests_result_bonsaixb(bonsai008);
+        }
+        else if (contests.bonsaichoosen==9) {
+            contests_result_bonsaixb(bonsai009);
+        }
+        else if (contests.bonsaichoosen==10) {
+            contests_result_bonsaixb(bonsai010);
+        }
+    }
+    else if (contests.bonsaichoosenx==11) {
+        if (contests.bonsaichoosen==1) {
+            contests_result_bonsaixb(bonsai011);
+        }
+        else if (contests.bonsaichoosen==2) {
+            contests_result_bonsaixb(bonsai012);
+        }
+        else if (contests.bonsaichoosen==3) {
+            contests_result_bonsaixb(bonsai013);
+        }
+        else if (contests.bonsaichoosen==4) {
+            contests_result_bonsaixb(bonsai014);
+        }
+        else if (contests.bonsaichoosen==5) {
+            contests_result_bonsaixb(bonsai015);
+        }
+        else if (contests.bonsaichoosen==6) {
+            contests_result_bonsaixb(bonsai016);
+        }
+        else if (contests.bonsaichoosen==7) {
+            contests_result_bonsaixb(bonsai017);
+        }
+        else if (contests.bonsaichoosen==8) {
+            contests_result_bonsaixb(bonsai018);
+        }
+        else if (contests.bonsaichoosen==9) {
+            contests_result_bonsaixb(bonsai019);
+        }
+        else if (contests.bonsaichoosen==10) {
+            contests_result_bonsaixb(bonsai020);
+        }
+    }      
+}
 function contests_result_bonsaixb(bonsaixx) {
     document.getElementById("bonsaixb_name_contests").innerText = bonsaixx.name.toLocaleString('en', {minimumFractionDigits: 0});
     document.getElementById("bonsaixb_types_contests").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, bonsaixx, "50", "50");
@@ -646,4 +655,5 @@ function contests_result_bonsaixb(bonsaixx) {
     document.getElementById("bonsaixb_t_contests").innerHTML = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 1});
     document.getElementById("bonsaixb_r_contests").innerHTML = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 1});
     document.getElementById("bonsaixb_idstring_contests").innerText = bonsaixx.id_string.toLocaleString('en', {minimumFractionDigits: 0});
+    contests_wincalc (bonsaixx);
 }

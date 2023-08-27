@@ -20,7 +20,7 @@ w.addEventListener('message', function(e){
     console.log(time);
     menu_change();
     menu_shop_change();
-    if (contests_visible==1) {
+    if (contests.visible==1) {
         menu_contests_change();
     }
     

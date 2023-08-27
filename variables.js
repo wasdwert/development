@@ -122,6 +122,7 @@ var contests_bonsai_c1 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c2 = {
     treetype: 0,
@@ -144,6 +145,7 @@ var contests_bonsai_c2 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c3 = {
     treetype: 0,
@@ -166,6 +168,7 @@ var contests_bonsai_c3 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c4 = {
     treetype: 0,
@@ -188,6 +191,7 @@ var contests_bonsai_c4 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c5 = {
     treetype: 0,
@@ -210,6 +214,7 @@ var contests_bonsai_c5 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c6 = {
     treetype: 0,
@@ -232,6 +237,7 @@ var contests_bonsai_c6 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c7 = {
     treetype: 0,
@@ -254,6 +260,7 @@ var contests_bonsai_c7 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c8 = {
     treetype: 0,
@@ -276,6 +283,7 @@ var contests_bonsai_c8 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 var contests_bonsai_c9 = {
     treetype: 0,
@@ -298,6 +306,7 @@ var contests_bonsai_c9 = {
     leftpoints: 0,
     leftpointstotal: 0,
     distributiontype: 0,
+    score: 0,
 }
 
 var newOption = 0;
@@ -311,12 +320,28 @@ var naturepoints=0;
 var leftpoints=0;
 var autosave=0;
 var styletype=0;
-var contests_visible=0;
-var bonsaichoosen=0;
-var bonsaichoosenx=0;
-var constestsz=0;
-var contests_id= "-";
-var contests_difficulty= 0;
+
+var contests = {
+    z:0,
+    visible:0,
+    bonsaichoosen:0,
+    bonsaichoosenx:0,
+    id: "-",
+    own_score:0,
+    difficulty:0,
+    a_score:0,
+    b_score:0,
+    a_advantages:1,
+    a_disadvantages:1,
+    b_advantages:1,
+    b_disadvantages:1,
+    judge1_preference: "-",
+    judge1_dislike: "-",
+    judge2_preference: "-",
+    judge2_dislike: "-",
+    judge3_preference: "-",
+    judge3_dislike: "-",
+}
 
 var worker01 = {
     busy: 0,

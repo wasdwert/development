@@ -1,5 +1,5 @@
 function contests_comcalc () {
-    if (contests_difficulty==1) {
+    if (contests.difficulty==1) {
         $(document).ready(function(){
             $('#modal_contests_result_c2').show();
             $('#modal_contests_result_c3').show();
@@ -11,7 +11,7 @@ function contests_comcalc () {
             $('#modal_contests_result_c9').hide();
         });
     }
-    else if (contests_difficulty==2) {
+    else if (contests.difficulty==2) {
         $(document).ready(function(){
             $('#modal_contests_result_c2').show();
             $('#modal_contests_result_c3').show();
@@ -23,7 +23,7 @@ function contests_comcalc () {
             $('#modal_contests_result_c9').hide();
         });
     }
-    if (contests_difficulty==3) {
+    if (contests.difficulty==3) {
         $(document).ready(function(){
             $('#modal_contests_result_c2').show();
             $('#modal_contests_result_c3').show();
@@ -35,7 +35,7 @@ function contests_comcalc () {
             $('#modal_contests_result_c9').hide();
         });
     }
-    if (contests_difficulty==4) {
+    if (contests.difficulty==4) {
         $(document).ready(function(){
             $('#modal_contests_result_c2').show();
             $('#modal_contests_result_c3').show();
@@ -72,7 +72,7 @@ function contests_comcalc () {
 
 //Level
 function contests_comcalc_level () {
-    if (contests_id=="TTG01_C1") {
+    if (contests.id=="TTG01_C1") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
         contests_bonsai_c2.level=Math.round(Math.random()*25);
@@ -80,7 +80,7 @@ function contests_comcalc_level () {
         contests_bonsai_c3.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c3);
     }
-    else if (contests_id=="TTG01_C2") {
+    else if (contests.id=="TTG01_C2") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
         contests_bonsai_c1.level +=15;
@@ -97,7 +97,7 @@ function contests_comcalc_level () {
         contests_comcalc_level20 (contests_bonsai_c5);
         contests_bonsai_c5.level +=15;
     }
-    else if (contests_id=="TTG01_C3") {
+    else if (contests.id=="TTG01_C3") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
         contests_comcalc_level20 (contests_bonsai_c1);
         contests_bonsai_c1.level +=30;
@@ -144,7 +144,7 @@ function contests_comcalc_level20 (a) {
 
 //Treequality
 function contests_comcalc_treequality () {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_comcalc_treequality_area1(contests_bonsai_c1);
         contests_comcalc_treequality_area1(contests_bonsai_c2);
         contests_comcalc_treequality_area1(contests_bonsai_c3);
@@ -170,7 +170,7 @@ function contests_comcalc_treequality_area1 (a) {
 
 //Treetype group & Treetype
 function contests_comcalc_ttt() {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_bonsai_c1.treetypegroup=1;
         contests_bonsai_c2.treetypegroup=1;
         contests_bonsai_c3.treetypegroup=1;
@@ -206,7 +206,7 @@ function contests_comcalc_ttt_tt(a) {
 
 //Styletpe
 function contests_comcalc_st() {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_comcalc_st_typgroup1(contests_bonsai_c1);
         contests_comcalc_st_typgroup1(contests_bonsai_c2);
         contests_comcalc_st_typgroup1(contests_bonsai_c3);
@@ -232,7 +232,7 @@ function contests_comcalc_st_typgroup1(a) {
 
 //Shiny
 function contests_comcalc_shiny() {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_bonsai_c1.shiny=1;
         contests_bonsai_c2.shiny=1;
         contests_bonsai_c3.shiny=1;
@@ -258,7 +258,7 @@ function contests_comcalc_nature() {
 
 //Growing
 function contests_comcalc_growing() {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_bonsai_c1.growing=Math.round(Math.random()*6);
         contests_bonsai_c2.growing=Math.round(Math.random()*6);
         contests_bonsai_c3.growing=Math.round(Math.random()*6);
@@ -271,7 +271,7 @@ function contests_comcalc_growing() {
 
 //Shaping
 function contests_comcalc_shaping() {
-    if (contests_id=="TTG01_C1" || contests_id=="TTG01_C2" || contests_id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
         contests_bonsai_c1.shaping=Math.round(Math.random()*4);
         contests_bonsai_c2.shaping=Math.round(Math.random()*4);
         contests_bonsai_c3.shaping=Math.round(Math.random()*4);
@@ -818,15 +818,69 @@ function cpcom_lp_two_str_equal (a) {
         a.roots +=a.leftpointstotal/2;
     }
     else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
-        a.foliage +=a.leftpointstotal/8;
-        a.branches +=a.leftpointstotal/8;
-        a.trunk +=a.leftpointstotal/8;
-        a.roots +=a.leftpointstotal/8;
+        a.foliage +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.branches +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.trunk +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.roots +=Math.floor(a.leftpointstotal/8*10)/10;
+        if (Math.floor(a.leftpointstotal/8*10)/10<a.leftpointstotal/8) {
+            state.random_contests =Math.random(); //Random number between 0 and 1
+            if (state.random_contests>=0.833333) {
+                a.foliage +=0.1;
+                a.branches +=0.1;
+            }
+            else if (state.random_contests>=0.666666) {
+                a.foliage +=0.1;
+                a.trunk +=0.1;
+            }
+            else if (state.random_contests>=0.500000) {
+                a.foliage +=0.1;
+                a.roots +=0.1;
+            }
+            else if (state.random_contests>=0.333333) {
+                a.branches +=0.1;
+                a.trunk +=0.1;
+            }
+            else if (state.random_contests>=0.166666) {
+                a.branches +=0.1;
+                a.roots +=0.1;
+            }
+            else {
+                a.trunk +=0.1;
+                a.roots +=0.1;
+            }
+        }
     }
-    a.foliage +=a.leftpointstotal/8;
-    a.branches +=a.leftpointstotal/8;
-    a.trunk +=a.leftpointstotal/8;
-    a.roots +=a.leftpointstotal/8;
+    a.foliage +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.branches +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.trunk +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.roots +=Math.floor(a.leftpointstotal/8*10)/10;
+    if (Math.floor(a.leftpointstotal/8*10)/10<a.leftpointstotal/8) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.833333) {
+            a.foliage +=0.1;
+            a.branches +=0.1;
+        }
+        else if (state.random_contests>=0.666666) {
+            a.foliage +=0.1;
+            a.trunk +=0.1;
+        }
+        else if (state.random_contests>=0.500000) {
+            a.foliage +=0.1;
+            a.roots +=0.1;
+        }
+        else if (state.random_contests>=0.333333) {
+            a.branches +=0.1;
+            a.trunk +=0.1;
+        }
+        else if (state.random_contests>=0.166666) {
+            a.branches +=0.1;
+            a.roots +=0.1;
+        }
+        else {
+            a.trunk +=0.1;
+            a.roots +=0.1;
+        }
+    }
 }
 
 function cpcom_lp_two_str_random (a) {
@@ -886,15 +940,69 @@ function cpcom_lp_two_weak_equal (a) {
         a.roots +=a.leftpointstotal/2;
     }
     else if (a.nature==1 || a.nature==5 || a.nature==9 || a.nature==13) {
-        a.foliage +=a.leftpointstotal/8;
-        a.branches +=a.leftpointstotal/8;
-        a.trunk +=a.leftpointstotal/8;
-        a.roots +=a.leftpointstotal/8;
+        a.foliage +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.branches +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.trunk +=Math.floor(a.leftpointstotal/8*10)/10;
+        a.roots +=Math.floor(a.leftpointstotal/8*10)/10;
+        if (Math.floor(a.leftpointstotal/8*10)/10<a.leftpointstotal/8) {
+            state.random_contests =Math.random(); //Random number between 0 and 1
+            if (state.random_contests>=0.833333) {
+                a.foliage +=0.1;
+                a.branches +=0.1;
+            }
+            else if (state.random_contests>=0.666666) {
+                a.foliage +=0.1;
+                a.trunk +=0.1;
+            }
+            else if (state.random_contests>=0.500000) {
+                a.foliage +=0.1;
+                a.roots +=0.1;
+            }
+            else if (state.random_contests>=0.333333) {
+                a.branches +=0.1;
+                a.trunk +=0.1;
+            }
+            else if (state.random_contests>=0.166666) {
+                a.branches +=0.1;
+                a.roots +=0.1;
+            }
+            else {
+                a.trunk +=0.1;
+                a.roots +=0.1;
+            }
+        }
     }
-    a.foliage +=a.leftpointstotal/8;
-    a.branches +=a.leftpointstotal/8;
-    a.trunk +=a.leftpointstotal/8;
-    a.roots +=a.leftpointstotal/8;
+    a.foliage +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.branches +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.trunk +=Math.floor(a.leftpointstotal/8*10)/10;
+    a.roots +=Math.floor(a.leftpointstotal/8*10)/10;
+    if (Math.floor(a.leftpointstotal/8*10)/10<a.leftpointstotal/8) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.833333) {
+            a.foliage +=0.1;
+            a.branches +=0.1;
+        }
+        else if (state.random_contests>=0.666666) {
+            a.foliage +=0.1;
+            a.trunk +=0.1;
+        }
+        else if (state.random_contests>=0.500000) {
+            a.foliage +=0.1;
+            a.roots +=0.1;
+        }
+        else if (state.random_contests>=0.333333) {
+            a.branches +=0.1;
+            a.trunk +=0.1;
+        }
+        else if (state.random_contests>=0.166666) {
+            a.branches +=0.1;
+            a.roots +=0.1;
+        }
+        else {
+            a.trunk +=0.1;
+            a.roots +=0.1;
+        }
+    }
 }
 
 function cpcom_lp_two_weak_random (a) {

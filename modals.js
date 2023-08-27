@@ -213,7 +213,7 @@ var spancontestsbonsaij = document.getElementById("Button_Modal_Contests_BonsaiJ
 
 // When the user clicks on <span> (x), close the modal
 spancontestsenter.onclick = function() {
-    if (bonsaichoosen==0) {
+    if (contests.bonsaichoosen==0) {
         document.getElementById("snack_message").innerText = "Choose a bonsai first";
         var snackb = document.getElementById("snackbar");
         snackb.className = "show";
@@ -222,7 +222,7 @@ spancontestsenter.onclick = function() {
     else {
         modalcontests.style.display = "none";
         x_contests = 1;
-        contests_visible=0;
+        contests.visible=0;
         document.getElementById("menu_contests").value=x_contests;       
         $('#menu_contests').trigger('change');
         contests_result();
@@ -232,43 +232,43 @@ spancontestsenter.onclick = function() {
 
 spancontestscancel.onclick = function() {
     modalcontests.style.display = "none";
-    bonsaichoosen=0;
-    bonsaichoosenx=0;
+    contests.bonsaichoosen=0;
+    contests.bonsaichoosenx=0;
     x_contests = 1;
-    contests_visible=0;
+    contests.visible=0;
     document.getElementById("menu_contests").value=x_contests;       
     $('#menu_contests').trigger('change');
 }
 
 spancontestsbonsaia.onclick = function() {
-    contests_choosebonsai(constestsz=1);
+    contests_choosebonsai(contests.z=1);
 }
 spancontestsbonsaib.onclick = function() {
-    contests_choosebonsai(constestsz=2);   
+    contests_choosebonsai(contests.z=2);   
 }
 spancontestsbonsaic.onclick = function() {
-    contests_choosebonsai(constestsz=3);  
+    contests_choosebonsai(contests.z=3);  
 }
 spancontestsbonsaid.onclick = function() {
-    contests_choosebonsai(constestsz=4);   
+    contests_choosebonsai(contests.z=4);   
 }
 spancontestsbonsaie.onclick = function() {
-    contests_choosebonsai(constestsz=5);  
+    contests_choosebonsai(contests.z=5);  
 }
 spancontestsbonsaif.onclick = function() {
-    contests_choosebonsai(constestsz=6);   
+    contests_choosebonsai(contests.z=6);   
 }
 spancontestsbonsaig.onclick = function() {
-    contests_choosebonsai(constestsz=7);   
+    contests_choosebonsai(contests.z=7);   
 }
 spancontestsbonsaih.onclick = function() {
-    contests_choosebonsai(constestsz=8);   
+    contests_choosebonsai(contests.z=8);   
 }
 spancontestsbonsaii.onclick = function() {
-    contests_choosebonsai(constestsz=9);  
+    contests_choosebonsai(contests.z=9);  
 }
 spancontestsbonsaij.onclick = function() {
-    contests_choosebonsai(constestsz=10);      
+    contests_choosebonsai(contests.z=10);      
 }
 
 /* Contests Modal*/
@@ -290,6 +290,6 @@ var spancontests_rresult = document.getElementById("Button_Modal_Contests_Result
 
 spancontests_rresult.onclick = function() {
     modalcontests_r.style.display = "none";
-    bonsaichoosen=0;
-    bonsaichoosenx=0;
+    contests.bonsaichoosen=0;
+    contests.bonsaichoosenx=0;
 }
