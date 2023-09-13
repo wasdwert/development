@@ -771,6 +771,23 @@ function fetchvalues() {
     document.getElementById("board_mobilexs").innerHTML = resources.board;
     document.getElementById("shop_board").innerHTML = resources.board;
     document.getElementById("shop_board_mobile").innerHTML = resources.board;
+    
+    conteststime(clubs_leagues.ttg01c1, "club_ttg01_c1time");
+    conteststime(clubs_leagues.ttg01c2, "club_ttg01_c2time");
+    conteststime(clubs_leagues.ttg01c3, "club_ttg01_c3time");
+    conteststime(clubs_leagues.lea01c1, "league_area01_c1time");
+}
+
+function conteststime(clubs_leagues, a) {
+    if (clubs_leagues==0) {
+        document.getElementById(a).innerHTML = ''; 
+    }
+    else {
+        state.hours=Math.floor(clubs_leagues/60/60);
+        state.minutes=Math.floor((clubs_leagues/60)-(state.hours*60));
+        state.seconds=Math.floor(clubs_leagues-(state.minutes*60)-(state.hours*60*60));
+        document.getElementById(a).innerHTML = '(next in '+state.hours.toString().padStart(2, '0')+':'+state.minutes.toString().padStart(2, '0')+':'+state.seconds.toString().padStart(2, '0')+')';
+    }
 }
 
 function fetchunlocks() {
@@ -920,6 +937,26 @@ function fetchunlocks() {
     }
     
     //Unlock Clubs/Leagues
+    if (clubs_leagues.ttg01==5) {
+        $(document).ready(function(){
+            $('#ButtonTTG01_R1').hide();
+            $('#ButtonTTG01_R2').hide();
+            $('#ButtonTTG01_R3').hide();
+            $('#ButtonTTG01_C1').show();
+            $('#ButtonTTG01_C2').show();
+            $('#ButtonTTG01_C3').show();
+        });
+    }
+    if (clubs_leagues.ttg01==4) {
+        $(document).ready(function(){
+            $('#ButtonTTG01_R1').hide();
+            $('#ButtonTTG01_R2').hide();
+            $('#ButtonTTG01_R3').hide();
+            $('#ButtonTTG01_C1').show();
+            $('#ButtonTTG01_C2').show();
+            $('#ButtonTTG01_C3').hide();
+        });
+    }
     if (clubs_leagues.ttg01==3) {
         $(document).ready(function(){
             $('#ButtonTTG01_R1').hide();

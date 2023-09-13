@@ -1,5 +1,10 @@
 var state = {
     zeitsave: 0,
+    zeitjetzt: 0,
+    zeitsincesave: 0,
+    seconds: 0,
+    minutes: 0,
+    hours: 0,
     random_treetype: 0,
     random_treequality: 0,
     random_shiny: 0,
@@ -11,6 +16,7 @@ var state = {
     seedlings: 0,
     seedlings_ontheway: 0,
     workerstandin: 0,
+    areasunlocked: 1,
 }
 
 var statistics = {
@@ -62,9 +68,22 @@ skillexperience[6]= 60;
 skillexperience[7]= 72;
 skillexperience[8]= 86;
 skillexperience[9]= 103;
+skillexperience[10]= 124;
+skillexperience[11]= 149;
+skillexperience[12]= 178;
+skillexperience[13]= 214;
+skillexperience[14]= 257;
+skillexperience[15]= 308;
+skillexperience[16]= 370;
+skillexperience[17]= 444;
+skillexperience[18]= 532;
+skillexperience[19]= 639;
 
 var clubs_leagues = {
     ttg01: 0,
+    ttg01c1: 0,
+    ttg01c2: 0,
+    ttg01c3: 0,
     ttg02: 0,
     ttg03: 0,
     ttg04: 0,
@@ -90,6 +109,9 @@ var clubs_leagues = {
     st15: 0,
     st16: 0,
     lea01: 0,
+    lea01c1: 0,
+    lea01c2: 0,
+    lea01c3: 0,
     lea02: 0,
     lea03: 0,
     lea04: 0,
@@ -123,6 +145,9 @@ var contests_bonsai_c1 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c2 = {
     treetype: 0,
@@ -146,6 +171,9 @@ var contests_bonsai_c2 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c3 = {
     treetype: 0,
@@ -169,6 +197,9 @@ var contests_bonsai_c3 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c4 = {
     treetype: 0,
@@ -192,6 +223,9 @@ var contests_bonsai_c4 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c5 = {
     treetype: 0,
@@ -215,6 +249,9 @@ var contests_bonsai_c5 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c6 = {
     treetype: 0,
@@ -238,6 +275,9 @@ var contests_bonsai_c6 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c7 = {
     treetype: 0,
@@ -261,6 +301,9 @@ var contests_bonsai_c7 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c8 = {
     treetype: 0,
@@ -284,6 +327,9 @@ var contests_bonsai_c8 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 var contests_bonsai_c9 = {
     treetype: 0,
@@ -307,6 +353,9 @@ var contests_bonsai_c9 = {
     leftpointstotal: 0,
     distributiontype: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var newOption = 0;
@@ -327,7 +376,8 @@ var contests = {
     bonsaichoosen:0,
     bonsaichoosenx:0,
     id: "-",
-    own_score:0,
+    entryprice:0,
+    own_place:1,
     difficulty:0,
     a_score:0,
     b_score:0,
@@ -342,6 +392,9 @@ var contests = {
     judge3_preference: "-",
     judge3_dislike: "-",
 }
+var judge_preference ="-";
+var judge_dislike ="-";
+var ajudge =0;
 
 var worker01 = {
     busy: 0,
@@ -575,10 +628,25 @@ grow_time_tq1[17]= 720;
 grow_time_tq1[18]= 840;
 grow_time_tq1[19]= 960;
 grow_time_tq1[20]= 1080;
-grow_time_tq1[21]= 1260;
-grow_time_tq1[22]= 1440;
-grow_time_tq1[23]= 1620;
-grow_time_tq1[24]= 1800;
+grow_time_tq1[21]= 1200;
+grow_time_tq1[22]= 1320;
+grow_time_tq1[23]= 1440;
+grow_time_tq1[24]= 1560;
+grow_time_tq1[25]= 1680;
+grow_time_tq1[26]= 1800;
+grow_time_tq1[27]= 1920;
+grow_time_tq1[28]= 2040;
+grow_time_tq1[29]= 2160;
+grow_time_tq1[30]= 2280;
+grow_time_tq1[31]= 2400;
+grow_time_tq1[32]= 2520;
+grow_time_tq1[33]= 2640;
+grow_time_tq1[34]= 2760;
+grow_time_tq1[35]= 2880;
+grow_time_tq1[36]= 3000;
+grow_time_tq1[37]= 3120;
+grow_time_tq1[38]= 3240;
+grow_time_tq1[39]= 3360;
 
 const grow_time_tq2 = [];
 grow_time_tq2[0]= 6;
@@ -606,6 +674,21 @@ grow_time_tq2[21]= 1260;
 grow_time_tq2[22]= 1440;
 grow_time_tq2[23]= 1620;
 grow_time_tq2[24]= 1800;
+grow_time_tq2[25]= 1980;
+grow_time_tq2[26]= 2160;
+grow_time_tq2[27]= 2340;
+grow_time_tq2[28]= 2520;
+grow_time_tq2[29]= 2700;
+grow_time_tq2[30]= 2880;
+grow_time_tq2[31]= 3060;
+grow_time_tq2[32]= 3240;
+grow_time_tq2[33]= 3420;
+grow_time_tq2[34]= 3600;
+grow_time_tq2[35]= 3780;
+grow_time_tq2[36]= 3960;
+grow_time_tq2[37]= 4140;
+grow_time_tq2[38]= 4320;
+grow_time_tq2[39]= 4500;
 
 const grow_time_tq3 = [];
 grow_time_tq3[0]= 6;
@@ -633,6 +716,21 @@ grow_time_tq3[21]= 1260;
 grow_time_tq3[22]= 1440;
 grow_time_tq3[23]= 1620;
 grow_time_tq3[24]= 1800;
+grow_time_tq3[25]= 2100;
+grow_time_tq3[26]= 2400;
+grow_time_tq3[27]= 2700;
+grow_time_tq3[28]= 3000;
+grow_time_tq3[29]= 3300;
+grow_time_tq3[30]= 3600;
+grow_time_tq3[31]= 3900;
+grow_time_tq3[32]= 4200;
+grow_time_tq3[33]= 4500;
+grow_time_tq3[34]= 4800;
+grow_time_tq3[35]= 5100;
+grow_time_tq3[36]= 5400;
+grow_time_tq3[37]= 5700;
+grow_time_tq3[38]= 6000;
+grow_time_tq3[39]= 6300;
 
 const level_cp_tq1 = [];
 level_cp_tq1[0]= 2;

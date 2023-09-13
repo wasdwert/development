@@ -1161,6 +1161,7 @@
                             <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Contests</div>
                             <button id=club_ttg01raundo class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewClub_TTG01()">Club Raundo</button>
                             <button id=club_st01chokan class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewClub_ST01()">Club Chokan</button>
+                            <button id=league_area01 class=darker_grey style="width:100%;background: #d8d8d8;color: #555;height: 30px;display: show" onclick="ViewLeague_Area01()">League Area 1</button>
                         </div>
                         <div class="centercolumn_right">
                             <div id=Club_TTG01 style="width:100%; display: none; background-image: url(Images/neighborhood.jpg); background-size: 315px">
@@ -1168,12 +1169,17 @@
                                 <button id=ButtonTTG01_R1 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: show" onclick="club_ttg01_request1()">1st Request</button>
                                 <button id=ButtonTTG01_R2 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_request2()">2nd Request</button>
                                 <button id=ButtonTTG01_R3 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_request3()">3rd Request</button>
-                                <button id=ButtonTTG01_C1 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition1()">Competition: Beginner</button>
-                                <button id=ButtonTTG01_C2 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition2()">Competition: Advanced</button>
-                                <button id=ButtonTTG01_C3 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition3()">Competition: Expert</button>
+                                <button id=ButtonTTG01_C1 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition1()">Competition: Beginner <span id="club_ttg01_c1time">(next in XX:XX:XX)</span></button>
+                                <button id=ButtonTTG01_C2 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition2()">Competition: Advanced <span id="club_ttg01_c2time">(next in XX:XX:XX)</span></button>
+                                <button id=ButtonTTG01_C3 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: none" onclick="club_ttg01_competition3()">Competition: Expert <span id="club_ttg01_c3time">(next in XX:XX:XX)</span></button>
                             </div>
                             <div id=Club_ST01 style="width:100%; display: none; background-image: url(Images/neighborhood.jpg); background-size: 315px">
                                 <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">Club Chokan</div>
+                                
+                            </div>
+                            <div id=League_Area01 style="width:100%; display: none; background-image: url(Images/neighborhood.jpg); background-size: 315px">
+                                <div class="Field" style="width:100%;background: #777;color: white;height: 40px;display: flex;align-items:center">League Area 1</div>
+                                <button id=ButtonArea01_C1 class=grey style="width:100%;background: #9f9f9f;color: white;height: 40px; display: show" onclick="league_area01_competition1()">Exhibition: Beginner <span id="league_area01_c1time">(next in XX:XX:XX)</span></button>
                                 
                             </div>
                         </div>
@@ -2787,7 +2793,7 @@
     <div id="m_contests" class="modal_contests">
         <div class="modal_contests-content" style="width: 450px">
             <div class="Field" id="modal_contests_title" style="width: 450px;background: #777;color: white;height: 30px;display: flex;align-items:center">Request X</div>
-            <div id="modal_contests_overflow" style="overflow-y: scroll; width: 450px; height: 500px">
+            <div id="modal_contests_overflow" style="overflow-y: scroll; width: 450px; height: 460px">
                 <div class="Field" id="modal_contests_explanation" style="width:100%; padding-top: 5px; padding-bottom: 5px; background: #d8d8d8;color: #555; display: flex;align-items:center">Explanation of <br>request</div>
                 <div id=Field style="width: 423.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Choose the bonsai</div>
                 <select class="select" id="menu_contests" onchange="menu_contests_change()" style="width:100%;background: #d8d8d8;color: #555">
@@ -3116,10 +3122,10 @@
                         <button id="Button_Modal_Contests_BonsaiJ" class="Button_Modal_Position_Class" style="width: 80px;height: 110px;display: flex;align-items:center;justify-content: center">Choose</button>
                     </div>      
                 </div>
-                <div class="Field" style="width:33%;background: #777;color: white;height: 40px;width: 433.2px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
-                    <button id="Button_Modal_Contests_Enter" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Enter</button>
-                    <button id="Button_Modal_Contests_Cancel" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
-                </div>
+            </div>
+            <div class="Field" style="background: #777; color: white; height: 40px; width: 450px;display: flex;align-items:center;justify-content: center;padding-left: 0px">
+                <button id="Button_Modal_Contests_Enter" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Enter&nbsp;(Fee:&nbsp;<span id="entryprice" style="display: flex; align-items:center; justify-content: center">-</span>)</button>
+                <button id="Button_Modal_Contests_Cancel" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">Cancel</button>
             </div>     
         </div>
     </div>
@@ -3158,13 +3164,13 @@
                         <span class="contests" style="width: 60px; height: 30px; padding: 0px; justify-content: center" id=bonsaixa_r_contests>-</span>
                     </div>
                 </div>
-                <div id=Field style="width: 440px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your result</div>
+                <div class=Field style="width: 450px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Result</div>
                 <div class="Field" id="modal_contests_result_request_result" style="width:100%; padding-top: 5px; padding-bottom: 5px; background: #d8d8d8;color: #555; display: flex;align-items:center">Explanation of <br>request</div>
-                <div id=Field style="width: 440px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your reward</div>
+                <div class=Field style="width: 450px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Reward</div>
                 <div class="Field" id="modal_contests_result_request_reward" style="width:100%; padding-top: 5px; padding-bottom: 5px; background: #d8d8d8;color: #555; display: flex;align-items:center">Explanation of <br>request</div>
             </div>
             <div id="modal_contests_result_competition" style="overflow-y: scroll; width: 450px; height: 460px; display: none">
-                <div id=Field style="width:423.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your choosen bonsai</div>
+                <div class=Field style="width:433.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your choosen bonsai</div>
                 <div style="width: 433.2px;background: #d8d8d8;color: #555;height: 120px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
                     <div id="ButtonBonsaiXB_contests" class="bonsaiimage120"><span id="bonsaixb_types_contests"><img src="Images/pot.svg" width="50" height="50"></span></div>
                     <div style="width: 313.2px; height: 120px; padding: 0px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center">
@@ -3193,7 +3199,7 @@
                         <span class="contests" style="width: 55px; height: 30px; padding: 0px; justify-content: center" id=bonsaixb_r_contests>-</span>
                     </div>
                 </div>
-                <div id=Field style="width:423.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Competition</div>
+                <div class=Field style="width:433.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Competition</div>
                 <div id="modal_contests_result_c1" style="width: 433.2px; display: show">
                     <div style="width:433.2px; height: 110px; padding: 0px; display: flex">
                         <div style="width: 353.2px;background: #d8d8d8;color: #555;height: 110px; padding: 0px;display: flex;align-items: center; justify-content: center; flex-wrap: wrap">
@@ -3590,9 +3596,194 @@
                         </div>
                     </div>
                 </div>
-                <div id=Field style="width: 423.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your result</div>
+                <div class=Field style="width: 433.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Result</div>
+                <div id="modal_contests_result_competition_scores3">    
+                    <div style="width:100%; padding: 0px; background: #d8d8d8;color: #555; display: flex; flex-wrap: wrap; align-items:center">
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">You</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_score3>5.000,0</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 2</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_score3>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 1</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_score3>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 3</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_score3>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    </div>
+                </div>
+                <div id="modal_contests_result_competition_scores5">    
+                    <div style="width:100%; padding: 0px; background: #d8d8d8;color: #555; display: flex; flex-wrap: wrap; align-items:center">
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">You</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_score5>5.000,0</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 3</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_score5>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 1</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_score5>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 4</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_score5>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 2</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_score5>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 5</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_score5>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    </div>
+                </div>
+                <div id="modal_contests_result_competition_scores7">    
+                    <div style="width:100%; padding: 0px; background: #d8d8d8;color: #555; display: flex; flex-wrap: wrap; align-items:center">
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">You</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_score7>5.000,0</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 4</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_score7>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 1</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_score7>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 5</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_score7>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 2</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_score7>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 6</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_score7>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 3</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_score7>-</span>
+                    <span class="contests" style="width: 26.8px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 7</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_score7>-</span>
+                    <span class="contests" style="width: 30px; height: 26.67px; padding-left: 4px; justify-content: flex-start; border-bottom: 0px"></span>
+                    </div>
+                </div>
+                <div id="modal_contests_result_competition_scores9">
+                    <div style="width:100%; padding: 0px; background: #d8d8d8;color: #555; display: flex; flex-wrap: wrap; align-items:center">
+                    <span class="contests" style="width: 108.2px; height: 46px; padding-left: 10px; justify-content: flex-start"></span>
+                    <span class="contests" style="width: 65px; height: 46px; padding-left: 4px; justify-content: flex-start">Score</span>
+                    <span class="contests" style="width: 65px; height: 46px; padding-left: 4px; justify-content: flex-start">Judge A<br><div class="judge1pre"><img src="Images/like.svg" width="20" height="20"><span id="judge1pre_text">-</span></div>&nbsp;&nbsp;&nbsp;<div class="judge1dis"><img src="Images/dislike.svg" width="20" height="20"><span id="judge1dis_text">-</span></div></span>
+                    <span class="contests" style="width: 65px; height: 46px; padding-left: 4px; justify-content: flex-start">Judge B<br><div class="judge2pre"><img src="Images/like.svg" width="20" height="20"><span id="judge2pre_text">-</span></div>&nbsp;&nbsp;&nbsp;<div class="judge2dis"><img src="Images/dislike.svg" width="20" height="20"><span id="judge2dis_text">-</span></div></span>
+                    <span class="contests" style="width: 65px; height: 46px; padding-left: 4px; justify-content: flex-start">Judge C<br><div class="judge3pre"><img src="Images/like.svg" width="20" height="20"><span id="judge3pre_text">-</span></div>&nbsp;&nbsp;&nbsp;<div class="judge3dis"><img src="Images/dislike.svg" width="20" height="20"><span id="judge3dis_text">-</span></div></span>
+                    <span class="contests" style="width: 65px; height: 46px; padding-left: 4px; justify-content: flex-start">Total</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">You</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaixb_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 1</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic1_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 2</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic2_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 3</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic3_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 4</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic4_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 5</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic5_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 6</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic6_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 7</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic7_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 8</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic8_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic8_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic8_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic8_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic8_total>-</span>
+                    
+                    <span class="contests" style="width: 108.2px; height: 26.67px; padding-left: 10px; justify-content: flex-start">Competitor 9</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic9_score>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic9_judge1>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic9_judge2>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic9_judge3>-</span>
+                    <span class="contests" style="width: 65px; height: 26.67px; padding-left: 4px; justify-content: flex-start" id=bonsaic9_total>-</span>
+                    </div>
+                </div>
                 <div class="Field" id="modal_contests_result_competition_result" style="width:100%; padding-top: 5px; padding-bottom: 5px; background: #d8d8d8;color: #555; display: flex;align-items:center">Explanation of <br>request</div>
-                <div id=Field style="width: 423.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Your reward</div>
+                <div class=Field style="width: 433.2px; background: #9f9f9f;color: white; height: 30px; padding-left: 10px; display: flex;align-items:center">Reward</div>
                 <div class="Field" id="modal_contests_result_competition_reward" style="width:100%; padding-top: 5px; padding-bottom: 5px; background: #d8d8d8;color: #555; display: flex;align-items:center">Explanation of <br>request</div>
             </div>
             <button id="Button_Modal_Contests_Result" class="Button_Modal_Position_Class" style="width:100%;display: flex;align-items:center;justify-content: center">OK</button>
@@ -3614,6 +3805,7 @@
     <script src="contests.js"></script>
     <script src="contests_comcalc.js"></script>
     <script src="contests_wincalc.js"></script>
+    <script src="contests_results.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
     <link href="select2.min.css" rel="stylesheet" />
     <script src="select2.min.js"></script>

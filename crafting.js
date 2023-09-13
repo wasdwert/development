@@ -83,8 +83,8 @@ function crafting_countdown(worker) {
                 document.getElementById("worker3_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task'; 
             }
             
-            task005trigger();
-            task011trigger();
+            //task005trigger();
+            //task011trigger();
         }
     }
 }

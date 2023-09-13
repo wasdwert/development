@@ -378,7 +378,7 @@
     font-size: 15px;
 }
 
-#ButtonTTG01_R1, #ButtonTTG01_R2, #ButtonTTG01_R3, #ButtonTTG01_C1, #ButtonTTG01_C2, #ButtonTTG01_C3 {
+#ButtonTTG01_R1, #ButtonTTG01_R2, #ButtonTTG01_R3, #ButtonTTG01_C1, #ButtonTTG01_C2, #ButtonTTG01_C3, #ButtonArea01_C1 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -506,7 +506,7 @@
     font-size: 15px;
 }
 
-#club_ttg01raundo, #club_st01chokan {
+#club_ttg01raundo, #club_st01chokan, #league_area01 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -854,6 +854,46 @@
     font-family: Arial;
     font-size: 15px;
 }
+
+/* Tooltip */
+.judge1pre, .judge1dis, .judge2pre, .judge2dis, .judge3pre, .judge3dis {
+  position: relative;
+  display: inline-block;
+}
+
+.judge1pre #judge1pre_text, .judge1dis #judge1dis_text, .judge2pre #judge2pre_text, .judge2dis #judge2dis_text, .judge3pre #judge3pre_text, .judge3dis #judge3dis_text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.judge1pre #judge1pre_text::after, .judge1dis #judge1dis_text::after, .judge2pre #judge2pre_text::after, .judge2dis #judge2dis_text::after, .judge3pre #judge3pre_text::after, .judge3dis #judge3dis_text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.judge1pre:hover #judge1pre_text, .judge1dis:hover #judge1dis_text, .judge2pre:hover #judge2pre_text, .judge2dis:hover #judge2dis_text, .judge3pre:hover #judge3pre_text, .judge3dis:hover #judge3dis_text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /* Collapsible Menus Container*/
 .rightcolumn_content2 {

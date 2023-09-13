@@ -219,7 +219,17 @@ spancontestsenter.onclick = function() {
         snackb.className = "show";
         setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
     }
+    else if (resources.money<contests.entryprice) {
+        document.getElementById("snack_message").innerText = "Not enough money for entry fee";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
     else {
+        resources.money -=contests.entryprice;
+        document.getElementById("money").innerHTML = resources.money;
+        document.getElementById("money_mobile").innerHTML = resources.money;
+        document.getElementById("money_mobilexs").innerHTML = resources.money;
         modalcontests.style.display = "none";
         x_contests = 1;
         contests.visible=0;
@@ -227,6 +237,7 @@ spancontestsenter.onclick = function() {
         $('#menu_contests').trigger('change');
         contests_result();
         modalcontests_r.style.display = "block";
+        document.getElementById('modal_contests_result_competition').scrollTop =0;
     }
 }
 

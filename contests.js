@@ -1,6 +1,8 @@
 function club_ttg01_request1() {
     contests.visible=1;
     contests.id="TTG01_R1";
+    contests.entryprice=0;
+    document.getElementById('entryprice').innerHTML = 'Free';
     menu_contests_change();
     
     document.getElementById("modal_contests_title").innerText = "Club Raundo - First Request";
@@ -13,6 +15,8 @@ function club_ttg01_request1() {
 function club_ttg01_request2() {
     contests.visible=1;
     contests.id="TTG01_R2";
+    contests.entryprice=0;
+    document.getElementById('entryprice').innerHTML = 'Free';
     menu_contests_change();
     
     document.getElementById("modal_contests_title").innerText = "Club Raundo - Second Request";
@@ -25,8 +29,9 @@ function club_ttg01_request2() {
 function club_ttg01_request3() {
     contests.visible=1;
     contests.id="TTG01_R3";
+    contests.entryprice=0;
+    document.getElementById('entryprice').innerHTML = 'Free';
     menu_contests_change();
-    document.getElementById('modal_contests_overflow').scrollTop =0;
     
     document.getElementById("modal_contests_title").innerText = "Club Raundo - Third Request";
     document.getElementById("modal_contests_explanation").innerHTML = "The clubs third and last request is:<br>- A bonsai that comes for the treetype group 'Raundo'.<br>- The nature isn't allowed to prefer any subcategorie.<br>- A foliage of at least 10.";
@@ -36,42 +41,91 @@ function club_ttg01_request3() {
 }
 
 function club_ttg01_competition1() {
-    contests.visible=1;
-    contests.id="TTG01_C1";
-    menu_contests_change();
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+    if (clubs_leagues.ttg01c1==0) {
+        contests.visible=1;
+        contests.id="TTG01_C1";
+        contests.entryprice=3;
+        document.getElementById('entryprice').innerHTML = '3&nbsp;<img src="Images/currency_white.svg" width="15" height="15">';
+        menu_contests_change();
+        
+        document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Beginner";
+        document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
     
-    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Beginner";
-    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
-    
-    modalcontests.style.display = "block";
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+        modalcontests.style.display = "block";
+        document.getElementById('modal_contests_overflow').scrollTop =0;
+    }
+    else {
+        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 function club_ttg01_competition2() {
-    contests.visible=1;
-    contests.id="TTG01_C2";
-    menu_contests_change();
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+    if (clubs_leagues.ttg01c2==0) {
+        contests.visible=1;
+        contests.id="TTG01_C2";
+        contests.entryprice=5;
+        document.getElementById('entryprice').innerHTML = '5&nbsp;<img src="Images/currency_white.svg" width="15" height="15">';
+        menu_contests_change();
     
-    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Advanced";
-    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+        document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Advanced";
+        document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
     
-    modalcontests.style.display = "block";
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+        modalcontests.style.display = "block";
+        document.getElementById('modal_contests_overflow').scrollTop =0;
+    }
+    else {
+        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 function club_ttg01_competition3() {
-    contests.visible=1;
-    contests.id="TTG01_C3";
-    menu_contests_change();
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+    if (clubs_leagues.ttg01c3==0) {
+        contests.visible=1;
+        contests.id="TTG01_C3";
+        contests.entryprice=10;
+        document.getElementById('entryprice').innerHTML = '10&nbsp;<img src="Images/currency_white.svg" width="15" height="15">';
+        menu_contests_change();
+        
+        document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Expert";
+        document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
     
-    document.getElementById("modal_contests_title").innerText = "Club Raundo - Competition: Expert";
-    document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+        modalcontests.style.display = "block";
+        document.getElementById('modal_contests_overflow').scrollTop =0;
+    }
+    else {
+        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
+}
+
+function league_area01_competition1() {
+    if (clubs_leagues.lea01c1==0) {
+        contests.visible=1;
+        contests.id="Area01_C1";
+        contests.entryprice=3;
+        document.getElementById('entryprice').innerHTML = '3&nbsp;<img src="Images/currency_white.svg" width="15" height="15">';
+        menu_contests_change();
     
-    modalcontests.style.display = "block";
-    document.getElementById('modal_contests_overflow').scrollTop =0;
+        document.getElementById("modal_contests_title").innerText = "League Area 01 - Exhibition: Beginner";
+        document.getElementById("modal_contests_explanation").innerHTML = "TBA.";
+    
+        modalcontests.style.display = "block";
+        document.getElementById('modal_contests_overflow').scrollTop =0;
+    }
+    else {
+        document.getElementById("snack_message").innerText = "Next exhibition hasn't begun yet.";
+        var snackb = document.getElementById("snackbar");
+        snackb.className = "show";
+        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    }
 }
 
 function contests_bonsaiunavailable() {
@@ -347,150 +401,6 @@ function contests_choosebonsai3b(a, b) {
     document.getElementById(b).innerText = "Choose"; 
     contests.bonsaichoosen=0;
     contests.bonsaichoosenx=0;
-}
-
-function contests_result() {
-    if (contests.id=="TTG01_R1" || contests.id=="TTG01_R2" || contests.id=="TTG01_R3") {
-        contests_result_request();
-        if (contests.id=="TTG01_R1") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').show();
-                $('#modal_contests_result_competition').hide();
-            });            
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - First Request";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "The represented bonsai fits the requirements made in our request. Thank you very much.<br>You may proceed with the next request. Two more to go.";
-            document.getElementById("modal_contests_result_request_reward").innerText = "3 XP";
-            experience(3);
-            clubs_leagues.ttg01=1;
-            $(document).ready(function(){
-                $('#ButtonTTG01_R1').hide();
-                $('#ButtonTTG01_R2').show();
-                $('#ButtonTTG01_R3').hide();
-                $('#ButtonTTG01_C1').hide();
-                $('#ButtonTTG01_C2').hide();
-                $('#ButtonTTG01_C3').hide();
-            });
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-        else if (contests.id=="TTG01_R2") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').show();
-                $('#modal_contests_result_competition').hide();
-            }); 
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Second Request";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "Once again the represented bonsai fits the requirements we made. Thank you very much.<br>You may proceed with the next request. One more to go.";
-            document.getElementById("modal_contests_result_request_reward").innerText = "5 XP";
-            experience(5);
-            clubs_leagues.ttg01=2;
-            $(document).ready(function(){
-                $('#ButtonTTG01_R1').hide();
-                $('#ButtonTTG01_R2').hide();
-                $('#ButtonTTG01_R3').show();
-                $('#ButtonTTG01_C1').hide();
-                $('#ButtonTTG01_C2').hide();
-                $('#ButtonTTG01_C3').hide();
-            });
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-        else if (contests.id=="TTG01_R3") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').show();
-                $('#modal_contests_result_competition').hide();
-            }); 
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Third Request";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "Your third represented bonsai, has as usual, fit our requirements. We congratulate you to finishing all our requests.<br>You may proceed now with competing in our competitions.";
-            document.getElementById("modal_contests_result_request_reward").innerText = "10 XP";
-            experience(10);
-            clubs_leagues.ttg01=3;
-            $(document).ready(function(){
-                $('#ButtonTTG01_R1').hide();
-                $('#ButtonTTG01_R2').hide();
-                $('#ButtonTTG01_R3').hide();
-                $('#ButtonTTG01_C1').show();
-                $('#ButtonTTG01_C2').hide();
-                $('#ButtonTTG01_C3').hide();
-            });
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-    }
-    else if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
-
-        if (contests.id=="TTG01_C1") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').hide();
-                $('#modal_contests_result_competition').show();
-            }); 
-            contests.difficulty=1;
-            contests_comcalc();
-            contests_result_competition();
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Beginner";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
-            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
-            //experience(10);
-            //clubs_leagues.ttg01=3;
-            //$(document).ready(function(){
-            //    $('#ButtonTTG01_R1').hide();
-            //    $('#ButtonTTG01_R2').hide();
-            //    $('#ButtonTTG01_R3').hide();
-            //    $('#ButtonTTG01_C1').hide();
-            //    $('#ButtonTTG01_C2').hide();
-            //    $('#ButtonTTG01_C3').hide();
-            //}); 
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-        else if (contests.id=="TTG01_C2") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').hide();
-                $('#modal_contests_result_competition').show();
-            }); 
-            contests.difficulty=2;
-            contests_comcalc();
-            contests_result_competition();
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Advanced";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
-            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
-            //experience(10);
-            //clubs_leagues.ttg01=3;
-            //$(document).ready(function(){
-            //    $('#ButtonTTG01_R1').hide();
-            //    $('#ButtonTTG01_R2').hide();
-            //    $('#ButtonTTG01_R3').hide();
-            //    $('#ButtonTTG01_C1').hide();
-            //    $('#ButtonTTG01_C2').hide();
-            //    $('#ButtonTTG01_C3').hide();
-            //}); 
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-        else if (contests.id=="TTG01_C3") {
-            $(document).ready(function(){
-                $('#modal_contests_result_request').hide();
-                $('#modal_contests_result_competition').show();
-            }); 
-            contests.difficulty=3;
-            contests_comcalc();
-            contests_result_competition();
-            document.getElementById("modal_contests_result_title").innerText = "Result: Club Raundo - Competition: Expert";
-            document.getElementById("modal_contests_result_request_result").innerHTML = "TBA";
-            document.getElementById("modal_contests_result_request_reward").innerText = "xxx XP";
-            //experience(10);
-            //clubs_leagues.ttg01=3;
-            //$(document).ready(function(){
-            //    $('#ButtonTTG01_R1').hide();
-            //    $('#ButtonTTG01_R2').hide();
-            //    $('#ButtonTTG01_R3').hide();
-            //    $('#ButtonTTG01_C1').hide();
-            //    $('#ButtonTTG01_C2').hide();
-            //    $('#ButtonTTG01_C3').hide();
-            //}); 
-            contests.bonsaichoosen=0;
-            contests.bonsaichoosenx=0;
-        }
-    } 
 }
 
 function contests_result_request() {

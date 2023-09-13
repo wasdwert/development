@@ -144,6 +144,21 @@ w.addEventListener('message', function(e){
         bonsai020.growing_zeit -=1;
         Bonsai_Growing_Intervall(bonsai020);
     }
+    
+    if (clubs_leagues.ttg01c1>0) {
+        clubs_leagues.ttg01c1-=1;
+    }
+    if (clubs_leagues.ttg01c2>0) {
+        clubs_leagues.ttg01c2-=1;
+    }
+    if (clubs_leagues.ttg01c3>0) {
+        clubs_leagues.ttg01c3-=1;
+    }
+    if (clubs_leagues.lea01c1>0) {
+        clubs_leagues.lea01c1-=1;
+    }
+    fetchvalues();
+    
     autosave +=1;
     if (autosave==30) {
         SaveGame();
@@ -172,6 +187,8 @@ function SaveGame() {
     localStorage.setItem('worker03', JSON.stringify(worker03));
     localStorage.setItem('exp_area01', JSON.stringify(exp_area01));
     localStorage.setItem('exp_area02', JSON.stringify(exp_area02));
+    localStorage.setItem('cr_compost1', JSON.stringify(cr_compost1));
+    localStorage.setItem('cr_robot1', JSON.stringify(cr_robot1));
     localStorage.setItem('seedling1', JSON.stringify(seedling1));
     localStorage.setItem('seedling2', JSON.stringify(seedling2));
     localStorage.setItem('seedling3', JSON.stringify(seedling3));
@@ -212,6 +229,8 @@ function LoadGame() {
     worker03 = JSON.parse(localStorage.getItem('worker03'));
     exp_area01 = JSON.parse(localStorage.getItem('exp_area01'));
     exp_area02 = JSON.parse(localStorage.getItem('exp_area02'));
+    cr_compost1 = JSON.parse(localStorage.getItem('cr_compost1'));
+    cr_robot1 = JSON.parse(localStorage.getItem('cr_robot1'));
     seedling1 = JSON.parse(localStorage.getItem('seedling1'));
     seedling2 = JSON.parse(localStorage.getItem('seedling2'));
     seedling3 = JSON.parse(localStorage.getItem('seedling3'));
@@ -239,7 +258,111 @@ function LoadGame() {
     bonsai019 = JSON.parse(localStorage.getItem('bonsai019'));
     bonsai020 = JSON.parse(localStorage.getItem('bonsai020'));
     
+    state.zeitjetzt = Date.now();
+    state.zeitsincesave = Math.floor(state.zeitjetzt/1000) - Math.floor(state.zeitsave/1000);
+    
+    document.getElementById("snack_message").innerText = "Welcome back, you have been "+state.zeitsincesave+" seconds away.";
+    var snackb = document.getElementById("snackbar");
+    snackb.className = "show";
+    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    
+    loadcheckup();
     startup();
+}
+
+function loadcheckup() {
+    bonsaicheckup (bonsai001);
+    bonsaicheckup (bonsai002);
+    bonsaicheckup (bonsai003);
+    bonsaicheckup (bonsai004);
+    bonsaicheckup (bonsai005);
+    bonsaicheckup (bonsai006);
+    bonsaicheckup (bonsai007);
+    bonsaicheckup (bonsai008);
+    bonsaicheckup (bonsai009);
+    bonsaicheckup (bonsai010);
+    bonsaicheckup (bonsai011);
+    bonsaicheckup (bonsai012);
+    bonsaicheckup (bonsai013);
+    bonsaicheckup (bonsai014);
+    bonsaicheckup (bonsai015);
+    bonsaicheckup (bonsai016);
+    bonsaicheckup (bonsai017);
+    bonsaicheckup (bonsai018);
+    bonsaicheckup (bonsai019);
+    bonsaicheckup (bonsai020);
+    workerexpeditioncheckup (worker01, "01", "1");
+    workerexpeditioncheckup (worker02, "02", "2");
+    workerexpeditioncheckup (worker03, "03", "3");
+    
+    for (let i = 0; i < state.zeitsincesave; i++) { 
+        crafting_countdown(worker01);
+        crafting_countdown(worker02);
+        crafting_countdown(worker03);
+    }
+    
+    if (clubs_leagues.ttg01c1>0) {
+        if (state.zeitsincesave>clubs_leagues.ttg01c1) {
+            clubs_leagues.ttg01c1-=1;
+        }
+        else {
+            clubs_leagues.ttg01c1-=state.zeitsincesave;
+        }
+    }
+    if (clubs_leagues.ttg01c2>0) {
+        if (state.zeitsincesave>clubs_leagues.ttg01c2) {
+            clubs_leagues.ttg01c2-=1;
+        }
+        else {
+            clubs_leagues.ttg01c2-=state.zeitsincesave;
+        }
+    }
+    if (clubs_leagues.ttg01c3>0) {
+        if (state.zeitsincesave>clubs_leagues.ttg01c3) {
+            clubs_leagues.ttg01c3-=1;
+        }
+        else {
+            clubs_leagues.ttg01c3-=state.zeitsincesave;
+        }
+    }
+    if (clubs_leagues.lea01c1>0) {
+        if (state.zeitsincesave>clubs_leagues.lea01c1) {
+            clubs_leagues.lea01c1-=1;
+        }
+        else {
+            clubs_leagues.lea01c1-=state.zeitsincesave;
+        }
+    }
+}
+
+function bonsaicheckup (bonsaixx) {
+    if (bonsaixx.growing==1) {
+        if (state.zeitsincesave>bonsaixx.growing_zeit) {
+            bonsaixx.growing_zeit=0;
+            Bonsai_Growing_Intervall(bonsaixx);
+        }
+        else {
+            bonsaixx.growing_zeit-=state.zeitsincesave;
+            Bonsai_Growing_Intervall(bonsaixx);
+        }
+    }
+}
+
+function workerexpeditioncheckup (worker, a, b) {
+    if (worker.expedition>0) {
+        if (state.zeitsincesave>worker.expedition_zeit) {
+            worker.expedition_zeit = 0; 
+            seedling_countdown(worker);
+            document.getElementById("zeit_worker"+a).innerHTML = "";  
+            document.getElementById("worker"+b+"_task").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready for new task';
+            document.getElementById("worker"+b+"_task_mobile").innerHTML = '<img src="Images/idle.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Ready';
+            document.getElementById("worker"+b+"_task_mobilexs").innerHTML = '<img src="Images/idle.svg" width="20" height="20">';   
+        }
+        else {
+            worker.expedition_zeit -=state.zeitsincesave;
+            document.getElementById("zeit_worker"+a).innerHTML = "("+worker.expedition_zeit+"&nbsp;seconds left)";  
+        }
+    }
 }
 
 function startup() {

@@ -464,6 +464,7 @@ function ViewClub_TTG01 () {
     $(document).ready(function(){
         $('#Club_TTG01').show();
         $('#Club_ST01').hide();
+        $('#League_Area01').hide();
     });
 }
 
@@ -471,6 +472,15 @@ function ViewClub_ST01 () {
     $(document).ready(function(){
         $('#Club_TTG01').hide();
         $('#Club_ST01').show();
+        $('#League_Area01').hide();
+    });
+}
+
+function ViewLeague_Area01 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_ST01').hide();
+        $('#League_Area01').show();
     });
 }
 

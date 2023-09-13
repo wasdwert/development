@@ -74,55 +74,84 @@ function contests_comcalc () {
 function contests_comcalc_level () {
     if (contests.id=="TTG01_C1") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c1);
+        contests_comcalc_level25 (contests_bonsai_c1);
         contests_bonsai_c2.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c2);
+        contests_comcalc_level25 (contests_bonsai_c2);
         contests_bonsai_c3.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c3);
+        contests_comcalc_level25 (contests_bonsai_c3);
     }
     else if (contests.id=="TTG01_C2") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c1);
+        contests_comcalc_level25 (contests_bonsai_c1);
         contests_bonsai_c1.level +=15;
         contests_bonsai_c2.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c2);
+        contests_comcalc_level25 (contests_bonsai_c2);
         contests_bonsai_c2.level +=15;
         contests_bonsai_c3.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c3);
+        contests_comcalc_level25 (contests_bonsai_c3);
         contests_bonsai_c3.level +=15;
         contests_bonsai_c4.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c4);
+        contests_comcalc_level25 (contests_bonsai_c4);
         contests_bonsai_c4.level +=15;
         contests_bonsai_c5.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c5);
+        contests_comcalc_level25 (contests_bonsai_c5);
         contests_bonsai_c5.level +=15;
     }
     else if (contests.id=="TTG01_C3") {
         contests_bonsai_c1.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c1);
+        contests_comcalc_level25 (contests_bonsai_c1);
         contests_bonsai_c1.level +=30;
         contests_bonsai_c2.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c2);
+        contests_comcalc_level25 (contests_bonsai_c2);
         contests_bonsai_c2.level +=30;
         contests_bonsai_c3.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c3);
+        contests_comcalc_level25 (contests_bonsai_c3);
         contests_bonsai_c3.level +=30;
         contests_bonsai_c4.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c4);
+        contests_comcalc_level25 (contests_bonsai_c4);
         contests_bonsai_c4.level +=30;
         contests_bonsai_c5.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c5);
+        contests_comcalc_level25 (contests_bonsai_c5);
         contests_bonsai_c5.level +=30;
         contests_bonsai_c6.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c6);
+        contests_comcalc_level25 (contests_bonsai_c6);
         contests_bonsai_c6.level +=30;
         contests_bonsai_c7.level=Math.round(Math.random()*25);
-        contests_comcalc_level20 (contests_bonsai_c7);
+        contests_comcalc_level25 (contests_bonsai_c7);
         contests_bonsai_c7.level +=30;
+    }
+    else if (contests.id=="Area01_C1") {
+        contests_bonsai_c1.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c1);
+        contests_bonsai_c1.level +=20;
+        contests_bonsai_c2.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c2);
+        contests_bonsai_c2.level +=20;
+        contests_bonsai_c3.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c3);
+        contests_bonsai_c3.level +=20;
+        contests_bonsai_c4.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c4);
+        contests_bonsai_c4.level +=20;
+        contests_bonsai_c5.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c5);
+        contests_bonsai_c5.level +=20;
+        contests_bonsai_c6.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c6);
+        contests_bonsai_c6.level +=20;
+        contests_bonsai_c7.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c7);
+        contests_bonsai_c7.level +=20;
+        contests_bonsai_c8.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c8);
+        contests_bonsai_c8.level +=20;
+        contests_bonsai_c9.level=Math.round(Math.random()*20);
+        contests_comcalc_level20 (contests_bonsai_c9);
+        contests_bonsai_c9.level +=20;
     }
 }
 
-function contests_comcalc_level20 (a) {
+function contests_comcalc_level25 (a) {
     if (a.level>=20) {
     }
     else if (a.level>=16) {
@@ -142,9 +171,26 @@ function contests_comcalc_level20 (a) {
     }
 }
 
+function contests_comcalc_level20 (a) {
+    if (a.level>=16) {
+    }
+    else if (a.level>=12) {
+        a.level +=1;
+    }
+    else if (a.level>=8) {
+        a.level +=2;
+    }
+    else if (a.level>=4) {
+        a.level +=3;
+    }
+    else if (a.level>=0) {
+        a.level +=4;
+    }
+}
+
 //Treequality
 function contests_comcalc_treequality () {
-    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3" || contests.id=="Area01_C1") {
         contests_comcalc_treequality_area1(contests_bonsai_c1);
         contests_comcalc_treequality_area1(contests_bonsai_c2);
         contests_comcalc_treequality_area1(contests_bonsai_c3);
@@ -152,6 +198,8 @@ function contests_comcalc_treequality () {
         contests_comcalc_treequality_area1(contests_bonsai_c5);
         contests_comcalc_treequality_area1(contests_bonsai_c6);
         contests_comcalc_treequality_area1(contests_bonsai_c7);
+        contests_comcalc_treequality_area1(contests_bonsai_c8);
+        contests_comcalc_treequality_area1(contests_bonsai_c9);
     }
 }
 
@@ -187,6 +235,40 @@ function contests_comcalc_ttt() {
         contests_comcalc_ttt_tt(contests_bonsai_c6);
         contests_comcalc_ttt_tt(contests_bonsai_c7);
     }
+    else if (contests.id=="Area01_C1") {
+        contests_comcalc_ttt2(contests_bonsai_c1);
+        contests_comcalc_ttt2(contests_bonsai_c2);
+        contests_comcalc_ttt2(contests_bonsai_c3);
+        contests_comcalc_ttt2(contests_bonsai_c4);
+        contests_comcalc_ttt2(contests_bonsai_c5);
+        contests_comcalc_ttt2(contests_bonsai_c6);
+        contests_comcalc_ttt2(contests_bonsai_c7);
+        contests_comcalc_ttt2(contests_bonsai_c8);
+        contests_comcalc_ttt2(contests_bonsai_c9);
+        
+        contests_comcalc_ttt_tt(contests_bonsai_c1);
+        contests_comcalc_ttt_tt(contests_bonsai_c2);
+        contests_comcalc_ttt_tt(contests_bonsai_c3);
+        contests_comcalc_ttt_tt(contests_bonsai_c4);
+        contests_comcalc_ttt_tt(contests_bonsai_c5);
+        contests_comcalc_ttt_tt(contests_bonsai_c6);
+        contests_comcalc_ttt_tt(contests_bonsai_c7);
+        contests_comcalc_ttt_tt(contests_bonsai_c8);
+        contests_comcalc_ttt_tt(contests_bonsai_c9);
+    }
+}
+
+function contests_comcalc_ttt2(a) {
+    state.random_contests =Math.random(); //Random number between 0 and 1
+    if (state.random_contests>=1.0001) {
+        a.treetypegroup=3;
+    }
+    else if (state.random_contests>=0.6666) {
+        a.treetypegroup=2;
+    }
+    else {
+        a.treetypegroup=1;
+    }
 }
 
 function contests_comcalc_ttt_tt(a) {
@@ -202,11 +284,35 @@ function contests_comcalc_ttt_tt(a) {
             a.treetype=1;
         }
     }
+    else if (a.treetypegroup==2) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=1.0001) {
+            a.treetype=6;
+        }
+        else if (state.random_contests>=0.6557) {
+            a.treetype=5;
+        }
+        else {
+            a.treetype=4;
+        }
+    }
+    else if (a.treetypegroup==3) {
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.9016) {
+            a.treetype=9;
+        }
+        else if (state.random_contests>=0.6557) {
+            a.treetype=8;
+        }
+        else {
+            a.treetype=7;
+        }
+    }
 }
 
 //Styletpe
 function contests_comcalc_st() {
-    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3" || contests.id=="Area01_C1") {
         contests_comcalc_st_typgroup1(contests_bonsai_c1);
         contests_comcalc_st_typgroup1(contests_bonsai_c2);
         contests_comcalc_st_typgroup1(contests_bonsai_c3);
@@ -214,6 +320,8 @@ function contests_comcalc_st() {
         contests_comcalc_st_typgroup1(contests_bonsai_c5);
         contests_comcalc_st_typgroup1(contests_bonsai_c6);
         contests_comcalc_st_typgroup1(contests_bonsai_c7);
+        contests_comcalc_st_typgroup1(contests_bonsai_c8);
+        contests_comcalc_st_typgroup1(contests_bonsai_c9);
     }
 }
 
@@ -232,7 +340,7 @@ function contests_comcalc_st_typgroup1(a) {
 
 //Shiny
 function contests_comcalc_shiny() {
-    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3" || contests.id=="Area01_C1") {
         contests_bonsai_c1.shiny=1;
         contests_bonsai_c2.shiny=1;
         contests_bonsai_c3.shiny=1;
@@ -240,6 +348,8 @@ function contests_comcalc_shiny() {
         contests_bonsai_c5.shiny=1;
         contests_bonsai_c6.shiny=1;
         contests_bonsai_c7.shiny=1;
+        contests_bonsai_c8.shiny=1;
+        contests_bonsai_c9.shiny=1;
     }
 }
 
@@ -258,7 +368,7 @@ function contests_comcalc_nature() {
 
 //Growing
 function contests_comcalc_growing() {
-    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3" || contests.id=="Area01_C1") {
         contests_bonsai_c1.growing=Math.round(Math.random()*6);
         contests_bonsai_c2.growing=Math.round(Math.random()*6);
         contests_bonsai_c3.growing=Math.round(Math.random()*6);
@@ -266,12 +376,14 @@ function contests_comcalc_growing() {
         contests_bonsai_c5.growing=Math.round(Math.random()*6);
         contests_bonsai_c6.growing=Math.round(Math.random()*6);
         contests_bonsai_c7.growing=Math.round(Math.random()*6);
+        contests_bonsai_c8.growing=Math.round(Math.random()*6);
+        contests_bonsai_c9.growing=Math.round(Math.random()*6);
     }
 }
 
 //Shaping
 function contests_comcalc_shaping() {
-    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3") {
+    if (contests.id=="TTG01_C1" || contests.id=="TTG01_C2" || contests.id=="TTG01_C3" || contests.id=="Area01_C1") {
         contests_bonsai_c1.shaping=Math.round(Math.random()*4);
         contests_bonsai_c2.shaping=Math.round(Math.random()*4);
         contests_bonsai_c3.shaping=Math.round(Math.random()*4);
@@ -279,6 +391,8 @@ function contests_comcalc_shaping() {
         contests_bonsai_c5.shaping=Math.round(Math.random()*4);
         contests_bonsai_c6.shaping=Math.round(Math.random()*4);
         contests_bonsai_c7.shaping=Math.round(Math.random()*4);
+        contests_bonsai_c8.shaping=Math.round(Math.random()*4);
+        contests_bonsai_c9.shaping=Math.round(Math.random()*4);
     }
 }
 

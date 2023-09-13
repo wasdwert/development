@@ -28,6 +28,9 @@ var bonsai001 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai002 = {
@@ -60,6 +63,9 @@ var bonsai002 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai003 = {
@@ -92,6 +98,9 @@ var bonsai003 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai004 = {
@@ -124,6 +133,9 @@ var bonsai004 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai005 = {
@@ -156,6 +168,9 @@ var bonsai005 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai006 = {
@@ -188,6 +203,9 @@ var bonsai006 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai007 = {
@@ -220,6 +238,9 @@ var bonsai007 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai008 = {
@@ -252,6 +273,9 @@ var bonsai008 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai009 = {
@@ -284,6 +308,9 @@ var bonsai009 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai010 = {
@@ -316,6 +343,9 @@ var bonsai010 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai011 = {
@@ -348,6 +378,9 @@ var bonsai011 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai012 = {
@@ -380,6 +413,9 @@ var bonsai012 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai013 = {
@@ -412,6 +448,9 @@ var bonsai013 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai014 = {
@@ -444,6 +483,9 @@ var bonsai014 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai015 = {
@@ -476,6 +518,9 @@ var bonsai015 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai016 = {
@@ -508,6 +553,9 @@ var bonsai016 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai017 = {
@@ -540,6 +588,9 @@ var bonsai017 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai018 = {
@@ -572,6 +623,9 @@ var bonsai018 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai019 = {
@@ -604,6 +658,9 @@ var bonsai019 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
 
 var bonsai020 = {
@@ -636,4 +693,7 @@ var bonsai020 = {
     roots_lp: 0,
     price: 0,
     score: 0,
+    judge1: 0,
+    judge2: 0,
+    judge3: 0,
 }
