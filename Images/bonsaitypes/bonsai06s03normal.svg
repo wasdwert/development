@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg2515"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="bonsai06s03normal.svg"
+   inkscape:export-filename="C:\Users\Lenovo\Desktop\Coding\Media files\Bonsais\bonsai06.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <sodipodi:namedview
+     id="namedview2517"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="272.58966"
+     inkscape:cy="248.54803"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10068"
+     showguides="false" />
+  <defs
+     id="defs2512">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2) translate(6,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path24092" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path24086" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path24080" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path24083" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Slanting Style"
+     inkscape:groupmode="layer"
+     id="g10068"
+     style="display:inline">
+    <g
+       id="g17814-1"
+       transform="translate(133.76614,26.683648)"
+       style="display:inline">
+      <g
+         id="g39254"
+         transform="translate(-108.82611,13.599702)">
+        <path
+           style="display:inline;fill:#c49078;fill-opacity:1;stroke:#c49078;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 8.3213686,68.882707 c 0,0 0.36832,-12.270952 4.5632904,-20.751119 5.78814,-11.70081 10.34133,-20.112956 15.10888,-24.684503 6.90113,-6.617402 7.3989,-5.038541 14.50733,-11.410896 5.968667,-5.3506141 8.020973,-10.4292921 15.301545,-16.2261101 7.278606,-5.795255 7.28791,-4.953954 11.93342,-9.0882919 4.436006,-3.947887 10.382568,-8.883775 10.382568,-8.883775 5.139726,-2.173989 1.063045,-5.028209 11.47225,-6.667519 -9.428444,9.037168 -0.655017,4.278296 -8.899277,8.508002 -6.406321,5.135177 -0.311275,3.193676 -10.611641,9.855655 -4.192345,2.7114879 -8.340597,7.5421859 -8.340597,7.5421859 -9.215744,3.88032595 -10.489532,11.366747 -17.046956,17.4842931 -4.705442,4.389794 -8.175432,7.330147 -12.215972,14.049375 -6.18689,10.288523 -7.89302,13.599797 -9.12968,23.670873 -0.94583,7.702674 2.53378,14.782429 5.13292,16.60183 2.59914,1.8194 -22.1580804,0 -22.1580804,0 z"
+           id="path14864-7-1"
+           sodipodi:nodetypes="cssssssccssssssc" />
+        <path
+           id="path14864-7-4"
+           style="display:inline;fill:#9f6a57;fill-opacity:1;stroke:#9f6a57;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 845.74219,1.890625 c -39.34188,6.1958173 -23.93364,16.982567 -43.35938,25.199219 0,0 -22.47618,18.655024 -39.24219,33.576172 -17.55783,15.625845 -17.59187,12.446285 -45.10156,34.349609 -27.51712,21.909235 -35.27524,41.103375 -57.83398,61.326175 -26.8665,24.08449 -28.74708,18.11825 -54.83008,43.1289 -18.01911,17.27829 -35.22703,49.07139 -57.10352,93.29492 -15.85496,32.05103 -17.24804,78.42969 -17.24804,78.42969 83.29155,1.9997 94.66825,5.23885 6.61718,-1.07031 0,0 1.39309,-46.37866 17.24805,-78.42969 21.87649,-44.22353 39.08441,-76.01858 57.10352,-93.29687 26.083,-25.01066 27.96553,-19.04246 54.83203,-43.12696 22.55874,-20.22278 30.31491,-39.41693 57.83203,-61.326168 C 752.16594,72.041987 752.19998,75.221555 769.75781,59.595703 786.52382,44.674548 809,26.017578 809,26.017578 c 18.21,-7.702424 5.81107,-17.6618884 36.5957,-23.9824218 0.055,-0.052753 0.0912,-0.091527 0.14649,-0.1445312 z"
+           transform="matrix(0.26458333,0,0,0.26458333,-132.17863,-29.329483)"
+           sodipodi:nodetypes="ccsssssccsssssccc" />
+      </g>
+    </g>
+    <g
+       id="g1638-6-6-3"
+       transform="matrix(0.46471746,0,0,-0.25891218,-404.28959,465.17402)"
+       style="display:inline">
+      <path
+         d="m 1063.22,1363.63 -3.97,5.96 H 896.482 l -3.956,-5.96 c -12.178,-18.31 -12.178,-42.14 0,-60.45 l 3.956,-5.96 h 162.768 l 3.97,5.96 c 12.17,18.31 12.17,42.14 0,60.45"
+         style="fill:#9fbde1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+         id="path314-0-6-3-2" />
+      <path
+         d="m 909.212,1385.47 h 137.318 v -15.88 H 909.212 v 15.88"
+         style="fill:#bfd9f3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+         id="path316-2-3-7" />
+      <path
+         d="m 906.53,1363.63 3.957,5.96 h -14.005 l -3.956,-5.96 c -12.178,-18.31 -12.178,-42.14 0,-60.45 l 3.956,-5.96 h 14.005 l -3.957,5.96 c -12.177,18.31 -12.177,42.14 0,60.45"
+         style="fill:#799dbe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+         id="path326-2-6-9" />
+      <path
+         d="m 909.212,1385.47 h 14.005 v -15.88 h -14.005 v 15.88"
+         style="fill:#96b9e4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+         id="path328-0-1-8" />
+    </g>
+    <g
+       id="g22226-7-9-2-1-7"
+       transform="matrix(0.54835514,0,0,0.54835514,-1.7100449,30.619086)"
+       style="display:inline">
+      <g
+         id="g22138-0-2-3-3-8"
+         transform="translate(-26.833461,54.442803)">
+        <g
+           id="Page-1-8-2-4-6-9-2"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-29-3-8-1-3"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-6-3-9-3-3"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-3-9-3-2-2"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-4-6-3-7-9-4"
+         transform="translate(0.33401899,35.484808)"
+         style="display:inline">
+        <g
+           id="Page-1-8-0-8-6-2-5-8"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-2-7-9-1-2-5"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-1-4-0-9-8-7"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-8-8-3-7-8-5"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-5-3-3-7-3-8"
+         transform="translate(29.81882,54.442617)"
+         style="display:inline">
+        <g
+           id="Page-1-8-4-1-3-5-1-2"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-8-8-5-8-2-7"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-3-11-3-0-3-6"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-4-4-6-2-0-5"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+    </g>
+    <g
+       id="g22226-7-9-2-1-3"
+       transform="matrix(0.54835514,0,0,0.54835514,-41.748903,9.967185)"
+       style="display:inline">
+      <g
+         id="g22138-0-2-3-3-0"
+         transform="translate(-26.833461,54.442803)">
+        <g
+           id="Page-1-8-2-4-6-9-1"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-29-3-8-1-8"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-6-3-9-3-6"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-3-9-3-2-8"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-4-6-3-7-9-0"
+         transform="translate(0.33401899,35.484808)"
+         style="display:inline">
+        <g
+           id="Page-1-8-0-8-6-2-5-2"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-2-7-9-1-2-6"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-1-4-0-9-8-4"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-8-8-3-7-8-0"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-5-3-3-7-3-0"
+         transform="translate(29.81882,54.442617)"
+         style="display:inline">
+        <g
+           id="Page-1-8-4-1-3-5-1-6"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-8-8-5-8-2-6"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-3-11-3-0-3-4"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-4-4-6-2-0-3"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+    </g>
+    <g
+       id="g22226-7-9-2-1-9"
+       transform="matrix(0.46558455,0,0,0.46558455,1.2476345,-8.3611143)"
+       style="display:inline">
+      <g
+         id="g22138-0-2-3-3-7"
+         transform="translate(-26.833461,54.442803)">
+        <g
+           id="Page-1-8-2-4-6-9-17"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-29-3-8-1-2"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-6-3-9-3-61"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-3-9-3-2-9"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-4-6-3-7-9-44"
+         transform="translate(0.33401899,35.484808)"
+         style="display:inline">
+        <g
+           id="Page-1-8-0-8-6-2-5-4"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-2-7-9-1-2-1"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-1-4-0-9-8-49"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-8-8-3-7-8-4"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-5-3-3-7-3-9"
+         transform="translate(29.81882,54.442617)"
+         style="display:inline">
+        <g
+           id="Page-1-8-4-1-3-5-1-4"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-8-8-5-8-2-3"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-3-11-3-0-3-41"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-4-4-6-2-0-2"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+    </g>
+    <g
+       id="g22226-7-9-2-1-9-6"
+       transform="matrix(0.46558455,0,0,0.46558455,33.811411,7.7901832)"
+       style="display:inline">
+      <g
+         id="g22138-0-2-3-3-7-2"
+         transform="translate(-26.833461,54.442803)">
+        <g
+           id="Page-1-8-2-4-6-9-17-6"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-29-3-8-1-2-8"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-6-3-9-3-61-0"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-3-9-3-2-9-1"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-4-6-3-7-9-44-5"
+         transform="translate(0.33401899,35.484808)"
+         style="display:inline">
+        <g
+           id="Page-1-8-0-8-6-2-5-4-2"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-2-7-9-1-2-1-4"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-1-4-0-9-8-49-3"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-8-8-3-7-8-4-5"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-5-3-3-7-3-9-3"
+         transform="translate(29.81882,54.442617)"
+         style="display:inline">
+        <g
+           id="Page-1-8-4-1-3-5-1-4-1"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-8-8-5-8-2-3-6"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-3-11-3-0-3-41-1"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-4-4-6-2-0-2-7"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+    </g>
+    <g
+       id="g22226-7-9-2-1-9-1"
+       transform="matrix(0.41385294,0,0,0.41385294,50.804747,-18.560091)"
+       style="display:inline">
+      <g
+         id="g22138-0-2-3-3-7-4"
+         transform="translate(-26.833461,54.442803)">
+        <g
+           id="Page-1-8-2-4-6-9-17-7"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-29-3-8-1-2-2"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-6-3-9-3-61-4"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-3-9-3-2-9-6"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-4-6-3-7-9-44-54"
+         transform="translate(0.33401899,35.484808)"
+         style="display:inline">
+        <g
+           id="Page-1-8-0-8-6-2-5-4-5"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-2-7-9-1-2-1-8"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-1-4-0-9-8-49-1"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-8-8-3-7-8-4-56"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+      <g
+         id="g22138-5-3-3-7-3-9-1"
+         transform="translate(29.81882,54.442617)"
+         style="display:inline">
+        <g
+           id="Page-1-8-4-1-3-5-1-4-3"
+           stroke="none"
+           stroke-width="1"
+           fill="none"
+           fill-rule="evenodd"
+           sketch:type="MSPage"
+           style="fill:#81cc29;fill-opacity:1"
+           transform="matrix(1.25,0,0,1.25,123.91155,12.485537)">
+          <g
+             id="Icon-Set-Filled-8-8-5-8-2-3-7"
+             sketch:type="MSLayerGroup"
+             transform="translate(-519,-781)"
+             fill="#000000"
+             style="fill:#81cc29;fill-opacity:1">
+            <path
+               d="M 542.067,786.028 C 540.599,783.053 537.543,781 534,781 c -4.749,0 -8.63,3.682 -8.967,8.345 C 521.542,790.34 519,793.39 519,797 c 0,4.26 3.54,7.755 8,8 h 15 c 4.966,0 9,-4.253 9,-9.5 0,-5.056 -3.951,-9.177 -8.933,-9.472"
+               id="cloud-3-11-3-0-3-41-6"
+               sketch:type="MSShapeGroup"
+               style="fill:#99ffcc;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           id="cloud-7-4-4-6-2-0-2-9"
+           style="fill:#5de7a2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.25"
+           d="m 142.66142,12.485383 c -5.93625,0 -10.78737,4.602654 -11.20862,10.431404 -4.36375,1.243751 -7.54166,5.056426 -7.54166,9.568923 0,5.325002 4.42491,9.693659 9.99991,9.999909 h 4.23385 c -5.575,-0.30625 -10.00043,-4.674907 -10.00043,-9.999909 0,-4.512497 3.17791,-8.325172 7.54166,-9.568923 0.36984,-5.117375 4.15439,-9.28873 9.08989,-10.2309 -0.68475,-0.130707 -1.3914,-0.200504 -2.1146,-0.200504 z" />
+      </g>
+    </g>
+  </g>
+</svg>
