@@ -25,14 +25,14 @@ var statistics = {
 }
 
 var resources = {
-    money: 100,
+    money: 0,
     organic_waste: 0,
-    compost1: 25,
-    fertilizer1: 1,
-    bolt: 5,
-    metal: 3,
-    wire: 2,
-    board: 1,
+    compost1: 0,
+    fertilizer1: 0,
+    bolt: 0,
+    metal: 0,
+    wire: 0,
+    board: 0,
 }
 
 var equipment = {
