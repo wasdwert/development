@@ -12,7 +12,6 @@ function ViewBonDex() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewTasks() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -26,7 +25,6 @@ function ViewTasks() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewExpedition() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -40,7 +38,6 @@ function ViewExpedition() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewCrafting() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -54,7 +51,6 @@ function ViewCrafting() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewLearning() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -68,7 +64,6 @@ function ViewLearning() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewShopping() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -82,7 +77,6 @@ function ViewShopping() {
         $('.bonsai_details_seedling').hide();
     });
 }
-
 function ViewCompetitions() {
     $(document).ready(function(){
         $('.bondex').hide();
@@ -106,7 +100,6 @@ function ViewExNeighborhood() {
         $('#cityboundaries_mobile').hide();
     });
 }
-
 function ViewExCityBoundaries() {
     $(document).ready(function(){
         $('#neighborhood').hide();
@@ -311,7 +304,6 @@ function ViewCrCompost1() {
         $('#cr_robot1_mobile').hide();
     });
 }
-
 function ViewCrRobot1() {
     $(document).ready(function(){
         $('#cr_compost1').hide();
@@ -334,7 +326,6 @@ function ViewShopEquipment() {
         $('#shop_bonsais_mobile').hide();
     });
 }
-
 function ViewShopResources() {
     $(document).ready(function(){
         $('#shop_equipment').hide();
@@ -347,7 +338,6 @@ function ViewShopResources() {
         $('#shop_bonsais_mobile').hide();
     });
 }
-
 function ViewShopSeedlings() {
     $(document).ready(function(){
         $('#shop_equipment').hide();
@@ -360,7 +350,6 @@ function ViewShopSeedlings() {
         $('#shop_bonsais_mobile').hide();
     });
 }
-
 function ViewShopBonsais() {
     $(document).ready(function(){
         $('#shop_equipment').hide();
@@ -386,11 +375,11 @@ function ViewStats() {
         $('#skill_patience').hide();
     });
 }
-
 function ViewSkillTreestyles1() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').show();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').hide();
         $('#skill_compost1').hide();
         $('#skill_growing').hide();
@@ -398,11 +387,23 @@ function ViewSkillTreestyles1() {
         $('#skill_patience').hide();
     });
 }
-
+function ViewSkillTreestyles2() {
+    $(document).ready(function(){
+        $('#stats').hide();
+        $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').show();
+        $('#skill_robot1').hide();
+        $('#skill_compost1').hide();
+        $('#skill_growing').hide();
+        $('#skill_shaping').hide();
+        $('#skill_patience').hide();
+    });
+}
 function ViewSkillRobot1() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').show();
         $('#skill_compost1').hide();
         $('#skill_growing').hide();
@@ -410,11 +411,11 @@ function ViewSkillRobot1() {
         $('#skill_patience').hide();
     });
 }
-
 function ViewSkillCompost1() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').hide();
         $('#skill_compost1').show();
         $('#skill_growing').hide();
@@ -422,11 +423,11 @@ function ViewSkillCompost1() {
         $('#skill_patience').hide();
     });
 }
-
 function ViewSkillGrowing() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').hide();
         $('#skill_compost1').hide();
         $('#skill_growing').show();
@@ -434,11 +435,11 @@ function ViewSkillGrowing() {
         $('#skill_patience').hide();
     });
 }
-
 function ViewSkillShaping() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').hide();
         $('#skill_compost1').hide();
         $('#skill_growing').hide();
@@ -446,11 +447,11 @@ function ViewSkillShaping() {
         $('#skill_patience').hide();
     });
 }
-
 function ViewSkillPatience() {
     $(document).ready(function(){
         $('#stats').hide();
         $('#skill_treestyle1').hide();
+        $('#skill_treestyle2').hide();
         $('#skill_robot1').hide();
         $('#skill_compost1').hide();
         $('#skill_growing').hide();
@@ -467,7 +468,6 @@ function ViewClub_TTG01 () {
         $('#League_Area01').hide();
     });
 }
-
 function ViewClub_ST01 () {
     $(document).ready(function(){
         $('#Club_TTG01').hide();
@@ -475,12 +475,265 @@ function ViewClub_ST01 () {
         $('#League_Area01').hide();
     });
 }
-
 function ViewLeague_Area01 () {
     $(document).ready(function(){
         $('#Club_TTG01').hide();
         $('#Club_ST01').hide();
         $('#League_Area01').show();
+    });
+}
+
+//BonDex View Functions
+function ViewBonsai01 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').show();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai02 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').show();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai03 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').show();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai04 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').show();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai05 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').show();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai06 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').show();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai07 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').show();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai08 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').show();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai09 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').show();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai10 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').show();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai11 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').show();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai12 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').show();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai13 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').show();
+        $('#BonDex_14_show').hide();
+    });
+}
+function ViewBonsai14 () {
+    $(document).ready(function(){
+        $('#BonDex_01_show').hide();
+        $('#BonDex_02_show').hide();
+        $('#BonDex_03_show').hide();
+        $('#BonDex_04_show').hide();
+        $('#BonDex_05_show').hide();
+        $('#BonDex_06_show').hide();
+        $('#BonDex_07_show').hide();
+        $('#BonDex_08_show').hide();
+        $('#BonDex_09_show').hide();
+        $('#BonDex_10_show').hide();
+        $('#BonDex_11_show').hide();
+        $('#BonDex_12_show').hide();
+        $('#BonDex_13_show').hide();
+        $('#BonDex_14_show').show();
     });
 }
 

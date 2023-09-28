@@ -26,7 +26,7 @@ w.addEventListener('message', function(e){
     
     if (worker01.expedition>0) {
         worker01.expedition_zeit -= 1;
-        document.getElementById("zeit_worker01").innerHTML = "("+worker01.expedition_zeit+"&nbsp;seconds left)";  
+        document.getElementById("zeit_worker01").innerHTML = "("+timetracker(worker01.expedition_zeit)+"&nbsp;left)";  
         seedling_countdown(worker01);
         if (worker01.expedition==0) {
             document.getElementById("zeit_worker01").innerHTML = "";  
@@ -37,7 +37,7 @@ w.addEventListener('message', function(e){
     }
     if (worker02.expedition>0) {
         worker02.expedition_zeit -= 1;
-        document.getElementById("zeit_worker02").innerHTML = "("+worker02.expedition_zeit+"&nbsp;seconds left)";  
+        document.getElementById("zeit_worker02").innerHTML = "("+timetracker(worker02.expedition_zeit)+"&nbsp;left)";  
         seedling_countdown(worker02);
         if (worker02.expedition==0) {
             document.getElementById("zeit_worker02").innerHTML = "";  
@@ -48,7 +48,7 @@ w.addEventListener('message', function(e){
     }
     if (worker03.expedition>0) {
         worker03.expedition_zeit -= 1;
-        document.getElementById("zeit_worker03").innerHTML = "("+worker03.expedition_zeit+"&nbsp;seconds left)";  
+        document.getElementById("zeit_worker03").innerHTML = "("+timetracker(worker03.expedition_zeit)+"&nbsp;left)";  
         seedling_countdown(worker03);
         if (worker03.expedition==0) {
             document.getElementById("zeit_worker03").innerHTML = "";  
@@ -178,6 +178,7 @@ function SaveGame() {
     state.zeitsave = Date.now();
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
+    localStorage.setItem('bondex', JSON.stringify(bondex));
     localStorage.setItem('resources', JSON.stringify(resources));
     localStorage.setItem('equipment', JSON.stringify(equipment));
     localStorage.setItem('skills', JSON.stringify(skills));
@@ -220,6 +221,7 @@ function SaveGame() {
 function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
     statistics = JSON.parse(localStorage.getItem('statistics'));
+    bondex = JSON.parse(localStorage.getItem('bondex'));
     resources = JSON.parse(localStorage.getItem('resources'));
     equipment = JSON.parse(localStorage.getItem('equipment'));
     skills = JSON.parse(localStorage.getItem('skills'));
@@ -271,6 +273,8 @@ function LoadGame() {
 }
 
 function loadcheckup() {
+    bondex_checkup();
+    
     bonsaicheckup (bonsai001);
     bonsaicheckup (bonsai002);
     bonsaicheckup (bonsai003);
@@ -302,32 +306,32 @@ function loadcheckup() {
     }
     
     if (clubs_leagues.ttg01c1>0) {
-        if (state.zeitsincesave>clubs_leagues.ttg01c1) {
-            clubs_leagues.ttg01c1-=1;
+        if (state.zeitsincesave>=clubs_leagues.ttg01c1) {
+            clubs_leagues.ttg01c1=0;
         }
         else {
             clubs_leagues.ttg01c1-=state.zeitsincesave;
         }
     }
     if (clubs_leagues.ttg01c2>0) {
-        if (state.zeitsincesave>clubs_leagues.ttg01c2) {
-            clubs_leagues.ttg01c2-=1;
+        if (state.zeitsincesave>=clubs_leagues.ttg01c2) {
+            clubs_leagues.ttg01c2=0;
         }
         else {
             clubs_leagues.ttg01c2-=state.zeitsincesave;
         }
     }
     if (clubs_leagues.ttg01c3>0) {
-        if (state.zeitsincesave>clubs_leagues.ttg01c3) {
-            clubs_leagues.ttg01c3-=1;
+        if (state.zeitsincesave>=clubs_leagues.ttg01c3) {
+            clubs_leagues.ttg01c3=0;
         }
         else {
             clubs_leagues.ttg01c3-=state.zeitsincesave;
         }
     }
     if (clubs_leagues.lea01c1>0) {
-        if (state.zeitsincesave>clubs_leagues.lea01c1) {
-            clubs_leagues.lea01c1-=1;
+        if (state.zeitsincesave>=clubs_leagues.lea01c1) {
+            clubs_leagues.lea01c1=0;
         }
         else {
             clubs_leagues.lea01c1-=state.zeitsincesave;
@@ -360,7 +364,10 @@ function workerexpeditioncheckup (worker, a, b) {
         }
         else {
             worker.expedition_zeit -=state.zeitsincesave;
-            document.getElementById("zeit_worker"+a).innerHTML = "("+worker.expedition_zeit+"&nbsp;seconds left)";  
+            document.getElementById("zeit_worker"+a).innerHTML = "("+timetracker(worker.expedition_zeit)+"&nbsp;left)";
+            document.getElementById("worker"+b+"_task").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition'; 
+            document.getElementById("worker"+b+"_task_mobile").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Expedition';
+            document.getElementById("worker"+b+"_task_mobilexs").innerHTML = '<img src="Images/expedition.svg" width="20" height="20">';
         }
     }
 }
@@ -398,10 +405,10 @@ function startup() {
     $('#menu_contests').select2({
             minimumResultsForSearch: Infinity
         });
-    $('#neighborhood_time').select2({
+    $('#area01_time').select2({
             minimumResultsForSearch: Infinity
         });
-    $('#cityboundaries_time').select2({
+    $('#area02_time').select2({
             minimumResultsForSearch: Infinity
         });
     

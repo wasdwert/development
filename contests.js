@@ -106,7 +106,7 @@ function club_ttg01_competition3() {
     }
 }
 
-function league_area01_competition1() {
+function league_area01_exhibition1() {
     if (clubs_leagues.lea01c1==0) {
         contests.visible=1;
         contests.id="Area01_C1";

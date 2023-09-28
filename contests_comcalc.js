@@ -260,10 +260,10 @@ function contests_comcalc_ttt() {
 
 function contests_comcalc_ttt2(a) {
     state.random_contests =Math.random(); //Random number between 0 and 1
-    if (state.random_contests>=1.0001) {
+    if (state.random_contests>=0.666666) {
         a.treetypegroup=3;
     }
-    else if (state.random_contests>=0.6666) {
+    else if (state.random_contests>=0.333333) {
         a.treetypegroup=2;
     }
     else {
@@ -286,7 +286,7 @@ function contests_comcalc_ttt_tt(a) {
     }
     else if (a.treetypegroup==2) {
         state.random_contests =Math.random(); //Random number between 0 and 1
-        if (state.random_contests>=1.0001) {
+        if (state.random_contests>=0.9016) {
             a.treetype=6;
         }
         else if (state.random_contests>=0.6557) {

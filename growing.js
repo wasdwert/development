@@ -1,7 +1,6 @@
 /* Bonsai Detail Growing*/
 function Bonsai_Growing(bonsaixx) {
-    if (bonsaixx.growing==1) {   
-        document.getElementById("Button_Grow_Zeit").innerHTML = bonsaixx.growing_zeit;
+    if (bonsaixx.growing==1) {
         document.getElementById("bonsai_detail_treequality").style.backgroundImage = fetchbonsaitreequality_big(bonsaixx);
         document.getElementById("bonsai_detail_name").innerText = bonsaixx.name; 
         document.getElementById("bonsai_detail_name_mobile").innerText = bonsaixx.name; 
@@ -19,8 +18,8 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_trunk").innerText = bonsaixx.trunk.toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_detail_roots").innerText = bonsaixx.roots.toLocaleString('en', {minimumFractionDigits: 1});
         
-        document.getElementById("bonsai_detail_status").innerHTML = "Growing ("+bonsaixx.growing_zeit+"&nbsp;seconds)"; 
-        document.getElementById("bonsai_detail_status_mobile").innerHTML = "Growing ("+bonsaixx.growing_zeit+"&nbsp;seconds)";
+        document.getElementById("bonsai_detail_status").innerHTML = "Growing ("+timetracker(bonsaixx.growing_zeit)+")"; 
+        document.getElementById("bonsai_detail_status_mobile").innerHTML = "Growing ("+timetracker(bonsaixx.growing_zeit)+")";
         document.getElementById("bonsai_detail_level2").innerText = bonsaixx.level.toLocaleString('en', {minimumFractionDigits: 0});
         document.getElementById("bonsai_detail_cp2").innerHTML = (Math.round((bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1}); 
         document.getElementById("bonsai_detail_foliage2").innerText = bonsaixx.foliage.toLocaleString('en', {minimumFractionDigits: 1});
@@ -262,13 +261,55 @@ function Bonsai_Growing(bonsaixx) {
             $('#Growing3').hide();
         });
         
-        document.getElementById("Button_Grow").style.cursor= "pointer";
-        document.getElementById("Button_Grow").className = "grey";
-        document.getElementById("Button_Grow_Text").innerHTML = "Grow&nbsp;";
-        document.getElementById("Button_Grow_Zeit").innerHTML = "("+bonsaixx.growing_zeit.toLocaleString('en', {minimumFractionDigits: 0})+"&nbsp;seconds)";          
-
+        if (bonsaixx.level==100) {
+            document.getElementById("Button_Grow").style.cursor= "auto";
+            document.getElementById("Button_Grow").className = "";
+            document.getElementById("Button_Grow_Text").innerHTML = "Maximum level reached";
+            document.getElementById("Button_Grow_Zeit").innerHTML = ""; 
+        }
+        else {
+            document.getElementById("Button_Grow").style.cursor= "pointer";
+            document.getElementById("Button_Grow").className = "grey";
+            document.getElementById("Button_Grow_Text").innerHTML = "Grow&nbsp;";
+            document.getElementById("Button_Grow_Zeit").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+")";          
+        }
+        
         document.getElementById("ChangePosition").style.cursor= "pointer";
         document.getElementById("ChangePosition").className = "grey";
+    }
+}
+
+function timetracker(timevariable) {
+    if (timevariable==0) {
+        return ''; 
+    }
+    else if (timevariable==1) {
+        return timevariable+'&nbsp;second';
+    }
+    else if (timevariable<60) {
+        return timevariable+'&nbsp;seconds';
+    }
+    else if (timevariable>=60 && timevariable<120) {
+        state.minutes=Math.floor(timevariable/60);
+        state.seconds=Math.floor(timevariable-(state.minutes*60));
+        return state.minutes.toString().padStart(1, '0')+':'+state.seconds.toString().padStart(2, '0')+'&nbsp;minute';
+    }
+    else if (timevariable>=120 && timevariable<3600) {
+        state.minutes=Math.floor(timevariable/60);
+        state.seconds=Math.floor(timevariable-(state.minutes*60));
+        return state.minutes.toString().padStart(1, '0')+':'+state.seconds.toString().padStart(2, '0')+'&nbsp;minutes';
+    }
+    else if (timevariable>=3600 && timevariable<7200) {
+        state.hours=Math.floor(timevariable/60/60);
+        state.minutes=Math.floor((timevariable/60)-(state.hours*60));
+        state.seconds=Math.floor(timevariable-(state.minutes*60)-(state.hours*60*60));
+        return state.hours.toString().padStart(1, '0')+':'+state.minutes.toString().padStart(2, '0')+':'+state.seconds.toString().padStart(2, '0')+'&nbsp;hour';
+    }
+    else if (timevariable>=7200) {
+        state.hours=Math.floor(timevariable/60/60);
+        state.minutes=Math.floor((timevariable/60)-(state.hours*60));
+        state.seconds=Math.floor(timevariable-(state.minutes*60)-(state.hours*60*60));
+        return state.hours.toString().padStart(1, '0')+':'+state.minutes.toString().padStart(2, '0')+':'+state.seconds.toString().padStart(2, '0')+'&nbsp;hours';
     }
 }
 
@@ -363,58 +404,66 @@ function GrowBonsaiWorkerPick2 (bonsaixx, worker) {
 }
 
 function GrowBonsai() {
-    if (SearchBonsaiShowing().leftpoints>=0.1) {
-        document.getElementById("snack_message").innerHTML = "Distribute all shape points first. &#32;"+ SearchBonsaiShowing().leftpoints.toLocaleString('en', {minimumFractionDigits: 1}) +"&#32; points left.";
+    if (SearchBonsaiShowing().level==100) { //Maximum level check
+        document.getElementById("snack_message").innerHTML = "Maximum level for this bonsai reached.";
         var snackb = document.getElementById("snackbar");
         snackb.className = "show";
         setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
     }
-    else {    
-        if (SearchBonsaiShowing().growing==0) {
-            GrowBonsaiWorkerPick(SearchBonsaiShowing());
-            if (state.workerstandin>0) {
-                SearchBonsaiShowing().growing = 1;
-                if (state.workerstandin==1) {
-                    worker01.busy = 1;
-                    document.getElementById("zeit_worker01").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
-                    document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
-                    state.workerstandin = 0;
-                }
-                else if (state.workerstandin==2) {
-                    worker02.busy = 1;
-                    document.getElementById("zeit_worker02").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
-                    document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
-                    state.workerstandin = 0;
-                }
-                else if (state.workerstandin==3) {
-                    worker03.busy = 1;
-                    document.getElementById("zeit_worker03").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
-                    document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
-                    state.workerstandin = 0;
-                }
-    
-                Bonsai_Details(SearchBonsaiShowing());
-    
-                menu_change();
-                menu_shop_change();
-                menu_contests_change();
-            }
-            else {
-            }
+    else {
+        if (SearchBonsaiShowing().leftpoints>=0.1) { //All points distributed check
+            document.getElementById("snack_message").innerHTML = "Distribute all shape points first. &#32;"+ SearchBonsaiShowing().leftpoints.toLocaleString('en', {minimumFractionDigits: 1}) +"&#32; points left.";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
         }
-        else {
-            if (SearchBonsaiShowing().growing_zeit>0) {
-                SearchBonsaiShowing().growing_zeit -=1;
-                
-                Bonsai_Growing_Intervall(SearchBonsaiShowing());
-                Bonsai_Details(SearchBonsaiShowing());
-                SearchWorker();
+        else {    
+            if (SearchBonsaiShowing().growing==0) { //If bonsai is already growing check
+                GrowBonsaiWorkerPick(SearchBonsaiShowing());
+                if (state.workerstandin>0) {
+                    SearchBonsaiShowing().growing = 1;
+                    if (state.workerstandin==1) {
+                        worker01.busy = 1;
+                        document.getElementById("zeit_worker01").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+")";
+                        document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
+                        state.workerstandin = 0;
+                    }
+                    else if (state.workerstandin==2) {
+                        worker02.busy = 1;
+                        document.getElementById("zeit_worker02").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+")";
+                        document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+                        state.workerstandin = 0;
+                    }
+                    else if (state.workerstandin==3) {
+                        worker03.busy = 1;
+                        document.getElementById("zeit_worker03").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+")";
+                        document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
+                        state.workerstandin = 0;
+                    }
     
-                menu_change();
-                menu_shop_change();
-                menu_contests_change();
+                    Bonsai_Details(SearchBonsaiShowing());
+    
+                    menu_change();
+                    menu_shop_change();
+                    menu_contests_change();
+                }
+                else {
+                }
             }
-            else {
+            else { //If bonsai is already growing, trigger care deduction from growing time
+                if (SearchBonsaiShowing().growing_zeit>0) {
+                    SearchBonsaiShowing().growing_zeit -=1;
+                
+                    Bonsai_Growing_Intervall(SearchBonsaiShowing());
+                    Bonsai_Details(SearchBonsaiShowing());
+                    SearchWorker();
+    
+                    menu_change();
+                    menu_shop_change();
+                    menu_contests_change();
+                }
+                else {
+                }
             }
         }
     }
@@ -519,13 +568,13 @@ function SearchWorker() {
 
 function SearchWorker2(x) {
     if (worker01.growing==x) {
-        document.getElementById("zeit_worker01").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker01").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+"&nbsp;left)";
     }
     else if (worker02.growing==x) {
-        document.getElementById("zeit_worker02").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker02").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+"&nbsp;left)";
     }
     else if (worker03.growing==x) {
-        document.getElementById("zeit_worker03").innerHTML = "("+SearchBonsaiShowing().growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker03").innerHTML = "("+timetracker(SearchBonsaiShowing().growing_zeit)+"&nbsp;left)";
     }
 }
 

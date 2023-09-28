@@ -633,18 +633,21 @@ function contests_wincalc_advcalc (a, b, c, d, e) {
             document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
     }
-        else if (a.styletype==4) {
+    else if (a.styletype==4) {
         if (b.styletype==1) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==2) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==3) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==4) {
             contests.a_disadvantages +=0;
@@ -652,70 +655,86 @@ function contests_wincalc_advcalc (a, b, c, d, e) {
             document.getElementById(c).innerHTML = '<img src="Images/smiley_neutral.svg" width="20" height="20">';
         }
         else if (b.styletype==5) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==6) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==7) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==8) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==9) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==10) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==11) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==12) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==13) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==14) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==15) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==16) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
     }
-            else if (a.styletype==5) {
+    else if (a.styletype==5) {
         if (b.styletype==1) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==2) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==3) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==4) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==5) {
             contests.a_disadvantages +=0;
@@ -723,51 +742,226 @@ function contests_wincalc_advcalc (a, b, c, d, e) {
             document.getElementById(c).innerHTML = '<img src="Images/smiley_neutral.svg" width="20" height="20">';
         }
         else if (b.styletype==6) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==7) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==8) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==9) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==10) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==11) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==12) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==13) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==14) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==15) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==16) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+    }
+    else if (a.styletype==6) {
+        if (b.styletype==1) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==2) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==3) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==4) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==5) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==6) {
             contests.a_disadvantages +=0;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_neutral.svg" width="20" height="20">';
+        }
+        else if (b.styletype==7) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==8) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==9) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==10) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==11) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==12) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==13) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==14) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==15) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==16) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+    }
+    else if (a.styletype==7) {
+        if (b.styletype==1) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==2) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==3) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==4) {
+            contests.a_disadvantages +=1;
+            contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
+        }
+        else if (b.styletype==5) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
+        }
+        else if (b.styletype==6) {
+            contests.a_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==7) {
             contests.a_disadvantages +=0;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_neutral.svg" width="20" height="20">';
         }
         else if (b.styletype==8) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==9) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==10) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==11) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==12) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==13) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==14) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
         else if (b.styletype==15) {
-            contests.a_disadvantages +=0;
+            contests.a_disadvantages +=1;
             contests.b_disadvantages +=0;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_bad.svg" width="20" height="20">';
         }
         else if (b.styletype==16) {
             contests.a_disadvantages +=0;
-            contests.b_disadvantages +=0;
+            contests.b_disadvantages +=1;
+            document.getElementById(c).innerHTML = '<img src="Images/smiley_good.svg" width="20" height="20">';
         }
     }
-            else if (a.styletype==6) {
+    else if (a.styletype==8) {
         if (b.styletype==1) {
             contests.a_disadvantages +=0;
             contests.b_disadvantages +=0;
@@ -1334,16 +1528,226 @@ function contests_judge_prefdis (a, b) {
             judge_dislike="Nature Cluster 1";
             document.getElementById(b).innerHTML = "Dislikes Natures: 'Leafed', 'Adorned' & 'Decorated'";
             if (judge_preference==judge_dislike) {
-                judge_dislike="Nature Cluster 2"
-                document.getElementById(b).innerHTML = "Dislikes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+                judge_dislike="Nature Cluster 5"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
             }
         }
     }
     else if (state.areasunlocked==2) {
-        
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.92) {
+            judge_preference="Nature Cluster 5";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+        }
+        else if (state.random_contests>=0.84) {
+            judge_preference="Nature Cluster 4";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+        }
+        else if (state.random_contests>=0.76) {
+            judge_preference="Nature Cluster 3";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+        }
+        else if (state.random_contests>=0.68) {
+            judge_preference="Nature Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+        }
+        else if (state.random_contests>=0.60) {
+            judge_preference="Nature Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+        }
+        else if (state.random_contests>=0.40) {
+            judge_preference="TT Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+        }
+        else if (state.random_contests>=0.30) {
+            judge_preference="TT Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Treetypegroup: 'Sanmen'";
+        }
+        else if (state.random_contests>=0.10) {
+            judge_preference="ST Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+        }
+        else {
+            judge_preference="ST Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Styletypes: 'Kengai' & 'Kabudachi'";
+        }
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.82) {
+            judge_dislike="Nature Cluster 5";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 4"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+            }
+        }
+        else if (state.random_contests>=0.64) {
+            judge_dislike="Nature Cluster 4";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 3"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+            }
+        }
+        else if (state.random_contests>=0.46) {
+            judge_dislike="Nature Cluster 3";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 2"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+            }
+        }
+        else if (state.random_contests>=0.28) {
+            judge_dislike="Nature Cluster 2";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+            }
+        }
+        else if (state.random_contests>=0.10) {
+            judge_dislike="Nature Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="TT Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+            }
+        }
+        else if (state.random_contests>=0.05) {
+            judge_dislike="TT Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="ST Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+            }
+        }
+        else {
+            judge_dislike="ST Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 5"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+            }
+        }
     }
     else if (state.areasunlocked==3) {
-        
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.94) {
+            judge_preference="Nature Cluster 5";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+        }
+        else if (state.random_contests>=0.88) {
+            judge_preference="Nature Cluster 4";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+        }
+        else if (state.random_contests>=0.82) {
+            judge_preference="Nature Cluster 3";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+        }
+        else if (state.random_contests>=0.76) {
+            judge_preference="Nature Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+        }
+        else if (state.random_contests>=0.70) {
+            judge_preference="Nature Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+        }
+        else if (state.random_contests>=0.62) {
+            judge_preference="TT Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+        }
+        else if (state.random_contests>=0.50) {
+            judge_preference="TT Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Treetypegroups: 'Sanmen' & 'Shihen'";
+        }
+        else if (state.random_contests>=0.35) {
+            judge_preference="TT Cluster 3";
+            document.getElementById(a).innerHTML = "Likes Treetypegroup: 'Jinkō-teki'";
+        }
+        else if (state.random_contests>=0.27) {
+            judge_preference="ST Cluster 1";
+            document.getElementById(a).innerHTML = "Likes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+        }
+        else if (state.random_contests>=0.15) {
+            judge_preference="ST Cluster 2";
+            document.getElementById(a).innerHTML = "Likes Styletypes: 'Kengai', 'Kabudachi', 'Hokidachi' & 'Bunjingi'";
+        }
+        else {
+            judge_preference="ST Cluster 3";
+            document.getElementById(a).innerHTML = "Likes Styletype: 'Fukinagashi'";
+        }
+        state.random_contests =Math.random(); //Random number between 0 and 1
+        if (state.random_contests>=0.84) {
+            judge_dislike="Nature Cluster 5";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 4"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+            }
+        }
+        else if (state.random_contests>=0.68) {
+            judge_dislike="Nature Cluster 4";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Grounded', 'Earthed' & 'Fixed'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 3"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+            }
+        }
+        else if (state.random_contests>=0.52) {
+            judge_dislike="Nature Cluster 3";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Strengthened', 'Fortified' & 'Consolidated'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 2"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+            }
+        }
+        else if (state.random_contests>=0.36) {
+            judge_dislike="Nature Cluster 2";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Branched', 'Ramified' & 'Dispersed'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+            }
+        }
+        else if (state.random_contests>=0.20) {
+            judge_dislike="Nature Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Natures: 'Leafed', 'Adorned' & 'Decorated'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="TT Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+            }
+        }
+        else if (state.random_contests>=0.13) {
+            judge_dislike="TT Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Raundo', 'Erementaru', 'Roku-men' & 'Seikatsu'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="TT Cluster 2"
+                document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Sanmen' & 'Shihen'";
+            }
+        }
+        else if (state.random_contests>=0.10) {
+            judge_dislike="TT Cluster 2";
+            document.getElementById(b).innerHTML = "Dislikes Treetypegroups: 'Sanmen' & 'Shihen'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="ST Cluster 1"
+                document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+            }
+        }
+        else if (state.random_contests>=0.03) {
+            judge_dislike="ST Cluster 1";
+            document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Chokan', 'Moyogi', 'Shakan', 'Han-Kengai' & 'Sokan'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="ST Cluster 2"
+                document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Kengai', 'Kabudachi', 'Hokidachi' & 'Bunjingi'";
+            }
+        }
+        else {
+            judge_dislike="ST Cluster 2";
+            document.getElementById(b).innerHTML = "Dislikes Styletypes: 'Kengai', 'Kabudachi', 'Hokidachi' & 'Bunjingi'";
+            if (judge_preference==judge_dislike) {
+                judge_dislike="Nature Cluster 5"
+                document.getElementById(b).innerHTML = "Dislikes Natures: 'Balanced', 'Equalised', 'Adjusted' & 'Tempered'";
+            }
+        }
     }
     else if (state.areasunlocked==4) {
         
@@ -1355,6 +1759,15 @@ function contests_judge_prefdis (a, b) {
         
     }
     else if (state.areasunlocked==7) {
+        
+    }
+    else if (state.areasunlocked==8) {
+        
+    }
+    else if (state.areasunlocked==9) {
+        
+    }
+    else if (state.areasunlocked==10) {
         
     }
 }

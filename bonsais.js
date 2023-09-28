@@ -218,55 +218,68 @@ function formatState (state) {
 
 function formatstateimage(bonsaixx) {
     if (bonsaixx.treetype==0) {
-        image='<img src="Images/b00r00.svg" width="25" height="25">';
+        image='<img src="Images/changeposition/b00r00.svg" width="25" height="25">';
     }
     else if (bonsaixx.treetype==1) {
-        if (bonsaixx.treequality==1) {
-            image='<img src="Images/b01r01.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==2) {
-            image='<img src="Images/b01r02.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==3) {
-            image='<img src="Images/b01r03.svg" width="25" height="25">';
-        }
+        formatstateimage2(bonsaixx, '01');
     }
     else if (bonsaixx.treetype==2) {
-        if (bonsaixx.treequality==1) {
-            image='<img src="Images/b02r01.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==2) {
-            image='<img src="Images/b02r02.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==3) {
-            image='<img src="Images/b02r03.svg" width="25" height="25">';
-        }
+        formatstateimage2(bonsaixx, '02');
     }
     else if (bonsaixx.treetype==3) {
-        if (bonsaixx.treequality==1) {
-            image='<img src="Images/b03r01.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==2) {
-            image='<img src="Images/b03r02.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==3) {
-            image='<img src="Images/b03r03.svg" width="25" height="25">';
-        }
+        formatstateimage2(bonsaixx, '03');
     }
     else if (bonsaixx.treetype==4) {
-        if (bonsaixx.treequality==1) {
-            image='<img src="Images/b04r01.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==2) {
-            image='<img src="Images/b04r02.svg" width="25" height="25">';
-        }
-        else if (bonsaixx.treequality==3) {
-            image='<img src="Images/b04r03.svg" width="25" height="25">';
-        }
+        formatstateimage2(bonsaixx, '04');
+    }
+    else if (bonsaixx.treetype==5) {
+        formatstateimage2(bonsaixx, '05');
+    }
+    else if (bonsaixx.treetype==6) {
+        formatstateimage2(bonsaixx, '06');
+    }
+    else if (bonsaixx.treetype==7) {
+        formatstateimage2(bonsaixx, '07');
+    }
+    else if (bonsaixx.treetype==8) {
+        formatstateimage2(bonsaixx, '08');
+    }
+    else if (bonsaixx.treetype==9) {
+        formatstateimage2(bonsaixx, '09');
+    }
+    else if (bonsaixx.treetype==10) {
+        formatstateimage2(bonsaixx, '10');
+    }
+    else if (bonsaixx.treetype==11) {
+        formatstateimage2(bonsaixx, '11');
+    }
+    else if (bonsaixx.treetype==12) {
+        formatstateimage2(bonsaixx, '12');
+    }
+    else if (bonsaixx.treetype==13) {
+        formatstateimage2(bonsaixx, '13');
+    }
+    else if (bonsaixx.treetype==14) {
+        formatstateimage2(bonsaixx, '14');
     }
     name=bonsaixx.name;
     level=bonsaixx.level;
     cp=bonsaixx.foliage+bonsaixx.branches+bonsaixx.trunk+bonsaixx.roots;
+}
+
+function formatstateimage2(bonsaixx, a) {
+    if (bonsaixx.treequality==1) {
+        image='<img src="Images/changeposition/b'+a+'r01.svg" width="25" height="25">';
+    }
+    else if (bonsaixx.treequality==2) {
+        image='<img src="Images/changeposition/b'+a+'r02.svg" width="25" height="25">';
+    }
+    else if (bonsaixx.treequality==3) {
+        image='<img src="Images/changeposition/b'+a+'r03.svg" width="25" height="25">';
+    }
+    else if (bonsaixx.treequality==4) {
+        image='<img src="Images/changeposition/b'+a+'r04.svg" width="25" height="25">';
+    }
 }
 
 function ChangePosition() {
@@ -745,6 +758,26 @@ function style_change2 (x, a) {
         document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
         document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
     }
+    else if (styletype==4) {
+        x.styletype=4;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
+    else if (styletype==5) {
+        x.styletype=5;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
+    else if (styletype==6) {
+        x.styletype=6;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
+    else if (styletype==7) {
+        x.styletype=7;
+        document.getElementById("seedling_detail_type").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+        document.getElementById("seedling_detail_type_mobile").innerHTML = fetchbonsaiimage(fetchbonsaiimage2, x, "100", "100");
+    }
 }
 
 function PlantSeedling() {
@@ -965,6 +998,96 @@ function treename (seedlingx) {
     else if (seedlingx.treetype==5) {
         return treename2 (seedlingx, 'HI');
     }
+    else if (seedlingx.treetype==6) {
+        return treename2 (seedlingx, 'KM');
+    }
+    else if (seedlingx.treetype==7) {
+        return treename2 (seedlingx, 'RK');
+    }
+    else if (seedlingx.treetype==8) {
+        return treename2 (seedlingx, 'AS');
+    }
+    else if (seedlingx.treetype==9) {
+        return treename2 (seedlingx, 'SU');
+    }
+    else if (seedlingx.treetype==10) {
+        return treename2 (seedlingx, 'FZ');
+    }
+    else if (seedlingx.treetype==11) {
+        return treename2 (seedlingx, 'MG');
+    }
+    else if (seedlingx.treetype==12) {
+        return treename2 (seedlingx, 'ME');
+    }
+    else if (seedlingx.treetype==13) {
+        return treename2 (seedlingx, 'SA');
+    }
+    else if (seedlingx.treetype==14) {
+        return treename2 (seedlingx, 'YJ');
+    }
+    else if (seedlingx.treetype==15) {
+        return treename2 (seedlingx, 'SR');
+    }
+    else if (seedlingx.treetype==16) {
+        return treename2 (seedlingx, 'DI');
+    }
+    else if (seedlingx.treetype==17) {
+        return treename2 (seedlingx, 'MT');
+    }
+    else if (seedlingx.treetype==18) {
+        return treename2 (seedlingx, 'SK');
+    }
+    else if (seedlingx.treetype==19) {
+        return treename2 (seedlingx, 'KU');
+    }
+    else if (seedlingx.treetype==20) {
+        return treename2 (seedlingx, 'HG');
+    }
+    else if (seedlingx.treetype==21) {
+        return treename2 (seedlingx, 'KO');
+    }
+    else if (seedlingx.treetype==22) {
+        return treename2 (seedlingx, 'MK');
+    }
+    else if (seedlingx.treetype==23) {
+        return treename2 (seedlingx, 'SB');
+    }
+    else if (seedlingx.treetype==24) {
+        return treename2 (seedlingx, 'BE');
+    }
+    else if (seedlingx.treetype==25) {
+        return treename2 (seedlingx, 'BO');
+    }
+    else if (seedlingx.treetype==26) {
+        return treename2 (seedlingx, 'PR');
+    }
+    else if (seedlingx.treetype==27) {
+        return treename2 (seedlingx, 'GN');
+    }
+    else if (seedlingx.treetype==28) {
+        return treename2 (seedlingx, 'TA');
+    }
+    else if (seedlingx.treetype==29) {
+        return treename2 (seedlingx, 'KH');
+    }
+    else if (seedlingx.treetype==30) {
+        return treename2 (seedlingx, 'TS');
+    }
+    else if (seedlingx.treetype==31) {
+        return treename2 (seedlingx, 'HS');
+    }
+    else if (seedlingx.treetype==32) {
+        return treename2 (seedlingx, 'TI');
+    }
+    else if (seedlingx.treetype==33) {
+        return treename2 (seedlingx, 'HN');
+    }
+    else if (seedlingx.treetype==34) {
+        return treename2 (seedlingx, 'KR');
+    }
+    else if (seedlingx.treetype==35) {
+        return treename2 (seedlingx, 'HA');
+    }
 }
 
 function treename2 (seedlingx, a) {
@@ -989,6 +1112,54 @@ function treename2 (seedlingx, a) {
     else if (seedlingx.styletype==7) {
         return a+id_string.toString().padStart(5, '0')+'KA';
     }
+    else if (seedlingx.styletype==8) {
+        return a+id_string.toString().padStart(5, '0')+'HO';
+    }
+    else if (seedlingx.styletype==9) {
+        return a+id_string.toString().padStart(5, '0')+'BU';
+    }
+    else if (seedlingx.styletype==10) {
+        return a+id_string.toString().padStart(5, '0')+'FU';
+    }
+    else if (seedlingx.styletype==11) {
+        return a+id_string.toString().padStart(5, '0')+'IK';
+    }
+    else if (seedlingx.styletype==12) {
+        return a+id_string.toString().padStart(5, '0')+'NE';
+    }
+    else if (seedlingx.styletype==13) {
+        return a+id_string.toString().padStart(5, '0')+'SR';
+    }
+    else if (seedlingx.styletype==14) {
+        return a+id_string.toString().padStart(5, '0')+'IS';
+    }
+    else if (seedlingx.styletype==15) {
+        return a+id_string.toString().padStart(5, '0')+'SA';
+    }
+    else if (seedlingx.styletype==16) {
+        return a+id_string.toString().padStart(5, '0')+'SE';
+    }
+}
+
+function bonsaiprice (bonsaixx) {
+    if (bonsaixx.treetype==1 || bonsaixx.treetype==4 || bonsaixx.treetype==7 || bonsaixx.treetype==10 || bonsaixx.treetype==13 || bonsaixx.treetype==14 || bonsaixx.treetype==18 || bonsaixx.treetype==19 || bonsaixx.treetype==23 || bonsaixx.treetype==24) {
+        return Math.ceil(bonsaixx.level*1*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
+    else if (bonsaixx.treetype==2 || bonsaixx.treetype==5 || bonsaixx.treetype==8 || bonsaixx.treetype==11 || bonsaixx.treetype==15 || bonsaixx.treetype==20 || bonsaixx.treetype==25 || bonsaixx.treetype==28) {
+        return Math.ceil(bonsaixx.level*2*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
+    else if (bonsaixx.treetype==3 || bonsaixx.treetype==6 || bonsaixx.treetype==9 || bonsaixx.treetype==16 || bonsaixx.treetype==21 || bonsaixx.treetype==26 || bonsaixx.treetype==29 || bonsaixx.treetype==30) {
+        return Math.ceil(bonsaixx.level*3*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
+    else if (bonsaixx.treetype==12 || bonsaixx.treetype==17 || bonsaixx.treetype==22) {
+        return Math.ceil(bonsaixx.level*4*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
+    else if (bonsaixx.treetype==27 || bonsaixx.treetype==31 || bonsaixx.treetype==32) {
+        return Math.ceil(bonsaixx.level*5*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
+    else if (bonsaixx.treetype==33 || bonsaixx.treetype==34 || bonsaixx.treetype==35) {
+        return Math.ceil(bonsaixx.level*6*(bonsaixx.treequality/5)*bonsaixx.shiny);
+    }
 }
 
 function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
@@ -1010,7 +1181,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     bonsaixx.trunk = 0;
     bonsaixx.roots = 0;
     bonsaixx.growing = 1;
-    bonsaixx.price = bonsaixx.level*bonsaixx.treetypegroup*bonsaixx.treequality;
+    bonsaixx.price = bonsaiprice(bonsaixx);
     bonsaixx.level_new +=1;
     if (bonsaixx.treequality==1) {
         bonsaixx.growing_zeit = grow_time_tq1[bonsaixx.level];
@@ -1027,21 +1198,27 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         cpdistribution(bonsaixx, level_cp_tq3)
         cpdistributionaftercare(bonsaixx);
     }
+    else if (bonsaixx.treequality==4) {
+        bonsaixx.growing_zeit = grow_time_tq4[bonsaixx.level];
+        cpdistribution(bonsaixx, level_cp_tq4)
+        cpdistributionaftercare(bonsaixx);
+    }
+    statistics.bonsais_total +=1;
     
     if (worker==worker01) {
-        document.getElementById("zeit_worker01").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker01").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
         document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
         document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
         document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">'; 
     }
     else if (worker==worker02) {
-        document.getElementById("zeit_worker02").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker02").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
         document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
         document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
         document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';
     }
     else if (worker==worker03) {
-        document.getElementById("zeit_worker03").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+        document.getElementById("zeit_worker03").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
         document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
         document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
         document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';
@@ -1052,6 +1229,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     menu_change();
     menu_shop_change();
     menu_contests_change();
+    bondex_check(bonsaixx);
     
     state.seedlings -=1;
     state.seedlings_ontheway -=1;
@@ -1247,6 +1425,29 @@ function cpdistribution(bonsaixx, level_cp_tq) {
     else if (bonsaixx.level_new<=50) {
         cpdistribution2(bonsaixx, level_cp_tq, 4);
     }
+    else if (bonsaixx.level_new<=60) {
+        cpdistribution2(bonsaixx, level_cp_tq, 5);
+    }
+    else if (bonsaixx.level_new<=70) {
+        cpdistribution2(bonsaixx, level_cp_tq, 6);
+    }
+    else if (bonsaixx.level_new<=80) {
+        cpdistribution2(bonsaixx, level_cp_tq, 7);
+    }
+    else if (bonsaixx.level_new<=90) {
+        cpdistribution2(bonsaixx, level_cp_tq, 8);
+    }
+    else if (bonsaixx.level_new<=100) {
+        if (bonsaixx.level==bonsaixx.level_new) {
+            bonsaixx.foliage_new=0;
+            bonsaixx.branches_new=0;
+            bonsaixx.trunk_new=0;
+            bonsaixx.roots_new=0;
+        }
+        else {
+            cpdistribution2(bonsaixx, level_cp_tq, 9);
+        }
+    }
 }
 
 function cpdistribution2(bonsaixx, level_cp_tq, level_index) {
@@ -1284,25 +1485,95 @@ function cpdistribution_growing(bonsaixx, level_cp_tq, level_index, a, b) {
         leftpoints=0;
     }
     else if (b.growing>=a) {
-        cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
+        if (bonsaixx.styletype<=5) {
+            cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 20, b);
+        }
+        else if (bonsaixx.styletype<=9) {
+            cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 25, b);
+        }
+        else if (bonsaixx.styletype<=12) {
+            cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 32, b);
+        }
+        else if (bonsaixx.styletype<=14) {
+            cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 40, b);
+        }
+        else {
+            cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 50, b);
+        }
     }
     else {
         if (Math.floor((((level_cp_tq[level_index]/10)*8)/a)*b.growing/0.4)*0.4<b.growing*0.4) {
             if (b.growing*0.4>leftpoints) {
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
+                if (bonsaixx.styletype<=5) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 20, b);
+                }
+                else if (bonsaixx.styletype<=9) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 25, b);
+                }
+                else if (bonsaixx.styletype<=12) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 32, b);
+                }
+                else if (bonsaixx.styletype<=14) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 40, b);
+                }
+                else {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 50, b);
+                }
             }
             else {
                 leftpoints=b.growing*0.4;
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
+                if (bonsaixx.styletype<=5) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 20, b);
+                }
+                else if (bonsaixx.styletype<=9) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 25, b);
+                }
+                else if (bonsaixx.styletype<=12) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 32, b);
+                }
+                else if (bonsaixx.styletype<=14) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 40, b);
+                }
+                else {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 50, b);
+                }
             }
         }
         else {
             if (Math.floor((((level_cp_tq[level_index]/10)*8)/a)*b.growing/0.4)*0.4>leftpoints) {
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
+                if (bonsaixx.styletype<=5) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 20, b);
+                }
+                else if (bonsaixx.styletype<=9) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 25, b);
+                }
+                else if (bonsaixx.styletype<=12) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 32, b);
+                }
+                else if (bonsaixx.styletype<=14) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 40, b);
+                }
+                else {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 50, b);
+                }
             }
             else {
                 leftpoints=Math.floor((((level_cp_tq[level_index]/10)*8)/a)*b.growing/0.4)*0.4;
-                cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, a, b);
+                if (bonsaixx.styletype<=5) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 20, b);
+                }
+                else if (bonsaixx.styletype<=9) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 25, b);
+                }
+                else if (bonsaixx.styletype<=12) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 32, b);
+                }
+                else if (bonsaixx.styletype<=14) {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 40, b);
+                }
+                else {
+                    cpdistribution_shaping(bonsaixx, level_cp_tq, level_index, 50, b);
+                }
             }
         }
     }
@@ -1477,9 +1748,6 @@ function naturerandom() {
 /* Bonsai Growing Intervall*/
 function Bonsai_Growing_Intervall(bonsaixx) {
     if (bonsaixx.growing_zeit==0) {
-        if (bonsaixx.level==0) {
-            statistics.bonsais_total +=1;
-        }
         console.log(statistics.bonsais_total);
         //task002trigger();
         levels=bonsaixx.level_new-bonsaixx.level;
@@ -1489,8 +1757,13 @@ function Bonsai_Growing_Intervall(bonsaixx) {
         bonsaixx.branches=bonsaixx.branches_new;
         bonsaixx.trunk=bonsaixx.trunk_new;
         bonsaixx.roots=bonsaixx.roots_new;
-        bonsaixx.price = bonsaixx.level*bonsaixx.treetypegroup*bonsaixx.treequality;
-        bonsaixx.level_new +=1;
+        bonsaixx.price = bonsaiprice(bonsaixx);
+        if (bonsaixx.level==100) {
+            bonsaixx.level_new=100;
+        }
+        else {
+            bonsaixx.level_new +=1;    
+        }
         bonsaixx.level_lp =0;
         bonsaixx.foliage_lp =0;
         bonsaixx.branches_lp =0;
@@ -1517,6 +1790,13 @@ function Bonsai_Growing_Intervall(bonsaixx) {
             cpdistributionaftercare(bonsaixx)
             bonsaixx.growing_zeit = grow_time_tq3[bonsaixx.level];
             levels =levels*3;
+            experience(levels);
+        }
+        if (bonsaixx.treequality==4) {
+            cpdistribution(bonsaixx, level_cp_tq4);
+            cpdistributionaftercare(bonsaixx)
+            bonsaixx.growing_zeit = grow_time_tq4[bonsaixx.level];
+            levels =levels*4;
             experience(levels);
         }
     
@@ -1665,7 +1945,7 @@ function Bonsai_Growing_Intervall(bonsaixx) {
 function worker_growing_check(bonsaixx, number) {
     if (worker01.growing==number) {
         if (bonsaixx.growing==1) {
-            document.getElementById("zeit_worker01").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("zeit_worker01").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
             document.getElementById("worker1_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
             document.getElementById("worker1_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
             document.getElementById("worker1_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';  
@@ -1682,7 +1962,7 @@ function worker_growing_check(bonsaixx, number) {
     }
     else if (worker02.growing==number) {
         if (bonsaixx.growing==1) {
-            document.getElementById("zeit_worker02").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("zeit_worker02").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
             document.getElementById("worker2_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
             document.getElementById("worker2_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
             document.getElementById("worker2_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';   
@@ -1699,7 +1979,7 @@ function worker_growing_check(bonsaixx, number) {
     }
     else if (worker03.growing==number) {
         if (bonsaixx.growing==1) {
-            document.getElementById("zeit_worker03").innerHTML = "("+bonsaixx.growing_zeit+"&nbsp;seconds left)";
+            document.getElementById("zeit_worker03").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
             document.getElementById("worker3_task").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing';
             document.getElementById("worker3_task_mobile").innerHTML = '<img src="Images/growing.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Growing'; 
             document.getElementById("worker3_task_mobilexs").innerHTML = '<img src="Images/growing.svg" width="20" height="20">';   

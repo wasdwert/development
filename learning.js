@@ -58,13 +58,50 @@ function learning_countdown() {
 
 function learn_treestyles1() {
     if (skills.treestyles1==0) {
-        skills.treestyles1=1;
-        fetchvalues();
-        fetchunlocks();
-        $(document).ready(function(){
-            $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
-            $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
-        });
+        if (equipment.tools1==1) {
+            if (equipment.book_styles1==1) {
+                skills.treestyles1=1;
+                fetchvalues();
+                fetchunlocks();
+                $(document).ready(function(){
+                    $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+                    $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+                });
+            }
+            else {
+                document.getElementById("snack_message").innerText = "Need book: Bonsai styles #1 first";
+                var snackb = document.getElementById("snackbar");
+                snackb.className = "show";
+                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            }
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Need 'Beginner bonsai tools' first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);    
+        }
+    }
+    else {}
+}
+
+function learn_treestyles2() {
+    if (skills.treestyles2==0) {
+        if (equipment.book_styles2==1) {
+            skills.treestyles2=1;
+            fetchvalues();
+            fetchunlocks();
+            $(document).ready(function(){
+                $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option></option><option value='4'>Han-Kengai - Semi-cascade Style</option></option><option value='5'>Sokan - Double Trunk Style</option></option><option value='6'>Kengai - Full Cascade Style</option></option><option value='7'>Kabudachi - Multi-Trunk Style</option>");
+                $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option><option value='4'>Han-Kengai - Semi-cascade Style</option></option><option value='5'>Sokan - Double Trunk Style</option></option><option value='6'>Kengai - Full Cascade Style</option></option><option value='7'>Kabudachi - Multi-Trunk Style</option>");
+            });
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Need book: Bonsai styles #2 first";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        }
     }
     else {}
 }
@@ -206,21 +243,23 @@ function learn_growing2 () {
 }
 
 function learn_growshape (bonsaixx) {
-    bonsaixx.foliage_lp=0;
-    bonsaixx.branches_lp=0;
-    bonsaixx.trunk_lp=0;
-    bonsaixx.roots_lp=0;
-    if (bonsaixx.treequality==1) {
-        cpdistribution(bonsaixx, level_cp_tq1);
-        cpdistributionaftercare(bonsaixx)
-    }
-    if (bonsaixx.treequality==2) {
-        cpdistribution(bonsaixx, level_cp_tq2);
-        cpdistributionaftercare(bonsaixx)
-    }
-    if (bonsaixx.treequality==3) {
-        cpdistribution(bonsaixx, level_cp_tq3);
-        cpdistributionaftercare(bonsaixx)
+    if (bonsaixx.growing==0) {
+        bonsaixx.foliage_lp=0;
+        bonsaixx.branches_lp=0;
+        bonsaixx.trunk_lp=0;
+        bonsaixx.roots_lp=0;
+        if (bonsaixx.treequality==1) {
+            cpdistribution(bonsaixx, level_cp_tq1);
+            cpdistributionaftercare(bonsaixx)
+        }
+        if (bonsaixx.treequality==2) {
+            cpdistribution(bonsaixx, level_cp_tq2);
+            cpdistributionaftercare(bonsaixx)
+        }
+        if (bonsaixx.treequality==3) {
+            cpdistribution(bonsaixx, level_cp_tq3);
+            cpdistributionaftercare(bonsaixx)
+        }
     }
 }
 

@@ -394,7 +394,7 @@
     font-size: 15px;
 }
 
-#Button_equip_memorychips, #Button_equip_bookofpatience, #Button_equip_backpack, #Button_equip_bookgrowing1, #Button_equip_bookshaping1 {
+#Button_equip_memorychips, #Button_equip_bookofpatience, #Button_equip_map_area02, #Button_equip_bookgrowing1, #Button_equip_bookshaping1, #Button_equip_bookstyles2 {
     box-sizing: border-box;
 	height: 30px;
 	background: #777;
@@ -474,7 +474,7 @@
     font-size: 15px;
 }
 
-#Button_Skill_Treestyles1, #Button_Skill_Robot1, #Button_Skill_Compost1, #Button_Skill_Growing, #Button_Skill_Shaping, #Button_Skill_Patience {
+#Button_Skill_Treestyles1, #Button_Skill_Treestyles2, #Button_Skill_Robot1, #Button_Skill_Compost1, #Button_Skill_Growing, #Button_Skill_Shaping, #Button_Skill_Patience {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -490,7 +490,7 @@
     font-size: 15px;
 }
 
-#Skill_Treestyles1, #Skill_Treestyles1_Learned, #Skill_Robot1, #Skill_Robot1_Learned, #Skill_Compost1, #Skill_Compost1_Learned, #Skill_Growing, #Skill_Growing_Learned, #Skill_Shaping, #Skill_Shaping_Learned, #Skill_Patience, #Skill_Patience_Learned {
+#Skill_Treestyles1, #Skill_Treestyles1_Learned, #Skill_Treestyles2, #Skill_Treestyles2_Learned, #Skill_Robot1, #Skill_Robot1_Learned, #Skill_Compost1, #Skill_Compost1_Learned, #Skill_Growing, #Skill_Growing_Learned, #Skill_Shaping, #Skill_Shaping_Learned, #Skill_Patience, #Skill_Patience_Learned {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -856,12 +856,12 @@
 }
 
 /* Tooltip */
-.judge1pre, .judge1dis, .judge2pre, .judge2dis, .judge3pre, .judge3dis {
+.tooltip, .judge1pre, .judge1dis, .judge2pre, .judge2dis, .judge3pre, .judge3dis {
   position: relative;
   display: inline-block;
 }
 
-.judge1pre #judge1pre_text, .judge1dis #judge1dis_text, .judge2pre #judge2pre_text, .judge2dis #judge2dis_text, .judge3pre #judge3pre_text, .judge3dis #judge3dis_text {
+.tooltip #tooltip_text, .judge1pre #judge1pre_text, .judge1dis #judge1dis_text, .judge2pre #judge2pre_text, .judge2dis #judge2dis_text, .judge3pre #judge3pre_text, .judge3dis #judge3dis_text {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -878,7 +878,7 @@
   transition: opacity 0.3s;
 }
 
-.judge1pre #judge1pre_text::after, .judge1dis #judge1dis_text::after, .judge2pre #judge2pre_text::after, .judge2dis #judge2dis_text::after, .judge3pre #judge3pre_text::after, .judge3dis #judge3dis_text::after {
+.tooltip #tooltip_text::after, .judge1pre #judge1pre_text::after, .judge1dis #judge1dis_text::after, .judge2pre #judge2pre_text::after, .judge2dis #judge2dis_text::after, .judge3pre #judge3pre_text::after, .judge3dis #judge3dis_text::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -889,7 +889,7 @@
   border-color: #555 transparent transparent transparent;
 }
 
-.judge1pre:hover #judge1pre_text, .judge1dis:hover #judge1dis_text, .judge2pre:hover #judge2pre_text, .judge2dis:hover #judge2dis_text, .judge3pre:hover #judge3pre_text, .judge3dis:hover #judge3dis_text {
+.tooltip:hover #tooltip_text, .judge1pre:hover #judge1pre_text, .judge1dis:hover #judge1dis_text, .judge2pre:hover #judge2pre_text, .judge2dis:hover #judge2dis_text, .judge3pre:hover #judge3pre_text, .judge3dis:hover #judge3dis_text {
   visibility: visible;
   opacity: 1;
 }

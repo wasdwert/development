@@ -778,34 +778,84 @@ function fetchvalues() {
     conteststime(clubs_leagues.lea01c1, "league_area01_c1time");
 }
 
-function conteststime(clubs_leagues, a) {
-    if (clubs_leagues==0) {
-        document.getElementById(a).innerHTML = ''; 
+function conteststime(variable, placement) {
+    if (variable==0) {
+        document.getElementById(placement).innerHTML = "";
     }
     else {
-        state.hours=Math.floor(clubs_leagues/60/60);
-        state.minutes=Math.floor((clubs_leagues/60)-(state.hours*60));
-        state.seconds=Math.floor(clubs_leagues-(state.minutes*60)-(state.hours*60*60));
-        document.getElementById(a).innerHTML = '(next in '+state.hours.toString().padStart(2, '0')+':'+state.minutes.toString().padStart(2, '0')+':'+state.seconds.toString().padStart(2, '0')+')';
+        document.getElementById(placement).innerHTML = "(next in "+timetracker(variable)+")";
     }
 }
 
 function fetchunlocks() {
     //Unlock treetypes and treequality in areas
+    //Area01
     if (exp_area01.treetype01==1) {
         document.getElementById("area01_tt01").innerHTML = '<img src="Images/bonsai01_stamp.svg" width="35" height="35">';
     }
     if (exp_area01.treetype02==1) {
         document.getElementById("area01_tt02").innerHTML = '<img src="Images/bonsai02_stamp.svg" width="35" height="35">';
     }
-    if (exp_area01.treetype03==1) {
-        document.getElementById("area01_tt03").innerHTML = '<img src="Images/bonsai04_stamp.svg" width="35" height="35">';
+    if (exp_area01.treetype04==1) {
+        document.getElementById("area01_tt04").innerHTML = '<img src="Images/bonsai04_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treetype05==1) {
+        document.getElementById("area01_tt05").innerHTML = '<img src="Images/bonsai05_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treetype07==1) {
+        document.getElementById("area01_tt07").innerHTML = '<img src="Images/bonsai07_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treetype08==1) {
+        document.getElementById("area01_tt08").innerHTML = '<img src="Images/bonsai08_stamp.svg" width="35" height="35">';
     }
     if (exp_area01.treequality01==1) {
-        document.getElementById("area01_po01").innerHTML = '<img src="Images/one_stamp.svg" width="35" height="35">';
+        document.getElementById("area01_tq01").innerHTML = '<img src="Images/one_stamp.svg" width="35" height="35">';
     }
     if (exp_area01.treequality02==1) {
-        document.getElementById("area01_po02").innerHTML = '<img src="Images/two_stamp.svg" width="35" height="35">';
+        document.getElementById("area01_tq02").innerHTML = '<img src="Images/two_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area01.treequality03==1) {
+        document.getElementById("area01_tq03").innerHTML = '<img src="Images/three_stamp.svg" width="35" height="35">';
+    }
+    //Area02
+    if (exp_area02.treetype01==1) {
+        document.getElementById("area02_tt01").innerHTML = '<img src="Images/bonsai01_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype03==1) {
+        document.getElementById("area02_tt03").innerHTML = '<img src="Images/bonsai03_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype04==1) {
+        document.getElementById("area02_tt04").innerHTML = '<img src="Images/bonsai04_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype06==1) {
+        document.getElementById("area02_tt06").innerHTML = '<img src="Images/bonsai06_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype09==1) {
+        document.getElementById("area02_tt09").innerHTML = '<img src="Images/bonsai09_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype10==1) {
+        document.getElementById("area02_tt10").innerHTML = '<img src="Images/bonsai10_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype11==1) {
+        document.getElementById("area02_tt11").innerHTML = '<img src="Images/bonsai11_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype13==1) {
+        document.getElementById("area02_tt13").innerHTML = '<img src="Images/bonsai13_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treetype14==1) {
+        document.getElementById("area02_tt14").innerHTML = '<img src="Images/bonsai14_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treequality01==1) {
+        document.getElementById("area02_tq01").innerHTML = '<img src="Images/one_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treequality02==1) {
+        document.getElementById("area02_tq02").innerHTML = '<img src="Images/two_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treequality03==1) {
+        document.getElementById("area02_tq03").innerHTML = '<img src="Images/three_stamp.svg" width="35" height="35">';
+    }
+    if (exp_area02.treequality04==1) {
+        document.getElementById("area02_tq04").innerHTML = '<img src="Images/four_stamp.svg" width="35" height="35">';
     }
     
     //Unlock workers
@@ -848,6 +898,22 @@ function fetchunlocks() {
             $('#you_equip_tools1').show();
         });
         document.getElementById("skill_treestyle_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+        document.getElementById("skill_treestyle2_rec1").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    if (equipment.book_styles1==1) {
+        $(document).ready(function() {
+            $('#you_equip_bookstyles1').show();
+        });
+        document.getElementById("skill_treestyle_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
+    }
+    if (equipment.book_styles2==1) {
+        $(document).ready(function() {
+            $('#shop_equip_bookstyles2').hide();
+        });
+        $(document).ready(function() {
+            $('#you_equip_bookstyles2').show();
+        });
+        document.getElementById("skill_treestyle2_rec2").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
     }
     if (equipment.book_robot1==1) {
         $(document).ready(function() {
@@ -885,6 +951,17 @@ function fetchunlocks() {
             document.getElementById("skill_shaping_rec2").innerHTML = '<img src="Images/cross.svg" width="20" height="20">';
         }
     }
+    if (equipment.map_area02==1) {
+        $(document).ready(function() {
+            $('#shop_equip_map_area02').hide();
+        });
+        $(document).ready(function() {
+            $('#you_equip_map_area02').show();
+        });
+        $(document).ready(function(){
+            $('#expedition2').show();
+        });
+    }
     
     //Unlock skills
     if (skills.treestyles1==1) {
@@ -894,13 +971,38 @@ function fetchunlocks() {
             $('#Skill_Treestyles1_Mobile').hide();
             $('#Skill_Treestyles1_Learned_Mobile').show();
         });
+        if (state.areasunlocked>=2) {
+            $(document).ready(function(){
+                $('#Skill_Treestyles2').show();
+                $('#Skill_Treestyles2_Mobile').show();
+            });
+        }
         document.getElementById("skill_treestyle_rec1").innerHTML = '';
+        document.getElementById("skill_treestyle_rec2").innerHTML = '';
         document.getElementById("Skill_Treestyles1_Button").innerHTML = "Learned";
         Button_Skill_Treestyles1.className = "";
         document.getElementById("Button_Skill_Treestyles1").style.cursor= "auto";
         $(document).ready(function(){
             $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
             $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option>");
+        });
+    }
+    
+    if (skills.treestyles2==1) {
+        $(document).ready(function(){
+            $('#Skill_Treestyles2').hide();
+            $('#Skill_Treestyles2_Learned').show();
+            $('#Skill_Treestyles2_Mobile').hide();
+            $('#Skill_Treestyles2_Learned_Mobile').show();
+        });
+        document.getElementById("skill_treestyle2_rec1").innerHTML = '';
+        document.getElementById("skill_treestyle2_rec2").innerHTML = '';
+        document.getElementById("Skill_Treestyles2_Button").innerHTML = "Learned";
+        Button_Skill_Treestyles2.className = "";
+        document.getElementById("Button_Skill_Treestyles2").style.cursor= "auto";
+        $(document).ready(function(){
+            $("#menu_style").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option></option><option value='4'>Han-Kengai - Semi-cascade Style</option></option><option value='5'>Sokan - Double Trunk Style</option></option><option value='6'>Kengai - Full Cascade Style</option></option><option value='7'>Kabudachi - Multi-Trunk Style</option>");
+            $("#menu_style_mobile").html("<option value='0'>Choose a style for your bonsai</option><option value='1'>Chokan - Formal Upright Style</option><option value='2'>Moyogi - Informal Upright Style</option><option value='3'>Shakan - Slanting Style</option><option value='4'>Han-Kengai - Semi-cascade Style</option></option><option value='5'>Sokan - Double Trunk Style</option></option><option value='6'>Kengai - Full Cascade Style</option></option><option value='7'>Kabudachi - Multi-Trunk Style</option>");
         });
     }
     

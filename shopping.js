@@ -242,48 +242,61 @@ function SellBonsaiExecution(bonsaixx) {
 function SellSeedling(seedlingx) {
     if (seedlingx.treetype>0) {
         resources.money +=seedlingx.price;
-        seedlingx.styletype=0;
         seedlingx.treetype=0;
         seedlingx.treetypegroup=0;
+        seedlingx.styletype=0;
         seedlingx.treequality=0;
+        seedlingx.shiny=0;
         seedlingx.price=0;
         state.seedlings -=1;
         state.seedlings_ontheway -=1;
+        $(document).ready(function(){
+            $('#menu_style2').hide();
+            $('#menu_style2_mobile').hide();
+           
+            $('#menu_style').val(seedlingx.styletype);
+            $('#menu_style').trigger('change');
+           
+            $('#menu_style_mobile').val(seedlingx.styletype);
+            $('#menu_style_mobile').trigger('change');
+        });
+        document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
+        document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';        
         if (seedlingx==seedling1) {
-        document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
-        fetchimage_seedling ("a", seedling1);
-        document.getElementById("seedlinga_center").style.cursor= "auto"; 
-        seedlinga_center.className = "";
+            document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
+            fetchimage_seedling ("a", seedling1);
+            document.getElementById("seedlinga_center").style.cursor= "auto"; 
+            seedlinga_center.className = "";
         }
         if (seedlingx==seedling2) {
-        document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
-        fetchimage_seedling ("b", seedling2);
-        document.getElementById("seedlingb_center").style.cursor= "auto"; 
-        seedlingb_center.className = "";
+            document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
+            fetchimage_seedling ("b", seedling2);
+            document.getElementById("seedlingb_center").style.cursor= "auto"; 
+            seedlingb_center.className = "";
         }
         if (seedlingx==seedling3) {
-        document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
-        fetchimage_seedling ("c", seedling3);
-        document.getElementById("seedlingc_center").style.cursor= "auto"; 
-        seedlingc_center.className = "";
+            document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
+            fetchimage_seedling ("c", seedling3);
+            document.getElementById("seedlingc_center").style.cursor= "auto"; 
+            seedlingc_center.className = "";
         }
         if (seedlingx==seedling4) {
-        document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
-        fetchimage_seedling ("d", seedling4);
-        document.getElementById("seedlingd_center").style.cursor= "auto"; 
-        seedlingd_center.className = "";
+            document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
+            fetchimage_seedling ("d", seedling4);
+            document.getElementById("seedlingd_center").style.cursor= "auto"; 
+            seedlingd_center.className = "";
         }
         if (seedlingx==seedling5) {
-        document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
-        fetchimage_seedling ("e", seedling5);
-        document.getElementById("seedlinge_center").style.cursor= "auto"; 
-        seedlinge_center.className = "";
+            document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
+            fetchimage_seedling ("e", seedling5);
+            document.getElementById("seedlinge_center").style.cursor= "auto"; 
+            seedlinge_center.className = "";
         }
         if (seedlingx==seedling6) {
-        document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
-        fetchimage_seedling ("f", seedling6);
-        document.getElementById("seedlingf_center").style.cursor= "auto"; 
-        seedlingf_center.className = "";
+            document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
+            fetchimage_seedling ("f", seedling6);
+            document.getElementById("seedlingf_center").style.cursor= "auto"; 
+            seedlingf_center.className = "";
         }
         PlantSeedlingReset();
         fetchvalues();
@@ -291,17 +304,41 @@ function SellSeedling(seedlingx) {
     }
 }
 
-function BuyBackpack() {
-    if (resources.money>=20) {
-        resources.money -=20;
-        document.getElementById("money").innerText = resources.money;
-        equipment.backpack=1;
-        document.getElementById("shop_equip_backpack").style.backgroundImage= "url('Images/bought.svg')";
-        $(document).ready(function(){
-            $('#expedition2').show();
-        });
-        task010trigger();
+function BuyMapArea02() {
+    if (equipment.map_area02==0) {
+        if (resources.money>=20) {
+            resources.money -=20;
+            equipment.map_area02=1;
+            state.areasunlocked+=1;
+            fetchvalues();
+            fetchunlocks();
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Not enough money";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        } 
     }
+    else {}
+}
+
+function BuyBookStyles2() {
+    if (equipment.book_styles2==0) {
+        if (resources.money>=25) {
+            resources.money -=25;
+            equipment.book_styles2=1;
+            fetchvalues();
+            fetchunlocks();
+        }
+        else {
+            document.getElementById("snack_message").innerText = "Not enough money";
+            var snackb = document.getElementById("snackbar");
+            snackb.className = "show";
+            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        } 
+    }
+    else {}
 }
 
 function BuyBookofPatience() {
