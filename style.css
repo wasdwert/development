@@ -104,6 +104,7 @@
     }
 }
 
+/* Currently disabled
 @media screen and (max-width: 909px) {
     .leftcolumn_pc {
         display: none;
@@ -148,6 +149,7 @@
         width: 300px;;
     }
 }
+*/
 
 .game, .startscreen {
     box-sizing: border-box;
@@ -861,7 +863,7 @@
   display: inline-block;
 }
 
-.tooltip #tooltip_text, .judge1pre #judge1pre_text, .judge1dis #judge1dis_text, .judge2pre #judge2pre_text, .judge2dis #judge2dis_text, .judge3pre #judge3pre_text, .judge3dis #judge3dis_text {
+.tooltip .tooltip_text, .judge1pre #judge1pre_text, .judge1dis #judge1dis_text, .judge2pre #judge2pre_text, .judge2dis #judge2dis_text, .judge3pre #judge3pre_text, .judge3dis #judge3dis_text {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -871,25 +873,25 @@
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  top: 100%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.tooltip #tooltip_text::after, .judge1pre #judge1pre_text::after, .judge1dis #judge1dis_text::after, .judge2pre #judge2pre_text::after, .judge2dis #judge2dis_text::after, .judge3pre #judge3pre_text::after, .judge3dis #judge3dis_text::after {
+.tooltip .tooltip_text::after, .judge1pre #judge1pre_text::after, .judge1dis #judge1dis_text::after, .judge2pre #judge2pre_text::after, .judge2dis #judge2dis_text::after, .judge3pre #judge3pre_text::after, .judge3dis #judge3dis_text::after {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: transparent transparent #555 transparent;
 }
 
-.tooltip:hover #tooltip_text, .judge1pre:hover #judge1pre_text, .judge1dis:hover #judge1dis_text, .judge2pre:hover #judge2pre_text, .judge2dis:hover #judge2dis_text, .judge3pre:hover #judge3pre_text, .judge3dis:hover #judge3dis_text {
+.tooltip:hover .tooltip_text, .judge1pre:hover #judge1pre_text, .judge1dis:hover #judge1dis_text, .judge2pre:hover #judge2pre_text, .judge2dis:hover #judge2dis_text, .judge3pre:hover #judge3pre_text, .judge3dis:hover #judge3dis_text {
   visibility: visible;
   opacity: 1;
 }
@@ -1274,26 +1276,85 @@
 
 
  /* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
+#snackbar-container{
+	position :  fixed;
+    bottom : 0px;
+    left : 50%;
+}
+
+.snackbar_information {
     visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
+    min-width: 400px;
+    margin-left: -200px;
+    height: 42px;
     background-color: #777;
+    margin-bottom : 20px;
     color: #fff;
     font-family: Arial;
     font-size: 15px;
-    text-align: center;
-    padding: 16px;
-    position: fixed;
+    padding-top: 4px;
+    padding-bottom: 4px;
     z-index: 1;
     left: 50%;
     bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#snackbar.show {
+.snackbar_attention {
+    visibility: hidden;
+    min-width: 400px;
+    margin-left: -200px;
+    height: 42px;
+    background-color: #cc0000;
+    margin-bottom : 20px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.snackbar_skillstone {
+    visibility: hidden;
+    min-width: 400px;
+    margin-left: -200px;
+    height: 42px;
+    background-color: #b79a00;
+    margin-bottom : 20px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.snackbar.none {
+    display: none;
+}
+
+.snackbar_information.show3s, .snackbar_attention.show3s {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+.snackbar_skillstone.show6s {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5.5s;
 }
 
 @-webkit-keyframes fadein {

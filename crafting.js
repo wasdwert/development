@@ -129,10 +129,7 @@ function craft_compost1() {
                     document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Not enough resources";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }
             }
             else if (worker02.busy==0) {
@@ -157,10 +154,7 @@ function craft_compost1() {
                     document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Not enough resources";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }
             }
             else if (worker03.busy==0) {
@@ -187,25 +181,16 @@ function craft_compost1() {
                     document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Not enough resources";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }
             }
         }
         else {
-                document.getElementById("snack_message").innerText = "Crafting compost already on the way";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Crafting compost already on the way", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {
-        document.getElementById("snack_message").innerText = "No workers available";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No workers available", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -237,10 +222,7 @@ function craft_robot1() {
                         document.getElementById("worker1_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }
                     else {
-                        document.getElementById("snack_message").innerText = "Not enough resources";
-                        var snackb = document.getElementById("snackbar");
-                        snackb.className = "show";
-                        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                     }
                 }
                 else if (worker02.busy==0) {
@@ -267,10 +249,7 @@ function craft_robot1() {
                         document.getElementById("worker2_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }
                     else {
-                        document.getElementById("snack_message").innerText = "Not enough resources";
-                        var snackb = document.getElementById("snackbar");
-                        snackb.className = "show";
-                        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                     }
                 }
                 else if (worker03.busy==0) {
@@ -297,32 +276,20 @@ function craft_robot1() {
                         document.getElementById("worker3_task").innerHTML = '<img src="Images/crafting.svg" width="20" height="20">&nbsp;&nbsp;&nbsp;Crafting'; 
                     }
                     else {
-                        document.getElementById("snack_message").innerText = "Not enough resources";
-                        var snackb = document.getElementById("snackbar");
-                        snackb.className = "show";
-                        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough resources", "snackbar_attention", 3000, "snackbar_attention show3s");
                     }
                 } 
             }
             else {
-                document.getElementById("snack_message").innerText = "Crafting robot already on the way";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Crafting robot already on the way", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "No workers available";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No workers available", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {
-    document.getElementById("snack_message").innerText = "Worker limit reached";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Worker limit reached", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 

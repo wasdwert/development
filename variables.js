@@ -22,6 +22,21 @@ var state = {
 var statistics = {
     seedlings_total: 0,
     bonsais_total: 0,
+    bondex_treetype_discovered: 0,
+    bondex_bonsai01_discovered: 0,
+    bondex_bonsai02_discovered: 0,
+    bondex_bonsai03_discovered: 0,
+    bondex_bonsai04_discovered: 0,
+    bondex_bonsai05_discovered: 0,
+    bondex_bonsai06_discovered: 0,
+    bondex_bonsai07_discovered: 0,
+    bondex_bonsai08_discovered: 0,
+    bondex_bonsai09_discovered: 0,
+    bondex_bonsai10_discovered: 0,
+    bondex_bonsai11_discovered: 0,
+    bondex_bonsai12_discovered: 0,
+    bondex_bonsai13_discovered: 0,
+    bondex_bonsai14_discovered: 0,
 }
 
 var resources = {

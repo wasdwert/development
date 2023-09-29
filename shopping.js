@@ -15,10 +15,7 @@ shop_bolt_sell.onclick = function() {
         fetchunlocks();
         }
     else {
-        document.getElementById("snack_message").innerText = "You don't have any bolts left.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;You don't have any bolts left", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -30,10 +27,7 @@ shop_bolt_buy.onclick = function() {
         fetchunlocks();
     }
     else {
-        document.getElementById("snack_message").innerText = "Not enough money";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -45,10 +39,7 @@ shop_metal_sell.onclick = function() {
         fetchunlocks();
         }
     else {
-        document.getElementById("snack_message").innerText = "You don't have any metal left.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;You don't have any metal left", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -60,10 +51,7 @@ shop_metal_buy.onclick = function() {
         fetchunlocks();
     }
     else {
-        document.getElementById("snack_message").innerText = "Not enough money";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -75,10 +63,7 @@ shop_wire_sell.onclick = function() {
         fetchunlocks();
         }
     else {
-        document.getElementById("snack_message").innerText = "You don't have any wires left.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;You don't have any wires left", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -90,10 +75,7 @@ shop_wire_buy.onclick = function() {
         fetchunlocks();
     }
     else {
-        document.getElementById("snack_message").innerText = "Not enough money";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -105,10 +87,7 @@ shop_board_sell.onclick = function() {
         fetchunlocks();
         }
     else {
-        document.getElementById("snack_message").innerText = "You don't have any electronic boards left.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;You don't have any electronic boards left", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -120,10 +99,7 @@ shop_board_buy.onclick = function() {
         fetchunlocks();
     }
     else {
-        document.getElementById("snack_message").innerText = "Not enough money";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -231,10 +207,7 @@ function SellBonsaiExecution(bonsaixx) {
             fetchunlocks();
         }
         else {
-            document.getElementById("snack_message").innerText = "Can not sell a growing bonsai";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Can not sell a growing bonsai", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
 }
@@ -314,10 +287,7 @@ function BuyMapArea02() {
             fetchunlocks();
         }
         else {
-            document.getElementById("snack_message").innerText = "Not enough money";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else {}
@@ -332,10 +302,7 @@ function BuyBookStyles2() {
             fetchunlocks();
         }
         else {
-            document.getElementById("snack_message").innerText = "Not enough money";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else {}
@@ -368,10 +335,7 @@ function BuyBookGrowing1() {
             fetchunlocks();
         }
         else {
-            document.getElementById("snack_message").innerText = "Not enough money";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else {}
@@ -387,10 +351,7 @@ function BuyBookShaping1() {
         
         }
         else {
-            document.getElementById("snack_message").innerText = "Not enough money";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else {}

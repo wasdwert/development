@@ -134,25 +134,15 @@ var spanchange_change = document.getElementById("Button_Modal_Position_Change");
 // When the user clicks on the button, open the modal
 btnchange.onclick = function() {
     if (SearchBonsaiShowing().growing==1) {
-        document.getElementById("snack_message").innerText = "Changing position of a growing bonsai isn't possible";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);  
-  
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Changing position of a growing bonsai isn't possible", "snackbar_attention", 3000, "snackbar_attention show3s");  
     }
     else {
         if (document.getElementById("positionn_place").value==00 || document.getElementById("positionn_place").value==0) {
-            document.getElementById("snack_message").innerText = "Choose a position first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);  
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a position first", "snackbar_attention", 3000, "snackbar_attention show3s"); 
         }
         else {
             if (SearchBonsaiReplacement().growing==1) {
-                document.getElementById("snack_message").innerText = "Can not switch with a growing bonsai";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);  
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Can not switch with a growing bonsai", "snackbar_attention", 3000, "snackbar_attention show3s"); 
             }
             else {
                 document.getElementById("bonsaiold_nr").innerText = "#"+state.bonsai_showing;
@@ -214,16 +204,10 @@ var spancontestsbonsaij = document.getElementById("Button_Modal_Contests_BonsaiJ
 // When the user clicks on <span> (x), close the modal
 spancontestsenter.onclick = function() {
     if (contests.bonsaichoosen==0) {
-        document.getElementById("snack_message").innerText = "Choose a bonsai first";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a bonsai first!", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
     else if (resources.money<contests.entryprice) {
-        document.getElementById("snack_message").innerText = "Not enough money for entry fee";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough money for entry fee", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
     else {
         resources.money -=contests.entryprice;

@@ -8,10 +8,7 @@ function ChangeName() {
     if (nname==0) {
     }
     else if (nname>=10) {
-        document.getElementById("snack_message").innerText = "Name to long. No more than 9 characters allowed!";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Name to long.<br>No more than 9 characters allowed", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
     else {
         SearchBonsaiShowing().name=newname;
@@ -589,17 +586,11 @@ function ChooseSeedling(x) {
 
 function ChooseSeedling2 (seedling1, seedling2, seedling3, seedling4, seedling5, seedling6, a, b, c, d, e, f, seedling1_center, seedling2_center, seedling3_center, seedling4_center, seedling5_center, seedling6_center, seedling1_center_mobile, seedling2_center_mobile, seedling3_center_mobile, seedling4_center_mobile, seedling5_center_mobile, seedling6_center_mobile) {
     if (seedling1.treetype==0) {
-        document.getElementById("snack_message").innerText = "No seedling available";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No seedling available", "snackbar_attention", 3000, "snackbar_attention show3s");
     } 
     else {
         if (seedling2.planting_choosen==1 || seedling3.planting_choosen==1 || seedling4.planting_choosen==1 || seedling5.planting_choosen==1 || seedling6.planting_choosen==1) {
-            document.getElementById("snack_message").innerText = "Only one seedling can be choosen to plant";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Only one seedling can be choosen to plant", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         else {
             if (seedling1.planting_choosen==0) {
@@ -793,10 +784,7 @@ function PlantSeedling() {
         }
     }
     else {
-        document.getElementById("snack_message").innerText = "No workers available";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No workers available", "snackbar_attention", 3000, "snackbar_attention show3s");
     }   
 }
 
@@ -806,10 +794,7 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling1, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else if (seedling2.planting_choosen==1) {
@@ -817,10 +802,7 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling2, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else if (seedling3.planting_choosen==1) {
@@ -828,10 +810,7 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling3, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else if (seedling4.planting_choosen==1) {
@@ -839,10 +818,7 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling4, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else if (seedling5.planting_choosen==1) {
@@ -850,10 +826,7 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling5, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else if (seedling6.planting_choosen==1) {
@@ -861,17 +834,11 @@ function PlantSeedling2(worker) {
             PlantSeedlingPick(seedling6, worker);
         }
         else {
-            document.getElementById("snack_message").innerText = "Choose a style for your bonsai first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a style for your bonsai first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }  
     }
     else {
-        document.getElementById("snack_message").innerText = "Choose a seedling to plant first";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Choose a seedling to plant first", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 

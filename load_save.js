@@ -163,10 +163,7 @@ w.addEventListener('message', function(e){
     if (autosave==30) {
         SaveGame();
         
-        document.getElementById("snack_message").innerText = "Game autosaved";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/save_white.svg' width='30' height='30'>&nbsp;Game autosaved", "snackbar_information", 3000, "snackbar_information show3s");
         
         autosave=0;
     }
@@ -263,10 +260,7 @@ function LoadGame() {
     state.zeitjetzt = Date.now();
     state.zeitsincesave = Math.floor(state.zeitjetzt/1000) - Math.floor(state.zeitsave/1000);
     
-    document.getElementById("snack_message").innerText = "Welcome back, you have been "+state.zeitsincesave+" seconds away.";
-    var snackb = document.getElementById("snackbar");
-    snackb.className = "show";
-    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    Snackbar("<img src='Images/information_white.svg' width='30' height='30'>&nbsp;Welcome back!<br>&nbsp;You have been "+timetracker(state.zeitsincesave)+" seconds away.", "snackbar_information", 3000, "snackbar_information show3s");
     
     loadcheckup();
     startup();
@@ -510,8 +504,5 @@ function startup() {
 function ViewOptions() { //Current Saving Option//
     SaveGame();
     
-    document.getElementById("snack_message").innerText = "Game saved";
-    var snackb = document.getElementById("snackbar");
-    snackb.className = "show";
-    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+    Snackbar("<img src='Images/save_white.svg' width='30' height='30'>&nbsp;Game saved", "snackbar_information", 3000, "snackbar_information show3s");
 }

@@ -1,3 +1,13 @@
+function Snackbar(text, barclass, time, timeclass) {
+    var el = document.createElement("div");
+    el.className = barclass;
+    var y = document.getElementById("snackbar-container");
+    el.innerHTML = text;
+    y.append(el);
+    el.className = timeclass;
+    setTimeout(function(){ el.className = el.className.replace(timeclass, "snackbar none"); }, time);
+}
+
 function experience(exp) {
     if (exp<skills.exp_nextlevel) {
         skills.exp_nextlevel= skills.exp_nextlevel-exp;
@@ -26,10 +36,10 @@ function experience(exp) {
             document.getElementById("skill_growing_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
             document.getElementById("skill_shaping_rec3").innerHTML = '<img src="Images/tick.svg" width="20" height="20">';
         }
-        document.getElementById("snack_message").innerHTML = "Reached skill level&nbsp;"+ skills.level +". Congratulations!";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        
+        //modalmilestone.style.display = "block";
+        
+        Snackbar("<img src='Images/skill_white.svg' width='20' height='20'>&nbsp;You reached skill level&nbsp;"+ skills.level +".", "snackbar_skillstone", 6000, "snackbar_skillstone show6s");
     }
 }
 
@@ -69,17 +79,11 @@ function learn_treestyles1() {
                 });
             }
             else {
-                document.getElementById("snack_message").innerText = "Need book: Bonsai styles #1 first";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Bonsai styles #1 first", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Need 'Beginner bonsai tools' first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);    
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need 'Beginner bonsai tools' first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {}
@@ -97,10 +101,7 @@ function learn_treestyles2() {
             });
         }
         else {
-            document.getElementById("snack_message").innerText = "Need book: Bonsai styles #2 first";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Bonsai styles #2 first", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {}
@@ -117,10 +118,7 @@ function learn_robot1() {
             else {}
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {}
@@ -136,17 +134,11 @@ function learn_compost1() {
                 fetchunlocks();
             }
             else {
-                document.getElementById("snack_message").innerText = "Not enough skill points";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough skill points", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else {}
@@ -163,24 +155,15 @@ function learn_growing() {
                     fetchunlocks();
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Need book: Growing #1 first";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Growing #1 first", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }    
             }
             else {
-                document.getElementById("snack_message").innerText = "Not enough skill points";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough skill points", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else if (skills.growing>8 && skills.growing<10) {
@@ -193,24 +176,15 @@ function learn_growing() {
                     fetchunlocks();
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Need book: Growing #1 first";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Growing #1 first", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }    
             }
             else {
-                document.getElementById("snack_message").innerText = "Not enough skill points";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough skill points", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else if (skills.growing>9 && skills.growing<=18) {
@@ -274,24 +248,15 @@ function learn_shaping() {
                     fetchunlocks();
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Need book: Shaping #1 first";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Shaping #1 first", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }    
             }
             else {
-                document.getElementById("snack_message").innerText = "Not enough skill points";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough skill points", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         } 
     }
     else if (skills.shaping>8 && skills.shaping<10) {
@@ -304,24 +269,15 @@ function learn_shaping() {
                     fetchunlocks();
                 }
                 else {
-                    document.getElementById("snack_message").innerText = "Need book: Shaping #1 first";
-                    var snackb = document.getElementById("snackbar");
-                    snackb.className = "show";
-                    setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                    Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Need book: Shaping #1 first", "snackbar_attention", 3000, "snackbar_attention show3s");
                 }    
             }
             else {
-                document.getElementById("snack_message").innerText = "Not enough skill points";
-                var snackb = document.getElementById("snackbar");
-                snackb.className = "show";
-                setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+                Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough skill points", "snackbar_attention", 3000, "snackbar_attention show3s");
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Skill level not high enough";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Skill level not high enough", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
     else if (skills.shaping>9 && skills.shaping<=18) {

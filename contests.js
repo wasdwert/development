@@ -55,10 +55,7 @@ function club_ttg01_competition1() {
         document.getElementById('modal_contests_overflow').scrollTop =0;
     }
     else {
-        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Next competition hasn't begun yet", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -77,10 +74,7 @@ function club_ttg01_competition2() {
         document.getElementById('modal_contests_overflow').scrollTop =0;
     }
     else {
-        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Next competition hasn't begun yet", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -99,10 +93,7 @@ function club_ttg01_competition3() {
         document.getElementById('modal_contests_overflow').scrollTop =0;
     }
     else {
-        document.getElementById("snack_message").innerText = "Next competition hasn't begun yet.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Next competition hasn't begun yet", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -121,10 +112,7 @@ function league_area01_exhibition1() {
         document.getElementById('modal_contests_overflow').scrollTop =0;
     }
     else {
-        document.getElementById("snack_message").innerText = "Next exhibition hasn't begun yet.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Next competition hasn't begun yet", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -383,10 +371,7 @@ function contests_choosebonsai3() {
             }
         }
         else {
-            document.getElementById("snack_message").innerText = "Can only choose one bonsai";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 1000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Can only choose one bonsai", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
     }
 } 

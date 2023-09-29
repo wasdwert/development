@@ -333,10 +333,7 @@ function GrowBonsaiWorkerPick(bonsaixx) {
         }
     }
     else {
-        document.getElementById("snack_message").innerText = "No workers available";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No workers available", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -405,17 +402,11 @@ function GrowBonsaiWorkerPick2 (bonsaixx, worker) {
 
 function GrowBonsai() {
     if (SearchBonsaiShowing().level==100) { //Maximum level check
-        document.getElementById("snack_message").innerHTML = "Maximum level for this bonsai reached.";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Maximum level reached", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
     else {
         if (SearchBonsaiShowing().leftpoints>=0.1) { //All points distributed check
-            document.getElementById("snack_message").innerHTML = "Distribute all shape points first. &#32;"+ SearchBonsaiShowing().leftpoints.toLocaleString('en', {minimumFractionDigits: 1}) +"&#32; points left.";
-            var snackb = document.getElementById("snackbar");
-            snackb.className = "show";
-            setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Distribute all shape points first.<br>&nbsp;"+ SearchBonsaiShowing().leftpoints.toLocaleString('en', {minimumFractionDigits: 1}) +"&#32; points left.", "snackbar_attention", 3000, "snackbar_attention show3s");
         }
         else {    
             if (SearchBonsaiShowing().growing==0) { //If bonsai is already growing check

@@ -737,6 +737,69 @@ function ViewBonsai14 () {
     });
 }
 
+//Goals View Functions
+function ViewMilestones () {
+    $(document).ready(function(){
+        $('#milestones').show();
+        $('#t000').hide();
+        $('#t001').hide();
+        $('#t002').hide();
+        $('#t003').hide();
+        $('#t004').hide();
+        $('#t005').hide();
+        $('#t006').hide();
+        $('#t007').hide();
+        $('#t008').hide();
+        $('#t009').hide();
+        $('#t010').hide();
+        $('#t011').hide();
+        $('#t012').hide();
+        $('#t013').hide();
+        $('#t014').hide();
+    });
+    Snackbar("<img src='Images/milestone_white.svg' width='30' height='30'>&nbsp;Milestone: First Milestone<br>&nbsp;Reward: 3XP", "snackbar_skillstone", 6000, "snackbar_skillstone show6s");
+}
+function ViewT000() {
+    $(document).ready(function(){
+        $('#milestones').hide();
+        $('#t000').show();
+        $('#t001').hide();
+        $('#t002').hide();
+        $('#t003').hide();
+        $('#t004').hide();
+        $('#t005').hide();
+        $('#t006').hide();
+        $('#t007').hide();
+        $('#t008').hide();
+        $('#t009').hide();
+        $('#t010').hide();
+        $('#t011').hide();
+        $('#t012').hide();
+        $('#t013').hide();
+        $('#t014').hide();
+    });
+}
+function ViewT001() {
+    $(document).ready(function(){
+        $('#milestones').hide();
+        $('#t000').hide();
+        $('#t001').show();
+        $('#t002').hide();
+        $('#t003').hide();
+        $('#t004').hide();
+        $('#t005').hide();
+        $('#t006').hide();
+        $('#t007').hide();
+        $('#t008').hide();
+        $('#t009').hide();
+        $('#t010').hide();
+        $('#t011').hide();
+        $('#t012').hide();
+        $('#t013').hide();
+        $('#t014').hide();
+    });
+}
+
 /* Collapsible Menus - Main menu: Opened at start*/
 function toggleCollapsibleSectionWithAnimation() {
 	this.classList.toggle("active");

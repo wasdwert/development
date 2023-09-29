@@ -11,10 +11,7 @@ function expedition(place) {
         }
     }
     else {
-        document.getElementById("snack_message").innerText = "No workers available";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;No workers available", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
@@ -43,10 +40,7 @@ function expedition_worker (place, worker, worker2, worker3) {
         }
     }
     else {
-        document.getElementById("snack_message").innerText = "Seedlings full/about to be";
-        var snackb = document.getElementById("snackbar");
-        snackb.className = "show";
-        setTimeout(function(){ snackb.className = snackb.className.replace("show", ""); }, 3000);
+        Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Seedlings full/about to be", "snackbar_attention", 3000, "snackbar_attention show3s");
     }
 }
 
