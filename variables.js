@@ -44,10 +44,10 @@ var resources = {
     organic_waste: 0,
     compost1: 0,
     fertilizer1: 0,
-    bolt: 0,
-    metal: 0,
-    wire: 0,
-    board: 0,
+    bolt: 5,
+    metal: 3,
+    wire: 2,
+    board: 1,
 }
 
 var equipment = {

@@ -1,3 +1,14 @@
+/*Snackbar*/
+function Snackbar(text, barclass, time, timeclass) {
+    var el = document.createElement("div");
+    el.className = barclass;
+    var y = document.getElementById("snackbar-container");
+    el.innerHTML = text;
+    y.append(el);
+    el.className = timeclass;
+    setTimeout(function(){ el.className = el.className.replace(timeclass, "snackbar none"); }, time);
+}
+
 /* Tutorial? Modal*/
 // Get the modal
 var modaltutorial = document.getElementById("m_tutorial");
@@ -59,33 +70,6 @@ spannewgame_yes.onclick = function() {
     localStorage.clear(); //LocalStorage cleared
     modaltutorial.style.display = "block";
 }
-
-/* Milestone Modal*/
-// Get the modal
-var modalmilestone = document.getElementById("m_milestone");
-
-// Get the button that opens the modal
-//var btnmilestone = document.getElementById("XXX");
-
-// Get the <span> element that closes the modal
-var spanmilestoneclose = document.getElementById("Button_Modal_Milestone");
-
-// When the user clicks on the button, open the modal
-//btnmilestone.onclick = function() {
-//    modalmilestone.style.display = "block";
-//}
-
-// When the user clicks on <span> (x), close the modal
-spanmilestoneclose.onclick = function() {
-    modalmilestone.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function(event) {
-    if (event.target == modalmilestone) {
-        modalmilestone.style.display = "none";
-    }
-}) 
 
 /* Edit Name Modal*/
 // Get the modal

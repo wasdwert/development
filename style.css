@@ -1169,7 +1169,7 @@
 
 /* Edit Name Modal */
  /* The Modal (background) */
-.modal_name, .modal_newgame, .modal_tutorial, .modal_position, .modal_milestone, .modal_contests, .modal_contests_result{
+.modal_name, .modal_newgame, .modal_tutorial, .modal_position, .modal_contests, .modal_contests_result{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -1183,7 +1183,7 @@
 }
 
 /* Modal Content/Box */
-.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content, .modal_milestone-content, .modal_contests-content , .modal_contests_result-content {
+.modal_name-content, .modal_newgame-content, .modal_tutorial-content, .modal_position-content, .modal_contests-content , .modal_contests_result-content {
     background-color: #f1f1f1;
     margin: 5% auto; /* 15% from the top and centered */
     padding: 5px;

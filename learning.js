@@ -1,13 +1,3 @@
-function Snackbar(text, barclass, time, timeclass) {
-    var el = document.createElement("div");
-    el.className = barclass;
-    var y = document.getElementById("snackbar-container");
-    el.innerHTML = text;
-    y.append(el);
-    el.className = timeclass;
-    setTimeout(function(){ el.className = el.className.replace(timeclass, "snackbar none"); }, time);
-}
-
 function experience(exp) {
     if (exp<skills.exp_nextlevel) {
         skills.exp_nextlevel= skills.exp_nextlevel-exp;

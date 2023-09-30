@@ -1132,7 +1132,9 @@ function bonsaiprice (bonsaixx) {
 function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
-    bonsaixx.id = statistics.bonsais_total+1;
+    statistics.bonsais_total +=1;
+    bonsaixx.id = statistics.bonsais_total;
+    taskstones();
     id_string=bonsaixx.id;
     bonsaixx.name = treename(seedlingx);
     bonsaixx.id_string = bonsaixx.name;
@@ -1170,7 +1172,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         cpdistribution(bonsaixx, level_cp_tq4)
         cpdistributionaftercare(bonsaixx);
     }
-    statistics.bonsais_total +=1;
     
     if (worker==worker01) {
         document.getElementById("zeit_worker01").innerHTML = "("+timetracker(bonsaixx.growing_zeit)+"&nbsp;left)";
@@ -1715,7 +1716,6 @@ function naturerandom() {
 /* Bonsai Growing Intervall*/
 function Bonsai_Growing_Intervall(bonsaixx) {
     if (bonsaixx.growing_zeit==0) {
-        console.log(statistics.bonsais_total);
         //task002trigger();
         levels=bonsaixx.level_new-bonsaixx.level;
         bonsaixx.growing=0;

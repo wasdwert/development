@@ -112,17 +112,18 @@ function seedling_countdown(worker) {
             area_bonsais_found(seedling6, worker);
             bondex_check(seedling6);
         }
-    worker.expedition = 0;
-    worker.busy = 0;
-    state.workers_available +=1;
-    state.seedlings +=1;
-    statistics.seedlings_total +=1;
+        worker.expedition = 0;
+        worker.busy = 0;
+        state.workers_available +=1;
+        state.seedlings +=1;
+        statistics.seedlings_total +=1;
+        taskstones();
         
-    //task001trigger();
-        
-    //task003trigger();
+        //task001trigger();
     
-    document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});  
+        //task003trigger();
+    
+        document.getElementById("seedling_number").innerText = state.seedlings.toLocaleString('en', {minimumFractionDigits: 0});  
     }
 }
 
@@ -155,7 +156,6 @@ function randommaschine(seedlingx, worker) {
         seedlingx.shiny=1;
         seedlingx.price= seedlingprice(seedlingx);
         experience(1);
-        modalmilestone.style.display = "block";
     }
     else if (statistics.seedlings_total==3) {
         seedlingx.treetype=2;
@@ -319,6 +319,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai01_discovered==0) {
+                    statistics.bondex_bonsai01_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                }                
             }
             else if (seedlingx.treetype==2) {
                 exp_area01.treetype02=1;
@@ -326,6 +331,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai02_discovered==0) {
+                    statistics.bondex_bonsai02_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==4) {
                 exp_area01.treetype04=1;
@@ -333,6 +343,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai04_discovered==0) {
+                    statistics.bondex_bonsai04_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==5) {
                 exp_area01.treetype05=1;
@@ -340,6 +355,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai05_discovered==0) {
+                    statistics.bondex_bonsai05_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==7) {
                 exp_area01.treetype07=1;
@@ -347,6 +367,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai07_discovered==0) {
+                    statistics.bondex_bonsai07_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==8) {
                 exp_area01.treetype08=1;
@@ -354,6 +379,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area01.treetype01+exp_area01.treetype02+exp_area01.treetype04+exp_area01.treetype05+exp_area01.treetype07+exp_area01.treetype08==6) {
                     exp_area01.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai08_discovered==0) {
+                    statistics.bondex_bonsai08_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
         }
         if (exp_area01.alltreequality==1) {
@@ -393,6 +423,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai01_discovered==0) {
+                    statistics.bondex_bonsai01_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==3) {
                 exp_area02.treetype03=1;
@@ -400,6 +435,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai03_discovered==0) {
+                    statistics.bondex_bonsai03_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==4) {
                 exp_area02.treetype04=1;
@@ -407,6 +447,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai04_discovered==0) {
+                    statistics.bondex_bonsai04_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==6) {
                 exp_area02.treetype06=1;
@@ -414,6 +459,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai06_discovered==0) {
+                    statistics.bondex_bonsai06_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==9) {
                 exp_area02.treetype09=1;
@@ -421,6 +471,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai09_discovered==0) {
+                    statistics.bondex_bonsai09_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==10) {
                 exp_area02.treetype10=1;
@@ -428,6 +483,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai10_discovered==0) {
+                    statistics.bondex_bonsai10_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==11) {
                 exp_area02.treetype11=1;
@@ -435,6 +495,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai11_discovered==0) {
+                    statistics.bondex_bonsai11_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==13) {
                 exp_area02.treetype13=1;
@@ -442,6 +507,11 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai13_discovered==0) {
+                    statistics.bondex_bonsai13_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    taskstones();
+                } 
             }
             else if (seedlingx.treetype==14) {
                 exp_area02.treetype14=1;
@@ -449,6 +519,13 @@ function area_bonsais_found(seedlingx, worker) {
                 if (exp_area02.treetype01+exp_area02.treetype03+exp_area02.treetype04+exp_area02.treetype06+exp_area02.treetype09+exp_area02.treetype10+exp_area02.treetype11+exp_area02.treetype13+exp_area02.treetype14==9) {
                     exp_area02.alltreetype=1;
                 }
+                if (statistics.bondex_bonsai14_discovered==0) {
+                    console.log(statistics.bondex_treetype_discovered, "H");
+                    statistics.bondex_bonsai14_discovered=1;
+                    statistics.bondex_treetype_discovered+=1;
+                    console.log(statistics.bondex_treetype_discovered, "H");
+                    taskstones();
+                } 
             }
         }
         if (exp_area02.alltreequality==1) {  

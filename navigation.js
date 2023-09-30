@@ -757,7 +757,6 @@ function ViewMilestones () {
         $('#t013').hide();
         $('#t014').hide();
     });
-    Snackbar("<img src='Images/milestone_white.svg' width='30' height='30'>&nbsp;Milestone: First Milestone<br>&nbsp;Reward: 3XP", "snackbar_skillstone", 6000, "snackbar_skillstone show6s");
 }
 function ViewT000() {
     $(document).ready(function(){

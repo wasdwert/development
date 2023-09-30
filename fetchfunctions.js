@@ -772,6 +772,10 @@ function fetchvalues() {
     document.getElementById("shop_board").innerHTML = resources.board;
     document.getElementById("shop_board_mobile").innerHTML = resources.board;
     
+    document.getElementById("stats_seedlingstotal").innerHTML = statistics.seedlings_total;
+    document.getElementById("stats_bonsaitotal").innerHTML = statistics.bonsais_total;
+    document.getElementById("stats_treetypetotal").innerHTML = statistics.bondex_treetype_discovered;
+    
     conteststime(clubs_leagues.ttg01c1, "club_ttg01_c1time");
     conteststime(clubs_leagues.ttg01c2, "club_ttg01_c2time");
     conteststime(clubs_leagues.ttg01c3, "club_ttg01_c3time");

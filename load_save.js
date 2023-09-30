@@ -176,6 +176,8 @@ function SaveGame() {
     localStorage.setItem('state', JSON.stringify(state));
     localStorage.setItem('statistics', JSON.stringify(statistics));
     localStorage.setItem('bondex', JSON.stringify(bondex));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('milestones', JSON.stringify(milestones));
     localStorage.setItem('resources', JSON.stringify(resources));
     localStorage.setItem('equipment', JSON.stringify(equipment));
     localStorage.setItem('skills', JSON.stringify(skills));
@@ -219,6 +221,8 @@ function LoadGame() {
     state = JSON.parse(localStorage.getItem('state'));
     statistics = JSON.parse(localStorage.getItem('statistics'));
     bondex = JSON.parse(localStorage.getItem('bondex'));
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    milestones = JSON.parse(localStorage.getItem('milestones'));
     resources = JSON.parse(localStorage.getItem('resources'));
     equipment = JSON.parse(localStorage.getItem('equipment'));
     skills = JSON.parse(localStorage.getItem('skills'));
@@ -268,6 +272,7 @@ function LoadGame() {
 
 function loadcheckup() {
     bondex_checkup();
+    taskstones_checkup();
     
     bonsaicheckup (bonsai001);
     bonsaicheckup (bonsai002);

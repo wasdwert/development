@@ -3071,7 +3071,6 @@ function bondex_seedling(seedling) {
             });
             document.getElementById("BonDex_14name").innerHTML = "Yajirushi";
             document.getElementById("BonDex_14name2").innerHTML = "Yajirushi";
-            statistics.bondex_treetype_discovered+=1;
         }
         if (seedling.treequality>bondex.bonsai14) {
             bondex.bonsai14=seedling.treequality;
