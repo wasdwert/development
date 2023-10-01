@@ -236,37 +236,31 @@ function SellSeedling(seedlingx) {
         document.getElementById("seedling_detail_type").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';
         document.getElementById("seedling_detail_type_mobile").innerHTML = '<img src="Images/pot.svg" width="100" height="100">';        
         if (seedlingx==seedling1) {
-            document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
             fetchimage_seedling ("a", seedling1);
             document.getElementById("seedlinga_center").style.cursor= "auto"; 
             seedlinga_center.className = "";
         }
         if (seedlingx==seedling2) {
-            document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
             fetchimage_seedling ("b", seedling2);
             document.getElementById("seedlingb_center").style.cursor= "auto"; 
             seedlingb_center.className = "";
         }
         if (seedlingx==seedling3) {
-            document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
             fetchimage_seedling ("c", seedling3);
             document.getElementById("seedlingc_center").style.cursor= "auto"; 
             seedlingc_center.className = "";
         }
         if (seedlingx==seedling4) {
-            document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
             fetchimage_seedling ("d", seedling4);
             document.getElementById("seedlingd_center").style.cursor= "auto"; 
             seedlingd_center.className = "";
         }
         if (seedlingx==seedling5) {
-            document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
             fetchimage_seedling ("e", seedling5);
             document.getElementById("seedlinge_center").style.cursor= "auto"; 
             seedlinge_center.className = "";
         }
         if (seedlingx==seedling6) {
-            document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
             fetchimage_seedling ("f", seedling6);
             document.getElementById("seedlingf_center").style.cursor= "auto"; 
             seedlingf_center.className = "";
@@ -275,6 +269,15 @@ function SellSeedling(seedlingx) {
         fetchvalues();
         fetchunlocks();
     }
+}
+
+function SellSeedlingAll() {
+    SellSeedling(seedling1);
+    SellSeedling(seedling2);
+    SellSeedling(seedling3);
+    SellSeedling(seedling4);
+    SellSeedling(seedling5);
+    SellSeedling(seedling6);
 }
 
 function BuyMapArea02() {

@@ -49,7 +49,6 @@ function seedling_countdown(worker) {
         if (seedling1.treetype<1) {
             randommaschine (seedling1, worker);
             fetchimage_seedling ("a", seedling1);
-            document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
             document.getElementById("seedlinga_center").style.cursor= "pointer";
             seedlinga_center.className = "darker_grey";
             document.getElementById("seedlinga_center_mobile").style.cursor= "pointer";
@@ -60,7 +59,6 @@ function seedling_countdown(worker) {
         else if (seedling2.treetype<1) {
             randommaschine (seedling2, worker);
             fetchimage_seedling ("b", seedling2);
-            document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
             document.getElementById("seedlingb_center").style.cursor= "pointer";
             seedlingb_center.className = "darker_grey";
             document.getElementById("seedlingb_center_mobile").style.cursor= "pointer";
@@ -71,7 +69,6 @@ function seedling_countdown(worker) {
         else if (seedling3.treetype<1) {
             randommaschine (seedling3, worker);
             fetchimage_seedling ("c", seedling3);
-            document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
             document.getElementById("seedlingc_center").style.cursor= "pointer";
             seedlingc_center.className = "darker_grey";
             document.getElementById("seedlingc_center_mobile").style.cursor= "pointer";
@@ -82,7 +79,6 @@ function seedling_countdown(worker) {
         else if (seedling4.treetype<1) {
             randommaschine (seedling4, worker);
             fetchimage_seedling ("d", seedling4);
-            document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
             document.getElementById("seedlingd_center").style.cursor= "pointer";
             seedlingd_center.className = "darker_grey";
             document.getElementById("seedlingd_center_mobile").style.cursor= "pointer";
@@ -93,7 +89,6 @@ function seedling_countdown(worker) {
         else if (seedling5.treetype<1) {
             randommaschine (seedling5, worker);
             fetchimage_seedling ("e", seedling5);
-            document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
             document.getElementById("seedlinge_center").style.cursor= "pointer";
             seedlinge_center.className = "darker_grey";
             document.getElementById("seedlinge_center_mobile").style.cursor= "pointer";
@@ -104,7 +99,6 @@ function seedling_countdown(worker) {
         else if (seedling6.treetype<1) {
             randommaschine (seedling6, worker);
             fetchimage_seedling ("f", seedling6);
-            document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
             document.getElementById("seedlingf_center").style.cursor= "pointer";
             seedlingf_center.className = "darker_grey";
             document.getElementById("seedlingf_center_mobile").style.cursor= "pointer";

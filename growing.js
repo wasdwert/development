@@ -35,37 +35,37 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_roots_new2").innerHTML = bonsaixx.roots_new.toLocaleString('en', {minimumFractionDigits: 1}); 
         document.getElementById("bonsai_detail_leftpoints").innerHTML = bonsaixx.leftpoints.toLocaleString('en', {minimumFractionDigits: 1});  
 
-        document.getElementById("bonsai_level_leftpoints").innerHTML = (Math.round((bonsaixx.level_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 0});
+        document.getElementById("bonsai_level_leftpoints").innerHTML = (Math.round((bonsaixx.level_lp+1)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 0});
         document.getElementById("bonsai_foliage_leftpoints").innerHTML = (Math.round((bonsaixx.foliage_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_branches_leftpoints").innerHTML = (Math.round((bonsaixx.branches_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_trunk_leftpoints").innerHTML = (Math.round((bonsaixx.trunk_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_roots_leftpoints").innerHTML = (Math.round((bonsaixx.roots_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
             
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
         
-        document.getElementById("bonsai_foliage_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_foliage_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_foliage_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_minus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_foliage_minus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_foliage_minus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_minus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_minus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_minus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_minus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_minus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_minus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_minus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_minus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_minus_10").style.background = "#9f9f9f";
         
         if (resources.fertilizer1>0 & bonsaixx.growing_zeit>600) {
             $(document).ready(function(){
@@ -137,122 +137,122 @@ function Bonsai_Growing(bonsaixx) {
         document.getElementById("bonsai_detail_roots_new2").innerHTML = bonsaixx.roots_new.toLocaleString('en', {minimumFractionDigits: 1}); 
         document.getElementById("bonsai_detail_leftpoints").innerHTML = bonsaixx.leftpoints.toLocaleString('en', {minimumFractionDigits: 1});  
 
-        document.getElementById("bonsai_level_leftpoints").innerHTML = (Math.round((bonsaixx.level_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 0});
+        document.getElementById("bonsai_level_leftpoints").innerHTML = (Math.round((bonsaixx.level_lp+1)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 0});
         document.getElementById("bonsai_foliage_leftpoints").innerHTML = (Math.round((bonsaixx.foliage_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_branches_leftpoints").innerHTML = (Math.round((bonsaixx.branches_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_trunk_leftpoints").innerHTML = (Math.round((bonsaixx.trunk_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         document.getElementById("bonsai_roots_leftpoints").innerHTML = (Math.round((bonsaixx.roots_lp)* 10) / 10).toLocaleString('en', {minimumFractionDigits: 1});
         
         if (bonsaixx.leftpoints>0.09) {
-            document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-            document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-            document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-            document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/p0.svg')";
+            document.getElementById("bonsai_foliage_plus_0").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_branches_plus_0").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_trunk_plus_0").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_roots_plus_0").style.background = "#38cc2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-            document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-            document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-            document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
+            document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+            document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+            document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+            document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
         }
         
         if (bonsaixx.leftpoints>0.99) {
-            document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-            document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-            document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-            document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/p1.svg')";
+            document.getElementById("bonsai_foliage_plus_1").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_branches_plus_1").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_trunk_plus_1").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_roots_plus_1").style.background = "#38cc2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-            document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-            document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-            document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
+            document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+            document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+            document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+            document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
         }
         
         if (bonsaixx.leftpoints>9.99) {
-            document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-            document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-            document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-            document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/p10.svg')";
+            document.getElementById("bonsai_foliage_plus_10").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_branches_plus_10").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_trunk_plus_10").style.background = "#38cc2ba1";
+            document.getElementById("bonsai_roots_plus_10").style.background = "#38cc2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-            document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-            document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-            document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+            document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+            document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+            document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+            document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
         }
         
         if (bonsaixx.foliage_lp>0.09) {
-            document.getElementById("bonsai_foliage_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+            document.getElementById("bonsai_foliage_minus_0").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+            document.getElementById("bonsai_foliage_minus_0").style.background = "#9f9f9f";
         }
         if (bonsaixx.foliage_lp>0.99) {
-            document.getElementById("bonsai_foliage_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+            document.getElementById("bonsai_foliage_minus_1").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+            document.getElementById("bonsai_foliage_minus_1").style.background = "#9f9f9f";
         }
         if (bonsaixx.foliage_lp>9.99) {
-            document.getElementById("bonsai_foliage_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+            document.getElementById("bonsai_foliage_minus_10").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_foliage_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+            document.getElementById("bonsai_foliage_minus_10").style.background = "#9f9f9f";
         }
         if (bonsaixx.branches_lp>0.09) {
-            document.getElementById("bonsai_branches_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+            document.getElementById("bonsai_branches_minus_0").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_branches_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+            document.getElementById("bonsai_branches_minus_0").style.background = "#9f9f9f";
         }
         if (bonsaixx.branches_lp>0.99) {
-            document.getElementById("bonsai_branches_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+            document.getElementById("bonsai_branches_minus_1").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_branches_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+            document.getElementById("bonsai_branches_minus_1").style.background = "#9f9f9f";
         }
         if (bonsaixx.branches_lp>9.99) {
-            document.getElementById("bonsai_branches_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+            document.getElementById("bonsai_branches_minus_10").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_branches_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+            document.getElementById("bonsai_branches_minus_10").style.background = "#9f9f9f";
         }
         if (bonsaixx.trunk_lp>0.09) {
-            document.getElementById("bonsai_trunk_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+            document.getElementById("bonsai_trunk_minus_0").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_trunk_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+            document.getElementById("bonsai_trunk_minus_0").style.background = "#9f9f9f";
         }
         if (bonsaixx.trunk_lp>0.99) {
-            document.getElementById("bonsai_trunk_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+            document.getElementById("bonsai_trunk_minus_1").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_trunk_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+            document.getElementById("bonsai_trunk_minus_1").style.background = "#9f9f9f";
         }
         if (bonsaixx.trunk_lp>9.99) {
-            document.getElementById("bonsai_trunk_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+            document.getElementById("bonsai_trunk_minus_10").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_trunk_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+            document.getElementById("bonsai_trunk_minus_10").style.background = "#9f9f9f";
         }
         if (bonsaixx.roots_lp>0.09) {
-            document.getElementById("bonsai_roots_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+            document.getElementById("bonsai_roots_minus_0").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_roots_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+            document.getElementById("bonsai_roots_minus_0").style.background = "#9f9f9f";
         }
         if (bonsaixx.roots_lp>0.99) {
-            document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+            document.getElementById("bonsai_roots_minus_1").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+            document.getElementById("bonsai_roots_minus_1").style.background = "#9f9f9f";
         }
         if (bonsaixx.roots_lp>9.99) {
-            document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+            document.getElementById("bonsai_roots_minus_10").style.background = "#db3e2ba1";
         }
         else {
-            document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+            document.getElementById("bonsai_roots_minus_10").style.background = "#9f9f9f";
         }
         
         $(document).ready(function(){
@@ -1051,31 +1051,31 @@ btn_fm0.onclick = function() {
 
 function leftpoints_f_buttoncheck_m() {
     if (SearchBonsaiShowing().foliage_lp<9.99) {
-        document.getElementById("bonsai_foliage_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_minus_10").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().foliage_lp<0.99) {
-        document.getElementById("bonsai_foliage_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_foliage_minus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().foliage_lp<0.09) {
-        document.getElementById("bonsai_foliage_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_foliage_minus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints>0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/p0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/p1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/p10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#38cc2ba1";
     }
 }
 
@@ -1132,31 +1132,31 @@ btn_fp10.onclick = function() {
 
 function leftpoints_f_buttoncheck_p() {
     if (SearchBonsaiShowing().foliage_lp>9.99) {
-        document.getElementById("bonsai_foliage_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+        document.getElementById("bonsai_foliage_minus_10").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().foliage_lp>0.99) {
-        document.getElementById("bonsai_foliage_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+        document.getElementById("bonsai_foliage_minus_1").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().foliage_lp>0.09) {
-        document.getElementById("bonsai_foliage_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+        document.getElementById("bonsai_foliage_minus_0").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().leftpoints<0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
     }
 }
 
@@ -1214,31 +1214,31 @@ btn_bm0.onclick = function() {
 
 function leftpoints_b_buttoncheck_m() {
     if (SearchBonsaiShowing().branches_lp<9.99) {
-        document.getElementById("bonsai_branches_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_branches_minus_10").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().branches_lp<0.99) {
-        document.getElementById("bonsai_branches_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_branches_minus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().branches_lp<0.09) {
-        document.getElementById("bonsai_branches_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_branches_minus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints>0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/p0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/p1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/p10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#38cc2ba1";
     }
 }
 
@@ -1295,31 +1295,31 @@ btn_bp10.onclick = function() {
 
 function leftpoints_b_buttoncheck_p() {
     if (SearchBonsaiShowing().branches_lp>9.99) {
-        document.getElementById("bonsai_branches_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+        document.getElementById("bonsai_branches_minus_10").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().branches_lp>0.99) {
-        document.getElementById("bonsai_branches_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+        document.getElementById("bonsai_branches_minus_1").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().branches_lp>0.09) {
-        document.getElementById("bonsai_branches_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+        document.getElementById("bonsai_branches_minus_0").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().leftpoints<0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
     }
 }
 
@@ -1377,31 +1377,31 @@ btn_tm0.onclick = function() {
 
 function leftpoints_t_buttoncheck_m() {
     if (SearchBonsaiShowing().trunk_lp<9.99) {
-        document.getElementById("bonsai_trunk_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_trunk_minus_10").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().trunk_lp<0.99) {
-        document.getElementById("bonsai_trunk_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_trunk_minus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().trunk_lp<0.09) {
-        document.getElementById("bonsai_trunk_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_trunk_minus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints>0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/p0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/p1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/p10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#38cc2ba1";
     }
 }
 
@@ -1458,31 +1458,31 @@ btn_tp10.onclick = function() {
 
 function leftpoints_t_buttoncheck_p() {
     if (SearchBonsaiShowing().trunk_lp>9.99) {
-        document.getElementById("bonsai_trunk_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+        document.getElementById("bonsai_trunk_minus_10").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().trunk_lp>0.99) {
-        document.getElementById("bonsai_trunk_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+        document.getElementById("bonsai_trunk_minus_1").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().trunk_lp>0.09) {
-        document.getElementById("bonsai_trunk_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+        document.getElementById("bonsai_trunk_minus_0").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().leftpoints<0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
     }
 }
 
@@ -1540,31 +1540,31 @@ btn_rm0.onclick = function() {
 
 function leftpoints_r_buttoncheck_m() {
     if (SearchBonsaiShowing().roots_lp<9.99) {
-        document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_roots_minus_10").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().roots_lp<0.99) {
-        document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_roots_minus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().roots_lp<0.09) {
-        document.getElementById("bonsai_roots_minus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_roots_minus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints>0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/p0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/p0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/p1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/p1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#38cc2ba1";
     }
     if (SearchBonsaiShowing().leftpoints>9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/p10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/p10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#38cc2ba1";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#38cc2ba1";
     }
 }
 
@@ -1621,30 +1621,30 @@ btn_rp10.onclick = function() {
 
 function leftpoints_r_buttoncheck_p() {
     if (SearchBonsaiShowing().roots_lp>9.99) {
-        document.getElementById("bonsai_roots_minus_10").style.backgroundImage = "url('Images/m10.svg')";
+        document.getElementById("bonsai_roots_minus_10").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().roots_lp>0.99) {
-        document.getElementById("bonsai_roots_minus_1").style.backgroundImage = "url('Images/m1.svg')";
+        document.getElementById("bonsai_roots_minus_1").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().roots_lp>0.09) {
-        document.getElementById("bonsai_roots_minus_0").style.backgroundImage = "url('Images/m0.svg')";
+        document.getElementById("bonsai_roots_minus_0").style.background = "#db3e2ba1";
     }
     if (SearchBonsaiShowing().leftpoints<0.09) {
-        document.getElementById("bonsai_foliage_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_branches_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_trunk_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
-        document.getElementById("bonsai_roots_plus_0").style.backgroundImage = "url('Images/pm0.svg')";
+        document.getElementById("bonsai_foliage_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_0").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_0").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<0.99) {
-        document.getElementById("bonsai_foliage_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_branches_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_trunk_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
-        document.getElementById("bonsai_roots_plus_1").style.backgroundImage = "url('Images/pm1.svg')";
+        document.getElementById("bonsai_foliage_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_1").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_1").style.background = "#9f9f9f";
     }
     if (SearchBonsaiShowing().leftpoints<9.99) {
-        document.getElementById("bonsai_foliage_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_branches_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_trunk_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
-        document.getElementById("bonsai_roots_plus_10").style.backgroundImage = "url('Images/pm10.svg')";
+        document.getElementById("bonsai_foliage_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_branches_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_trunk_plus_10").style.background = "#9f9f9f";
+        document.getElementById("bonsai_roots_plus_10").style.background = "#9f9f9f";
     }
 }

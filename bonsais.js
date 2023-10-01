@@ -1222,7 +1222,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling1.treequality=0;
         seedling1.shiny=0;
         seedling1.price=0;
-        document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
         fetchimage_seedling ("a", seedling1);
         document.getElementById("seedlinga_center").style.cursor= "auto"; 
         seedlinga_center.className = "";
@@ -1238,7 +1237,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling2.treequality=0;
         seedling2.shiny=0;
         seedling2.price=0;
-        document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
         fetchimage_seedling ("b", seedling2);
         document.getElementById("seedlingb_center").style.cursor= "auto"; 
         seedlingb_center.className = "";
@@ -1254,7 +1252,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling3.treequality=0;
         seedling3.shiny=0;
         seedling3.price=0;
-        document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
         fetchimage_seedling ("c", seedling3);
         document.getElementById("seedlingc_center").style.cursor= "auto"; 
         seedlingc_center.className = "";
@@ -1270,7 +1267,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling4.treequality=0;
         seedling4.shiny=0;
         seedling4.price=0;
-        document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
         fetchimage_seedling ("d", seedling4);
         document.getElementById("seedlingd_center").style.cursor= "auto"; 
         seedlingd_center.className = "";
@@ -1286,7 +1282,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling5.treequality=0;
         seedling5.shiny=0;
         seedling5.price=0;
-        document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
         fetchimage_seedling ("e", seedling5);
         document.getElementById("seedlinge_center").style.cursor= "auto"; 
         seedlinge_center.className = "";
@@ -1302,7 +1297,6 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedling6.treequality=0;
         seedling6.shiny=0;
         seedling6.price=0;
-        document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
         fetchimage_seedling ("f", seedling6);
         document.getElementById("seedlingf_center").style.cursor= "auto"; 
         seedlingf_center.className = "";
@@ -1310,6 +1304,7 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
         seedlingf_center_mobile.className = "";
         PlantSeedlingReset()
     }
+    fetchvalues();
 }
 
 function PlantSeedlingReset() {

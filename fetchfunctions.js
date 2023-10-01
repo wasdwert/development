@@ -772,6 +772,14 @@ function fetchvalues() {
     document.getElementById("shop_board").innerHTML = resources.board;
     document.getElementById("shop_board_mobile").innerHTML = resources.board;
     
+    document.getElementById("seedlinga_price_sell").innerHTML = seedling1.price;
+    document.getElementById("seedlingb_price_sell").innerHTML = seedling2.price;
+    document.getElementById("seedlingc_price_sell").innerHTML = seedling3.price;
+    document.getElementById("seedlingd_price_sell").innerHTML = seedling4.price;
+    document.getElementById("seedlinge_price_sell").innerHTML = seedling5.price;
+    document.getElementById("seedlingf_price_sell").innerHTML = seedling6.price;
+    document.getElementById("seedlingall_price_sell").innerHTML = seedling1.price+seedling2.price+seedling3.price+seedling4.price+seedling5.price+seedling6.price;
+    
     document.getElementById("stats_seedlingstotal").innerHTML = statistics.seedlings_total;
     document.getElementById("stats_bonsaitotal").innerHTML = statistics.bonsais_total;
     document.getElementById("stats_treetypetotal").innerHTML = statistics.bondex_treetype_discovered;

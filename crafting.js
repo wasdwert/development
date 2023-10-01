@@ -295,6 +295,8 @@ function craft_robot1() {
 
 var cr_compost1_m = document.getElementById("cr_compost1_m");
 var cr_compost1_p = document.getElementById("cr_compost1_p");
+var cr_compost1_min = document.getElementById("cr_compost1_min");
+var cr_compost1_max = document.getElementById("cr_compost1_max");
 
 cr_compost1_m.onclick = function() {
     if (cr_compost1.q>1) {
@@ -309,11 +311,34 @@ cr_compost1_m.onclick = function() {
 
 cr_compost1_p.onclick = function() {
     if (cr_compost1.q<=98) {
-        cr_compost1.q +=1;
-        document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
-        cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
-        document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
-        cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
-        document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
+        if (cr_compost1.q<resources.organic_waste) {
+            cr_compost1.q +=1;
+            document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+            cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+            document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+            cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+            document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
+        }
+        else {
+            Snackbar("<img src='Images/attention_white.svg' width='30' height='30'>&nbsp;Not enough organic waste", "snackbar_attention", 3000, "snackbar_attention show3s");
+        }
     }
+}
+
+cr_compost1_min.onclick = function() {
+    cr_compost1.q =1;
+    document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+    cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+    document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+    cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+    document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
+}
+
+cr_compost1_max.onclick = function() {
+    cr_compost1.q =resources.organic_waste;
+    document.getElementById("cr_compost1_q").innerHTML= cr_compost1.q;
+    cr_compost1.ow = cr_compost1.q*cr_compost1.ow_original;
+    document.getElementById("cr_compost1_ow").innerHTML= cr_compost1.ow;
+    cr_compost1.time = cr_compost1.q*cr_compost1.time_original;
+    document.getElementById("cr_compost1_time").innerHTML= timetracker(cr_compost1.time);
 }
