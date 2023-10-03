@@ -370,36 +370,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai01s00normal) {
                 bondex.bonsai01s00normal=seedling.treequality;
-                if (bondex.bonsai01s00normal==1) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==2) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==3) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==4) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==5) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==6) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==7) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==8) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==9) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai01s00normal==10) {
-                    document.getElementById("BonDex_01_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai01s00normal, "01_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -412,36 +383,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai01s00blooming) {
                 bondex.bonsai01s00blooming=seedling.treequality;
-                if (bondex.bonsai01s00blooming==1) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==2) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==3) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==4) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==5) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==6) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==7) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==8) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==9) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai01s00blooming==10) {
-                    document.getElementById("BonDex_01_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai01s00blooming, "01_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -455,36 +397,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai01s00shiny) {
                 bondex.bonsai01s00shiny=seedling.treequality;
-                if (bondex.bonsai01s00shiny==1) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==2) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==3) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==4) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==5) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==6) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==7) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==8) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==9) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai01s00shiny==10) {
-                    document.getElementById("BonDex_01_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai01s00shiny, "01_s00shiny");
             }
         }
         else {
@@ -499,36 +412,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai01s00shinybloom) {
                 bondex.bonsai01s00shinybloom=seedling.treequality;
-                if (bondex.bonsai01s00shinybloom==1) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==2) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==3) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==4) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==5) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==6) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==7) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==8) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==9) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai01s00shinybloom==10) {
-                    document.getElementById("BonDex_01_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai01s00shinybloom, "01_s00shinybloom");
             }
         }
     }
@@ -584,36 +468,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai02s00normal) {
                 bondex.bonsai02s00normal=seedling.treequality;
-                if (bondex.bonsai02s00normal==1) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==2) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==3) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==4) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==5) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==6) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==7) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==8) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==9) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai02s00normal==10) {
-                    document.getElementById("BonDex_02_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai02s00normal, "02_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -626,36 +481,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai02s00blooming) {
                 bondex.bonsai02s00blooming=seedling.treequality;
-                if (bondex.bonsai02s00blooming==1) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==2) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==3) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==4) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==5) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==6) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==7) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==8) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==9) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai02s00blooming==10) {
-                    document.getElementById("BonDex_02_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai02s00blooming, "02_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -669,36 +495,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai02s00shiny) {
                 bondex.bonsai02s00shiny=seedling.treequality;
-                if (bondex.bonsai02s00shiny==1) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==2) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==3) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==4) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==5) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==6) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==7) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==8) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==9) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai02s00shiny==10) {
-                    document.getElementById("BonDex_02_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai02s00shiny, "02_s00shiny");
             }
         }
         else {
@@ -713,36 +510,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai02s00shinybloom) {
                 bondex.bonsai02s00shinybloom=seedling.treequality;
-                if (bondex.bonsai02s00shinybloom==1) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==2) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==3) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==4) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==5) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==6) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==7) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==8) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==9) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai02s00shinybloom==10) {
-                    document.getElementById("BonDex_02_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai02s00shinybloom, "02_s00shinybloom");
             }
         }
     }
@@ -799,36 +567,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai03s00normal) {
                 bondex.bonsai03s00normal=seedling.treequality;
-                if (bondex.bonsai03s00normal==1) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==2) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==3) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==4) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==5) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==6) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==7) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==8) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==9) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai03s00normal==10) {
-                    document.getElementById("BonDex_03_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai03s00normal, "03_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -841,36 +580,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai03s00blooming) {
                 bondex.bonsai03s00blooming=seedling.treequality;
-                if (bondex.bonsai03s00blooming==1) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==2) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==3) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==4) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==5) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==6) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==7) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==8) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==9) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai03s00blooming==10) {
-                    document.getElementById("BonDex_03_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai03s00blooming, "03_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -884,36 +594,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai03s00shiny) {
                 bondex.bonsai03s00shiny=seedling.treequality;
-                if (bondex.bonsai03s00shiny==1) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==2) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==3) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==4) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==5) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==6) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==7) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==8) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==9) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai03s00shiny==10) {
-                    document.getElementById("BonDex_03_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai03s00shiny, "03_s00shiny");
             }
         }
         else {
@@ -928,36 +609,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai03s00shinybloom) {
                 bondex.bonsai03s00shinybloom=seedling.treequality;
-                if (bondex.bonsai03s00shinybloom==1) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==2) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==3) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==4) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==5) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==6) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==7) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==8) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==9) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai03s00shinybloom==10) {
-                    document.getElementById("BonDex_03_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai03s00shinybloom, "03_s00shinybloom");
             }
         }
     }
@@ -1015,36 +667,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai04s00normal) {
                 bondex.bonsai04s00normal=seedling.treequality;
-                if (bondex.bonsai04s00normal==1) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==2) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==3) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==4) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==5) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==6) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==7) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==8) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==9) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai04s00normal==10) {
-                    document.getElementById("BonDex_04_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai04s00normal, "04_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -1057,36 +680,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai04s00blooming) {
                 bondex.bonsai04s00blooming=seedling.treequality;
-                if (bondex.bonsai04s00blooming==1) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==2) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==3) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==4) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==5) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==6) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==7) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==8) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==9) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai04s00blooming==10) {
-                    document.getElementById("BonDex_04_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai04s00blooming, "04_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -1100,36 +694,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai04s00shiny) {
                 bondex.bonsai04s00shiny=seedling.treequality;
-                if (bondex.bonsai04s00shiny==1) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==2) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==3) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==4) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==5) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==6) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==7) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==8) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==9) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai04s00shiny==10) {
-                    document.getElementById("BonDex_04_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai04s00shiny, "04_s00shiny");
             }
         }
         else {
@@ -1144,36 +709,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai04s00shinybloom) {
                 bondex.bonsai04s00shinybloom=seedling.treequality;
-                if (bondex.bonsai04s00shinybloom==1) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==2) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==3) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==4) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==5) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==6) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==7) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==8) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==9) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai04s00shinybloom==10) {
-                    document.getElementById("BonDex_04_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai04s00shinybloom, "04_s00shinybloom");
             }
         }
     }
@@ -1232,36 +768,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai05s00normal) {
                 bondex.bonsai05s00normal=seedling.treequality;
-                if (bondex.bonsai05s00normal==1) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==2) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==3) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==4) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==5) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==6) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==7) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==8) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==9) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai05s00normal==10) {
-                    document.getElementById("BonDex_05_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai05s00normal, "05_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -1274,36 +781,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai05s00blooming) {
                 bondex.bonsai05s00blooming=seedling.treequality;
-                if (bondex.bonsai05s00blooming==1) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==2) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==3) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==4) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==5) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==6) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==7) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==8) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==9) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai05s00blooming==10) {
-                    document.getElementById("BonDex_05_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai05s00blooming, "05_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -1317,36 +795,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai05s00shiny) {
                 bondex.bonsai05s00shiny=seedling.treequality;
-                if (bondex.bonsai05s00shiny==1) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==2) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==3) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==4) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==5) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==6) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==7) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==8) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==9) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai05s00shiny==10) {
-                    document.getElementById("BonDex_05_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai05s00shiny, "05_s00shiny");
             }
         }
         else {
@@ -1361,36 +810,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai05s00shinybloom) {
                 bondex.bonsai05s00shinybloom=seedling.treequality;
-                if (bondex.bonsai05s00shinybloom==1) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==2) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==3) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==4) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==5) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==6) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==7) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==8) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==9) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai05s00shinybloom==10) {
-                    document.getElementById("BonDex_05_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai05s00shinybloom, "05_s00shinybloom");
             }
         }
     }
@@ -1450,36 +870,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai06s00normal) {
                 bondex.bonsai06s00normal=seedling.treequality;
-                if (bondex.bonsai06s00normal==1) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==2) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==3) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==4) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==5) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==6) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==7) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==8) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==9) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai06s00normal==10) {
-                    document.getElementById("BonDex_06_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai06s00normal, "06_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -1492,36 +883,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai06s00blooming) {
                 bondex.bonsai06s00blooming=seedling.treequality;
-                if (bondex.bonsai06s00blooming==1) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==2) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==3) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==4) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==5) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==6) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==7) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==8) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==9) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai06s00blooming==10) {
-                    document.getElementById("BonDex_06_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai06s00blooming, "06_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -1535,36 +897,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai06s00shiny) {
                 bondex.bonsai06s00shiny=seedling.treequality;
-                if (bondex.bonsai06s00shiny==1) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==2) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==3) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==4) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==5) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==6) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==7) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==8) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==9) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai06s00shiny==10) {
-                    document.getElementById("BonDex_06_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai06s00shiny, "06_s00shiny");
             }
         }
         else {
@@ -1579,36 +912,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai06s00shinybloom) {
                 bondex.bonsai06s00shinybloom=seedling.treequality;
-                if (bondex.bonsai06s00shinybloom==1) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==2) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==3) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==4) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==5) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==6) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==7) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==8) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==9) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai06s00shinybloom==10) {
-                    document.getElementById("BonDex_06_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai06s00shinybloom, "06_s00shinybloom");
             }
         }
     }
@@ -1669,36 +973,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai07s00normal) {
                 bondex.bonsai07s00normal=seedling.treequality;
-                if (bondex.bonsai07s00normal==1) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==2) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==3) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==4) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==5) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==6) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==7) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==8) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==9) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai07s00normal==10) {
-                    document.getElementById("BonDex_07_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai07s00normal, "07_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -1711,36 +986,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai07s00blooming) {
                 bondex.bonsai07s00blooming=seedling.treequality;
-                if (bondex.bonsai07s00blooming==1) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==2) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==3) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==4) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==5) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==6) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==7) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==8) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==9) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai07s00blooming==10) {
-                    document.getElementById("BonDex_07_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai07s00blooming, "07_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -1754,36 +1000,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai07s00shiny) {
                 bondex.bonsai07s00shiny=seedling.treequality;
-                if (bondex.bonsai07s00shiny==1) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==2) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==3) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==4) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==5) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==6) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==7) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==8) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==9) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai07s00shiny==10) {
-                    document.getElementById("BonDex_07_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai07s00shiny, "07_s00shiny");
             }
         }
         else {
@@ -1798,36 +1015,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai07s00shinybloom) {
                 bondex.bonsai07s00shinybloom=seedling.treequality;
-                if (bondex.bonsai07s00shinybloom==1) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==2) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==3) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==4) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==5) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==6) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==7) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==8) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==9) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai07s00shinybloom==10) {
-                    document.getElementById("BonDex_07_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai07s00shinybloom, "07_s00shinybloom");
             }
         }
     }
@@ -1889,36 +1077,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai08s00normal) {
                 bondex.bonsai08s00normal=seedling.treequality;
-                if (bondex.bonsai08s00normal==1) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==2) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==3) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==4) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==5) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==6) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==7) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==8) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==9) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai08s00normal==10) {
-                    document.getElementById("BonDex_08_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai08s00normal, "08_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -1931,36 +1090,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai08s00blooming) {
                 bondex.bonsai08s00blooming=seedling.treequality;
-                if (bondex.bonsai08s00blooming==1) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==2) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==3) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==4) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==5) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==6) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==7) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==8) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==9) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai08s00blooming==10) {
-                    document.getElementById("BonDex_08_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai08s00blooming, "08_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -1974,36 +1104,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai08s00shiny) {
                 bondex.bonsai08s00shiny=seedling.treequality;
-                if (bondex.bonsai08s00shiny==1) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==2) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==3) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==4) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==5) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==6) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==7) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==8) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==9) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai08s00shiny==10) {
-                    document.getElementById("BonDex_08_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai08s00shiny, "08_s00shiny");
             }
         }
         else {
@@ -2018,36 +1119,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai08s00shinybloom) {
                 bondex.bonsai08s00shinybloom=seedling.treequality;
-                if (bondex.bonsai08s00shinybloom==1) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==2) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==3) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==4) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==5) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==6) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==7) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==8) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==9) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai08s00shinybloom==10) {
-                    document.getElementById("BonDex_08_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai08s00shinybloom, "08_s00shinybloom");
             }
         }
     }
@@ -2110,36 +1182,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai09s00normal) {
                 bondex.bonsai09s00normal=seedling.treequality;
-                if (bondex.bonsai09s00normal==1) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==2) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==3) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==4) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==5) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==6) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==7) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==8) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==9) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai09s00normal==10) {
-                    document.getElementById("BonDex_09_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai09s00normal, "09_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -2152,36 +1195,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai09s00blooming) {
                 bondex.bonsai09s00blooming=seedling.treequality;
-                if (bondex.bonsai09s00blooming==1) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==2) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==3) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==4) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==5) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==6) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==7) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==8) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==9) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai09s00blooming==10) {
-                    document.getElementById("BonDex_09_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai09s00blooming, "09_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -2195,36 +1209,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai09s00shiny) {
                 bondex.bonsai09s00shiny=seedling.treequality;
-                if (bondex.bonsai09s00shiny==1) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==2) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==3) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==4) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==5) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==6) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==7) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==8) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==9) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai09s00shiny==10) {
-                    document.getElementById("BonDex_09_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai09s00shiny, "09_s00shiny");
             }
         }
         else {
@@ -2239,36 +1224,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai09s00shinybloom) {
                 bondex.bonsai09s00shinybloom=seedling.treequality;
-                if (bondex.bonsai09s00shinybloom==1) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==2) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==3) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==4) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==5) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==6) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==7) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==8) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==9) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai09s00shinybloom==10) {
-                    document.getElementById("BonDex_09_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai09s00shinybloom, "09_s00shinybloom");
             }
         }
     }
@@ -2332,36 +1288,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai10s00normal) {
                 bondex.bonsai10s00normal=seedling.treequality;
-                if (bondex.bonsai10s00normal==1) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==2) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==3) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==4) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==5) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==6) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==7) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==8) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==9) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai10s00normal==10) {
-                    document.getElementById("BonDex_10_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai10s00normal, "10_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -2374,36 +1301,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai10s00blooming) {
                 bondex.bonsai10s00blooming=seedling.treequality;
-                if (bondex.bonsai10s00blooming==1) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==2) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==3) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==4) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==5) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==6) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==7) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==8) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==9) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai10s00blooming==10) {
-                    document.getElementById("BonDex_10_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai10s00blooming, "10_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -2417,36 +1315,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai10s00shiny) {
                 bondex.bonsai10s00shiny=seedling.treequality;
-                if (bondex.bonsai10s00shiny==1) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==2) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==3) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==4) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==5) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==6) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==7) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==8) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==9) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai10s00shiny==10) {
-                    document.getElementById("BonDex_10_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai10s00shiny, "10_s00shiny");
             }
         }
         else {
@@ -2461,36 +1330,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai10s00shinybloom) {
                 bondex.bonsai10s00shinybloom=seedling.treequality;
-                if (bondex.bonsai10s00shinybloom==1) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==2) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==3) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==4) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==5) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==6) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==7) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==8) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==9) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai10s00shinybloom==10) {
-                    document.getElementById("BonDex_10_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai10s00shinybloom, "10_s00shinybloom");
             }
         }
     }
@@ -2555,36 +1395,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai11s00normal) {
                 bondex.bonsai11s00normal=seedling.treequality;
-                if (bondex.bonsai11s00normal==1) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==2) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==3) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==4) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==5) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==6) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==7) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==8) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==9) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai11s00normal==10) {
-                    document.getElementById("BonDex_11_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai11s00normal, "11_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -2597,36 +1408,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai11s00blooming) {
                 bondex.bonsai11s00blooming=seedling.treequality;
-                if (bondex.bonsai11s00blooming==1) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==2) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==3) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==4) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==5) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==6) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==7) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==8) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==9) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai11s00blooming==10) {
-                    document.getElementById("BonDex_11_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai11s00blooming, "11_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -2640,36 +1422,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai11s00shiny) {
                 bondex.bonsai11s00shiny=seedling.treequality;
-                if (bondex.bonsai11s00shiny==1) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==2) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==3) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==4) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==5) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==6) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==7) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==8) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==9) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai11s00shiny==10) {
-                    document.getElementById("BonDex_11_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai11s00shiny, "11_s00shiny");
             }
         }
         else {
@@ -2684,36 +1437,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai11s00shinybloom) {
                 bondex.bonsai11s00shinybloom=seedling.treequality;
-                if (bondex.bonsai11s00shinybloom==1) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==2) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==3) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==4) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==5) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==6) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==7) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==8) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==9) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai11s00shinybloom==10) {
-                    document.getElementById("BonDex_11_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai11s00shinybloom, "11_s00shinybloom");
             }
         }
     }
@@ -2779,36 +1503,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai12s00normal) {
                 bondex.bonsai12s00normal=seedling.treequality;
-                if (bondex.bonsai12s00normal==1) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==2) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==3) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==4) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==5) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==6) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==7) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==8) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==9) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai12s00normal==10) {
-                    document.getElementById("BonDex_12_s00normal_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai12s00normal, "12_s00normal");
             }
         }
         else if (seedling.shiny==2) {
@@ -2821,36 +1516,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai12s00blooming) {
                 bondex.bonsai12s00blooming=seedling.treequality;
-                if (bondex.bonsai12s00blooming==1) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==2) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==3) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==4) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==5) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==6) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==7) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==8) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==9) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai12s00blooming==10) {
-                    document.getElementById("BonDex_12_s00blooming_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai12s00blooming, "12_s00blooming");
             }
         }
         else if (seedling.shiny==3) {
@@ -2864,36 +1530,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai12s00shiny) {
                 bondex.bonsai12s00shiny=seedling.treequality;
-                if (bondex.bonsai12s00shiny==1) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==2) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==3) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==4) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==5) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==6) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==7) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==8) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==9) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai12s00shiny==10) {
-                    document.getElementById("BonDex_12_s00shiny_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai12s00shiny, "12_s00shiny");
             }
         }
         else {
@@ -2908,36 +1545,7 @@ function bondex_seedling(seedling) {
             }
             if (seedling.treequality>bondex.bonsai12s00shinybloom) {
                 bondex.bonsai12s00shinybloom=seedling.treequality;
-                if (bondex.bonsai12s00shinybloom==1) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/one_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==2) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/two_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==3) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/three_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==4) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/four_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==5) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/five_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==6) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/six_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==7) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/seven_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==8) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/eight_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==9) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/nine_small.svg)"
-                }
-                else if (bondex.bonsai12s00shinybloom==10) {
-                    document.getElementById("BonDex_12_s00shinybloom_tq").style.backgroundImage = "url(Images/treequality/ten_small.svg)"
-                }
+                bondex_treequality(bondex.bonsai12s00shinybloom, "12_s00shinybloom");
             }
         }
     }
@@ -3162,11 +1770,36 @@ function bondex_seedling(seedling) {
     }
 }
 
+var bonsai_styletypecheck=0;
+function bondex_styletypescheck(a, b, c, d, e, f, g) {
+    bonsai_styletypecheck=0;
+    if (a>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (b>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (c>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (d>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (e>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (f>0) {
+        bonsai_styletypecheck+=1;
+    }
+    if (g>0) {
+        bonsai_styletypecheck+=1;
+    }
+}
+
 function bondex_bonsai(bonsai) {
     if (bonsai.treetype==1) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai01normal==0) {
-                bondex.bonsai01normal=1;
                 $(document).ready(function(){
                     $('#BonDex_01normal').show();
                 });
@@ -3234,10 +1867,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai01s07normal, "01_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai01s01normal, bondex.bonsai01s02normal, bondex.bonsai01s03normal, bondex.bonsai01s04normal, bondex.bonsai01s05normal, bondex.bonsai01s06normal, bondex.bonsai01s07normal);
+            bondex.bonsai01normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai01blooming==0) {
-                bondex.bonsai01blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_01normal').show();
                     $('#BonDex_01blooming').show();
@@ -3306,10 +1940,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai01s07blooming, "01_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai01s01blooming, bondex.bonsai01s02blooming, bondex.bonsai01s03blooming, bondex.bonsai01s04blooming, bondex.bonsai01s05blooming, bondex.bonsai01s06blooming, bondex.bonsai01s07blooming);
+            bondex.bonsai01blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai01shiny==0) {
-                bondex.bonsai01shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_01normal').show();
                     $('#BonDex_01blooming').show();
@@ -3379,10 +2014,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai01s07shiny, "01_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai01s01shiny, bondex.bonsai01s02shiny, bondex.bonsai01s03shiny, bondex.bonsai01s04shiny, bondex.bonsai01s05shiny, bondex.bonsai01s06shiny, bondex.bonsai01s07shiny);
+            bondex.bonsai01shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai01shinybloom==0) {
-                bondex.bonsai01shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_01normal').show();
                     $('#BonDex_01blooming').show();
@@ -3453,12 +2089,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai01s07shinybloom, "01_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai01s01shinybloom, bondex.bonsai01s02shinybloom, bondex.bonsai01s03shinybloom, bondex.bonsai01s04shinybloom, bondex.bonsai01s05shinybloom, bondex.bonsai01s06shinybloom, bondex.bonsai01s07shinybloom);
+            bondex.bonsai01shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==2) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai02normal==0) {
-                bondex.bonsai02normal=1;
                 $(document).ready(function(){
                     $('#BonDex_02normal').show();
                 });
@@ -3526,10 +2164,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai02s07normal, "02_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai02s01normal, bondex.bonsai02s02normal, bondex.bonsai02s03normal, bondex.bonsai02s04normal, bondex.bonsai02s05normal, bondex.bonsai02s06normal, bondex.bonsai02s07normal);
+            bondex.bonsai02normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai02blooming==0) {
-                bondex.bonsai02blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_02normal').show();
                     $('#BonDex_02blooming').show();
@@ -3598,10 +2237,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai02s07blooming, "02_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai02s01blooming, bondex.bonsai02s02blooming, bondex.bonsai02s03blooming, bondex.bonsai02s04blooming, bondex.bonsai02s05blooming, bondex.bonsai02s06blooming, bondex.bonsai02s07blooming);
+            bondex.bonsai02blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai02shiny==0) {
-                bondex.bonsai02shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_02normal').show();
                     $('#BonDex_02blooming').show();
@@ -3671,10 +2311,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai02s07shiny, "02_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai02s01shiny, bondex.bonsai02s02shiny, bondex.bonsai02s03shiny, bondex.bonsai02s04shiny, bondex.bonsai02s05shiny, bondex.bonsai02s06shiny, bondex.bonsai02s07shiny);
+            bondex.bonsai02shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai02shinybloom==0) {
-                bondex.bonsai02shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_02normal').show();
                     $('#BonDex_02blooming').show();
@@ -3745,12 +2386,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai02s07shinybloom, "02_s07shinybloom");
                 }
             }
-        }        
+            bondex_styletypescheck(bondex.bonsai02s01shinybloom, bondex.bonsai02s02shinybloom, bondex.bonsai02s03shinybloom, bondex.bonsai02s04shinybloom, bondex.bonsai02s05shinybloom, bondex.bonsai02s06shinybloom, bondex.bonsai02s07shinybloom);
+            bondex.bonsai02shinybloom=bonsai_styletypecheck;
+        } 
+        taskstones();
     }
     else if (bonsai.treetype==3) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai03normal==0) {
-                bondex.bonsai03normal=1;
                 $(document).ready(function(){
                     $('#BonDex_03normal').show();
                 });
@@ -3818,10 +2461,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai03s07normal, "03_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai03s01normal, bondex.bonsai03s02normal, bondex.bonsai03s03normal, bondex.bonsai03s04normal, bondex.bonsai03s05normal, bondex.bonsai03s06normal, bondex.bonsai03s07normal);
+            bondex.bonsai03normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai03blooming==0) {
-                bondex.bonsai03blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_03normal').show();
                     $('#BonDex_03blooming').show();
@@ -3890,10 +2534,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai03s07blooming, "03_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai03s01blooming, bondex.bonsai03s02blooming, bondex.bonsai03s03blooming, bondex.bonsai03s04blooming, bondex.bonsai03s05blooming, bondex.bonsai03s06blooming, bondex.bonsai03s07blooming);
+            bondex.bonsai03blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai03shiny==0) {
-                bondex.bonsai03shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_03normal').show();
                     $('#BonDex_03blooming').show();
@@ -3963,10 +2608,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai03s07shiny, "03_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai03s01shiny, bondex.bonsai03s02shiny, bondex.bonsai03s03shiny, bondex.bonsai03s04shiny, bondex.bonsai03s05shiny, bondex.bonsai03s06shiny, bondex.bonsai03s07shiny);
+            bondex.bonsai03shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai03shinybloom==0) {
-                bondex.bonsai03shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_03normal').show();
                     $('#BonDex_03blooming').show();
@@ -4037,12 +2683,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai03s07shinybloom, "03_s07shinybloom");
                 }
             }
-        }        
+            bondex_styletypescheck(bondex.bonsai03s01shinybloom, bondex.bonsai03s02shinybloom, bondex.bonsai03s03shinybloom, bondex.bonsai03s04shinybloom, bondex.bonsai03s05shinybloom, bondex.bonsai03s06shinybloom, bondex.bonsai03s07shinybloom);
+            bondex.bonsai03shinybloom=bonsai_styletypecheck;
+        }   
+        taskstones();
     }
     else if (bonsai.treetype==4) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai04normal==0) {
-                bondex.bonsai04normal=1;
                 $(document).ready(function(){
                     $('#BonDex_04normal').show();
                 });
@@ -4110,10 +2758,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai04s07normal, "04_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai04s01normal, bondex.bonsai04s02normal, bondex.bonsai04s03normal, bondex.bonsai04s04normal, bondex.bonsai04s05normal, bondex.bonsai04s06normal, bondex.bonsai04s07normal);
+            bondex.bonsai04normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai04blooming==0) {
-                bondex.bonsai04blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_04normal').show();
                     $('#BonDex_04blooming').show();
@@ -4182,10 +2831,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai04s07blooming, "04_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai04s01blooming, bondex.bonsai04s02blooming, bondex.bonsai04s03blooming, bondex.bonsai04s04blooming, bondex.bonsai04s05blooming, bondex.bonsai04s06blooming, bondex.bonsai04s07blooming);
+            bondex.bonsai04blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai04shiny==0) {
-                bondex.bonsai04shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_04normal').show();
                     $('#BonDex_04blooming').show();
@@ -4255,10 +2905,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai04s07shiny, "04_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai04s01shiny, bondex.bonsai04s02shiny, bondex.bonsai04s03shiny, bondex.bonsai04s04shiny, bondex.bonsai04s05shiny, bondex.bonsai04s06shiny, bondex.bonsai04s07shiny);
+            bondex.bonsai04shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai04shinybloom==0) {
-                bondex.bonsai04shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_04normal').show();
                     $('#BonDex_04blooming').show();
@@ -4329,12 +2980,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai04s07shinybloom, "04_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai04s01shinybloom, bondex.bonsai04s02shinybloom, bondex.bonsai04s03shinybloom, bondex.bonsai04s04shinybloom, bondex.bonsai04s05shinybloom, bondex.bonsai04s06shinybloom, bondex.bonsai04s07shinybloom);
+            bondex.bonsai04shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==5) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai05normal==0) {
-                bondex.bonsai05normal=1;
                 $(document).ready(function(){
                     $('#BonDex_05normal').show();
                 });
@@ -4402,10 +3055,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai05s07normal, "05_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai05s01normal, bondex.bonsai05s02normal, bondex.bonsai05s03normal, bondex.bonsai05s04normal, bondex.bonsai05s05normal, bondex.bonsai05s06normal, bondex.bonsai05s07normal);
+            bondex.bonsai05normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai05blooming==0) {
-                bondex.bonsai05blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_05normal').show();
                     $('#BonDex_05blooming').show();
@@ -4474,10 +3128,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai05s07blooming, "05_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai05s01blooming, bondex.bonsai05s02blooming, bondex.bonsai05s03blooming, bondex.bonsai05s04blooming, bondex.bonsai05s05blooming, bondex.bonsai05s06blooming, bondex.bonsai05s07blooming);
+            bondex.bonsai05blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai05shiny==0) {
-                bondex.bonsai05shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_05normal').show();
                     $('#BonDex_05blooming').show();
@@ -4547,10 +3202,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai05s07shiny, "05_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai05s01shiny, bondex.bonsai05s02shiny, bondex.bonsai05s03shiny, bondex.bonsai05s04shiny, bondex.bonsai05s05shiny, bondex.bonsai05s06shiny, bondex.bonsai05s07shiny);
+            bondex.bonsai05shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai05shinybloom==0) {
-                bondex.bonsai05shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_05normal').show();
                     $('#BonDex_05blooming').show();
@@ -4621,12 +3277,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai05s07shinybloom, "05_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai05s01shinybloom, bondex.bonsai05s02shinybloom, bondex.bonsai05s03shinybloom, bondex.bonsai05s04shinybloom, bondex.bonsai05s05shinybloom, bondex.bonsai05s06shinybloom, bondex.bonsai05s07shinybloom);
+            bondex.bonsai05shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==6) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai06normal==0) {
-                bondex.bonsai06normal=1;
                 $(document).ready(function(){
                     $('#BonDex_06normal').show();
                 });
@@ -4694,10 +3352,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai06s07normal, "06_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai06s01normal, bondex.bonsai06s02normal, bondex.bonsai06s03normal, bondex.bonsai06s04normal, bondex.bonsai06s05normal, bondex.bonsai06s06normal, bondex.bonsai06s07normal);
+            bondex.bonsai06normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai06blooming==0) {
-                bondex.bonsai06blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_06normal').show();
                     $('#BonDex_06blooming').show();
@@ -4766,10 +3425,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai06s07blooming, "06_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai06s01blooming, bondex.bonsai06s02blooming, bondex.bonsai06s03blooming, bondex.bonsai06s04blooming, bondex.bonsai06s05blooming, bondex.bonsai06s06blooming, bondex.bonsai06s07blooming);
+            bondex.bonsai06blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai06shiny==0) {
-                bondex.bonsai06shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_06normal').show();
                     $('#BonDex_06blooming').show();
@@ -4839,10 +3499,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai06s07shiny, "06_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai06s01shiny, bondex.bonsai06s02shiny, bondex.bonsai06s03shiny, bondex.bonsai06s04shiny, bondex.bonsai06s05shiny, bondex.bonsai06s06shiny, bondex.bonsai06s07shiny);
+            bondex.bonsai06shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai06shinybloom==0) {
-                bondex.bonsai06shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_06normal').show();
                     $('#BonDex_06blooming').show();
@@ -4913,12 +3574,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai06s07shinybloom, "06_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai06s01shinybloom, bondex.bonsai06s02shinybloom, bondex.bonsai06s03shinybloom, bondex.bonsai06s04shinybloom, bondex.bonsai06s05shinybloom, bondex.bonsai06s06shinybloom, bondex.bonsai06s07shinybloom);
+            bondex.bonsai06shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==7) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai07normal==0) {
-                bondex.bonsai07normal=1;
                 $(document).ready(function(){
                     $('#BonDex_07normal').show();
                 });
@@ -4986,10 +3649,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai07s07normal, "07_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai07s01normal, bondex.bonsai07s02normal, bondex.bonsai07s03normal, bondex.bonsai07s04normal, bondex.bonsai07s05normal, bondex.bonsai07s06normal, bondex.bonsai07s07normal);
+            bondex.bonsai07normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai07blooming==0) {
-                bondex.bonsai07blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_07normal').show();
                     $('#BonDex_07blooming').show();
@@ -5058,10 +3722,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai07s07blooming, "07_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai07s01blooming, bondex.bonsai07s02blooming, bondex.bonsai07s03blooming, bondex.bonsai07s04blooming, bondex.bonsai07s05blooming, bondex.bonsai07s06blooming, bondex.bonsai07s07blooming);
+            bondex.bonsai07blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai07shiny==0) {
-                bondex.bonsai07shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_07normal').show();
                     $('#BonDex_07blooming').show();
@@ -5131,10 +3796,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai07s07shiny, "07_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai07s01shiny, bondex.bonsai07s02shiny, bondex.bonsai07s03shiny, bondex.bonsai07s04shiny, bondex.bonsai07s05shiny, bondex.bonsai07s06shiny, bondex.bonsai07s07shiny);
+            bondex.bonsai07shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai07shinybloom==0) {
-                bondex.bonsai07shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_07normal').show();
                     $('#BonDex_07blooming').show();
@@ -5205,12 +3871,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai07s07shinybloom, "07_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai07s01shinybloom, bondex.bonsai07s02shinybloom, bondex.bonsai07s03shinybloom, bondex.bonsai07s04shinybloom, bondex.bonsai07s05shinybloom, bondex.bonsai07s06shinybloom, bondex.bonsai07s07shinybloom);
+            bondex.bonsai07shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==8) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai08normal==0) {
-                bondex.bonsai08normal=1;
                 $(document).ready(function(){
                     $('#BonDex_08normal').show();
                 });
@@ -5278,10 +3946,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai08s07normal, "08_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai08s01normal, bondex.bonsai08s02normal, bondex.bonsai08s03normal, bondex.bonsai08s04normal, bondex.bonsai08s05normal, bondex.bonsai08s06normal, bondex.bonsai08s07normal);
+            bondex.bonsai08normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai08blooming==0) {
-                bondex.bonsai08blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_08normal').show();
                     $('#BonDex_08blooming').show();
@@ -5350,10 +4019,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai08s07blooming, "08_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai08s01blooming, bondex.bonsai08s02blooming, bondex.bonsai08s03blooming, bondex.bonsai08s04blooming, bondex.bonsai08s05blooming, bondex.bonsai08s06blooming, bondex.bonsai08s07blooming);
+            bondex.bonsai08blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai08shiny==0) {
-                bondex.bonsai08shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_08normal').show();
                     $('#BonDex_08blooming').show();
@@ -5423,10 +4093,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai08s07shiny, "08_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai08s01shiny, bondex.bonsai08s02shiny, bondex.bonsai08s03shiny, bondex.bonsai08s04shiny, bondex.bonsai08s05shiny, bondex.bonsai08s06shiny, bondex.bonsai08s07shiny);
+            bondex.bonsai08shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai08shinybloom==0) {
-                bondex.bonsai08shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_08normal').show();
                     $('#BonDex_08blooming').show();
@@ -5497,12 +4168,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai08s07shinybloom, "08_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai08s01shinybloom, bondex.bonsai08s02shinybloom, bondex.bonsai08s03shinybloom, bondex.bonsai08s04shinybloom, bondex.bonsai08s05shinybloom, bondex.bonsai08s06shinybloom, bondex.bonsai08s07shinybloom);
+            bondex.bonsai08shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==9) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai09normal==0) {
-                bondex.bonsai09normal=1;
                 $(document).ready(function(){
                     $('#BonDex_09normal').show();
                 });
@@ -5570,10 +4243,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai09s07normal, "09_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai09s01normal, bondex.bonsai09s02normal, bondex.bonsai09s03normal, bondex.bonsai09s04normal, bondex.bonsai09s05normal, bondex.bonsai09s06normal, bondex.bonsai09s07normal);
+            bondex.bonsai09normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai09blooming==0) {
-                bondex.bonsai09blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_09normal').show();
                     $('#BonDex_09blooming').show();
@@ -5642,10 +4316,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai09s07blooming, "09_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai09s01blooming, bondex.bonsai09s02blooming, bondex.bonsai09s03blooming, bondex.bonsai09s04blooming, bondex.bonsai09s05blooming, bondex.bonsai09s06blooming, bondex.bonsai09s07blooming);
+            bondex.bonsai09blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai09shiny==0) {
-                bondex.bonsai09shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_09normal').show();
                     $('#BonDex_09blooming').show();
@@ -5715,10 +4390,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai09s07shiny, "09_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai09s01shiny, bondex.bonsai09s02shiny, bondex.bonsai09s03shiny, bondex.bonsai09s04shiny, bondex.bonsai09s05shiny, bondex.bonsai09s06shiny, bondex.bonsai09s07shiny);
+            bondex.bonsai09shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai09shinybloom==0) {
-                bondex.bonsai09shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_09normal').show();
                     $('#BonDex_09blooming').show();
@@ -5789,12 +4465,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai09s07shinybloom, "09_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai09s01shinybloom, bondex.bonsai09s02shinybloom, bondex.bonsai09s03shinybloom, bondex.bonsai09s04shinybloom, bondex.bonsai09s05shinybloom, bondex.bonsai09s06shinybloom, bondex.bonsai09s07shinybloom);
+            bondex.bonsai09shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==10) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai10normal==0) {
-                bondex.bonsai10normal=1;
                 $(document).ready(function(){
                     $('#BonDex_10normal').show();
                 });
@@ -5862,10 +4540,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai10s07normal, "10_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai10s01normal, bondex.bonsai10s02normal, bondex.bonsai10s03normal, bondex.bonsai10s04normal, bondex.bonsai10s05normal, bondex.bonsai10s06normal, bondex.bonsai10s07normal);
+            bondex.bonsai10normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai10blooming==0) {
-                bondex.bonsai10blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_10normal').show();
                     $('#BonDex_10blooming').show();
@@ -5934,10 +4613,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai10s07blooming, "10_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai10s01blooming, bondex.bonsai10s02blooming, bondex.bonsai10s03blooming, bondex.bonsai10s04blooming, bondex.bonsai10s05blooming, bondex.bonsai10s06blooming, bondex.bonsai10s07blooming);
+            bondex.bonsai10blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai10shiny==0) {
-                bondex.bonsai10shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_10normal').show();
                     $('#BonDex_10blooming').show();
@@ -6007,10 +4687,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai10s07shiny, "10_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai10s01shiny, bondex.bonsai10s02shiny, bondex.bonsai10s03shiny, bondex.bonsai10s04shiny, bondex.bonsai10s05shiny, bondex.bonsai10s06shiny, bondex.bonsai10s07shiny);
+            bondex.bonsai10shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai10shinybloom==0) {
-                bondex.bonsai10shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_10normal').show();
                     $('#BonDex_10blooming').show();
@@ -6081,12 +4762,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai10s07shinybloom, "10_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai10s01shinybloom, bondex.bonsai10s02shinybloom, bondex.bonsai10s03shinybloom, bondex.bonsai10s04shinybloom, bondex.bonsai10s05shinybloom, bondex.bonsai10s06shinybloom, bondex.bonsai10s07shinybloom);
+            bondex.bonsai10shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==11) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai11normal==0) {
-                bondex.bonsai11normal=1;
                 $(document).ready(function(){
                     $('#BonDex_11normal').show();
                 });
@@ -6154,10 +4837,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai11s07normal, "11_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai11s01normal, bondex.bonsai11s02normal, bondex.bonsai11s03normal, bondex.bonsai11s04normal, bondex.bonsai11s05normal, bondex.bonsai11s06normal, bondex.bonsai11s07normal);
+            bondex.bonsai11normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai11blooming==0) {
-                bondex.bonsai11blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_11normal').show();
                     $('#BonDex_11blooming').show();
@@ -6226,10 +4910,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai11s07blooming, "11_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai11s01blooming, bondex.bonsai11s02blooming, bondex.bonsai11s03blooming, bondex.bonsai11s04blooming, bondex.bonsai11s05blooming, bondex.bonsai11s06blooming, bondex.bonsai11s07blooming);
+            bondex.bonsai11blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai11shiny==0) {
-                bondex.bonsai11shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_11normal').show();
                     $('#BonDex_11blooming').show();
@@ -6299,10 +4984,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai11s07shiny, "11_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai11s01shiny, bondex.bonsai11s02shiny, bondex.bonsai11s03shiny, bondex.bonsai11s04shiny, bondex.bonsai11s05shiny, bondex.bonsai11s06shiny, bondex.bonsai11s07shiny);
+            bondex.bonsai11shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai11shinybloom==0) {
-                bondex.bonsai11shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_11normal').show();
                     $('#BonDex_11blooming').show();
@@ -6373,12 +5059,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai11s07shinybloom, "11_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai11s01shinybloom, bondex.bonsai11s02shinybloom, bondex.bonsai11s03shinybloom, bondex.bonsai11s04shinybloom, bondex.bonsai11s05shinybloom, bondex.bonsai11s06shinybloom, bondex.bonsai11s07shinybloom);
+            bondex.bonsai11shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==12) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai12normal==0) {
-                bondex.bonsai12normal=1;
                 $(document).ready(function(){
                     $('#BonDex_12normal').show();
                 });
@@ -6446,10 +5134,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai12s07normal, "12_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai12s01normal, bondex.bonsai12s02normal, bondex.bonsai12s03normal, bondex.bonsai12s04normal, bondex.bonsai12s05normal, bondex.bonsai12s06normal, bondex.bonsai12s07normal);
+            bondex.bonsai12normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai12blooming==0) {
-                bondex.bonsai12blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_12normal').show();
                     $('#BonDex_12blooming').show();
@@ -6518,10 +5207,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai12s07blooming, "12_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai12s01blooming, bondex.bonsai12s02blooming, bondex.bonsai12s03blooming, bondex.bonsai12s04blooming, bondex.bonsai12s05blooming, bondex.bonsai12s06blooming, bondex.bonsai12s07blooming);
+            bondex.bonsai12blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai12shiny==0) {
-                bondex.bonsai12shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_12normal').show();
                     $('#BonDex_12blooming').show();
@@ -6591,10 +5281,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai12s07shiny, "12_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai12s01shiny, bondex.bonsai12s02shiny, bondex.bonsai12s03shiny, bondex.bonsai12s04shiny, bondex.bonsai12s05shiny, bondex.bonsai12s06shiny, bondex.bonsai12s07shiny);
+            bondex.bonsai12shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai12shinybloom==0) {
-                bondex.bonsai12shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_12normal').show();
                     $('#BonDex_12blooming').show();
@@ -6665,12 +5356,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai12s07shinybloom, "12_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai01s12shinybloom, bondex.bonsai12s02shinybloom, bondex.bonsai12s03shinybloom, bondex.bonsai12s04shinybloom, bondex.bonsai12s05shinybloom, bondex.bonsai12s06shinybloom, bondex.bonsai12s07shinybloom);
+            bondex.bonsai12shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==13) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai13normal==0) {
-                bondex.bonsai13normal=1;
                 $(document).ready(function(){
                     $('#BonDex_13normal').show();
                 });
@@ -6738,10 +5431,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai13s07normal, "13_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai13s01normal, bondex.bonsai13s02normal, bondex.bonsai13s03normal, bondex.bonsai13s04normal, bondex.bonsai13s05normal, bondex.bonsai13s06normal, bondex.bonsai13s07normal);
+            bondex.bonsai13normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai13blooming==0) {
-                bondex.bonsai13blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_13normal').show();
                     $('#BonDex_13blooming').show();
@@ -6810,10 +5504,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai13s07blooming, "13_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai13s01blooming, bondex.bonsai13s02blooming, bondex.bonsai13s03blooming, bondex.bonsai13s04blooming, bondex.bonsai13s05blooming, bondex.bonsai13s06blooming, bondex.bonsai13s07blooming);
+            bondex.bonsai13blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai13shiny==0) {
-                bondex.bonsai13shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_13normal').show();
                     $('#BonDex_13blooming').show();
@@ -6883,10 +5578,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai13s07shiny, "13_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai13s01shiny, bondex.bonsai13s02shiny, bondex.bonsai13s03shiny, bondex.bonsai13s04shiny, bondex.bonsai13s05shiny, bondex.bonsai13s06shiny, bondex.bonsai13s07shiny);
+            bondex.bonsai13shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai13shinybloom==0) {
-                bondex.bonsai13shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_13normal').show();
                     $('#BonDex_13blooming').show();
@@ -6957,12 +5653,14 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai13s07shinybloom, "13_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai13s01shinybloom, bondex.bonsai13s02shinybloom, bondex.bonsai13s03shinybloom, bondex.bonsai13s04shinybloom, bondex.bonsai13s05shinybloom, bondex.bonsai13s06shinybloom, bondex.bonsai13s07shinybloom);
+            bondex.bonsai13shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
     else if (bonsai.treetype==14) {
         if (bonsai.shiny==1) {
             if (bondex.bonsai14normal==0) {
-                bondex.bonsai14normal=1;
                 $(document).ready(function(){
                     $('#BonDex_14normal').show();
                 });
@@ -7030,10 +5728,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai14s07normal, "14_s07normal");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai14s01normal, bondex.bonsai14s02normal, bondex.bonsai14s03normal, bondex.bonsai14s04normal, bondex.bonsai14s05normal, bondex.bonsai14s06normal, bondex.bonsai14s07normal);
+            bondex.bonsai14normal=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==2) {
             if (bondex.bonsai14blooming==0) {
-                bondex.bonsai14blooming=1;
                 $(document).ready(function(){
                     $('#BonDex_14normal').show();
                     $('#BonDex_14blooming').show();
@@ -7102,10 +5801,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai14s07blooming, "14_s07blooming");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai14s01blooming, bondex.bonsai14s02blooming, bondex.bonsai14s03blooming, bondex.bonsai14s04blooming, bondex.bonsai14s05blooming, bondex.bonsai14s06blooming, bondex.bonsai14s07blooming);
+            bondex.bonsai14blooming=bonsai_styletypecheck;
         }
         else if (bonsai.shiny==3) {
             if (bondex.bonsai14shiny==0) {
-                bondex.bonsai14shiny=1;
                 $(document).ready(function(){
                     $('#BonDex_14normal').show();
                     $('#BonDex_14blooming').show();
@@ -7175,10 +5875,11 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai14s07shiny, "14_s07shiny");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai14s01shiny, bondex.bonsai14s02shiny, bondex.bonsai14s03shiny, bondex.bonsai14s04shiny, bondex.bonsai14s05shiny, bondex.bonsai14s06shiny, bondex.bonsai14s07shiny);
+            bondex.bonsai14shiny=bonsai_styletypecheck;
         }
         else {
             if (bondex.bonsai14shinybloom==0) {
-                bondex.bonsai14shinybloom=1;
                 $(document).ready(function(){
                     $('#BonDex_14normal').show();
                     $('#BonDex_14blooming').show();
@@ -7249,7 +5950,10 @@ function bondex_bonsai(bonsai) {
                     bondex_treequality(bondex.bonsai14s07shinybloom, "14_s07shinybloom");
                 }
             }
+            bondex_styletypescheck(bondex.bonsai14s01shinybloom, bondex.bonsai14s02shinybloom, bondex.bonsai14s03shinybloom, bondex.bonsai14s04shinybloom, bondex.bonsai14s05shinybloom, bondex.bonsai14s06shinybloom, bondex.bonsai14s07shinybloom);
+            bondex.bonsai14shinybloom=bonsai_styletypecheck;
         }
+        taskstones();
     }
 }
 
@@ -7735,7 +6439,7 @@ function bondex_checkup_seedlings(b_shinybloom, b_shiny, b_blooming, b_normal, b
 }
 
 function bondex_checkup_stylecategories(b_shinybloom, b_shiny, b_blooming, b_normal, bonsaiid) {
-    if (b_shinybloom==1) {
+    if (b_shinybloom>=1) {
         $(document).ready(function(){
             $('#BonDex_'+bonsaiid+'normal').show();
             $('#BonDex_'+bonsaiid+'blooming').show();
@@ -7743,20 +6447,20 @@ function bondex_checkup_stylecategories(b_shinybloom, b_shiny, b_blooming, b_nor
             $('#BonDex_'+bonsaiid+'shinybloom').show();
         });
     }
-    else if (b_shiny==1) {
+    else if (b_shiny>=1) {
         $(document).ready(function(){
             $('#BonDex_'+bonsaiid+'normal').show();
             $('#BonDex_'+bonsaiid+'blooming').show();
             $('#BonDex_'+bonsaiid+'shiny').show();
         });
     }
-    else if (b_blooming==1) {
+    else if (b_blooming>=1) {
         $(document).ready(function(){
             $('#BonDex_'+bonsaiid+'normal').show();
             $('#BonDex_'+bonsaiid+'blooming').show();
         });
     }
-    if (b_normal==1) {
+    if (b_normal>=1) {
         $(document).ready(function(){
             $('#BonDex_'+bonsaiid+'normal').show();
         });

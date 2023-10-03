@@ -1133,6 +1133,9 @@ function PlantSeedlingExecution(bonsaixx, seedlingx, worker) {
     state.workers_available -=1;
     worker.busy = 1;
     statistics.bonsais_total +=1;
+    if (seedlingx.shiny==2) {
+        statistics.bloomingbonsais_total +=1;
+    }
     bonsaixx.id = statistics.bonsais_total;
     taskstones();
     id_string=bonsaixx.id;

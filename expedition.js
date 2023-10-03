@@ -55,6 +55,9 @@ function seedling_countdown(worker) {
             seedlinga_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling1, worker);
             bondex_check(seedling1);
+            if (seedling1.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         else if (seedling2.treetype<1) {
             randommaschine (seedling2, worker);
@@ -65,6 +68,9 @@ function seedling_countdown(worker) {
             seedlingb_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling2, worker);
             bondex_check(seedling2);
+            if (seedling2.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         else if (seedling3.treetype<1) {
             randommaschine (seedling3, worker);
@@ -75,6 +81,9 @@ function seedling_countdown(worker) {
             seedlingc_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling3, worker);
             bondex_check(seedling3);
+            if (seedling3.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         else if (seedling4.treetype<1) {
             randommaschine (seedling4, worker);
@@ -85,6 +94,9 @@ function seedling_countdown(worker) {
             seedlingd_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling4, worker);
             bondex_check(seedling4);
+            if (seedling4.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         else if (seedling5.treetype<1) {
             randommaschine (seedling5, worker);
@@ -95,6 +107,9 @@ function seedling_countdown(worker) {
             seedlinge_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling5, worker);
             bondex_check(seedling5);
+            if (seedling5.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         else if (seedling6.treetype<1) {
             randommaschine (seedling6, worker);
@@ -105,12 +120,16 @@ function seedling_countdown(worker) {
             seedlingf_center_mobile.className = "darker_grey";
             area_bonsais_found(seedling6, worker);
             bondex_check(seedling6);
+            if (seedling6.shiny==2) {
+                statistics.bloomingseedlings_total+=1;
+            }
         }
         worker.expedition = 0;
         worker.busy = 0;
         state.workers_available +=1;
         state.seedlings +=1;
         statistics.seedlings_total +=1;
+        
         taskstones();
         
         //task001trigger();

@@ -21,7 +21,9 @@ var state = {
 
 var statistics = {
     seedlings_total: 0,
+    bloomingseedlings_total: 0,
     bonsais_total: 0,
+    bloomingbonsais_total: 0,
     bondex_treetype_discovered: 0,
     bondex_bonsai01_discovered: 0,
     bondex_bonsai02_discovered: 0,
