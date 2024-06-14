@@ -464,21 +464,77 @@ function ViewSkillPatience() {
 function ViewClub_TTG01 () {
     $(document).ready(function(){
         $('#Club_TTG01').show();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').hide();
         $('#Club_ST01').hide();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').hide();
+        $('#League_Area01').hide();
+    });
+}
+function ViewClub_TTG02 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_TTG02').show();
+        $('#Club_TTG03').hide();
+        $('#Club_ST01').hide();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').hide();
+        $('#League_Area01').hide();
+    });
+}
+function ViewClub_TTG03 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').show();
+        $('#Club_ST01').hide();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').hide();
         $('#League_Area01').hide();
     });
 }
 function ViewClub_ST01 () {
     $(document).ready(function(){
         $('#Club_TTG01').hide();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').hide();
         $('#Club_ST01').show();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').hide();
+        $('#League_Area01').hide();
+    });
+}
+function ViewClub_ST02 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').hide();
+        $('#Club_ST01').hide();
+        $('#Club_ST02').show();
+        $('#Club_ST03').hide();
+        $('#League_Area01').hide();
+    });
+}
+function ViewClub_ST03 () {
+    $(document).ready(function(){
+        $('#Club_TTG01').hide();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').hide();
+        $('#Club_ST01').hide();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').show();
         $('#League_Area01').hide();
     });
 }
 function ViewLeague_Area01 () {
     $(document).ready(function(){
         $('#Club_TTG01').hide();
+        $('#Club_TTG02').hide();
+        $('#Club_TTG03').hide();
         $('#Club_ST01').hide();
+        $('#Club_ST02').hide();
+        $('#Club_ST03').hide();
         $('#League_Area01').show();
     });
 }

@@ -380,7 +380,7 @@
     font-size: 15px;
 }
 
-#ButtonTTG01_R1, #ButtonTTG01_R2, #ButtonTTG01_R3, #ButtonTTG01_C1, #ButtonTTG01_C2, #ButtonTTG01_C3, #ButtonArea01_C1 {
+#ButtonTTG01_R1, #ButtonTTG01_R2, #ButtonTTG01_R3, #ButtonTTG01_C1, #ButtonTTG01_C2, #ButtonTTG01_C3, #ButtonTTG02_R1, #ButtonTTG02_R2, #ButtonTTG02_R3, #ButtonTTG02_C1, #ButtonTTG02_C2, #ButtonTTG02_C3, #ButtonTTG03_R1, #ButtonTTG03_R2, #ButtonTTG03_R3, #ButtonTTG03_C1, #ButtonTTG03_C2, #ButtonTTG03_C3, #ButtonArea01_C1 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
@@ -532,7 +532,7 @@
     font-size: 15px;
 }
 
-#club_ttg01raundo, #club_st01chokan, #league_area01 {
+#club_ttg01raundo, #club_ttg02erementaru, #club_ttg03roku-men, #club_st01chokan, #club_st02moyogi, #club_st03shakan, #league_area01 {
     box-sizing: border-box;
 	height: 40px;
 	background: #777;
